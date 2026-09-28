@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGradCrm" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </radialGradient>
+    
+    <!-- Blueprint/Building Gradient -->
+    <linearGradient id="bldgGradCrm" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+
+    <!-- Metallic Edge Gradient -->
+    <linearGradient id="edgeGradCrm" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#1e40af" />
+    </linearGradient>
+    
+    <!-- User/Database color inside -->
+    <linearGradient id="userGradCrm" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#3b82f6" />
+        <stop offset="100%" stop-color="#bfdbfe" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Circular Badge Background -->
+  <circle cx="256" cy="256" r="230" fill="url(#bgGradCrm)" stroke="url(#edgeGradCrm)" stroke-width="12" />
+
+  <!-- Building Outline (Isometric view) -->
+  <path d="M160 180L256 130L352 180V350L256 400L160 350Z" fill="url(#bldgGradCrm)" stroke="#93c5fd" stroke-width="4" stroke-linejoin="round"/>
+  
+  <!-- Building Facade Details (Windows) -->
+  <!-- Front Left Face -->
+  <path d="M180 200V330M200 210V310M220 220V290" fill="none" stroke="#bfdbfe" stroke-width="2" opacity="0.7"/>
+  <!-- Front Right Face -->
+  <path d="M290 220V290M310 210V310M330 200V330" fill="none" stroke="#bfdbfe" stroke-width="2" opacity="0.7"/>
+
+  <!-- Blueprint Overlay lines -->
+  <path d="M130 150L160 130M352 130L382 150M130 380L160 400M352 400L382 380" fill="none" stroke="#bfdbfe" stroke-width="2" stroke-dasharray="5 5" opacity="0.5"/>
+
+  <!-- CRM/Database User Icon -->
+  <g transform="translate(290, 290) scale(0.8)">
+    <circle cx="40" cy="40" r="35" fill="url(#userGradCrm)" stroke="#ffffff" stroke-width="4"/>
+    <!-- Database Cylinder top -->
+    <ellipse cx="40" cy="20" rx="20" ry="8" fill="#ffffff"/>
+    <!-- User silhouette -->
+    <path d="M40 35C30 35 22 43 22 53V68H58V53C58 43 50 35 40 35Z" fill="#1e40af"/>
+  </g>
+  
+  <!-- Gear icon on building -->
+  <g transform="translate(160, 130) scale(0.6)">
+      <circle cx="40" cy="40" r="20" fill="#1e40af" stroke="#93c5fd" stroke-width="3"/>
+      <path d="M40 10V25M40 55V70M10 40H25M55 40H70M21 21L31 31M49 49L59 59M21 59L31 49M49 31L59 21" stroke="#93c5fd" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="40" cy="40" r="8" fill="#3b82f6"/>
+  </g>
+</svg>

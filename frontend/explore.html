@@ -1,0 +1,3189 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en-IN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Prospera AI Realtors | Real Estate in Lucknow | Direct Developer Connect</title>
+<meta name="description" content="Explore residential and commercial properties in Lucknow with Prospera AI Realtors. Discover projects, compare property options, explore locations, and connect directly with developers.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Prospera AI Realtors">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#FAF8F5">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Prospera AI Realtors">
+<meta property="og:title" content="Prospera AI Realtors | Real Estate in Lucknow | Direct Developer Connect">
+<meta property="og:description" content="Explore property projects and locations in Lucknow, compare options, and connect directly with developers through Prospera AI Realtors.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Prospera AI Realtors | Real Estate in Lucknow">
+<meta name="twitter:description" content="Explore property projects and locations in Lucknow and connect directly with developers.">
+<link rel="icon" type="image/png" href="./assets/images/logos/dark_mode.png">
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- FontAwesome Icons CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"/>
+<!-- Google Fonts: Plus Jakarta Sans & DM Serif Display -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#FCF9EE',
+                            100: '#FAF3D3',
+                            200: '#F4E5A1',
+                            300: '#EDD36E',
+                            400: '#E4BF3F',
+                            500: '#D4AF37', // Metallic Signature Gold
+                            600: '#AA8524',
+                            700: '#806118',
+                            800: '#57400F',
+                            900: '#332407',
+                        },
+                        obsidian: {
+                            950: '#070708',
+                            900: '#0E0E11',
+                            800: '#16161C',
+                            700: '#22222A',
+                            600: '#30303B',
+                        },
+                        brandDark: '#121619',
+                        brandGray: '#4A5568',
+                        softBg: '#FAF8F5',
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['DM Serif Display', 'serif'],
+                        heading: ['DM Serif Display', 'serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 0 35px -5px rgba(212, 175, 55, 0.3)',
+                        'gold-glow-lg': '0 0 60px -10px rgba(212, 175, 55, 0.45)',
+                        'card-glow': '0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 1px 1px rgba(212, 175, 55, 0.2)',
+                        'soft-gold': '0 20px 40px -15px rgba(197, 160, 89, 0.25)',
+                        'card-hover': '0 25px 50px -12px rgba(0, 0, 0, 0.08)',
+                        'avatar-ring': '0 0 0 6px rgba(197, 160, 89, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+
+<!-- Theme Stylesheet & Pre-Render Theme Loader (Defaults to Light Mode) -->
+<link href="theme.css" rel="stylesheet"/>
+<script>
+        /* Prospera AI uses a single light visual system. */
+        (function() {
+            document.documentElement.setAttribute("data-theme", "light");
+            document.documentElement.classList.remove("dark");
+        })();
+    </script>
+  <style id="prospera-explore-design-system">
+    /* ============================================================
+       PROSPERA AI — EXPLORE PAGE STRICT DESIGN SYSTEM
+       Strict 3-Color Palette: BLACK (#000000), WHITE (#FFFFFF), GOLD (#D4AF37)
+       ============================================================ */
+
+    .font-heading { font-family: 'DM Serif Display', serif !important; }
+    .font-sans { font-family: 'Plus Jakarta Sans', sans-serif !important; }
+
+    body {
+      background-color: #FAF8F5 !important;
+      color: #000000 !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+    }
+
+    /* Hero section: ditto from builders.html */
+    .builders-hero {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+      padding: 104px 0 48px;
+    }
+
+    /* Gold gradients and accents */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #D4AF37 0%, #AA820A 100%) !important;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+
+    /* Cards & Panels */
+    .explore-card,
+    .project-item {
+      background: #FFFFFF !important;
+      border: 1px solid rgba(212, 175, 55, 0.28) !important;
+      border-radius: 16px !important;
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04) !important;
+      transition: all 0.3s ease !important;
+    }
+    .project-item:hover {
+      border-color: #D4AF37 !important;
+      box-shadow: 0 10px 30px -5px rgba(212, 175, 55, 0.2) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    /* Project card title over image */
+    .project-item h3 {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      font-weight: 700 !important;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9) !important;
+    }
+
+    /* STRICT BUTTON SYSTEM:
+       1. BLACK BUTTON: Black bg, White text -> Hover: Gold bg, Black text
+       2. GOLD BUTTON: Gold bg, Black text -> Hover: Black bg, White text
+       3. CLOSE (X) BUTTON: Transparent bg, Black icon -> Hover: Gold icon
+    */
+    .btn-prospera-black,
+    .gold-btn-gradient,
+    button.gold-btn-gradient {
+      background: #000000 !important;
+      color: #FFFFFF !important;
+      border: 1px solid #000000 !important;
+      border-radius: 12px !important;
+      font-weight: 700 !important;
+      transition: all 0.2s ease !important;
+      cursor: pointer !important;
+      text-decoration: none !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    .btn-prospera-black:hover,
+    .gold-btn-gradient:hover,
+    button.gold-btn-gradient:hover {
+      background: #D4AF37 !important;
+      color: #000000 !important;
+      border-color: #D4AF37 !important;
+    }
+    .btn-prospera-black *,
+    .gold-btn-gradient * {
+      color: inherit !important;
+    }
+
+    .btn-prospera-gold {
+      background: #D4AF37 !important;
+      color: #000000 !important;
+      border: 1px solid #D4AF37 !important;
+      border-radius: 12px !important;
+      font-weight: 700 !important;
+      transition: all 0.2s ease !important;
+      cursor: pointer !important;
+      text-decoration: none !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    .btn-prospera-gold:hover {
+      background: #000000 !important;
+      color: #FFFFFF !important;
+      border-color: #000000 !important;
+    }
+    .btn-prospera-gold * {
+      color: inherit !important;
+    }
+
+    /* Icon button (Robot / quick action) */
+    .btn-icon-action {
+      background: #FFFFFF !important;
+      color: #000000 !important;
+      border: 1px solid rgba(212, 175, 55, 0.4) !important;
+      border-radius: 12px !important;
+      transition: all 0.2s ease !important;
+      cursor: pointer !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    .btn-icon-action:hover {
+      background: #D4AF37 !important;
+      color: #000000 !important;
+      border-color: #D4AF37 !important;
+    }
+
+    /* Search Clear X button: NO background, clean rounded circular border */
+    button.explore-clear-search-btn,
+    .explore-clear-search-btn {
+      background: transparent !important;
+      background-color: transparent !important;
+      border: 1px solid #000000 !important;
+      border-radius: 9999px !important;
+      width: 24px !important;
+      height: 24px !important;
+      min-width: 24px !important;
+      min-height: 24px !important;
+      padding: 0 !important;
+      margin: 0 0 0 4px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+      cursor: pointer !important;
+      box-shadow: none !important;
+      outline: none !important;
+      transition: all 0.18s ease !important;
+      flex-shrink: 0 !important;
+    }
+    button.explore-clear-search-btn:hover,
+    .explore-clear-search-btn:hover {
+      background: transparent !important;
+      background-color: transparent !important;
+      border-color: #D4AF37 !important;
+      color: #D4AF37 !important;
+      -webkit-text-fill-color: #D4AF37 !important;
+      transform: scale(1.08) !important;
+    }
+    button.explore-clear-search-btn i,
+    .explore-clear-search-btn i,
+    .explore-clear-search-btn * {
+      background: transparent !important;
+      color: inherit !important;
+      -webkit-text-fill-color: currentColor !important;
+      font-size: 11px !important;
+      line-height: 1 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* Mobile filter button visibility: ONLY on mobile/tablet (< 1024px), NEVER on laptop/desktop (>= 1024px) */
+    @media (min-width: 1024px) {
+      #mobileFilterToggleBtn,
+      .mobile-filter-toggle-btn {
+        display: none !important;
+      }
+    }
+    @media (max-width: 1023px) {
+      #mobileFilterToggleBtn,
+      .mobile-filter-toggle-btn {
+        display: inline-flex !important;
+      }
+    }
+
+    /* Modal Close / X button: transparent background, clean black icon */
+    .btn-close-transparent,
+    #filterSidebar .filter-close-btn,
+    #projectModal button[aria-label="Close"],
+    #direct-modal button[onclick*="closeDirectConnectModal"],
+    #floatingAIWidget button[onclick*="toggleFloatingChat"],
+    #voiceModal button[onclick*="closeVoiceModal"] {
+      background: transparent !important;
+      border: none !important;
+      color: #000000 !important;
+      cursor: pointer !important;
+      box-shadow: none !important;
+      padding: 6px !important;
+      transition: color 0.18s ease !important;
+    }
+    .btn-close-transparent:hover,
+    #projectModal button[aria-label="Close"]:hover,
+    #direct-modal button[onclick*="closeDirectConnectModal"]:hover,
+    #floatingAIWidget button[onclick*="toggleFloatingChat"]:hover {
+      color: #D4AF37 !important;
+      background: transparent !important;
+    }
+    #voiceModal button[onclick*="closeVoiceModal"] {
+      color: #FFFFFF !important;
+      border: 1px solid rgba(212, 175, 55, 0.4) !important;
+    }
+    #voiceModal button[onclick*="closeVoiceModal"]:hover {
+      color: #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      background: transparent !important;
+    }
+
+    /* Filter Chips */
+    .budget-chip,
+    .type-chip {
+      background: #FAF8F5 !important;
+      border: 1px solid rgba(212, 175, 55, 0.32) !important;
+      color: #000000 !important;
+      font-weight: 600 !important;
+      transition: all 0.2s ease !important;
+      cursor: pointer !important;
+    }
+    .budget-chip:hover,
+    .type-chip:hover {
+      background: #F3EBD6 !important;
+      border-color: #D4AF37 !important;
+      color: #000000 !important;
+    }
+    .budget-chip.border-gold-500,
+    .type-chip.border-gold-500 {
+      background: #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      color: #000000 !important;
+      font-weight: 700 !important;
+    }
+
+    /* Form Controls */
+    select, input[type="text"] {
+      color: #000000 !important;
+      background-color: #FFFFFF !important;
+    }
+    select option {
+      background: #FFFFFF !important;
+      color: #000000 !important;
+    }
+    input::placeholder {
+      color: rgba(0, 0, 0, 0.45) !important;
+    }
+    input[type="checkbox"] {
+      accent-color: #D4AF37 !important;
+    }
+
+    /* Badges */
+    .badge-match-ai {
+      background: #D4AF37 !important;
+      color: #000000 !important;
+      font-weight: 800 !important;
+    }
+    .badge-rera {
+      background: #000000 !important;
+      border: 1px solid rgba(212, 175, 55, 0.5) !important;
+      color: #D4AF37 !important;
+      font-weight: 700 !important;
+    }
+    .badge-builder {
+      background: #000000 !important;
+      border: 1px solid rgba(212, 175, 55, 0.5) !important;
+      color: #D4AF37 !important;
+      font-weight: 700 !important;
+    }
+
+    /* Project Modal Overrides */
+    #projectModal .rounded-2xl {
+      background: #FFFFFF !important;
+      border: 1px solid rgba(212, 175, 55, 0.3) !important;
+    }
+    #projectModal h3 {
+      color: #000000 !important;
+    }
+    #projectModal strong {
+      color: #000000 !important;
+    }
+    #projectModal a[href="ai-property-finder.html"] {
+      background: #000000 !important;
+      color: #FFFFFF !important;
+      border: 1px solid #000000 !important;
+      transition: all 0.2s ease !important;
+    }
+    #projectModal a[href="ai-property-finder.html"]:hover {
+      background: #D4AF37 !important;
+      color: #000000 !important;
+      border-color: #D4AF37 !important;
+    }
+
+    /* Direct Connect Modal Overrides */
+    #direct-modal .bg-white {
+      border: 1px solid rgba(212, 175, 55, 0.3) !important;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #FAF8F5; }
+    ::-webkit-scrollbar-thumb { background: rgba(212, 175, 55, 0.4); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
+  </style>
+
+</head>
+<body class="bg-[#f7f4ee] text-[#182033] font-sans selection:bg-gold-200 selection:text-[#182033] relative antialiased min-h-screen overflow-x-hidden">
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-white border-b border-slate-200 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a aria-label="Prospera AI Realtors" class="prospera-brand-logo group flex-shrink-0" href="index.html">
+        <span aria-hidden="true" class="prospera-logo-frame">
+          <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+        </span>
+      </a>
+      <!-- Desktop Primary Navigation -->
+      <nav aria-label="Primary navigation"
+        class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-700">
+        <a class="hover:text-gold-500 transition-colors" href="index.html">Home</a>
+        <a class="hover:text-gold-500 transition-colors" href="builders.html">Builders</a>
+        <a class="hover:text-gold-500 transition-colors" href="explore.html">Properties</a>
+        <a class="hover:text-gold-500 transition-colors" href="agents.html">Agents</a>
+        <a class="hover:text-gold-500 transition-colors" href="market-insights.html">Market Insights</a>
+        <a class="hover:text-gold-500 transition-colors" href="compare-projects.html">Compare</a>
+        <a class="hover:text-gold-500 transition-colors" href="book-site-visit.html">Book Site Visit</a>
+        <div class="prospera-about-dropdown" id="desktopAboutDropdown">
+          <button aria-controls="desktopAboutMenu" aria-expanded="false"
+            class="prospera-about-trigger hover:text-gold-500 transition-colors"
+            onclick="toggleAboutDropdown(event, 'desktopAboutDropdown')" type="button">
+            <span>About</span>
+            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+          </button>
+          <div aria-label="About links" class="prospera-about-menu" id="desktopAboutMenu" role="menu">
+            <a href="about-us.html" role="menuitem">About Us</a>
+            <a href="why-prospera-ai.html" role="menuitem">Why Prospera AI</a>
+            <a href="reviews.html" role="menuitem">Reviews</a>
+            <a href="contact.html" role="menuitem">Contact Us</a>
+            <a href="privacy-terms.html" role="menuitem">Privacy Policy</a>
+          </div>
+        </div>
+      </nav>
+      <!-- Right: Mobile Navigation -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button aria-label="Open menu"
+          class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl border border-gold-500/30 bg-gold-500/10 text-gold-500 hover:bg-gold-500/20 transition-all"
+          id="mobileMenuBtn" onclick="toggleMobileMenu()">
+          <i class="fa-solid fa-bars text-base" id="mobileMenuIcon"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Navigation Dropdown -->
+    <div class="hidden md:hidden border-t border-slate-200 bg-white" id="mobileMenu">
+      <nav aria-label="Mobile navigation" class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="index.html">Home</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="builders.html">Builders</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="explore.html">Properties</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="agents.html">Agents</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="market-insights.html">Market Insights</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="compare-projects.html">Compare</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="book-site-visit.html">Book Site Visit</a>
+        <div class="prospera-mobile-about" id="mobileAboutDropdown">
+          <button aria-controls="mobileAboutMenu" aria-expanded="false" class="prospera-mobile-about-trigger"
+            onclick="toggleAboutDropdown(event, 'mobileAboutDropdown')" type="button">
+            <span>About</span>
+            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+          </button>
+          <div class="prospera-mobile-about-menu" id="mobileAboutMenu">
+            <a href="about-us.html">About Us</a>
+            <a href="why-prospera-ai.html">Why Prospera AI</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="privacy-terms.html">Privacy Policy</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =============================================
+       MAIN CONTENT: HERO (ditto from builders.html)
+       ============================================= -->
+  <div class="builders-hero">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-black/60 mb-6" aria-label="Breadcrumb">
+        <a href="index.html" class="hover:text-gold-600 transition-colors">Prospera AI</a>
+        <i class="fa-solid fa-chevron-right text-[8px] text-gold-500"></i>
+        <span class="text-gold-600 font-semibold">Explore Properties</span>
+      </nav>
+      <h1 class="font-heading text-4xl sm:text-5xl font-bold text-[#000000] mb-3 leading-tight">
+        Find your perfect <span class="text-gold-600">property.</span>
+      </h1>
+      <p class="text-black/75 text-base max-w-2xl leading-relaxed">
+        Discover RERA-approved luxury developments, commercial hubs &amp; premium plots across NCR.
+      </p>
+    </div>
+  </div>
+
+  <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- SEARCH BAR -->
+    <div class="mb-8">
+      <div class="bg-white p-2 sm:p-3 rounded-2xl border border-gold-500/30 shadow-sm flex flex-col md:flex-row items-center gap-3">
+    <div class="flex-1 w-full flex items-center gap-3 px-4 py-2.5 bg-[#FAF8F5] rounded-xl border border-gold-500/30 focus-within:border-gold-500 transition-colors">
+      <i class="fa-solid fa-magnifying-glass text-gold-500"></i>
+      <input class="w-full bg-transparent text-sm text-black placeholder-black/45 focus:outline-none" id="searchInput" onkeyup="filterProjectsLive()" placeholder="Search by Project name, Builder name, City, Area, or Landmark..." type="text"/>
+      <button aria-label="Clear search" class="explore-clear-search-btn" onclick="clearSearch()" title="Clear search" type="button"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="flex items-center gap-2 w-full md:w-auto">
+      <!-- Mobile Filter Toggle Button (Visible on mobile/tablet, hidden on laptop/desktop) -->
+      <button id="mobileFilterToggleBtn" class="mobile-filter-toggle-btn flex-1 md:flex-none items-center justify-center gap-2 px-5 py-3 rounded-xl btn-prospera-black text-xs font-semibold" onclick="toggleMobileFilters()">
+        <i class="fa-solid fa-sliders text-gold-400"></i>
+        <span>Filters</span>
+      </button>
+      <!-- Search Action Button -->
+      <button class="flex-1 md:flex-none px-6 py-3 rounded-xl btn-prospera-gold font-extrabold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-sm" onclick="window.location.href='ai-property-finder.html'">
+        <span>Search</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- LAYOUT GRID (FILTER SIDEBAR + PROJECT LISTINGS) -->
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+  <!-- LEFT SIDEBAR: ADVANCED FILTERS -->
+  <aside class="hidden lg:block lg:col-span-1 space-y-6 bg-white p-6 rounded-2xl border border-gold-500/25 shadow-sm h-fit sticky top-28" id="filterSidebar">
+    <div class="flex items-center justify-between pb-4 border-b border-gold-500/20">
+      <h3 class="font-bold text-black text-base flex items-center gap-2">
+        <i class="fa-solid fa-sliders text-gold-500"></i> Filter Projects
+      </h3>
+      <div class="flex items-center gap-3">
+        <button class="text-[11px] text-black hover:text-gold-600 font-semibold transition-colors" onclick="resetAllFilters()">Reset All</button>
+        <button aria-label="Close filters" class="lg:hidden text-black hover:text-gold-500 bg-transparent border-0 p-1 cursor-pointer transition-colors" onclick="toggleMobileFilters()">
+          <i class="fa-solid fa-xmark text-base"></i>
+        </button>
+      </div>
+    </div>
+    <!-- 1. LOCATION FILTERS -->
+    <div class="space-y-3">
+      <label class="text-xs font-bold text-black uppercase tracking-wider block">Location Filters</label>
+      <div class="space-y-2">
+        <select class="w-full bg-white border border-gold-500/30 rounded-xl p-2.5 text-xs text-black focus:border-gold-500 focus:outline-none" id="stateFilter">
+          <option value="">All States (Delhi NCR, UP, Haryana)</option>
+          <option value="UP">Uttar Pradesh</option>
+          <option value="HR">Haryana</option>
+          <option value="DL">Delhi</option>
+        </select>
+        <select class="w-full bg-white border border-gold-500/30 rounded-xl p-2.5 text-xs text-black focus:border-gold-500 focus:outline-none" id="cityFilter" onchange="filterProjectsLive()">
+          <option value="all">All Cities</option>
+          <option value="Noida">Noida</option>
+          <option value="Greater Noida">Greater Noida</option>
+          <option value="Gurgaon">Gurgaon</option>
+          <option value="Delhi">Delhi</option>
+        </select>
+        <input class="w-full bg-white border border-gold-500/30 rounded-xl p-2.5 text-xs text-black focus:border-gold-500 focus:outline-none placeholder-black/40" id="sectorFilter" placeholder="Sector / Locality (e.g. Sec 150)" type="text"/>
+      </div>
+    </div>
+    <!-- 2. BUDGET FILTERS -->
+    <div class="space-y-3 pt-2 border-t border-gold-500/20">
+      <label class="text-xs font-bold text-black uppercase tracking-wider block">Budget Ranges</label>
+      <div class="grid grid-cols-2 gap-2 text-xs">
+        <button class="budget-chip p-2 rounded-xl text-center font-semibold" onclick="setBudgetFilter('20L-50L', this)">₹20L–50L</button>
+        <button class="budget-chip p-2 rounded-xl text-center font-semibold" onclick="setBudgetFilter('50L-1Cr', this)">₹50L–1Cr</button>
+        <button class="budget-chip p-2 rounded-xl text-center font-semibold" onclick="setBudgetFilter('1Cr-2Cr', this)">₹1Cr–2Cr</button>
+        <button class="budget-chip p-2 rounded-xl text-center font-semibold" onclick="setBudgetFilter('2Cr+', this)">₹2Cr+</button>
+      </div>
+    </div>
+    <!-- 3. PROPERTY TYPE -->
+    <div class="space-y-3 pt-2 border-t border-gold-500/20">
+      <label class="text-xs font-bold text-black uppercase tracking-wider block">Property Type</label>
+      <div class="flex flex-wrap gap-1.5 text-[11px]" id="propertyTypeContainer">
+        <button class="type-chip px-3 py-1.5 rounded-lg" onclick="toggleTypeChip(this, 'Apartment')">Apartment</button>
+        <button class="type-chip px-3 py-1.5 rounded-lg" onclick="toggleTypeChip(this, 'Plot')">Plot</button>
+        <button class="type-chip px-3 py-1.5 rounded-lg" onclick="toggleTypeChip(this, 'Villa')">Villa</button>
+        <button class="type-chip px-3 py-1.5 rounded-lg" onclick="toggleTypeChip(this, 'Commercial')">Commercial</button>
+        <button class="type-chip px-3 py-1.5 rounded-lg" onclick="toggleTypeChip(this, 'Office')">Office Space</button>
+        <button class="type-chip px-3 py-1.5 rounded-lg" onclick="toggleTypeChip(this, 'Retail')">Retail Shop</button>
+        <button class="type-chip px-3 py-1.5 rounded-lg" onclick="toggleTypeChip(this, 'Farm')">Farm Land</button>
+      </div>
+    </div>
+    <!-- 4. CONSTRUCTION STATUS -->
+    <div class="space-y-3 pt-2 border-t border-gold-500/20">
+      <label class="text-xs font-bold text-black uppercase tracking-wider block">Status</label>
+      <div class="space-y-2 text-xs text-black">
+        <label class="flex items-center gap-2 cursor-pointer font-medium">
+          <input class="accent-gold-500 rounded" onchange="filterProjectsLive()" type="checkbox" value="Ready to Move"/> Ready to Move
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer font-medium">
+          <input class="accent-gold-500 rounded" onchange="filterProjectsLive()" type="checkbox" value="Under Construction"/> Under Construction
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer font-medium">
+          <input class="accent-gold-500 rounded" onchange="filterProjectsLive()" type="checkbox" value="New Launch"/> New Launch
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer font-medium">
+          <input class="accent-gold-500 rounded" onchange="filterProjectsLive()" type="checkbox" value="Possession Soon"/> Possession Soon
+        </label>
+      </div>
+    </div>
+    <!-- 5. OTHER SPECIAL FILTERS -->
+    <div class="space-y-3 pt-2 border-t border-gold-500/20">
+      <label class="text-xs font-bold text-black uppercase tracking-wider block">Other Filters</label>
+      <div class="space-y-2 text-xs text-black">
+        <label class="flex items-center gap-2 cursor-pointer font-medium">
+          <input checked="" class="accent-gold-500 rounded" id="reraCheck" onchange="filterProjectsLive()" type="checkbox"/> RERA Approved Only
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer font-medium">
+          <input class="accent-gold-500 rounded" id="loanCheck" onchange="filterProjectsLive()" type="checkbox"/> Bank Loan Available
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer font-medium">
+          <input class="accent-gold-500 rounded" id="cornerCheck" onchange="filterProjectsLive()" type="checkbox"/> Corner Plot / Park Facing
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer font-medium">
+          <input class="accent-gold-500 rounded" id="furnishedCheck" onchange="filterProjectsLive()" type="checkbox"/> Fully Furnished
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer font-medium">
+          <input class="accent-gold-500 rounded" id="luxuryCheck" onchange="filterProjectsLive()" type="checkbox"/> Ultra Luxury Segment
+        </label>
+      </div>
+    </div>
+    <button class="w-full py-3 rounded-xl btn-prospera-black font-bold text-xs uppercase tracking-wider shadow-sm" onclick="filterProjectsLive()">
+      Apply Filters
+    </button>
+  </aside>
+
+  <!-- RIGHT MAIN CONTENT: PROJECT CARDS GRID -->
+  <section class="lg:col-span-3 space-y-6">
+    <!-- Results Bar -->
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-gold-500/20 gap-3 text-xs">
+      <div class="text-black/70">
+        Showing <strong class="text-black font-bold" id="resultsCount">6</strong> AI Verified Projects in Delhi NCR
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-black/70">Sort By:</span>
+        <select class="bg-white border border-gold-500/30 rounded-lg p-2 text-black text-xs focus:outline-none focus:border-gold-500" onchange="filterProjectsLive()">
+          <option value="match">AI Match % (High to Low)</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="newest">Newest Launch First</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- PROJECT CARDS LISTING -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="projectsContainer">
+      <!-- PROJECT CARD 1 -->
+      <div class="project-item bg-white rounded-2xl overflow-hidden border border-gold-500/25 flex flex-col justify-between group" data-builder="M3M India" data-city="Gurgaon" data-name="M3M Golfestate Crown" data-price="3.85" data-sector="Golf Course Ext. Rd" data-status="Under Construction" data-type="Apartment">
+        <div class="relative h-56 overflow-hidden">
+          <img loading="lazy" decoding="async" alt="[M3M Golfestate Crown]" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+          <!-- Badges -->
+          <div class="absolute top-3 left-3 flex gap-2">
+            <span class="px-3 py-1 rounded-full badge-match-ai text-[11px] font-extrabold uppercase tracking-wide shadow-sm">
+              <i class="fa-solid fa-sparkles mr-1"></i> 98% AI Match
+            </span>
+            <span class="px-2.5 py-1 rounded-full badge-rera text-[10px] font-bold">
+              RERA Approved
+            </span>
+          </div>
+          <span class="absolute top-3 right-3 px-3 py-1 rounded-full badge-builder text-xs font-bold">
+            M3M India
+          </span>
+          <div class="absolute bottom-3 left-3 right-3">
+            <span class="text-[11px] text-white/90 font-medium uppercase tracking-wider block">Golf Course Ext. Rd, Gurgaon</span>
+            <h3 class="font-heading text-xl font-bold text-white">M3M Golfestate Crown</h3>
+          </div>
+        </div>
+        <div class="p-5 space-y-4 flex-1 flex flex-col justify-between bg-white">
+          <div class="grid grid-cols-3 gap-2 py-2.5 border-y border-gold-500/20 text-center text-xs">
+            <div>
+              <span class="text-[10px] uppercase text-black/60 block">Type</span>
+              <span class="font-bold text-black">3.5 &amp; 4.5 BHK</span>
+            </div>
+            <div class="border-x border-gold-500/20">
+              <span class="text-[10px] uppercase text-black/60 block">Possession</span>
+              <span class="font-bold text-gold-600">Dec 2026</span>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase text-black/60 block">Status</span>
+              <span class="font-bold text-black">Under Const.</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-1">
+            <div>
+              <span class="text-[10px] uppercase text-black/60 block">Starting Price</span>
+              <span class="text-lg font-extrabold text-black">₹ 3.85 Cr</span>
+            </div>
+            <div class="flex gap-2">
+              <button class="p-2.5 rounded-xl btn-icon-action" onclick="openProjectModal('M3M Golfestate Crown', 'M3M India', 'Gurgaon', '₹ 3.85 Cr')" title="Ask AI about this project">
+                <i class="fa-solid fa-robot"></i>
+              </button>
+              <button class="px-4 py-2 rounded-xl btn-prospera-black font-bold text-xs tracking-wider uppercase shadow-sm" onclick="openProjectModal('M3M Golfestate Crown', 'M3M India', 'Gurgaon', '₹ 3.85 Cr')">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT CARD 2 -->
+      <div class="project-item bg-white rounded-2xl overflow-hidden border border-gold-500/25 flex flex-col justify-between group" data-builder="Godrej Properties" data-city="Noida" data-name="Godrej Woods Reserve" data-price="2.15" data-sector="Sector 43" data-status="Possession Soon" data-type="Apartment">
+        <div class="relative h-56 overflow-hidden">
+          <img loading="lazy" decoding="async" alt="[Godrej Woods Reserve]" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+          <div class="absolute top-3 left-3 flex gap-2">
+            <span class="px-3 py-1 rounded-full badge-match-ai text-[11px] font-extrabold uppercase tracking-wide shadow-sm">
+              <i class="fa-solid fa-sparkles mr-1"></i> 95% AI Match
+            </span>
+            <span class="px-2.5 py-1 rounded-full badge-rera text-[10px] font-bold">
+              RERA Approved
+            </span>
+          </div>
+          <span class="absolute top-3 right-3 px-3 py-1 rounded-full badge-builder text-xs font-bold">
+            Godrej Properties
+          </span>
+          <div class="absolute bottom-3 left-3 right-3">
+            <span class="text-[11px] text-white/90 font-medium uppercase tracking-wider block">Sector 43, Noida</span>
+            <h3 class="font-heading text-xl font-bold text-white">Godrej Woods Reserve</h3>
+          </div>
+        </div>
+        <div class="p-5 space-y-4 flex-1 flex flex-col justify-between bg-white">
+          <div class="grid grid-cols-3 gap-2 py-2.5 border-y border-gold-500/20 text-center text-xs">
+            <div>
+              <span class="text-[10px] uppercase text-black/60 block">Type</span>
+              <span class="font-bold text-black">2, 3 &amp; 4 BHK</span>
+            </div>
+            <div class="border-x border-gold-500/20">
+              <span class="text-[10px] uppercase text-black/60 block">Possession</span>
+              <span class="font-bold text-gold-600">Mid 2025</span>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase text-black/60 block">Status</span>
+              <span class="font-bold text-black">Possession Soon</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-1">
+            <div>
+              <span class="text-[10px] uppercase text-black/60 block">Starting Price</span>
+              <span class="text-lg font-extrabold text-black">₹ 2.15 Cr</span>
+            </div>
+            <div class="flex gap-2">
+              <button class="p-2.5 rounded-xl btn-icon-action" onclick="openProjectModal('Godrej Woods Reserve', 'Godrej Properties', 'Noida', '₹ 2.15 Cr')" title="Ask AI about this project">
+                <i class="fa-solid fa-robot"></i>
+              </button>
+              <button class="px-4 py-2 rounded-xl btn-prospera-black font-bold text-xs tracking-wider uppercase shadow-sm" onclick="openProjectModal('Godrej Woods Reserve', 'Godrej Properties', 'Noida', '₹ 2.15 Cr')">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT CARD 3 -->
+      <div class="project-item bg-white rounded-2xl overflow-hidden border border-gold-500/25 flex flex-col justify-between group" data-builder="DLF Homes" data-city="Gurgaon" data-name="DLF The Aralias II" data-price="14.50" data-sector="Golf Course Road" data-status="Ready to Move" data-type="Apartment">
+        <div class="relative h-56 overflow-hidden">
+          <img loading="lazy" decoding="async" alt="[DLF The Aralias II]" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+          <div class="absolute top-3 left-3 flex gap-2">
+            <span class="px-3 py-1 rounded-full badge-match-ai text-[11px] font-extrabold uppercase tracking-wide shadow-sm">
+              <i class="fa-solid fa-crown mr-1"></i> Trophy Luxury
+            </span>
+          </div>
+          <span class="absolute top-3 right-3 px-3 py-1 rounded-full badge-builder text-xs font-bold">
+            DLF Homes
+          </span>
+          <div class="absolute bottom-3 left-3 right-3">
+            <span class="text-[11px] text-white/90 font-medium uppercase tracking-wider block">Golf Course Road, Gurgaon</span>
+            <h3 class="font-heading text-xl font-bold text-white">DLF The Aralias II</h3>
+          </div>
+        </div>
+        <div class="p-5 space-y-4 flex-1 flex flex-col justify-between bg-white">
+          <div class="grid grid-cols-3 gap-2 py-2.5 border-y border-gold-500/20 text-center text-xs">
+            <div>
+              <span class="text-[10px] uppercase text-black/60 block">Type</span>
+              <span class="font-bold text-black">Penthouse</span>
+            </div>
+            <div class="border-x border-gold-500/20">
+              <span class="text-[10px] uppercase text-black/60 block">Possession</span>
+              <span class="font-bold text-gold-600">Ready</span>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase text-black/60 block">Status</span>
+              <span class="font-bold text-black">Ready to Move</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-1">
+            <div>
+              <span class="text-[10px] uppercase text-black/60 block">Starting Price</span>
+              <span class="text-lg font-extrabold text-black">₹ 14.50 Cr</span>
+            </div>
+            <div class="flex gap-2">
+              <button class="p-2.5 rounded-xl btn-icon-action" onclick="openProjectModal('DLF The Aralias II', 'DLF Homes', 'Gurgaon', '₹ 14.50 Cr')" title="Ask AI about this project">
+                <i class="fa-solid fa-robot"></i>
+              </button>
+              <button class="px-4 py-2 rounded-xl btn-prospera-black font-bold text-xs tracking-wider uppercase shadow-sm" onclick="openProjectModal('DLF The Aralias II', 'DLF Homes', 'Gurgaon', '₹ 14.50 Cr')">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT CARD 4 -->
+      <div class="project-item bg-white rounded-2xl overflow-hidden border border-gold-500/25 flex flex-col justify-between group" data-builder="ATS Infrastructure" data-city="Greater Noida" data-name="ATS Knightsbridge Plots" data-price="0.95" data-sector="Pari Chowk" data-status="Ready to Move" data-type="Plot">
+        <div class="relative h-56 overflow-hidden">
+          <img loading="lazy" decoding="async" alt="[ATS Knightsbridge Plots]" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+          <div class="absolute top-3 left-3 flex gap-2">
+            <span class="px-3 py-1 rounded-full badge-match-ai text-[11px] font-extrabold uppercase tracking-wide shadow-sm">
+              <i class="fa-solid fa-sparkles mr-1"></i> 92% AI Match
+            </span>
+          </div>
+          <span class="absolute top-3 right-3 px-3 py-1 rounded-full badge-builder text-xs font-bold">
+            ATS Group
+          </span>
+          <div class="absolute bottom-3 left-3 right-3">
+            <span class="text-[11px] text-white/90 font-medium uppercase tracking-wider block">Pari Chowk, Greater Noida</span>
+            <h3 class="font-heading text-xl font-bold text-white">ATS Knightsbridge Plots</h3>
+          </div>
+        </div>
+        <div class="p-5 space-y-4 flex-1 flex flex-col justify-between bg-white">
+          <div class="grid grid-cols-3 gap-2 py-2.5 border-y border-gold-500/20 text-center text-xs">
+            <div>
+              <span class="text-[10px] uppercase text-black/60 block">Type</span>
+              <span class="font-bold text-black">Plot / Land</span>
+            </div>
+            <div class="border-x border-gold-500/20">
+              <span class="text-[10px] uppercase text-black/60 block">Possession</span>
+              <span class="font-bold text-gold-600">Immediate</span>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase text-black/60 block">Status</span>
+              <span class="font-bold text-black">Ready</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-1">
+            <div>
+              <span class="text-[10px] uppercase text-black/60 block">Starting Price</span>
+              <span class="text-lg font-extrabold text-black">₹ 95 Lakhs</span>
+            </div>
+            <div class="flex gap-2">
+              <button class="p-2.5 rounded-xl btn-icon-action" onclick="openProjectModal('ATS Knightsbridge Plots', 'ATS Group', 'Greater Noida', '₹ 95 Lakhs')" title="Ask AI about this project">
+                <i class="fa-solid fa-robot"></i>
+              </button>
+              <button class="px-4 py-2 rounded-xl btn-prospera-black font-bold text-xs tracking-wider uppercase shadow-sm" onclick="openProjectModal('ATS Knightsbridge Plots', 'ATS Group', 'Greater Noida', '₹ 95 Lakhs')">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT CARD 5 -->
+      <div class="project-item bg-white rounded-2xl overflow-hidden border border-gold-500/25 flex flex-col justify-between group" data-builder="Oberoi Realty" data-city="Gurgaon" data-name="Oberoi Commercial Tower" data-price="4.20" data-sector="Cyber City" data-status="New Launch" data-type="Commercial">
+        <div class="relative h-56 overflow-hidden">
+          <img loading="lazy" decoding="async" alt="[Oberoi Commercial Tower]" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+          <div class="absolute top-3 left-3 flex gap-2">
+            <span class="px-3 py-1 rounded-full badge-match-ai text-[11px] font-extrabold uppercase tracking-wide shadow-sm">
+              <i class="fa-solid fa-chart-line mr-1"></i> High ROI Commercial
+            </span>
+          </div>
+          <span class="absolute top-3 right-3 px-3 py-1 rounded-full badge-builder text-xs font-bold">
+            Oberoi Realty
+          </span>
+          <div class="absolute bottom-3 left-3 right-3">
+            <span class="text-[11px] text-white/90 font-medium uppercase tracking-wider block">Cyber City, Gurgaon</span>
+            <h3 class="font-heading text-xl font-bold text-white">Oberoi Commercial Hub</h3>
+          </div>
+        </div>
+        <div class="p-5 space-y-4 flex-1 flex flex-col justify-between bg-white">
+          <div class="grid grid-cols-3 gap-2 py-2.5 border-y border-gold-500/20 text-center text-xs">
+            <div>
+              <span class="text-[10px] uppercase text-black/60 block">Type</span>
+              <span class="font-bold text-black">Office / Retail</span>
+            </div>
+            <div class="border-x border-gold-500/20">
+              <span class="text-[10px] uppercase text-black/60 block">Possession</span>
+              <span class="font-bold text-gold-600">2027</span>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase text-black/60 block">Status</span>
+              <span class="font-bold text-black">New Launch</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-1">
+            <div>
+              <span class="text-[10px] uppercase text-black/60 block">Starting Price</span>
+              <span class="text-lg font-extrabold text-black">₹ 4.20 Cr</span>
+            </div>
+            <div class="flex gap-2">
+              <button class="p-2.5 rounded-xl btn-icon-action" onclick="openProjectModal('Oberoi Commercial Hub', 'Oberoi Realty', 'Gurgaon', '₹ 4.20 Cr')" title="Ask AI about this project">
+                <i class="fa-solid fa-robot"></i>
+              </button>
+              <button class="px-4 py-2 rounded-xl btn-prospera-black font-bold text-xs tracking-wider uppercase shadow-sm" onclick="openProjectModal('Oberoi Commercial Hub', 'Oberoi Realty', 'Gurgaon', '₹ 4.20 Cr')">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT CARD 6 -->
+      <div class="project-item bg-white rounded-2xl overflow-hidden border border-gold-500/25 flex flex-col justify-between group" data-builder="Prestige Group" data-city="Noida" data-name="Prestige City Boulevard" data-price="1.75" data-sector="Noida Expressway" data-status="Under Construction" data-type="Apartment">
+        <div class="relative h-56 overflow-hidden">
+          <img loading="lazy" decoding="async" alt="[Prestige City Boulevard]" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+          <div class="absolute top-3 left-3 flex gap-2">
+            <span class="px-3 py-1 rounded-full badge-match-ai text-[11px] font-extrabold uppercase tracking-wide shadow-sm">
+              <i class="fa-solid fa-sparkles mr-1"></i> 91% AI Match
+            </span>
+          </div>
+          <span class="absolute top-3 right-3 px-3 py-1 rounded-full badge-builder text-xs font-bold">
+            Prestige Group
+          </span>
+          <div class="absolute bottom-3 left-3 right-3">
+            <span class="text-[11px] text-white/90 font-medium uppercase tracking-wider block">Expressway, Noida</span>
+            <h3 class="font-heading text-xl font-bold text-white">Prestige City Boulevard</h3>
+          </div>
+        </div>
+        <div class="p-5 space-y-4 flex-1 flex flex-col justify-between bg-white">
+          <div class="grid grid-cols-3 gap-2 py-2.5 border-y border-gold-500/20 text-center text-xs">
+            <div>
+              <span class="text-[10px] uppercase text-black/60 block">Type</span>
+              <span class="font-bold text-black">2 &amp; 3 BHK</span>
+            </div>
+            <div class="border-x border-gold-500/20">
+              <span class="text-[10px] uppercase text-black/60 block">Possession</span>
+              <span class="font-bold text-gold-600">Late 2026</span>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase text-black/60 block">Status</span>
+              <span class="font-bold text-black">Under Const.</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-1">
+            <div>
+              <span class="text-[10px] uppercase text-black/60 block">Starting Price</span>
+              <span class="text-lg font-extrabold text-black">₹ 1.75 Cr</span>
+            </div>
+            <div class="flex gap-2">
+              <button class="p-2.5 rounded-xl btn-icon-action" onclick="openProjectModal('Prestige City Boulevard', 'Prestige Group', 'Noida', '₹ 1.75 Cr')" title="Ask AI about this project">
+                <i class="fa-solid fa-robot"></i>
+              </button>
+              <button class="px-4 py-2 rounded-xl btn-prospera-black font-bold text-xs tracking-wider uppercase shadow-sm" onclick="openProjectModal('Prestige City Boulevard', 'Prestige Group', 'Noida', '₹ 1.75 Cr')">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer class="bg-white border-t border-slate-200 text-slate-600 text-sm py-12 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div aria-label="Prospera AI Realtors" class="prospera-footer-brand mb-4">
+            <span aria-hidden="true" class="prospera-logo-frame">
+              <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+            </span>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            India’s premier AI-first conversational real estate network. Unbiased recommendations, voice search, and
+            predictive market intelligence.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="about-us.html">About Us</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="why-prospera-ai.html">Why Prospera
+                AI</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="reviews.html">Reviews</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="contact.html">Contact Us</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="privacy-terms.html">Privacy
+                Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Top Locations</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Gomti Nagar'); return false;">Gomti
+                Nagar</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Gomti Nagar Extension'); return false;">Gomti Nagar Extension</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Shaheed Path'); return false;">Shaheed
+                Path</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Sultanpur Road'); return false;">Sultanpur Road</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Contact &amp; Legal</h4>
+          <p class="text-xs text-slate-500 mb-2"><i class="fa-solid fa-envelope text-gold-500 mr-2"></i>
+            advisor@prospera.ai</p>
+          <p class="text-xs text-slate-500 mb-4"><i class="fa-solid fa-phone text-gold-500 mr-2"></i> +91 1800-PROSPERA
+          </p>
+          <div class="flex gap-3">
+            <a aria-label="LinkedIn"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+            <a aria-label="Twitter / X"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-x-twitter text-xs"></i></a>
+            <a aria-label="Instagram"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-instagram text-xs"></i></a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pt-8 border-t border-slate-200 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>© 2026 Prospera AI Realtors Inc. All rights reserved.</p>
+        <p class="text-slate-500">RERA Reg: UPRERA/AI/2026/001</p>
+      </div>
+    </div>
+  </footer>
+<div class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4" id="direct-modal">
+<div class="bg-white rounded-3xl max-w-md w-full p-6 relative border border-amber-200 shadow-2xl animate-fade-in">
+<button class="absolute top-4 right-4 bg-transparent border-0 text-black hover:text-gold-500 transition-colors p-2 cursor-pointer" onclick="closeDirectConnectModal()">
+<i class="fa-solid fa-xmark text-lg"></i>
+</button>
+<div class="text-center mb-6">
+<div class="w-12 h-12 bg-[#FAF8F5] border border-gold-500/30 text-gold-600 rounded-full flex items-center justify-center mx-auto text-xl mb-3">
+<i class="fa-solid fa-handshake"></i>
+</div>
+<h3 class="font-heading font-bold text-2xl text-black">Connect Directly With Developer</h3>
+<p class="text-xs text-gold-600 font-semibold mt-1" id="modal-project-name">Official Builder Sales Team Connect</p>
+<p class="text-xs text-black/70 mt-2">No agents, zero brokerage fee, official prices guaranteed.</p>
+</div>
+<form class="space-y-3" onsubmit="handleModalSubmit(event)">
+<div>
+<label class="text-xs font-semibold text-black block mb-1">Your Full Name</label>
+<input class="w-full bg-[#FAF8F5] border border-gold-500/30 rounded-xl py-2.5 px-3 text-sm text-black focus:outline-none focus:border-gold-500" placeholder="e.g. Rahul Verma" required="" type="text"/>
+</div>
+<div>
+<label class="text-xs font-semibold text-black block mb-1">Mobile Number (For Builder Callback)</label>
+<input class="w-full bg-[#FAF8F5] border border-gold-500/30 rounded-xl py-2.5 px-3 text-sm text-black focus:outline-none focus:border-gold-500" placeholder="+91 98765 43210" required="" type="tel"/>
+</div>
+<div>
+<label class="text-xs font-semibold text-black block mb-1">Preferred Visit Date</label>
+<input class="w-full bg-[#FAF8F5] border border-gold-500/30 rounded-xl py-2.5 px-3 text-sm text-black focus:outline-none focus:border-gold-500" type="date"/>
+</div>
+<button class="w-full py-3 rounded-xl btn-prospera-black font-bold text-xs uppercase tracking-wider mt-2 shadow-sm" type="submit">
+                    Request Direct Builder Callback
+                </button>
+</form>
+</div>
+</div>
+<div class="fixed bottom-6 right-6 bg-black text-white px-5 py-3 rounded-2xl shadow-2xl text-xs flex items-center gap-3 hidden z-50 border border-gold-500" id="toast">
+<i class="fa-solid fa-circle-check text-gold-400 text-base"></i>
+<span id="toast-message">Connected with official builder sales team!</span>
+</div>
+<div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end max-w-[calc(100vw-2rem)]" id="floatingAIWidget">
+<!-- Collapsible Chat Drawer -->
+<div class="hidden w-[calc(100vw-2rem)] sm:w-[380px] md:w-[400px] max-w-[400px] h-[500px] max-h-[calc(100vh-7rem)] rounded-3xl glass-card border border-gold-500/40 shadow-gold-glow-lg flex-col overflow-hidden mb-3 sm:mb-4 transition-all transform duration-300 box-border" id="aiChatDrawer">
+<!-- Chat Drawer Header -->
+<div class="p-4 bg-obsidian-900 border-b border-gold-500/20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-gradient-to-tr from-gold-500 to-gold-300 p-0.5 shadow-gold-glow">
+<div class="w-full h-full bg-obsidian-950 rounded-full flex items-center justify-center text-gold-400">
+<i class="fa-solid fa-robot text-sm"></i>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-white text-sm">Prospera Voice AI</h4>
+<span class="text-[10px] text-gold-400 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-ping"></span> Live &amp; Listening
+                        </span>
+</div>
+</div>
+<button class="text-slate-400 hover:text-white p-1" onclick="toggleFloatingChat()">
+<i class="fa-solid fa-xmark text-lg"></i>
+</button>
+</div>
+<!-- Chat Drawer Body Messages -->
+<div class="flex-1 p-4 overflow-y-auto space-y-3 text-xs" id="chatMessages">
+<!-- AI Welcome Message -->
+<div class="flex gap-2.5">
+<div class="w-7 h-7 rounded-full bg-gold-500/20 border border-gold-500/40 flex items-center justify-center text-gold-400 flex-shrink-0">
+<i class="fa-solid fa-robot text-xs"></i>
+</div>
+<div class="bg-obsidian-800 border border-gold-500/20 p-3 rounded-2xl rounded-tl-none text-slate-200 max-w-[82%] leading-relaxed">
+                        Hi, welcome to Prospera AI Realtors. Tell me your budget or city, and I'll help you find the right property.
+                    </div>
+</div>
+</div>
+<!-- Chat Drawer Quick Chips -->
+<div class="px-3 py-2 bg-obsidian-900/60 border-t border-slate-800 flex gap-2 overflow-x-auto text-[11px] whitespace-nowrap">
+<button class="px-2.5 py-1 rounded-full bg-obsidian-800 border border-gold-500/20 text-slate-300 hover:text-gold-300" onclick="sendQuickMessage('Find 3BHK in Noida under 1.8 Cr')">
+                    3BHK Noida &lt; 1.8Cr
+                </button>
+<button class="px-2.5 py-1 rounded-full bg-obsidian-800 border border-gold-500/20 text-slate-300 hover:text-gold-300" onclick="sendQuickMessage('Top luxury projects in Gurgaon')">
+                    Gurgaon Luxury
+                </button>
+</div>
+<!-- Chat Drawer Input Footer -->
+<div class="p-3 bg-obsidian-900 border-t border-gold-500/20 flex items-center gap-2">
+<button class="w-9 h-9 rounded-xl bg-gold-500/20 border border-gold-500/40 text-gold-400 flex items-center justify-center hover:bg-gold-500/30 transition-colors" onclick="triggerVoiceModal()" title="Tap to speak">
+<i class="fa-solid fa-microphone text-xs"></i>
+</button>
+<input class="flex-1 bg-obsidian-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-gold-400" id="floatingInput" onkeypress="handleKeyPress(event)" placeholder="Type requirement..." type="text"/>
+<button class="w-9 h-9 rounded-xl gold-btn-gradient text-obsidian-950 font-bold flex items-center justify-center hover:scale-105 transition-transform" onclick="sendFloatingMessage()">
+<i class="fa-solid fa-paper-plane text-xs"></i>
+</button>
+</div>
+</div>
+<!-- Floating Action Button Orb -->
+<button aria-label="Open Prospera AI Property Finder" class="relative group flex items-center gap-3 bg-gradient-to-r from-obsidian-900 via-obsidian-800 to-obsidian-950 border-2 border-gold-500 text-white p-3 sm:px-5 sm:py-3.5 rounded-full shadow-gold-glow hover:shadow-gold-glow-lg transition-all transform hover:scale-105" onclick="window.location.href='ai-property-finder.html'" type="button">
+<div class="w-8 h-8 rounded-full bg-gradient-to-tr from-gold-300 via-gold-500 to-gold-700 flex items-center justify-center text-obsidian-950 font-bold">
+<i class="fa-solid fa-robot text-sm"></i>
+</div>
+<span class="hidden sm:inline-block font-semibold text-xs text-gold-300 tracking-wider uppercase">AI Advisor</span>
+<span class="w-2.5 h-2.5 rounded-full bg-gold-400 animate-ping absolute top-1 right-1"></span>
+</button>
+</div>
+<!-- FULLSCREEN / MODAL VOICE EXPERIENCE OVERLAY -->
+<div class="fixed inset-0 z-50 bg-obsidian-950/95 backdrop-blur-2xl hidden flex-col items-center justify-center p-4" id="voiceModal">
+<button aria-label="Close voice assistant" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-gold-500/30 bg-obsidian-900 text-slate-300 hover:text-white hover:border-gold-400 flex items-center justify-center transition-all" onclick="closeVoiceModal()">
+<i class="fa-solid fa-xmark text-xl"></i>
+</button>
+<div class="max-w-xl w-full text-center">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold tracking-widest uppercase mb-7">
+<span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse"></span>
+                Prospera AI Voice Advisor
+            </div>
+<!-- Animated Female AI Avatar -->
+<div class="relative w-56 h-56 sm:w-64 sm:h-64 mx-auto mb-7" id="voiceAvatarStage">
+<div class="absolute inset-0 rounded-full border border-gold-500/20 voice-ring-one"></div>
+<div class="absolute inset-4 rounded-full border border-gold-400/20 voice-ring-two"></div>
+<div class="ai-girl-avatar ai-girl-avatar-large absolute inset-8 sm:inset-10 rounded-full overflow-hidden border-2 border-gold-400/60 shadow-gold-glow-lg" id="voiceGirlAvatar"><img loading="lazy" decoding="async" alt="Prospera AI Property Advisor" class="ai-avatar-photo" src="./assets/images/prospera_ai_advisor_avatar.png">
+</div>
+</div>
+<!-- Voice waveform -->
+<div aria-hidden="true" class="flex justify-center items-center gap-1.5 h-10 mb-5" id="voiceWaveform">
+<div class="voice-bar"></div>
+<div class="voice-bar"></div>
+<div class="voice-bar"></div>
+<div class="voice-bar"></div>
+<div class="voice-bar"></div>
+<div class="voice-bar"></div>
+<div class="voice-bar"></div>
+</div>
+<div class="space-y-2 px-3">
+<h3 class="font-serif text-2xl sm:text-3xl font-bold text-white" id="modalVoiceStatus">
+                    Connecting to Prospera AI...
+                </h3>
+<p class="text-slate-300 text-xs sm:text-sm max-w-lg mx-auto leading-relaxed min-h-10" id="modalVoiceTranscript">
+                    Allow microphone access. Voice mode does not use text input.
+                </p>
+</div>
+<p class="voice-only-note mt-7">
+<i class="fa-solid fa-microphone mr-1"></i>
+                Voice-only consultation • Speak naturally • Property photos/results appear in chat
+            </p>
+</div>
+</div>
+<!-- JAVASCRIPT LOGIC -->
+<script>
+        /* =========================================================
+           PROSPERA INDEX — REAL CHAT + REALTIME VOICE
+           Uses the same backend contract as ai-property-finder.html:
+             POST /api/chat
+             POST /api/realtime/session
+             POST /api/realtime/tool
+           ========================================================= */
+
+        const API_BASE_URL =
+            window.PROSPERA_API_BASE_URL ||
+            `${window.location.protocol}//${window.location.hostname}:5000/api`;
+
+        let heroPreviousResponseId = null;
+        let heroChatLoading = false;
+        let realtimeInstance = null;
+        let voiceActive = false;
+        let lastVoiceAssistantTranscript = "";
+        let activeVoiceAssistantBubble = null;
+
+        const heroInput = document.getElementById("heroPromptInput");
+        const heroSpeechBubble = document.getElementById("heroSpeechBubble");
+        const heroResults = document.getElementById("heroResults");
+        const voiceModal = document.getElementById("voiceModal");
+        const modalVoiceStatus = document.getElementById("modalVoiceStatus");
+        const modalVoiceTranscript = document.getElementById("modalVoiceTranscript");
+        const voiceGirlAvatar = document.getElementById("voiceGirlAvatar");
+        const heroAvatar = document.getElementById("heroAvatar");
+
+        function escapeHTML(value) {
+            if (value === null || value === undefined) return "";
+            return String(value)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        function removeImageUrls(value) {
+            if (!value || typeof value !== "string") return "";
+            return value
+                .replace(
+                    /https?:\/\/(?:images\.unsplash\.com|plus\.unsplash\.com|[^\s<>()]+\.(?:jpg|jpeg|png|webp|gif)(?:\?[^\s<>()]*)?)/gi,
+                    ""
+                )
+                .replace(
+                    /(?:https?:\/\/)?images\s+dot\s+unsplash\s+dot\s+com[^\s<>()]*/gi,
+                    ""
+                )
+                .replace(/\s{2,}/g, " ")
+                .trim();
+        }
+
+        function formatHeroAIText(value) {
+            if (!value || typeof value !== "string") {
+                return "";
+            }
+
+            let text = removeImageUrls(value);
+
+            /*
+            * ---------------------------------------------------------
+            * CLEAN MARKDOWN
+            * ---------------------------------------------------------
+            */
+            text = text
+                .replace(/\*\*/g, "")
+                .replace(/__/g, "")
+                .replace(/`/g, "")
+                .replace(/\r\n/g, "\n")
+                .replace(/\r/g, "\n");
+
+            /*
+            * ---------------------------------------------------------
+            * NORMALIZE WHITESPACE
+            * ---------------------------------------------------------
+            */
+            text = text
+                .replace(/[ \t]+/g, " ")
+                .replace(/[ \t]*\n[ \t]*/g, "\n")
+                .trim();
+
+            /*
+            * ---------------------------------------------------------
+            * PROPERTY NUMBER SEPARATION
+            *
+            * Converts:
+            *
+            * 1. House... Parking: Available 2. Apartment...
+            *
+            * into:
+            *
+            * 1. House...
+            *
+            * Parking: Available
+            *
+            * 2. Apartment...
+            * ---------------------------------------------------------
+            */
+            text = text.replace(
+                /(^|\s)(\d+)\.\s+/g,
+                (match, prefix, number) => {
+                    if (!prefix) {
+                        return `${number}. `;
+                    }
+
+                    return `\n\n${number}. `;
+                }
+            );
+
+
+            /*
+            * ---------------------------------------------------------
+            * SEPARATE PROPERTY DETAILS FROM AI CONVERSATION
+            *
+            * Sometimes the AI finishes a property detail and
+            * immediately starts speaking to the user on the same line.
+            *
+            * Example:
+            *
+            * Parking: Available Aap buy dekh rahe hain ya rent?
+            *
+            * We want:
+            *
+            * Parking: Available
+            *
+            * Aap buy dekh rahe hain ya rent?
+            *
+            * IMPORTANT:
+            * We only create a new line when a normal conversational
+            * sentence starts after a property value.
+            *
+            * Property details themselves remain untouched.
+            * ---------------------------------------------------------
+            */
+
+            const conversationStarts = [
+                "Aap ",
+                "Aapko ",
+                "Agar ",
+                "Aap chahein",
+                "Aap chahte",
+                "Aap bata",
+                "Aap bataye",
+                "Aap mujhe",
+                "Aapka ",
+                "Aapki ",
+                "Aap kis",
+                "Aap kya",
+                "Kya aap",
+                "Agar aap",
+                "Main ",
+                "Main aapko",
+                "Main aapki",
+                "Aap buy",
+                "Aap rent",
+                "Budget ",
+                "Aap budget",
+                "Would you",
+                "If you",
+                "I can ",
+                "I can help",
+                "Let me ",
+                "Tell me ",
+                "Which ",
+                "What ",
+                "How "
+            ];
+
+            conversationStarts.forEach((start) => {
+                const escapedStart = start.replace(
+                    /[.*+?^${}()|[\]\\]/g,
+                    "\\$&"
+                );
+
+                /*
+                * Add a newline before the conversational sentence
+                * only when it is currently attached to another word.
+                */
+                text = text.replace(
+                    new RegExp(`(?<=\\S)\\s+(?=${escapedStart})`, "g"),
+                    "\n\n"
+                );
+            });
+
+            /*
+            * ---------------------------------------------------------
+            * PROPERTY DETAIL SEPARATION
+            *
+            * Every important property field gets its own line.
+            * ---------------------------------------------------------
+            */
+            const detailLabels = [
+                "Price:",
+                "Rent:",
+                "Area:",
+                "Bedrooms:",
+                "Bathrooms:",
+                "Furnishing:",
+                "Parking:",
+                "Amenities:",
+                "Location:",
+                "Locality:",
+                "Type:",
+                "Listing Type:",
+                "Floor:",
+                "Facing:",
+                "Possession:",
+                "Status:"
+            ];
+
+            detailLabels.forEach((label) => {
+                const escapedLabel = label.replace(
+                    /[.*+?^${}()|[\]\\]/g,
+                    "\\$&"
+                );
+
+                text = text.replace(
+                    new RegExp(`\\s*${escapedLabel}\\s*`, "gi"),
+                    `\n${label} `
+                );
+            });
+
+            /*
+            * ---------------------------------------------------------
+            * HANDLE PROPERTY DASH SEPARATORS
+            *
+            * Keeps:
+            * 1. 3 BHK House — Rajajipuram, Lucknow
+            *
+            * clean and readable.
+            * ---------------------------------------------------------
+            */
+            text = text.replace(
+                /\s+(?=\d+\.\s+)/g,
+                "\n\n"
+            );
+
+            /*
+            * ---------------------------------------------------------
+            * FINAL CLEANUP
+            * ---------------------------------------------------------
+            */
+            text = text
+                .replace(/[ \t]+\n/g, "\n")
+                .replace(/\n[ \t]+/g, "\n")
+                .replace(/\n{3,}/g, "\n\n")
+                .trim();
+
+            return text;
+        }
+
+        function formatHeroPrice(price, listingType) {
+            if (typeof price !== "number") return "Price on request";
+            if (listingType === "Rent") {
+                return `₹${price.toLocaleString("en-IN")}/month`;
+            }
+            if (price >= 10000000) {
+                return `₹${(price / 10000000).toFixed(2)} Cr`;
+            }
+            if (price >= 100000) {
+                return `₹${(price / 100000).toFixed(1)} Lakh`;
+            }
+            return `₹${price.toLocaleString("en-IN")}`;
+        }
+
+        function heroLocation(property) {
+            const location = property?.location;
+            if (!location) return "Location unavailable";
+            if (typeof location === "string") return location;
+            return [location.locality, location.city]
+                .filter(Boolean)
+                .join(", ") || "Location unavailable";
+        }
+
+        function scrollHeroChatToBottom() {
+            const thread = document.getElementById("heroChatThread");
+            if (!thread) return;
+            requestAnimationFrame(() => {
+                thread.scrollTop = thread.scrollHeight;
+            });
+        }
+
+        function createHeroChatBubble(role, text = "", options = {}) {
+            const thread = document.getElementById("heroChatThread");
+            if (!thread) return null;
+
+            const row = document.createElement("div");
+            row.className = `hero-chat-row ${role === "user" ? "user" : "assistant"}`;
+
+            const bubble = document.createElement("div");
+            bubble.className = "hero-chat-bubble";
+            bubble.dataset.role = role;
+
+            const meta = document.createElement("div");
+            meta.className = "hero-chat-meta";
+            meta.textContent = role === "user" ? "You" : "Prospera AI";
+            bubble.appendChild(meta);
+
+            const body = document.createElement("div");
+            body.className = "hero-chat-body";
+            if (options.typing) {
+                body.innerHTML = `<span class="hero-chat-typing"><span></span><span></span><span></span></span>`;
+            } else {
+                body.textContent = formatHeroAIText(text || "");
+            }
+            bubble.appendChild(body);
+
+            if (options.results) {
+                appendHeroResultsToBubble(bubble, options.results.properties, options.results.images, options.results.imageAlt);
+            }
+
+            row.appendChild(bubble);
+            thread.appendChild(row);
+            scrollHeroChatToBottom();
+            return bubble;
+        }
+
+        function updateHeroChatBubble(bubble, text) {
+            if (!bubble) return;
+            const body = bubble.querySelector(".hero-chat-body");
+            if (!body) return;
+            body.textContent = formatHeroAIText(text || "");
+            scrollHeroChatToBottom();
+        }
+
+        function appendHeroResultsToBubble(bubble, properties = [], images = [], imageAlt = "Property image") {
+            if (!bubble) return;
+
+            if (
+                (!Array.isArray(properties) || !properties.length) &&
+                (!Array.isArray(images) || !images.length)
+            ) {
+                return;
+            }
+
+            const wrap = document.createElement("div");
+            wrap.className = "hero-chat-results";
+
+            /*
+             * ---------------------------------------------------------
+             * VERIFIED PROPERTY PHOTOS
+             *
+             * get_property returns image objects internally:
+             * { propertyId, title, image }
+             *
+             * Older responses may contain plain strings, so both
+             * formats are supported here.
+             *
+             * Image URLs are used only by the browser to render the
+             * verified image. They are never added to chat text.
+             * ---------------------------------------------------------
+             */
+            if (Array.isArray(images) && images.length > 0) {
+                const title = document.createElement("div");
+                title.className = "hero-ai-result-title";
+                title.textContent = "Verified Property Photos";
+                wrap.appendChild(title);
+
+                const gallery = document.createElement("div");
+                gallery.className = "hero-ai-image-gallery";
+
+                images.slice(0, 6).forEach((imageItem, index) => {
+                    let url = "";
+                    let titleText = "";
+
+                    if (typeof imageItem === "string") {
+                        url = imageItem.trim();
+                    } else if (
+                        imageItem &&
+                        typeof imageItem === "object"
+                    ) {
+                        url =
+                            typeof imageItem.image === "string"
+                                ? imageItem.image.trim()
+                                : "";
+
+                        titleText =
+                            typeof imageItem.title === "string"
+                                ? imageItem.title.trim()
+                                : "";
+                    }
+
+                    if (!url) return;
+
+                    const img = document.createElement("img");
+                    img.src = url;
+                    img.alt =
+                        titleText ||
+                        `${imageAlt || "Property image"} ${index + 1}`;
+                    img.loading = "lazy";
+                    img.addEventListener("click", () => openHeroImage(url, img.alt));
+                    img.addEventListener("error", () => img.remove());
+                    gallery.appendChild(img);
+                });
+
+                if (gallery.children.length) {
+                    wrap.appendChild(gallery);
+                }
+            }
+
+            /*
+             * ---------------------------------------------------------
+             * PROPERTY SEARCH RESULTS
+             *
+             * search_properties = property cards only.
+             * get_property = verified photo gallery only.
+             * ---------------------------------------------------------
+             */
+            if (Array.isArray(properties) && properties.length > 0) {
+                const title = document.createElement("div");
+                title.className = "hero-ai-result-title";
+                title.textContent = `${properties.length} ${properties.length === 1 ? "Property" : "Properties"} Found`;
+                wrap.appendChild(title);
+
+                const grid = document.createElement("div");
+                grid.className = "hero-ai-result-grid";
+
+                properties.slice(0, 6).forEach((property) => {
+                    const card = document.createElement("article");
+                    card.className = "hero-ai-property-card";
+
+                    const image =
+                        Array.isArray(property.images) &&
+                        property.images.length
+                            ? property.images[0]
+                            : "";
+
+                    if (image) {
+                        const img = document.createElement("img");
+                        img.src = image;
+                        img.alt = property.title || "Property";
+                        img.loading = "lazy";
+                        img.addEventListener("click", () => openHeroImage(image, img.alt));
+                        img.addEventListener("error", () => img.remove());
+                        card.appendChild(img);
+                    } else {
+                        const noImage = document.createElement("div");
+                        noImage.style.cssText =
+                            "height:112px;display:grid;place-items:center;color:#94a3b8;font-size:9px;background:#22222A;";
+                        noImage.textContent = "Verified image unavailable";
+                        card.appendChild(noImage);
+                    }
+
+                    const body = document.createElement("div");
+                    body.className = "hero-ai-property-body";
+                    body.innerHTML = `
+                        <div class="hero-ai-property-location"><i class="fa-solid fa-location-dot"></i> ${escapeHTML(heroLocation(property))}</div>
+                        <div class="hero-ai-property-title">${escapeHTML(property.title || "Property")}</div>
+                        <div class="hero-ai-property-price">${escapeHTML(formatHeroPrice(property.price, property.listingType))}</div>
+                        ${property.propertyId ? `<a class="hero-ai-property-link" href="project-details.html?id=${encodeURIComponent(property.propertyId)}">View Property</a>` : ""}
+                    `;
+                    card.appendChild(body);
+                    grid.appendChild(card);
+                });
+
+                wrap.appendChild(grid);
+            }
+
+            bubble.appendChild(wrap);
+            scrollHeroChatToBottom();
+            return wrap;
+        }
+
+        function renderHeroResults(properties = [], images = [], imageAlt = "Property image", bubble = null) {
+            if (!bubble) {
+                bubble = createHeroChatBubble("assistant", "");
+            }
+            return appendHeroResultsToBubble(bubble, properties, images, imageAlt);
+        }
+
+        function clearHeroResults() {
+            /* Chat history is intentionally persistent. New requests must not erase old cards/messages. */
+        }
+
+        function openHeroImage(url, alt = "Property image") {
+            if (!url) return;
+            let lightbox = document.getElementById("heroImageLightbox");
+            if (!lightbox) {
+                lightbox = document.createElement("div");
+                lightbox.id = "heroImageLightbox";
+                lightbox.className = "fixed inset-0 z-[80] hidden items-center justify-center p-5 bg-black/90 backdrop-blur-md";
+                lightbox.innerHTML = `
+                    <button type="button" class="absolute top-5 right-5 w-11 h-11 rounded-full border border-gold-500/40 bg-obsidian-900 text-white flex items-center justify-center" aria-label="Close image"><i class="fa-solid fa-xmark"></i></button>
+                    <img loading="lazy" decoding="async" class="max-w-full max-h-[88vh] object-contain rounded-xl border border-gold-500/30 shadow-gold-glow-lg" alt="">
+                `;
+                lightbox.addEventListener("click", (event) => {
+                    if (event.target === lightbox || event.target.closest("button")) {
+                        lightbox.classList.add("hidden");
+                        lightbox.classList.remove("flex");
+                    }
+                });
+                document.body.appendChild(lightbox);
+            }
+            const img = lightbox.querySelector("img");
+            img.src = url;
+            img.alt = alt;
+            lightbox.classList.remove("hidden");
+            lightbox.classList.add("flex");
+        }
+
+        function setHeroAvatarMode(mode) {
+            [heroAvatar, voiceGirlAvatar].forEach((avatar) => {
+                if (!avatar) return;
+                avatar.classList.remove("ai-speaking", "ai-listening");
+                if (mode === "speaking") avatar.classList.add("ai-speaking");
+                if (mode === "listening") avatar.classList.add("ai-listening");
+            });
+
+            if (voiceModal) {
+                voiceModal.classList.toggle(
+                    "voice-ai-speaking",
+                    mode === "speaking"
+                );
+            }
+        }
+
+        function getFriendlyAIError(error, fallback = "Sorry, the AI advisor is temporarily unavailable. Please try again in a moment.") {
+            const raw = String(error?.message || error || "");
+            const normalized = raw.toLowerCase();
+
+            // Never expose provider billing/quota/internal API details to visitors.
+            if (
+                normalized.includes("credit_balance_exhausted") ||
+                normalized.includes("insufficient_quota") ||
+                normalized.includes("no credits remaining") ||
+                normalized.includes("you have no credits") ||
+                normalized.includes("quota") ||
+                normalized.includes("429")
+            ) {
+                return "AI Advisor is temporarily unavailable. Please try again in a moment.";
+            }
+
+            if (
+                normalized.includes("failed to fetch") ||
+                normalized.includes("networkerror") ||
+                normalized.includes("connection refused") ||
+                normalized.includes("internal server error")
+            ) {
+                return "AI Advisor is temporarily unavailable. Please try again in a moment.";
+            }
+
+            return fallback;
+        }
+
+        function setHeroChatLoading(loading) {
+            heroChatLoading = loading;
+
+            const sendButton = document.getElementById("heroSendButton");
+            if (sendButton) {
+                sendButton.disabled = loading;
+                sendButton.classList.toggle("opacity-50", loading);
+            }
+
+            const status = document.getElementById("heroChatStatus");
+            if (status) status.textContent = loading ? "Thinking..." : (voiceActive ? "Voice active" : "Ready to assist");
+        }
+
+        async function submitHeroQuery() {
+            if (!heroInput || heroChatLoading || voiceActive) return;
+
+            const userMessage = heroInput.value.trim();
+            if (!userMessage) return;
+
+            heroInput.value = "";
+            createHeroChatBubble("user", userMessage);
+            const typingBubble = createHeroChatBubble("assistant", "", { typing: true });
+            setHeroChatLoading(true);
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/chat`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        message: userMessage,
+                        previousResponseId: heroPreviousResponseId
+                    })
+                });
+
+                const result = await response.json().catch(() => ({}));
+                if (!response.ok || result.success === false) {
+                    throw new Error(getFriendlyAIError(result.message, "AI Advisor is temporarily unavailable. Please try again in a moment."));
+                }
+
+                const data = result.data || {};
+                const text =
+                        formatHeroAIText(data.text || "") ||
+                        "I couldn't generate a response right now.";
+                updateHeroChatBubble(typingBubble, text);
+
+                if (data.responseId) heroPreviousResponseId = data.responseId;
+
+                appendHeroResultsToBubble(
+                    typingBubble,
+                    Array.isArray(data.properties) ? data.properties : [],
+                    Array.isArray(data.images) ? data.images : [],
+                    data.imageAlt || "Property image"
+                );
+
+                if (heroSpeechBubble) heroSpeechBubble.textContent = text;
+            } catch (error) {
+                console.warn("Prospera AI chat is temporarily unavailable.");
+                updateHeroChatBubble(
+                    typingBubble,
+                    getFriendlyAIError(error, "AI Advisor is temporarily unavailable. Please try again in a moment.")
+                );
+            } finally {
+                setHeroChatLoading(false);
+            }
+        }
+
+        function setQuery(text) {
+            if (!heroInput || voiceActive) return;
+            heroInput.value = text;
+            submitHeroQuery();
+        }
+
+        function askAILocation(loc) {
+            if (!heroInput || voiceActive) return;
+            heroInput.value =
+                `Find best properties and appreciation rate in ${loc}`;
+            submitHeroQuery();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        function openProjectAIDialog(name) {
+            if (!heroInput || voiceActive) return;
+
+            window.scrollTo({ top: 0, behavior: "smooth" });
+
+            heroInput.value =
+                `Tell me about ${name} pricing, availability and ROI`;
+
+            setTimeout(() => submitHeroQuery(), 250);
+        }
+
+        /* =========================================================
+           REALTIME VOICE CONTROLLER
+           Copied from the working AI Property Finder architecture.
+           ========================================================= */
+
+        function createRealtimeController(handlers = {}) {
+            return {
+                pc: null,
+                dataChannel: null,
+                audioElement: null,
+                localStream: null,
+                connected: false,
+                processedFunctionCalls: new Set(),
+                initialResponseSent: false,
+
+                async connect() {
+                    handlers.onStatus?.("connecting");
+
+                    if (!window.RTCPeerConnection) {
+                        throw new Error(
+                            "This browser does not support WebRTC."
+                        );
+                    }
+
+                    if (
+                        !navigator.mediaDevices ||
+                        !navigator.mediaDevices.getUserMedia
+                    ) {
+                        throw new Error(
+                            "Microphone access is not available in this browser."
+                        );
+                    }
+
+                    this.pc = new RTCPeerConnection();
+
+                    this.audioElement = document.createElement("audio");
+                    this.audioElement.autoplay = true;
+                    this.audioElement.setAttribute("aria-hidden", "true");
+                    document.body.appendChild(this.audioElement);
+
+                    this.pc.ontrack = (event) => {
+                        const remoteStream = event.streams?.[0];
+
+                        if (remoteStream && this.audioElement) {
+                            this.audioElement.srcObject = remoteStream;
+                            this.audioElement
+                                .play()
+                                .catch(() => {});
+                        }
+                    };
+
+                    this.localStream =
+                        await navigator.mediaDevices.getUserMedia({
+                            audio: {
+                                echoCancellation: true,
+                                noiseSuppression: true,
+                                autoGainControl: true
+                            }
+                        });
+
+                    for (const track of this.localStream.getTracks()) {
+                        this.pc.addTrack(track, this.localStream);
+                    }
+
+                    this.dataChannel =
+                        this.pc.createDataChannel("oai-events");
+
+                    this.dataChannel.addEventListener("open", () => {
+                        this.connected = true;
+                        handlers.onStatus?.("connected");
+
+                        /*
+                         * Realtime does not always begin with an assistant
+                         * response automatically. Explicitly create the
+                         * first response so the homepage voice assistant
+                         * greets the user immediately after connecting.
+                         */
+                        if (!this.initialResponseSent) {
+                            this.initialResponseSent = true;
+
+                            setTimeout(() => {
+                                try {
+                                    if (
+                                        this.dataChannel &&
+                                        this.dataChannel.readyState === "open"
+                                    ) {
+                                        this.sendEvent({
+                                            type: "response.create"
+                                        });
+                                    }
+                                } catch (error) {
+                                    console.error(
+                                        "Initial Realtime response error:",
+                                        error
+                                    );
+                                }
+                            }, 50);
+                        }
+                    });
+
+                    this.dataChannel.addEventListener("close", () => {
+                        this.connected = false;
+                        handlers.onStatus?.("disconnected");
+                    });
+
+                    this.dataChannel.addEventListener("error", () => {
+                        handlers.onError?.(
+                            new Error("Realtime data channel error.")
+                        );
+                    });
+
+                    this.dataChannel.addEventListener(
+                        "message",
+                        async (event) => {
+                            try {
+                                await this.handleServerEvent(event);
+                            } catch (error) {
+                                console.error(
+                                    "Realtime event handling error:",
+                                    error
+                                );
+                                handlers.onError?.(error);
+                            }
+                        }
+                    );
+
+                    const offer = await this.pc.createOffer();
+                    await this.pc.setLocalDescription(offer);
+
+                    if (!offer.sdp) {
+                        throw new Error(
+                            "WebRTC SDP offer was not created."
+                        );
+                    }
+
+                    const response = await fetch(
+                        `${API_BASE_URL}/realtime/session?interfaceMode=INDEX_VOICE`,
+                        {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/sdp"
+                            },
+                            body: offer.sdp
+                        }
+                    );
+
+                    const answerSdp = await response.text();
+
+                    if (!response.ok) {
+                        throw new Error(
+                            answerSdp ||
+                            "Failed to create Realtime voice session."
+                        );
+                    }
+
+                    await this.pc.setRemoteDescription({
+                        type: "answer",
+                        sdp: answerSdp
+                    });
+
+                    handlers.onStatus?.("listening");
+                    return true;
+                },
+
+                async handleServerEvent(event) {
+                    let data;
+
+                    try {
+                        data = JSON.parse(event.data);
+                    } catch {
+                        return;
+                    }
+
+                    handlers.onEvent?.(data);
+
+                    if (data.type === "session.created") {
+                        handlers.onStatus?.("connected");
+                        return;
+                    }
+
+                    if (data.type === "input_audio_buffer.speech_started") {
+                        handlers.onStatus?.("listening");
+                        return;
+                    }
+
+                    if (data.type === "input_audio_buffer.speech_stopped") {
+                        handlers.onStatus?.("processing");
+                        return;
+                    }
+
+                    if (
+                        data.type ===
+                            "conversation.item.input_audio_transcription.completed" ||
+                        data.type ===
+                            "input_audio_transcription.completed"
+                    ) {
+                        const transcript =
+                            typeof data.transcript === "string"
+                                ? data.transcript.trim()
+                                : "";
+
+                        if (transcript) {
+                            handlers.onTranscript?.(transcript);
+                        }
+                        return;
+                    }
+
+                    /* Animate avatar while Realtime audio is streaming. */
+                    if (
+                        data.type === "response.audio.delta" ||
+                        data.type === "response.output_audio.delta"
+                    ) {
+                        handlers.onSpeaking?.(true);
+                        return;
+                    }
+
+                    if (
+                        data.type === "response.audio.done" ||
+                        data.type === "response.output_audio.done"
+                    ) {
+                        handlers.onSpeaking?.(false);
+                        return;
+                    }
+
+                    if (
+                        data.type === "response.output_item.done" &&
+                        data.item?.type === "function_call"
+                    ) {
+                        await this.handleFunctionCall(data.item);
+                        return;
+                    }
+
+                    if (
+                        data.type ===
+                        "response.function_call_arguments.done"
+                    ) {
+                        await this.handleFunctionCall({
+                            type: "function_call",
+                            call_id: data.call_id,
+                            name: data.name,
+                            arguments: data.arguments
+                        });
+                        return;
+                    }
+
+                    if (
+                        data.type === "response.audio_transcript.done" ||
+                        data.type ===
+                            "response.output_audio_transcript.done"
+                    ) {
+                        const transcript =
+                            typeof data.transcript === "string"
+                                ? data.transcript.trim()
+                                : "";
+
+                        if (transcript) {
+                            handlers.onAssistantTranscript?.(
+                                transcript
+                            );
+                        }
+                        return;
+                    }
+
+                    if (data.type === "response.output_text.done") {
+                        const text =
+                            typeof data.text === "string"
+                                ? data.text.trim()
+                                : "";
+
+                        if (text) {
+                            handlers.onAssistantTranscript?.(text);
+                        }
+                        return;
+                    }
+
+                    if (data.type === "response.done") {
+                        handlers.onSpeaking?.(false);
+                        handlers.onStatus?.("listening");
+                        return;
+                    }
+
+                    if (data.type === "error") {
+                        const message =
+                            data.error?.message ||
+                            "Realtime API returned an error.";
+
+                        handlers.onError?.(
+                            new Error(message)
+                        );
+                    }
+                },
+
+                async handleFunctionCall(functionCall) {
+                    if (!functionCall?.call_id) return;
+
+                    if (
+                        this.processedFunctionCalls.has(
+                            functionCall.call_id
+                        )
+                    ) {
+                        return;
+                    }
+
+                    this.processedFunctionCalls.add(
+                        functionCall.call_id
+                    );
+
+                    let args = {};
+
+                    try {
+                        args = JSON.parse(
+                            functionCall.arguments || "{}"
+                        );
+                    } catch {
+                        args = {};
+                    }
+
+                    try {
+                        const response = await fetch(
+                            `${API_BASE_URL}/realtime/tool`,
+                            {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type":
+                                        "application/json"
+                                },
+                                body: JSON.stringify({
+                                    name: functionCall.name,
+                                    arguments: args
+                                })
+                            }
+                        );
+
+                        const result = await response.json();
+
+                        if (
+                            !response.ok ||
+                            result.success === false
+                        ) {
+                            throw new Error(
+                                result.message ||
+                                "Realtime tool execution failed."
+                            );
+                        }
+
+                        const modelResult =
+                            result?.data?.model ??
+                            result?.data ??
+                            result;
+
+                        const uiResult =
+                            result?.data?.ui ?? {
+                                properties: [],
+                                images: []
+                            };
+
+                        handlers.onToolResult?.({
+                            name: functionCall.name,
+                            arguments: args,
+                            result: modelResult,
+                            ui: uiResult
+                        });
+
+                        /*
+                         * IMPORTANT:
+                         * Raw image URLs are NOT sent back to the model.
+                         * Only model-safe tool output is returned.
+                         */
+                        this.sendEvent({
+                            type: "conversation.item.create",
+                            item: {
+                                type: "function_call_output",
+                                call_id:
+                                    functionCall.call_id,
+                                output:
+                                    JSON.stringify(
+                                        modelResult
+                                    )
+                            }
+                        });
+
+                        this.sendEvent({
+                            type: "response.create"
+                        });
+                    } catch (error) {
+                        console.error(
+                            "Realtime tool execution failed:",
+                            error
+                        );
+
+                        this.sendEvent({
+                            type: "conversation.item.create",
+                            item: {
+                                type: "function_call_output",
+                                call_id:
+                                    functionCall.call_id,
+                                output:
+                                    JSON.stringify({
+                                        error:
+                                            error.message ||
+                                            "Tool execution failed."
+                                    })
+                            }
+                        });
+
+                        this.sendEvent({
+                            type: "response.create"
+                        });
+                    }
+                },
+
+                sendEvent(event) {
+                    if (
+                        !this.dataChannel ||
+                        this.dataChannel.readyState !== "open"
+                    ) {
+                        throw new Error(
+                            "Realtime connection is not ready."
+                        );
+                    }
+
+                    this.dataChannel.send(
+                        JSON.stringify(event)
+                    );
+                },
+
+                disconnect() {
+                    try {
+                        this.localStream
+                            ?.getTracks()
+                            .forEach((track) => track.stop());
+                    } catch {}
+
+                    this.localStream = null;
+
+                    try {
+                        this.dataChannel?.close();
+                    } catch {}
+
+                    this.dataChannel = null;
+
+                    try {
+                        this.pc?.close();
+                    } catch {}
+
+                    this.pc = null;
+
+                    if (this.audioElement) {
+                        try {
+                            this.audioElement.pause();
+                            this.audioElement.srcObject = null;
+                            this.audioElement.remove();
+                        } catch {}
+                    }
+
+                    this.audioElement = null;
+                    this.connected = false;
+                    this.processedFunctionCalls.clear();
+                    this.initialResponseSent = false;
+
+                    handlers.onStatus?.("disconnected");
+                }
+            };
+        }
+
+        /* =========================================================
+           VOICE MODE
+           ========================================================= */
+
+        function updateVoiceModal(status) {
+            if (!modalVoiceStatus || !modalVoiceTranscript) return;
+
+            const config = {
+                connecting: [
+                    "Connecting to Prospera AI...",
+                    "Starting your secure voice consultation."
+                ],
+                connected: [
+                    "You're connected",
+                    "Speak naturally — Prospera AI is listening."
+                ],
+                listening: [
+                    "Listening...",
+                    "Tell me your city, budget, property type or requirement."
+                ],
+                processing: [
+                    "Thinking...",
+                    "Prospera AI is processing what you said."
+                ],
+                disconnected: [
+                    "Voice session ended",
+                    "Close this window or start a new voice consultation."
+                ]
+            };
+
+            const current =
+                config[status] || config.listening;
+
+            modalVoiceStatus.textContent = current[0];
+
+            if (
+                status !== "listening" ||
+                !modalVoiceTranscript.textContent
+            ) {
+                modalVoiceTranscript.textContent = current[1];
+            }
+        }
+
+        function setInlineVoiceStatus(status, detail = "") {
+            const hint = document.getElementById("heroVoiceHint");
+            const text = document.getElementById("heroVoiceStatusText");
+            const dot = document.getElementById("heroVoiceStatusDot");
+            const mic = document.getElementById("heroMicButton");
+            if (!hint || !text) return;
+
+            hint.classList.remove("is-listening", "is-speaking", "is-processing");
+
+            const config = {
+                idle: ["Tap the mic to speak", "idle"],
+                connecting: ["Connecting to Prospera AI...", "processing"],
+                connected: ["Connected — speak naturally", "listening"],
+                listening: ["Listening...", "listening"],
+                processing: ["Thinking...", "processing"],
+                speaking: ["Prospera AI is speaking...", "speaking"],
+                error: ["Voice connection error", "idle"]
+            };
+
+            const current = config[status] || config.idle;
+            text.textContent = detail || current[0];
+            if (current[1] === "listening") hint.classList.add("is-listening");
+            if (current[1] === "speaking") hint.classList.add("is-speaking");
+            if (current[1] === "processing") hint.classList.add("is-processing");
+
+            if (mic) {
+                mic.classList.toggle("is-active", status === "connecting" || status === "connected" || status === "listening" || status === "processing" || status === "speaking");
+                mic.setAttribute("aria-pressed", String(voiceActive));
+                mic.title = voiceActive ? "Stop voice conversation" : "Speak to AI";
+            }
+
+            if (dot) {
+                dot.className = "inline-flex w-2 h-2 rounded-full";
+                if (current[1] === "listening") dot.classList.add("bg-gold-400");
+                else if (current[1] === "speaking") dot.classList.add("bg-gold-500");
+                else if (current[1] === "processing") dot.classList.add("bg-gold-400");
+                else dot.classList.add("bg-black");
+            }
+        }
+
+        function openVoiceModalUI() {
+            /* Kept as a compatibility shim. Voice is now always inline on the homepage. */
+            setInlineVoiceStatus("connecting");
+        }
+
+        function closeVoiceModal() {
+            stopProsperaVoice();
+        }
+
+        async function triggerVoiceModal() {
+            if (voiceActive) {
+                stopProsperaVoice();
+                setInlineVoiceStatus("idle");
+                return;
+            }
+
+            try {
+                setInlineVoiceStatus("connecting");
+                await startProsperaVoice();
+            } catch (error) {
+                console.warn("Prospera voice could not start.");
+                setInlineVoiceStatus(
+                    "error",
+                    getFriendlyAIError(error, "AI Advisor is temporarily unavailable. Please try again in a moment.")
+                );
+            }
+        }
+
+        async function startProsperaVoice() {
+            if (realtimeInstance) return;
+
+            voiceActive = true;
+            lastVoiceAssistantTranscript = "";
+            activeVoiceAssistantBubble = null;
+
+            /* Voice mode is deliberately independent of the text input. */
+            if (heroInput) {
+                heroInput.disabled = true;
+                heroInput.placeholder =
+                    "Voice consultation active";
+            }
+
+            setHeroAvatarMode("listening");
+
+            const controller =
+                createRealtimeController({
+                    onStatus: (status) => {
+                        setInlineVoiceStatus(status);
+
+                        if (status === "listening") {
+                            setHeroAvatarMode("listening");
+                        }
+
+                        if (status === "processing") {
+                            setHeroAvatarMode("listening");
+                        }
+
+                        if (status === "disconnected") {
+                            setHeroAvatarMode("idle");
+                        }
+                    },
+
+                    onTranscript: (transcript) => {
+                        const clean = removeImageUrls(transcript);
+                        if (!clean.trim()) return;
+
+                        if (modalVoiceTranscript) modalVoiceTranscript.textContent = `You: "${clean}"`;
+                        if (heroSpeechBubble) heroSpeechBubble.textContent = clean;
+                        setInlineVoiceStatus("listening", "Listening...");
+
+                        const last = document.querySelector('#heroChatThread .hero-chat-row.user:last-child .hero-chat-body');
+                        if (!last || last.textContent !== clean) {
+                            createHeroChatBubble("user", clean);
+                        }
+                    },
+
+                    onAssistantTranscript: (transcript) => {
+                        const clean = removeImageUrls(transcript);
+                        if (!clean || clean === lastVoiceAssistantTranscript) return;
+
+                        lastVoiceAssistantTranscript = clean;
+                        if (modalVoiceTranscript) modalVoiceTranscript.textContent = `Prospera AI: "${clean}"`;
+                        if (heroSpeechBubble) heroSpeechBubble.textContent = clean;
+                        setInlineVoiceStatus("speaking", "Prospera AI is speaking...");
+
+                        activeVoiceAssistantBubble = createHeroChatBubble("assistant", clean);
+                    },
+
+                    onSpeaking: (isSpeaking) => {
+                        setHeroAvatarMode(isSpeaking ? "speaking" : "listening");
+                        setInlineVoiceStatus(isSpeaking ? "speaking" : "listening");
+                        if (voiceModal) voiceModal.classList.toggle("voice-ai-speaking", isSpeaking);
+                    },
+
+                    onToolResult: ({ name, ui }) => {
+                        /*
+                         * ---------------------------------------------------------
+                         * STRICT VISUAL INTENT SEPARATION
+                         *
+                         * search_properties
+                         *      -> property cards only
+                         *
+                         * get_property
+                         *      -> verified photo gallery only
+                         *
+                         * Other tools do not render property UI.
+                         * ---------------------------------------------------------
+                         */
+                        const properties =
+                            name === "search_properties" &&
+                            Array.isArray(ui?.properties)
+                                ? ui.properties
+                                : [];
+
+                        const images =
+                            name === "get_property" &&
+                            Array.isArray(ui?.images)
+                                ? ui.images
+                                : [];
+
+                        if (!properties.length && !images.length) {
+                            return;
+                        }
+
+                        if (!activeVoiceAssistantBubble) {
+                            activeVoiceAssistantBubble = createHeroChatBubble(
+                                "assistant",
+                                images.length
+                                    ? "Verified photos are shown below."
+                                    : "I found these verified properties for you."
+                            );
+                        }
+
+                        appendHeroResultsToBubble(
+                            activeVoiceAssistantBubble,
+                            properties,
+                            images,
+                            "Property image"
+                        );
+
+                        /*
+                         * INDEX_VOICE is the homepage voice experience, so it
+                         * may tell the user that the visual result is available
+                         * in the homepage chat.
+                         */
+                        if (images.length && modalVoiceTranscript) {
+                            modalVoiceTranscript.textContent =
+                                "Verified photos are shown in the chat. You can close voice mode and view them there.";
+                        }
+                    },
+
+                    onError: (error) => {
+                        console.warn("Prospera realtime voice is temporarily unavailable.");
+                        setInlineVoiceStatus(
+                            "error",
+                            getFriendlyAIError(error, "AI Advisor is temporarily unavailable. Please try again in a moment.")
+                        );
+                        setHeroAvatarMode("idle");
+                    }
+                });
+
+            realtimeInstance = controller;
+
+            try {
+                await controller.connect();
+            } catch (error) {
+                controller.disconnect();
+                realtimeInstance = null;
+                voiceActive = false;
+
+                if (heroInput) {
+                    heroInput.disabled = false;
+                    heroInput.placeholder =
+                        "e.g. 3 BHK in Gomti Nagar under 1.5 Cr with ready possession...";
+                }
+
+                setHeroAvatarMode("idle");
+                setInlineVoiceStatus("idle");
+                throw error;
+            }
+        }
+
+        function stopProsperaVoice() {
+            if (realtimeInstance) {
+                realtimeInstance.disconnect();
+                realtimeInstance = null;
+            }
+
+            voiceActive = false;
+
+            if (heroInput) {
+                heroInput.disabled = false;
+                heroInput.placeholder =
+                    "e.g. 3 BHK in Gomti Nagar under 1.5 Cr with ready possession...";
+            }
+
+            setHeroAvatarMode("idle");
+            setInlineVoiceStatus("idle");
+        }
+
+
+        function triggerDirectConnectModal(projectName, builderName) {
+            const nameEl = document.getElementById('modal-project-name');
+            const modal = document.getElementById('direct-modal');
+            if (nameEl) nameEl.innerText = projectName + ' • ' + builderName;
+            if (modal) modal.classList.remove('hidden');
+        }
+
+        function closeDirectConnectModal() {
+            document.getElementById('direct-modal')?.classList.add('hidden');
+        }
+
+        function handleModalSubmit(event) {
+            event.preventDefault();
+            closeDirectConnectModal();
+            showToast('Success! Direct developer sales team has been notified. They will call you shortly.');
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const messageEl = document.getElementById('toast-message');
+            if (!toast) return;
+            if (messageEl) messageEl.innerText = message;
+            toast.classList.remove('hidden');
+            window.clearTimeout(window.__prosperaToastTimer);
+            window.__prosperaToastTimer = window.setTimeout(() => toast.classList.add('hidden'), 4000);
+        }
+
+        function sendQuickPrompt(text) {
+            if (!heroInput || voiceActive) return;
+            heroInput.value = text;
+            submitHeroQuery();
+            document.getElementById("ai-advisor")?.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+
+        /* =========================================================
+           PROSPERA PROPERTY EXPLORER
+           UI works locally for now. Backend listing data can be connected later.
+           ========================================================= */
+        const prosperaFilterOptions = {
+            budget: [
+                "Any budget",
+                "Under ₹50 Lakh",
+                "₹50 Lakh – ₹1 Cr",
+                "₹1 Cr – ₹2 Cr",
+                "₹2 Cr – ₹5 Cr",
+                "₹5 Cr+"
+            ],
+            area: [
+                "Any area",
+                "Under 1,000 sq ft",
+                "1,000 – 2,000 sq ft",
+                "2,000 – 5,000 sq ft",
+                "5,000 – 10,000 sq ft",
+                "10,000+ sq ft"
+            ],
+            location: [
+                "Any location",
+                "Gomti Nagar",
+                "Gomti Nagar Extension",
+                "Sushant Golf City",
+                "Shaheed Path",
+                "Sultanpur Road",
+                "Faizabad Road",
+                "Indira Nagar",
+                "Aliganj",
+                "Mahanagar",
+                "Vrindavan Yojna",
+                "Mohanlalganj"
+            ],
+            "area-unit": [
+                "Sq Ft",
+                "Sq Yd",
+                "Acre",
+                "Bigha"
+            ]
+        };
+
+        function getPropertyFilterType(button) {
+            const label = button?.querySelector("small")?.textContent?.trim().toLowerCase() || "";
+            if (label === "budget") return "budget";
+            if (label === "area unit") return "area-unit";
+            if (label === "location") return "location";
+            return "area";
+        }
+
+        function closePropertyFilterMenus(exceptWrap = null) {
+            document.querySelectorAll("#property-types .property-filter-wrap.is-open").forEach((wrap) => {
+                if (wrap !== exceptWrap) wrap.classList.remove("is-open");
+            });
+        }
+
+        function togglePropertyFilter(button) {
+            if (!button) return;
+            const wrap = button.closest(".property-filter-wrap");
+            if (!wrap) return;
+            const willOpen = !wrap.classList.contains("is-open");
+            closePropertyFilterMenus(wrap);
+            wrap.classList.toggle("is-open", willOpen);
+            button.setAttribute("aria-expanded", String(willOpen));
+        }
+
+        function selectPropertyFilterOption(button, option) {
+            if (!button || !option) return;
+            const wrap = button.closest(".property-filter-wrap");
+            const strong = button.querySelector("strong");
+            const type = getPropertyFilterType(button);
+
+            if (strong) strong.textContent = option;
+            button.dataset.selectedValue = option;
+            button.dataset.filterType = type;
+            button.classList.add("is-selected");
+
+            const baseQuery = button.dataset.basePropertyQuery || button.dataset.propertyQuery || "";
+            button.dataset.basePropertyQuery = baseQuery;
+            button.dataset.propertyQuery = option.toLowerCase().startsWith("any ") || option === "Sq Ft"
+                ? baseQuery
+                : `${baseQuery} — ${option}`;
+
+            wrap?.querySelectorAll(".property-filter-option").forEach((item) => {
+                item.classList.toggle("is-selected", item.dataset.value === option);
+                item.setAttribute("aria-selected", String(item.dataset.value === option));
+            });
+
+            if (wrap) wrap.classList.remove("is-open");
+            button.setAttribute("aria-expanded", "false");
+            handlePropertySelection(button);
+        }
+
+        function setupPropertyFilterDropdowns() {
+            const root = document.getElementById("property-types");
+            if (!root) return;
+
+            root.querySelectorAll(".property-filter-select").forEach((button) => {
+                if (button.dataset.dropdownReady === "true") return;
+                button.dataset.dropdownReady = "true";
+
+                const type = getPropertyFilterType(button);
+                const currentValue = button.querySelector("strong")?.textContent?.trim() || prosperaFilterOptions[type]?.[0] || "Any";
+                const options = prosperaFilterOptions[type] || [];
+                const wrap = document.createElement("div");
+                wrap.className = "property-filter-wrap";
+
+                button.parentNode.insertBefore(wrap, button);
+                wrap.appendChild(button);
+                button.setAttribute("aria-haspopup", "listbox");
+                button.setAttribute("aria-expanded", "false");
+                button.dataset.filterType = type;
+                button.dataset.basePropertyQuery = button.dataset.propertyQuery || "";
+
+                const menu = document.createElement("div");
+                menu.className = "property-filter-menu";
+                menu.setAttribute("role", "listbox");
+                menu.setAttribute("aria-label", `${type.replace("-", " ")} options`);
+
+                options.forEach((option) => {
+                    const item = document.createElement("button");
+                    item.type = "button";
+                    item.className = "property-filter-option";
+                    item.dataset.value = option;
+                    item.setAttribute("role", "option");
+                    item.setAttribute("aria-selected", String(option === currentValue));
+                    item.textContent = option;
+                    if (option === currentValue) item.classList.add("is-selected");
+                    item.addEventListener("click", (event) => {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        selectPropertyFilterOption(button, option);
+                    });
+                    menu.appendChild(item);
+                });
+
+                wrap.appendChild(menu);
+                button.onclick = (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    togglePropertyFilter(button);
+                };
+            });
+
+            document.addEventListener("click", (event) => {
+                if (!event.target.closest("#property-types .property-filter-wrap")) {
+                    closePropertyFilterMenus();
+                }
+            });
+
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Escape") closePropertyFilterMenus();
+            });
+        }
+
+        function handlePropertySelection(button) {
+            if (!button) return;
+            const root = document.getElementById("property-types");
+            const query = button.dataset.propertyQuery || "";
+            const options = button.closest(".property-options");
+
+            if (button.classList.contains("property-search-action")) {
+                root?.querySelectorAll(".property-search-action").forEach((item) => item.classList.remove("is-active"));
+                button.classList.add("is-active");
+            } else if (button.classList.contains("property-option-chip")) {
+                options?.querySelectorAll(".property-option-chip").forEach((item) => item.classList.remove("is-selected"));
+                button.classList.add("is-selected");
+            } else if (button.classList.contains("property-filter-select")) {
+                options?.querySelectorAll(".property-filter-select").forEach((item) => item.classList.remove("is-selected"));
+                button.classList.add("is-selected");
+            }
+
+            const status = document.getElementById("property-results-status");
+            if (status) {
+                status.textContent = query ? "Selection saved" : "Ready for your selection";
+            }
+
+            const results = document.getElementById("property-results-shell");
+            if (results) {
+                results.classList.add("is-ready");
+                results.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            }
+
+            // Future backend hook: query contains the exact selection to send to your API.
+            window.prosperaPropertySelection = query;
+        }
+
+        /* =========================================================
+           PROSPERA PROPERTY EXPLORER
+           ========================================================= */
+        const prosperaPropertyDefaults = {
+            residential: "flat",
+            commercial: "office",
+            other: "agri"
+        };
+
+        function selectPropertyCategory(category) {
+            const root = document.getElementById("property-types");
+            if (!root) return;
+
+            const clickedTab = root.querySelector(`.property-category-tab[data-category="${category}"]`);
+            const wasActive = clickedTab?.classList.contains("is-active");
+
+            if (wasActive) {
+                // Clicking the currently open category closes it.
+                root.querySelectorAll(".property-category-tab").forEach((tab) => {
+                    tab.classList.remove("is-active");
+                    tab.setAttribute("aria-selected", "false");
+                });
+                root.querySelectorAll(".property-category-panel").forEach((panel) => {
+                    panel.classList.remove("is-active");
+                });
+                return;
+            }
+
+            root.querySelectorAll(".property-category-tab").forEach((tab) => {
+                const active = tab.dataset.category === category;
+                tab.classList.toggle("is-active", active);
+                tab.setAttribute("aria-selected", String(active));
+            });
+
+            root.querySelectorAll(".property-category-panel").forEach((panel) => {
+                panel.classList.toggle("is-active", panel.dataset.panel === category);
+            });
+
+            selectPropertySubtype(category, prosperaPropertyDefaults[category]);
+        }
+
+        function selectPropertySubtype(category, subtype) {
+            const panel = document.querySelector(`#property-types .property-category-panel[data-panel="${category}"]`);
+            if (!panel) return;
+
+            panel.querySelectorAll(".property-subtype-card").forEach((card) => {
+                card.classList.toggle("is-active", card.dataset.subtype === subtype);
+            });
+
+            panel.querySelectorAll(".property-options").forEach((options) => {
+                options.style.display = options.dataset.options === `${category}-${subtype}` ? "block" : "none";
+            });
+        }
+
+        /* Keep the first category ready as soon as the homepage loads. */
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", setupPropertyFilterDropdowns);
+        } else {
+            setupPropertyFilterDropdowns();
+        }
+
+        /* =========================================================
+           OTHER EXISTING INDEX FUNCTIONS
+           ========================================================= */
+
+        function toggleAboutDropdown(event, id) {
+            if (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            const wrap = document.getElementById(id);
+            if (!wrap) return;
+            const isOpen = wrap.classList.toggle("is-open");
+            const trigger = wrap.querySelector(".prospera-about-trigger, .prospera-mobile-about-trigger");
+            if (trigger) trigger.setAttribute("aria-expanded", String(isOpen));
+        }
+
+        document.addEventListener("click", (event) => {
+            document.querySelectorAll(".prospera-about-dropdown.is-open, .prospera-mobile-about.is-open").forEach((wrap) => {
+                if (!wrap.contains(event.target)) {
+                    wrap.classList.remove("is-open");
+                    const trigger = wrap.querySelector(".prospera-about-trigger, .prospera-mobile-about-trigger");
+                    if (trigger) trigger.setAttribute("aria-expanded", "false");
+                }
+            });
+        });
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById("mobileMenu");
+            const icon = document.getElementById("mobileMenuIcon");
+
+            if (!menu) return;
+
+            const hidden = menu.classList.contains("hidden");
+            menu.classList.toggle("hidden", !hidden);
+
+            if (icon) {
+                icon.classList.toggle("fa-bars", !hidden);
+                icon.classList.toggle("fa-xmark", hidden);
+            }
+        }
+
+        function filterProjects(category, btn) {
+            const buttons =
+                document.querySelectorAll(".filter-btn");
+
+            buttons.forEach((button) => {
+                button.classList.remove(
+                    "active",
+                    "bg-gold-500",
+                    "text-obsidian-950"
+                );
+            });
+
+            btn.classList.add(
+                "active",
+                "bg-gold-500",
+                "text-obsidian-950"
+            );
+
+            const cards =
+                document.querySelectorAll(".project-card");
+
+            cards.forEach((card) => {
+                card.style.display =
+                    category === "all" ||
+                    card.classList.contains(category)
+                        ? "flex"
+                        : "none";
+            });
+        }
+
+        /*
+         * Floating advisor on normal pages should lead to the full
+         * AI experience. It is no longer a fake/simulated chat drawer.
+         */
+        function toggleFloatingChat() {
+            window.location.href = "ai-property-finder.html";
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                submitHeroQuery();
+            }
+        }
+
+        function sendQuickMessage(text) {
+            if (!voiceActive && heroInput) {
+                heroInput.value = text;
+                submitHeroQuery();
+            }
+        }
+
+        function sendFloatingMessage() {
+            /*
+             * Legacy compatibility:
+             * the old floating drawer was simulated. Real chat lives
+             * in the main AI hero and the full AI Finder page.
+             */
+            const value =
+                document.getElementById("floatingInput")?.value?.trim();
+
+            if (!value) return;
+
+            if (heroInput) {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+                heroInput.value = value;
+                submitHeroQuery();
+            }
+        }
+
+        heroInput?.addEventListener("keydown", handleKeyPress);
+
+        window.addEventListener("beforeunload", () => {
+            realtimeInstance?.disconnect();
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (
+                event.key === "Escape" &&
+                voiceActive
+            ) {
+                closeVoiceModal();
+            }
+        });
+    </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const track = document.querySelector('.prospera-location-track');
+  if (!track || track.dataset.loopReady === 'true') return;
+  const cards = Array.from(track.children);
+  cards.forEach(card => track.appendChild(card.cloneNode(true)));
+  track.dataset.loopReady = 'true';
+});
+</script>
+
+<script id="prospera-success-location-controls">document.addEventListener('DOMContentLoaded',function(){const shell=document.querySelector('.prospera-location-carousel-shell'),scroller=shell?.querySelector('.prospera-location-carousel'),track=shell?.querySelector('.prospera-location-track');if(track){const cards=[...track.children].filter(e=>e.tagName==='ARTICLE');if(cards.length>20)cards.slice(20).forEach(e=>e.remove())}if(shell&&scroller&&track){const step=()=>{const c=track.querySelector('.prospera-location-slide');return c?c.getBoundingClientRect().width+(parseFloat(getComputedStyle(track).gap)||18):scroller.clientWidth*.75};shell.querySelector('.prospera-location-prev')?.addEventListener('click',()=>scroller.scrollBy({left:-step()*2,behavior:'smooth'}));shell.querySelector('.prospera-location-next')?.addEventListener('click',()=>scroller.scrollBy({left:step()*2,behavior:'smooth'}))}const st=document.querySelector('.prospera-success-track');if(st&&!st.dataset.loopReady){[...st.children].forEach(c=>st.appendChild(c.cloneNode(true)));st.dataset.loopReady='true'}});</script>
+
+
+<script id="prospera-property-results-slider-js">
+(function(){
+  const state = { index: 0, items: [] };
+
+  function getVisibleCount(){
+    if (window.innerWidth <= 640) return 1;
+    if (window.innerWidth <= 900) return 2;
+    return 3;
+  }
+
+  function updateSlider(){
+    const track=document.getElementById("property-results-track");
+    const prev=document.getElementById("property-results-prev");
+    const next=document.getElementById("property-results-next");
+    const pagination=document.getElementById("property-results-pagination");
+    if(!track || !prev || !next) return;
+
+    const visible=getVisibleCount();
+    const maxIndex=Math.max(0, state.items.length-visible);
+    state.index=Math.min(state.index,maxIndex);
+
+    const gap=window.innerWidth <= 640 ? 10 : 16;
+    const slideWidth=(track.parentElement.clientWidth-gap*(visible-1))/visible;
+    const offset=state.index*(slideWidth+gap);
+    track.style.transform=`translateX(-${offset}px)`;
+
+    prev.disabled=state.index<=0;
+    next.disabled=state.index>=maxIndex || state.items.length===0;
+
+    if(pagination){
+      pagination.innerHTML="";
+      const pages=Math.max(1,maxIndex+1);
+      if(state.items.length<=visible){
+        pagination.style.display="none";
+      }else{
+        pagination.style.display="flex";
+        for(let i=0;i<pages;i++){
+          const dot=document.createElement("button");
+          dot.type="button";
+          dot.className=i===state.index?"is-active":"";
+          dot.setAttribute("aria-label",`Show property slide ${i+1}`);
+          dot.addEventListener("click",()=>{state.index=i;updateSlider();});
+          pagination.appendChild(dot);
+        }
+      }
+    }
+  }
+
+  function setup(){
+    document.getElementById("property-results-prev")?.addEventListener("click",()=>{
+      state.index=Math.max(0,state.index-1);
+      updateSlider();
+    });
+    document.getElementById("property-results-next")?.addEventListener("click",()=>{
+      const visible=getVisibleCount();
+      state.index=Math.min(Math.max(0,state.items.length-visible),state.index+1);
+      updateSlider();
+    });
+    window.addEventListener("resize",updateSlider);
+    updateSlider();
+  }
+
+  /* Public backend hook.
+     Pass an array of property objects later; no page expansion occurs. */
+  window.renderProsperaPropertyResults=function(properties){
+    const track=document.getElementById("property-results-track");
+    const shell=document.getElementById("property-results-shell");
+    const status=document.getElementById("property-results-status");
+    if(!track) return;
+
+    state.items=Array.isArray(properties)?properties:[];
+    state.index=0;
+
+    if(!state.items.length){
+      track.innerHTML=`<div class="property-result-empty">
+        <span class="property-result-empty-icon"><i class="fa-solid fa-building-circle-check"></i></span>
+        <div><strong>No matching properties found</strong><p>Try a different selection or connect your backend listing data.</p></div>
+      </div>`;
+      if(status) status.textContent="No properties found";
+      updateSlider();
+      return;
+    }
+
+    track.innerHTML=state.items.map((property,idx)=>{
+      const image=property.image || property.imageUrl || "";
+      const builder=property.builderName || property.builder || "Developer";
+      const title=property.title || property.name || "Property";
+      const location=property.location || property.locality || property.city || "Location available";
+      const type=property.type || property.propertyType || "Property";
+      const possession=property.possession || property.status || "Available";
+      const price=property.price || property.startingPrice || "Price on request";
+      const bedrooms=property.bedrooms || property.bhk || "—";
+      const safeImage=image ? `<img class="property-result-card-image" src="${image}" alt="${title} in ${location}" loading="lazy" decoding="async">` : `<div class="property-result-card-image" aria-hidden="true"></div>`;
+      return `<article class="property-result-card">
+        ${safeImage}
+        <div class="property-result-card-body">
+          <div class="property-result-card-builder">${builder}</div>
+          <h4 class="property-result-card-title">${title}</h4>
+          <div class="property-result-card-location"><i class="fa-solid fa-location-dot"></i> ${location}</div>
+          <div class="property-result-card-meta">
+            <div><span>Type</span><strong>${type}</strong></div>
+            <div><span>BHK</span><strong>${bedrooms}</strong></div>
+            <div><span>Status</span><strong>${possession}</strong></div>
+          </div>
+          <div class="property-result-card-footer">
+            <div class="property-result-card-price">${price}</div>
+            <button type="button" class="property-result-card-button" data-property-index="${idx}">View Details</button>
+          </div>
+        </div>
+      </article>`;
+    }).join("");
+
+    if(status) status.textContent=`${state.items.length} ${state.items.length===1?"property":"properties"} found`;
+    updateSlider();
+  };
+
+  if(document.readyState==="loading"){
+    document.addEventListener("DOMContentLoaded",setup);
+  }else{
+    setup();
+  }
+})();
+</script>
+
+
+<!-- Explore Project Details Modal -->
+<div id="projectModal" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 bg-[#172033]/55 backdrop-blur-sm">
+  <div class="w-full max-w-md rounded-2xl bg-white border border-slate-200 shadow-2xl overflow-hidden">
+    <div class="flex items-center justify-between px-5 py-4 border-b border-slate-200">
+      <div>
+        <span class="text-[10px] font-bold uppercase tracking-[0.16em] text-[#806118]">Prospera AI Property</span>
+        <h3 id="modalTitle" class="mt-1 text-lg font-bold text-[#172033]">Project Details</h3>
+      </div>
+      <button type="button" onclick="closeProjectModal()" class="w-9 h-9 rounded-full bg-transparent border border-gold-500/30 text-black hover:text-gold-500 hover:border-gold-500 transition-colors flex items-center justify-center cursor-pointer" aria-label="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="p-5 space-y-4">
+      <div class="grid grid-cols-2 gap-3">
+        <div class="rounded-xl bg-[#FAF8F5] border border-gold-500/25 p-3"><span class="block text-[10px] uppercase tracking-wider text-black/60">Builder</span><strong id="modalBuilder" class="block mt-1 text-sm text-black">—</strong></div>
+        <div class="rounded-xl bg-[#FAF8F5] border border-gold-500/25 p-3"><span class="block text-[10px] uppercase tracking-wider text-black/60">Location</span><strong id="modalCity" class="block mt-1 text-sm text-black">—</strong></div>
+      </div>
+      <div class="rounded-xl bg-[#FAF8F5] border border-gold-500/25 p-4">
+        <span class="block text-[10px] uppercase tracking-wider text-black/60">Starting Price</span>
+        <strong id="modalPrice" class="block mt-1 text-xl text-black">—</strong>
+      </div>
+      <p class="text-xs leading-5 text-slate-500">Ask Prospera AI for availability, project comparisons, location fit or site-visit guidance.</p>
+      <a href="ai-property-finder.html" class="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl btn-prospera-black text-xs font-bold uppercase tracking-wider">Talk to AI Advisor <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</div>
+
+
+<script id="prospera-explore-functionality">
+let selectedBudget = null;
+let selectedTypes = [];
+function setBudgetFilter(budget, btn){
+  const buttons=document.querySelectorAll('.budget-chip');
+  if(selectedBudget===budget){selectedBudget=null;} else {selectedBudget=budget;}
+  buttons.forEach(b=>b.classList.remove('border-gold-500','bg-gold-500/20','text-gold-300'));
+  if(selectedBudget && btn){btn.classList.add('border-gold-500');}
+  filterProjectsLive();
+}
+function toggleTypeChip(btn,type){
+  if(selectedTypes.includes(type)){selectedTypes=selectedTypes.filter(t=>t!==type);}
+  else{selectedTypes.push(type);}
+  document.querySelectorAll('.type-chip').forEach(b=>b.classList.remove('border-gold-500'));
+  selectedTypes.forEach(t=>document.querySelectorAll('.type-chip').forEach(b=>{if(b.textContent.trim().toLowerCase()===t.toLowerCase() || (t==='Office'&&b.textContent.includes('Office')) || (t==='Commercial'&&b.textContent.includes('Commercial')) || (t==='Retail'&&b.textContent.includes('Retail')) || (t==='Farm'&&b.textContent.includes('Farm'))) b.classList.add('border-gold-500');}));
+  filterProjectsLive();
+}
+function filterProjectsLive(){
+  const search=(document.getElementById('searchInput')?.value||'').toLowerCase().trim();
+  const city=document.getElementById('cityFilter')?.value||'all';
+  const sector=(document.getElementById('sectorFilter')?.value||'').toLowerCase().trim();
+  const status=[...document.querySelectorAll('#filterSidebar input[type="checkbox"]')].filter(x=>['Ready to Move','Under Construction','New Launch','Possession Soon'].includes(x.value)&&x.checked).map(x=>x.value);
+  const cards=[...document.querySelectorAll('.project-item')];
+  let count=0;
+  cards.forEach(card=>{
+    const name=(card.dataset.name||'').toLowerCase(), builder=(card.dataset.builder||'').toLowerCase(), cardCity=(card.dataset.city||'').toLowerCase(), cardSector=(card.dataset.sector||'').toLowerCase(), type=card.dataset.type||'', cardStatus=card.dataset.status||'';
+    const price=parseFloat(card.dataset.price||'0');
+    let budgetOk=true;
+    if(selectedBudget){
+      budgetOk = selectedBudget==='20L-50L' ? price>=0.20&&price<0.50 : selectedBudget==='50L-1Cr' ? price>=0.50&&price<1 : selectedBudget==='1Cr-2Cr' ? price>=1&&price<2 : price>=2;
+    }
+    const okSearch=!search||name.includes(search)||builder.includes(search)||cardCity.includes(search)||cardSector.includes(search);
+    const okCity=city==='all'||cardCity===city.toLowerCase();
+    const okSector=!sector||cardSector.includes(sector);
+    const okType=!selectedTypes.length||selectedTypes.includes(type);
+    const okStatus=!status.length||status.includes(cardStatus);
+    const show=okSearch&&okCity&&okSector&&okType&&okStatus&&budgetOk;
+    card.style.display=show?'flex':'none'; if(show)count++;
+  });
+  const out=document.getElementById('resultsCount'); if(out) out.textContent=count;
+}
+function clearSearch(){const el=document.getElementById('searchInput');if(el)el.value='';filterProjectsLive();}
+function resetAllFilters(){
+  const s=document.getElementById('searchInput'); if(s)s.value='';
+  const c=document.getElementById('cityFilter'); if(c)c.value='all';
+  const sec=document.getElementById('sectorFilter'); if(sec)sec.value='';
+  selectedBudget=null;selectedTypes=[];
+  document.querySelectorAll('.budget-chip,.type-chip').forEach(b=>b.classList.remove('border-gold-500','bg-gold-500/20','text-gold-300'));
+  document.querySelectorAll('#filterSidebar input[type="checkbox"]').forEach(x=>{if(x.value!=='')x.checked=(x.id==='reraCheck');});
+  filterProjectsLive();
+}
+function openProjectModal(name,builder,city,price){
+  const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v;};
+  set('modalTitle',name);set('modalBuilder',builder);set('modalCity',city);set('modalPrice',price);
+  const modal=document.getElementById('projectModal');if(modal){modal.classList.remove('hidden');modal.classList.add('flex');document.body.classList.add('overflow-hidden');}
+}
+function closeProjectModal(){const modal=document.getElementById('projectModal');if(modal){modal.classList.add('hidden');modal.classList.remove('flex');document.body.classList.remove('overflow-hidden');}}
+function toggleMobileFilters(){const sidebar=document.getElementById('filterSidebar');if(!sidebar)return;sidebar.classList.toggle('hidden');}
+document.addEventListener('DOMContentLoaded',()=>{filterProjectsLive();document.getElementById('projectModal')?.addEventListener('click',e=>{if(e.target.id==='projectModal')closeProjectModal();});});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeProjectModal();});
+</script>
+
+  <script src="theme.js"></script>
+</body>
+</html>
+
+

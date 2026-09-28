@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en-IN">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Prospera AI Realtors | Verified Real Estate Builders Directory | Direct Developer Connect</title>
+  <meta content="Explore verified real estate builders, projects, locations and development portfolios across India with Prospera AI Realtors." name="description" />
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots" />
+  <meta content="Prospera AI Realtors" name="author" />
+  <meta content="#FAF8F5" name="theme-color" />
+  <meta content="website" property="og:type" />
+  <meta content="Prospera AI Realtors" property="og:site_name" />
+  <meta content="Prospera AI Realtors | Verified Real Estate Builders Directory" property="og:title" />
+  <meta content="Explore builders, their current projects and locations, and connect directly through Prospera AI Realtors." property="og:description" />
+  <meta content="summary" name="twitter:card" />
+  <link href="./assets/images/logos/dark_mode.png" rel="icon" type="image/png" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              50: '#FCF9EE',
+              100: '#FAF3D3',
+              200: '#F4E5A1',
+              300: '#EDD36E',
+              400: '#E4BF3F',
+              500: '#D4AF37',
+              600: '#AA8524',
+              700: '#806118',
+              800: '#57400F',
+              900: '#332407',
+            },
+            obsidian: {
+              950: '#070708',
+              900: '#0E0E11',
+              800: '#16161C',
+              700: '#22222A',
+              600: '#30303B',
+            },
+            brandDark: '#0A0A0A',
+            softBg: '#FAF8F5',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['DM Serif Display', 'serif'],
+            heading: ['DM Serif Display', 'serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          boxShadow: {
+            'gold-glow': '0 0 35px -5px rgba(212, 175, 55, 0.3)',
+            'gold-glow-lg': '0 0 60px -10px rgba(212, 175, 55, 0.45)',
+            'card-hover': '0 20px 40px -10px rgba(212, 175, 55, 0.15)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Theme Stylesheet & Pre-Render Theme Loader -->
+  <link href="theme.css" rel="stylesheet" />
+  <script>
+    (function () {
+      document.documentElement.setAttribute("data-theme", "light");
+      document.documentElement.classList.remove("dark");
+    })();
+  </script>
+
+  <style>
+    /* ============================================================
+       PROSPERA AI — MAIN CONTENT DESIGN SYSTEM
+       STRICT PALETTE: BLACK + WHITE + GOLD ONLY
+       ============================================================ */
+
+    /* Hero Section */
+    .builders-hero {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+      padding: 104px 0 48px;
+    }
+
+    /* Layout Wrapper */
+    .builders-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+    @media (max-width: 1023px) {
+      .builders-layout { grid-template-columns: 1fr; }
+    }
+
+    /* ── FILTER SIDEBAR ── */
+    .filter-panel {
+      background: #FFFFFF;
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      border-radius: 16px;
+      padding: 24px;
+      position: sticky;
+      top: 100px;
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
+    }
+    @media (max-width: 1023px) {
+      .filter-panel {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 200;
+        border-radius: 0;
+        overflow-y: auto;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+      }
+      .filter-panel.is-open { transform: translateX(0); }
+    }
+
+    .filter-panel-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 199;
+      backdrop-filter: blur(3px);
+    }
+    .filter-panel-overlay.is-open { display: block; }
+
+    .filter-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    }
+    .filter-kicker {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #D4AF37;
+      margin-bottom: 2px;
+    }
+    .filter-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #000000;
+      font-family: 'DM Serif Display', serif;
+    }
+
+    /* Close / X button: transparent background, clean black icon with gold hover */
+    .filter-close-btn {
+      display: none;
+      width: 32px;
+      height: 32px;
+      background: transparent;
+      border: none;
+      color: #000000;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 16px;
+      transition: color 0.18s ease;
+    }
+    .filter-close-btn:hover { color: #D4AF37; }
+    @media (max-width: 1023px) { .filter-close-btn { display: flex; } }
+
+    .filter-group {
+      margin-bottom: 18px;
+    }
+    .filter-label {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #000000;
+      margin-bottom: 6px;
+    }
+    .filter-input,
+    .filter-select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid rgba(212, 175, 55, 0.32);
+      border-radius: 10px;
+      background: #FFFFFF;
+      color: #000000;
+      font-size: 13.5px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: border-color 0.18s ease, box-shadow 0.18s ease;
+      outline: none;
+    }
+    .filter-input:focus,
+    .filter-select:focus {
+      border-color: #D4AF37;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+      background: #FFFFFF;
+    }
+    .filter-search-wrap {
+      position: relative;
+    }
+    .filter-search-wrap .fa-magnifying-glass {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #D4AF37;
+      font-size: 13px;
+    }
+    .filter-search-wrap input { padding-left: 34px; }
+
+    /* Checkbox grid */
+    .filter-check-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+    .filter-check-grid label {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 10px;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 8px;
+      background: #FFFFFF;
+      font-size: 13px;
+      color: #000000;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-weight: 500;
+    }
+    .filter-check-grid label:hover {
+      border-color: #D4AF37;
+      color: #D4AF37;
+    }
+    .filter-check-grid input[type="checkbox"] {
+      accent-color: #D4AF37;
+      width: 14px;
+      height: 14px;
+    }
+
+    /* Toggle switch */
+    .filter-toggle {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px 0;
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+      cursor: pointer;
+    }
+    .filter-toggle-text strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 2px;
+    }
+    .filter-toggle-text small {
+      font-size: 11px;
+      color: #333333;
+    }
+    .filter-toggle input[type="checkbox"] { display: none; }
+    .filter-toggle-track {
+      flex-shrink: 0;
+      width: 38px;
+      height: 22px;
+      border-radius: 11px;
+      background: #E5E5E5;
+      position: relative;
+      transition: background 0.2s ease;
+      margin-top: 2px;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+    }
+    .filter-toggle-track::after {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+      transition: transform 0.2s ease;
+    }
+    .filter-toggle input:checked ~ .filter-toggle-track {
+      background: #D4AF37;
+      border-color: #D4AF37;
+    }
+    .filter-toggle input:checked ~ .filter-toggle-track::after {
+      transform: translateX(16px);
+      background: #000000;
+    }
+
+    /* Reset button: strict BLACK button -> GOLD hover */
+    .filter-reset-btn {
+      width: 100%;
+      margin-top: 18px;
+      padding: 11px;
+      background: #000000;
+      border: 1px solid #000000;
+      border-radius: 10px;
+      color: #FFFFFF;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .filter-reset-btn:hover {
+      background: #D4AF37;
+      border-color: #D4AF37;
+      color: #000000;
+    }
+
+    /* ── RESULTS TOOLBAR ── */
+    .results-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .results-kicker {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #D4AF37;
+      margin-bottom: 2px;
+    }
+    .results-count {
+      font-size: 22px;
+      font-weight: 700;
+      color: #000000;
+      font-family: 'DM Serif Display', serif;
+    }
+    .toolbar-right { display: flex; align-items: center; gap: 12px; }
+
+    /* Mobile filter button: BLACK button -> GOLD hover */
+    .mobile-filter-btn {
+      display: none;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 14px;
+      background: #000000;
+      border: 1px solid #D4AF37;
+      border-radius: 10px;
+      color: #FFFFFF;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+    .mobile-filter-btn:hover {
+      background: #D4AF37;
+      color: #000000;
+    }
+    @media (max-width: 1023px) { .mobile-filter-btn { display: flex; } }
+
+    .sort-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #000000;
+      font-weight: 700;
+    }
+    .sort-select {
+      padding: 8px 12px;
+      border: 1px solid rgba(212, 175, 55, 0.32);
+      border-radius: 10px;
+      background: #FFFFFF;
+      color: #000000;
+      font-size: 13px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.18s ease;
+    }
+    .sort-select:focus { border-color: #D4AF37; }
+
+    /* ── BUILDER CARDS GRID ── */
+    .builder-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 900px) { .builder-grid { grid-template-columns: 1fr; } }
+
+    /* Builder Card: WHITE background, BLACK text, GOLD accents */
+    .builder-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .builder-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px -10px rgba(212, 175, 55, 0.16);
+      border-color: #D4AF37;
+    }
+
+    /* Card Head */
+    .card-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .card-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+      min-width: 0;
+    }
+    .card-logo {
+      width: 68px;
+      height: 68px;
+      border-radius: 12px;
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      background: #FFFFFF;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .card-logo img {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      padding: 6px;
+    }
+    .card-logo-fallback {
+      display: none;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 800;
+      color: #D4AF37;
+      font-family: 'DM Serif Display', serif;
+    }
+    .card-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: #000000;
+      font-family: 'DM Serif Display', serif;
+      margin-bottom: 2px;
+      line-height: 1.25;
+    }
+    .card-type {
+      font-size: 12.5px;
+      color: #333333;
+      font-weight: 500;
+    }
+
+    /* RERA Pill: strictly BLACK / WHITE / GOLD (no green) */
+    .rera-pill {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: #FFFFFF;
+      border: 1px solid #D4AF37;
+      color: #000000;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .rera-pill::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #D4AF37;
+    }
+
+    /* Card Summary */
+    .card-summary {
+      font-size: 13.5px;
+      color: #1E1E1E;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Stats Row */
+    .card-stats {
+      display: flex;
+      border: 1px solid rgba(212, 175, 55, 0.22);
+      border-radius: 12px;
+      background: #FAF8F5;
+      overflow: hidden;
+    }
+    .card-stat {
+      flex: 1;
+      padding: 10px 12px;
+      text-align: center;
+      border-right: 1px solid rgba(212, 175, 55, 0.22);
+    }
+    .card-stat:last-child { border-right: none; }
+    .card-stat b {
+      display: block;
+      font-size: 16px;
+      font-weight: 800;
+      color: #000000;
+      line-height: 1.1;
+    }
+    .card-stat span {
+      font-size: 10.5px;
+      color: #D4AF37;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* Info Rows */
+    .card-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .card-info-item small {
+      display: block;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #D4AF37;
+      margin-bottom: 3px;
+    }
+    .card-info-item p {
+      font-size: 13px;
+      font-weight: 600;
+      color: #000000;
+      margin: 0;
+    }
+
+    /* AI Agent Row: strictly BLACK / WHITE / GOLD (no green) */
+    .card-agent {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      background: #FAF8F5;
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      border-radius: 12px;
+    }
+    .agent-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #000000;
+      color: #D4AF37;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+      border: 1px solid #D4AF37;
+    }
+    .agent-info small {
+      display: block;
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #D4AF37;
+      margin-bottom: 1px;
+    }
+    .agent-info strong {
+      display: block;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #000000;
+    }
+    .agent-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      color: #000000;
+      font-weight: 700;
+    }
+    .agent-status::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #D4AF37;
+    }
+
+    /* Card Actions: Strict BLACK & GOLD buttons */
+    .card-actions {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    /* BLACK BUTTON -> GOLD hover */
+    .btn-profile {
+      padding: 10px 16px;
+      background: #000000;
+      color: #FFFFFF;
+      border: 1px solid #000000;
+      border-radius: 10px;
+      font-size: 13.5px;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.18s ease;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .btn-profile:hover {
+      background: #D4AF37;
+      color: #000000;
+      border-color: #D4AF37;
+      transform: translateY(-1px);
+    }
+
+    /* GOLD BUTTON -> BLACK hover */
+    .btn-connect {
+      padding: 10px 18px;
+      background: #D4AF37;
+      color: #000000;
+      border: 1px solid #D4AF37;
+      border-radius: 10px;
+      font-size: 13.5px;
+      font-weight: 700;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      transition: all 0.18s ease;
+      white-space: nowrap;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .btn-connect:hover {
+      background: #000000;
+      color: #FFFFFF;
+      border-color: #000000;
+      transform: translateY(-1px);
+    }
+
+    /* Empty state */
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 64px 32px;
+      background: #FFFFFF;
+      border: 1px dashed rgba(212, 175, 55, 0.4);
+      border-radius: 16px;
+    }
+    .empty-state i {
+      font-size: 40px;
+      color: #D4AF37;
+      margin-bottom: 16px;
+    }
+    .empty-state h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 8px;
+      font-family: 'DM Serif Display', serif;
+    }
+    .empty-state p {
+      font-size: 14px;
+      color: #333333;
+      margin-bottom: 20px;
+    }
+    .empty-state button {
+      padding: 10px 24px;
+      background: #000000;
+      color: #FFFFFF;
+      border: 1px solid #000000;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+    .empty-state button:hover {
+      background: #D4AF37;
+      color: #000000;
+      border-color: #D4AF37;
+    }
+  </style>
+</head>
+
+<body class="bg-[#FAF8F5] text-[#000000] font-sans selection:bg-gold-200 selection:text-[#000000] relative antialiased min-h-screen overflow-x-hidden">
+
+  <!-- =============================================
+       PROSPERA MASTER HEADER (exact from index.html)
+       ============================================= -->
+  <header class="fixed top-0 left-0 right-0 w-full z-50 bg-white border-b border-slate-200 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a aria-label="Prospera AI Realtors" class="prospera-brand-logo group flex-shrink-0" href="index.html">
+        <span aria-hidden="true" class="prospera-logo-frame">
+          <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+        </span>
+      </a>
+      <!-- Desktop Primary Navigation -->
+      <nav aria-label="Primary navigation"
+        class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-700">
+        <a class="hover:text-gold-500 transition-colors" href="index.html">Home</a>
+        <a class="hover:text-gold-500 transition-colors text-gold-600 font-semibold" href="builders.html">Builders</a>
+        <a class="hover:text-gold-500 transition-colors" href="explore.html">Properties</a>
+        <a class="hover:text-gold-500 transition-colors" href="agents.html">Agents</a>
+        <a class="hover:text-gold-500 transition-colors" href="market-insights.html">Market Insights</a>
+        <a class="hover:text-gold-500 transition-colors" href="compare-projects.html">Compare</a>
+        <a class="hover:text-gold-500 transition-colors" href="book-site-visit.html">Book Site Visit</a>
+        <div class="prospera-about-dropdown" id="desktopAboutDropdown">
+          <button aria-controls="desktopAboutMenu" aria-expanded="false"
+            class="prospera-about-trigger hover:text-gold-500 transition-colors"
+            onclick="toggleAboutDropdown(event, 'desktopAboutDropdown')" type="button">
+            <span>About</span>
+            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+          </button>
+          <div aria-label="About links" class="prospera-about-menu" id="desktopAboutMenu" role="menu">
+            <a href="about-us.html" role="menuitem">About Us</a>
+            <a href="why-prospera-ai.html" role="menuitem">Why Prospera AI</a>
+            <a href="reviews.html" role="menuitem">Reviews</a>
+            <a href="contact.html" role="menuitem">Contact Us</a>
+            <a href="privacy-terms.html" role="menuitem">Privacy Policy</a>
+          </div>
+        </div>
+      </nav>
+      <!-- Right: Mobile Navigation -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button aria-label="Open menu"
+          class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl border border-gold-500/30 bg-gold-500/10 text-gold-500 hover:bg-gold-500/20 transition-all"
+          id="mobileMenuBtn" onclick="toggleMobileMenu()">
+          <i class="fa-solid fa-bars text-base" id="mobileMenuIcon"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Navigation Dropdown -->
+    <div class="hidden md:hidden border-t border-slate-200 bg-white" id="mobileMenu">
+      <nav aria-label="Mobile navigation" class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="index.html">Home</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-semibold text-gold-600 bg-gold-50 transition-all"
+          href="builders.html">Builders</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="explore.html">Properties</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="agents.html">Agents</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="market-insights.html">Market Insights</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="compare-projects.html">Compare</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="book-site-visit.html">Book Site Visit</a>
+        <div class="prospera-mobile-about" id="mobileAboutDropdown">
+          <button aria-controls="mobileAboutMenu" aria-expanded="false" class="prospera-mobile-about-trigger"
+            onclick="toggleAboutDropdown(event, 'mobileAboutDropdown')" type="button">
+            <span>About</span>
+            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+          </button>
+          <div class="prospera-mobile-about-menu" id="mobileAboutMenu">
+            <a href="about-us.html">About Us</a>
+            <a href="why-prospera-ai.html">Why Prospera AI</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="privacy-terms.html">Privacy Policy</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =============================================
+       MAIN CONTENT: HERO
+       ============================================= -->
+  <div class="builders-hero">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-black/60 mb-6" aria-label="Breadcrumb">
+        <a href="index.html" class="hover:text-gold-600 transition-colors">Prospera AI</a>
+        <i class="fa-solid fa-chevron-right text-[8px] text-gold-500"></i>
+        <span class="text-gold-600 font-semibold">Builder Directory</span>
+      </nav>
+      <h1 class="font-heading text-4xl sm:text-5xl font-bold text-[#000000] mb-3 leading-tight">
+        Find the right <span class="text-gold-600">builder.</span>
+      </h1>
+      <p class="text-black/75 text-base max-w-2xl leading-relaxed">
+        Explore builders by experience, project portfolio, location, property type and current project status.
+        Then view the builder profile or connect with its Prospera AI agent.
+      </p>
+    </div>
+  </div>
+
+  <!-- =============================================
+       MAIN CONTENT: DIRECTORY & FILTERS
+       ============================================= -->
+  <main class="relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="builders-layout">
+
+        <!-- ── FILTER SIDEBAR ── -->
+        <div class="filter-panel-overlay" id="filterOverlay" onclick="closeBuilderFilters()"></div>
+        <aside class="filter-panel" id="builderFilters" role="complementary" aria-label="Builder filters">
+          <div class="filter-header">
+            <div>
+              <div class="filter-kicker">Filters</div>
+              <div class="filter-title">Find a Builder</div>
+            </div>
+            <button class="filter-close-btn" onclick="closeBuilderFilters()" aria-label="Close filters">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <!-- Search -->
+          <div class="filter-group">
+            <label class="filter-label" for="builderSearch">Search builder</label>
+            <div class="filter-search-wrap">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input class="filter-input" id="builderSearch" type="search" autocomplete="off" placeholder="Builder, project or area" />
+            </div>
+          </div>
+
+          <!-- Location -->
+          <div class="filter-group">
+            <label class="filter-label" for="builderLocation">Location</label>
+            <select class="filter-select" id="builderLocation">
+              <option value="all">All locations</option>
+              <option value="gomti nagar">Gomti Nagar</option>
+              <option value="gomti nagar extension">Gomti Nagar Extension</option>
+              <option value="vrindavan yojna">Vrindavan Yojna</option>
+              <option value="sushant golf city">Sushant Golf City</option>
+              <option value="iim road">IIM Road</option>
+              <option value="shaheed path">Shaheed Path</option>
+              <option value="sitapur road">Sitapur Road</option>
+              <option value="bijnor road">Bijnor Road</option>
+              <option value="raebareli road">Raebareli Road</option>
+              <option value="outer ring road">Outer Ring Road</option>
+              <option value="mohanlalganj">Mohanlalganj</option>
+            </select>
+          </div>
+
+          <!-- Experience -->
+          <div class="filter-group">
+            <label class="filter-label" for="builderExperience">Builder experience</label>
+            <select class="filter-select" id="builderExperience">
+              <option value="all">Any experience</option>
+              <option value="5">5+ years</option>
+              <option value="10">10+ years</option>
+              <option value="15">15+ years</option>
+              <option value="25">25+ years</option>
+              <option value="35">35+ years</option>
+            </select>
+          </div>
+
+          <!-- Portfolio size -->
+          <div class="filter-group">
+            <label class="filter-label" for="builderPortfolioSize">Portfolio size</label>
+            <select class="filter-select" id="builderPortfolioSize">
+              <option value="all">Any portfolio</option>
+              <option value="small">1–5 listed projects</option>
+              <option value="mid">6–20 listed projects</option>
+              <option value="large">21+ listed projects</option>
+            </select>
+          </div>
+
+          <!-- Price range -->
+          <div class="filter-group">
+            <label class="filter-label" for="builderPriceRange">Project price range</label>
+            <select class="filter-select" id="builderPriceRange">
+              <option value="all">Any project range</option>
+              <option value="under75">Up to ₹75 Lakh</option>
+              <option value="75to150">₹75 Lakh – ₹1.5 Cr</option>
+              <option value="150to300">₹1.5 Cr – ₹3 Cr</option>
+              <option value="300plus">₹3 Cr+</option>
+            </select>
+          </div>
+
+          <!-- Property type -->
+          <div class="filter-group">
+            <span class="filter-label">Property type</span>
+            <div class="filter-check-grid">
+              <label><input data-filter-type="type" type="checkbox" value="residential" /><span>Residential</span></label>
+              <label><input data-filter-type="type" type="checkbox" value="commercial" /><span>Commercial</span></label>
+              <label><input data-filter-type="type" type="checkbox" value="township" /><span>Township</span></label>
+              <label><input data-filter-type="type" type="checkbox" value="mixed use" /><span>Mixed Use</span></label>
+            </div>
+          </div>
+
+          <!-- Project status -->
+          <div class="filter-group">
+            <span class="filter-label">Project status</span>
+            <div class="filter-check-grid">
+              <label><input data-filter-type="status" type="checkbox" value="ongoing" /><span>Ongoing</span></label>
+              <label><input data-filter-type="status" type="checkbox" value="new launch" /><span>New Launch</span></label>
+              <label><input data-filter-type="status" type="checkbox" value="ready to move" /><span>Ready to Move</span></label>
+            </div>
+          </div>
+
+          <!-- Toggles -->
+          <label class="filter-toggle">
+            <input id="builderReraOnly" type="checkbox" />
+            <div class="filter-toggle-track"></div>
+            <div class="filter-toggle-text">
+              <strong>RERA-linked projects</strong>
+              <small>Show builders with linked project records</small>
+            </div>
+          </label>
+          <label class="filter-toggle">
+            <input id="builderAgentOnly" type="checkbox" />
+            <div class="filter-toggle-track"></div>
+            <div class="filter-toggle-text">
+              <strong>Prospera AI agent assigned</strong>
+              <small>Show builders with an active AI agent</small>
+            </div>
+          </label>
+
+          <button class="filter-reset-btn" onclick="resetBuilderFilters()" type="button">
+            <i class="fa-solid fa-rotate-left mr-2"></i>Reset all filters
+          </button>
+        </aside>
+
+        <!-- ── RESULTS ── -->
+        <div>
+          <!-- Toolbar -->
+          <div class="results-toolbar">
+            <div>
+              <div class="results-kicker">Builders</div>
+              <div class="results-count"><span id="visibleBuilderCount">5</span> builders found</div>
+            </div>
+            <div class="toolbar-right">
+              <button class="mobile-filter-btn" onclick="openBuilderFilters()" type="button">
+                <i class="fa-solid fa-sliders"></i> Filters
+              </button>
+              <div class="sort-wrap">
+                <span>Sort</span>
+                <select class="sort-select" id="builderSort">
+                  <option value="relevance">Relevance</option>
+                  <option value="projects">Most projects</option>
+                  <option value="experience">Most experience</option>
+                  <option value="price-low">Price: Low first</option>
+                  <option value="name">Name A–Z</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Builder Cards Grid -->
+          <div class="builder-grid" id="builderGrid">
+
+            <!-- ── Baba Infra ── -->
+            <article class="builder-card"
+              data-builder="baba-infra" data-experience="5" data-projects="5"
+              data-price-min="250" data-price-max="9999"
+              data-location="vrindavan yojna|lucknow"
+              data-type="residential"
+              data-status="ongoing|new launch"
+              data-rera="yes" data-agent="yes">
+              <div class="card-head">
+                <div class="card-brand">
+                  <div class="card-logo">
+                    <img alt="Baba Infra logo" loading="lazy"
+                      src="./assets/images/partner/babainfra.png"
+                      onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+                    <div class="card-logo-fallback">BI</div>
+                  </div>
+                  <div>
+                    <div class="card-name">Baba Infra</div>
+                    <div class="card-type">Residential developer</div>
+                  </div>
+                </div>
+                <span class="rera-pill">RERA linked</span>
+              </div>
+              <p class="card-summary">Lucknow-focused residential developer with a growing project portfolio and customer base.</p>
+              <div class="card-stats">
+                <div class="card-stat"><b>5+</b><span>Years</span></div>
+                <div class="card-stat"><b>5+</b><span>Projects</span></div>
+                <div class="card-stat"><b>50+</b><span>Acres</span></div>
+              </div>
+              <div class="card-info">
+                <div class="card-info-item"><small>Areas</small><p>Vrindavan Yojna</p></div>
+                <div class="card-info-item"><small>Current Project</small><p>Imperial Residencia</p></div>
+              </div>
+              <div class="card-agent">
+                <div class="agent-avatar"><i class="fa-solid fa-robot"></i></div>
+                <div class="agent-info">
+                  <small>Prospera AI Agent</small>
+                  <strong>Deepak AI</strong>
+                  <span class="agent-status">Active agent</span>
+                </div>
+              </div>
+              <div class="card-actions">
+                <a class="btn-profile" href="builder-profile.html?builder=baba-infra">View Builder Profile</a>
+                <a class="btn-connect" href="book-site-visit.html?builder=baba-infra">Connect <i class="fa-solid fa-handshake"></i></a>
+              </div>
+            </article>
+
+            <!-- ── Ekana Sportz City ── -->
+            <article class="builder-card"
+              data-builder="ekana" data-experience="12" data-projects="4"
+              data-price-min="56" data-price-max="9999"
+              data-location="gomti nagar extension|mohanlalganj|lucknow"
+              data-type="residential|commercial|mixed use"
+              data-status="ongoing|new launch"
+              data-rera="yes" data-agent="yes">
+              <div class="card-head">
+                <div class="card-brand">
+                  <div class="card-logo">
+                    <img alt="Ekana Sportz City logo" loading="lazy"
+                      src="./assets/images/partner/ekana.png"
+                      onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+                    <div class="card-logo-fallback">EK</div>
+                  </div>
+                  <div>
+                    <div class="card-name">Ekana Sportz City</div>
+                    <div class="card-type">Sports, lifestyle &amp; mixed-use developer</div>
+                  </div>
+                </div>
+                <span class="rera-pill">RERA linked</span>
+              </div>
+              <p class="card-summary">Large-format sports and lifestyle destination with residential, commercial and mixed-use opportunities.</p>
+              <div class="card-stats">
+                <div class="card-stat"><b>12</b><span>Years</span></div>
+                <div class="card-stat"><b>4</b><span>Projects</span></div>
+                <div class="card-stat"><b>137</b><span>Acres</span></div>
+              </div>
+              <div class="card-info">
+                <div class="card-info-item"><small>Areas</small><p>Gomti Nagar Ext · Mohanlalganj</p></div>
+                <div class="card-info-item"><small>Current Project</small><p>Ekana Business Centre</p></div>
+              </div>
+              <div class="card-agent">
+                <div class="agent-avatar"><i class="fa-solid fa-robot"></i></div>
+                <div class="agent-info">
+                  <small>Prospera AI Agent</small>
+                  <strong>Arjun AI</strong>
+                  <span class="agent-status">Active agent</span>
+                </div>
+              </div>
+              <div class="card-actions">
+                <a class="btn-profile" href="builder-profile.html?builder=ekana">View Builder Profile</a>
+                <a class="btn-connect" href="book-site-visit.html?builder=ekana">Connect <i class="fa-solid fa-handshake"></i></a>
+              </div>
+            </article>
+
+            <!-- ── Eldeco Group ── -->
+            <article class="builder-card"
+              data-builder="eldeco" data-experience="40" data-projects="65"
+              data-price-min="22" data-price-max="9999"
+              data-location="iim road|gomti nagar|shaheed path|sitapur road|bijnor road|sisandi road|lucknow"
+              data-type="residential|commercial|township"
+              data-status="ongoing|new launch|ready to move"
+              data-rera="yes" data-agent="yes">
+              <div class="card-head">
+                <div class="card-brand">
+                  <div class="card-logo">
+                    <img alt="Eldeco Group logo" loading="lazy"
+                      src="./assets/images/partner/eldeco.png"
+                      onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+                    <div class="card-logo-fallback">EL</div>
+                  </div>
+                  <div>
+                    <div class="card-name">Eldeco Group</div>
+                    <div class="card-type">Residential, commercial &amp; township developer</div>
+                  </div>
+                </div>
+                <span class="rera-pill">RERA linked</span>
+              </div>
+              <p class="card-summary">Established developer with a broad portfolio spanning residential communities, townships and commercial projects.</p>
+              <div class="card-stats">
+                <div class="card-stat"><b>40+</b><span>Years</span></div>
+                <div class="card-stat"><b>65+</b><span>Projects</span></div>
+                <div class="card-stat"><b>20+</b><span>Cities</span></div>
+              </div>
+              <div class="card-info">
+                <div class="card-info-item"><small>Areas</small><p>IIM Road · Shaheed Path · Sitapur Rd</p></div>
+                <div class="card-info-item"><small>Current Project</small><p>Eldeco Select</p></div>
+              </div>
+              <div class="card-agent">
+                <div class="agent-avatar"><i class="fa-solid fa-robot"></i></div>
+                <div class="agent-info">
+                  <small>Prospera AI Agent</small>
+                  <strong>Meera AI</strong>
+                  <span class="agent-status">Active agent</span>
+                </div>
+              </div>
+              <div class="card-actions">
+                <a class="btn-profile" href="builder-profile.html?builder=eldeco">View Builder Profile</a>
+                <a class="btn-connect" href="book-site-visit.html?builder=eldeco">Connect <i class="fa-solid fa-handshake"></i></a>
+              </div>
+            </article>
+
+            <!-- ── Omaxe Limited ── -->
+            <article class="builder-card"
+              data-builder="omaxe" data-experience="38" data-projects="4"
+              data-price-min="44" data-price-max="9999"
+              data-location="gomti nagar|raebareli road|outer ring road|lucknow"
+              data-type="residential|commercial|township"
+              data-status="ongoing|new launch"
+              data-rera="yes" data-agent="yes">
+              <div class="card-head">
+                <div class="card-brand">
+                  <div class="card-logo">
+                    <img alt="Omaxe Limited logo" loading="lazy"
+                      src="./assets/images/partner/omaxe.png"
+                      onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+                    <div class="card-logo-fallback">OM</div>
+                  </div>
+                  <div>
+                    <div class="card-name">Omaxe Limited</div>
+                    <div class="card-type">Residential, commercial &amp; township developer</div>
+                  </div>
+                </div>
+                <span class="rera-pill">RERA linked</span>
+              </div>
+              <p class="card-summary">Large real-estate group with multiple residential and commercial projects across Lucknow.</p>
+              <div class="card-stats">
+                <div class="card-stat"><b>38+</b><span>Years</span></div>
+                <div class="card-stat"><b>4+</b><span>Projects</span></div>
+                <div class="card-stat"><b>31</b><span>Cities</span></div>
+              </div>
+              <div class="card-info">
+                <div class="card-info-item"><small>Areas</small><p>Gomti Nagar · Raebareli Road</p></div>
+                <div class="card-info-item"><small>Current Project</small><p>Omaxe Centre Point</p></div>
+              </div>
+              <div class="card-agent">
+                <div class="agent-avatar"><i class="fa-solid fa-robot"></i></div>
+                <div class="agent-info">
+                  <small>Prospera AI Agent</small>
+                  <strong>Kabir AI</strong>
+                  <span class="agent-status">Active agent</span>
+                </div>
+              </div>
+              <div class="card-actions">
+                <a class="btn-profile" href="builder-profile.html?builder=omaxe">View Builder Profile</a>
+                <a class="btn-connect" href="book-site-visit.html?builder=omaxe">Connect <i class="fa-solid fa-handshake"></i></a>
+              </div>
+            </article>
+
+            <!-- ── Rishita Developers ── -->
+            <article class="builder-card"
+              data-builder="rishita" data-experience="17" data-projects="3"
+              data-price-min="110" data-price-max="9999"
+              data-location="sushant golf city|gomti nagar extension|lucknow"
+              data-type="residential"
+              data-status="ongoing|ready to move"
+              data-rera="yes" data-agent="yes">
+              <div class="card-head">
+                <div class="card-brand">
+                  <div class="card-logo">
+                    <img alt="Rishita Developers logo" loading="lazy"
+                      src="./assets/images/partner/rishita.png"
+                      onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+                    <div class="card-logo-fallback">RD</div>
+                  </div>
+                  <div>
+                    <div class="card-name">Rishita Developers</div>
+                    <div class="card-type">Residential developer</div>
+                  </div>
+                </div>
+                <span class="rera-pill">RERA linked</span>
+              </div>
+              <p class="card-summary">Residential developer focused on premium communities around Sushant Golf City and Gomti Nagar Extension.</p>
+              <div class="card-stats">
+                <div class="card-stat"><b>17</b><span>Years</span></div>
+                <div class="card-stat"><b>3</b><span>Projects</span></div>
+                <div class="card-stat"><b>2008</b><span>Since</span></div>
+              </div>
+              <div class="card-info">
+                <div class="card-info-item"><small>Areas</small><p>Sushant Golf City · Gomti Nagar Ext</p></div>
+                <div class="card-info-item"><small>Current Project</small><p>Rishita Manhattan</p></div>
+              </div>
+              <div class="card-agent">
+                <div class="agent-avatar"><i class="fa-solid fa-robot"></i></div>
+                <div class="agent-info">
+                  <small>Prospera AI Agent</small>
+                  <strong>Ananya AI</strong>
+                  <span class="agent-status">Active agent</span>
+                </div>
+              </div>
+              <div class="card-actions">
+                <a class="btn-profile" href="builder-profile.html?builder=rishita">View Builder Profile</a>
+                <a class="btn-connect" href="book-site-visit.html?builder=rishita">Connect <i class="fa-solid fa-handshake"></i></a>
+              </div>
+            </article>
+
+          </div><!-- /builder-grid -->
+
+          <!-- Empty state -->
+          <div class="empty-state" hidden id="emptyBuilders">
+            <i class="fa-solid fa-building-circle-exclamation"></i>
+            <h3>No builders match these filters</h3>
+            <p>Try changing the location, experience, portfolio or project filters.</p>
+            <button onclick="resetBuilderFilters()" type="button">Clear all filters</button>
+          </div>
+
+        </div><!-- /results -->
+      </div><!-- /layout -->
+    </div>
+  </main>
+
+  <!-- =============================================
+       MASTER FOOTER (exact from index.html)
+       ============================================= -->
+  <footer class="bg-white border-t border-slate-200 text-slate-600 text-sm py-12 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div aria-label="Prospera AI Realtors" class="prospera-footer-brand mb-4">
+            <span aria-hidden="true" class="prospera-logo-frame">
+              <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+            </span>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            India's premier AI-first conversational real estate network. Unbiased recommendations, voice search, and
+            predictive market intelligence.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="about-us.html">About Us</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="why-prospera-ai.html">Why Prospera AI</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="reviews.html">Reviews</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="contact.html">Contact Us</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="privacy-terms.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Top Locations</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#" onclick="askAILocation('Gomti Nagar'); return false;">Gomti Nagar</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#" onclick="askAILocation('Gomti Nagar Extension'); return false;">Gomti Nagar Extension</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#" onclick="askAILocation('Shaheed Path'); return false;">Shaheed Path</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#" onclick="askAILocation('Sultanpur Road'); return false;">Sultanpur Road</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Contact &amp; Legal</h4>
+          <p class="text-xs text-slate-500 mb-2"><i class="fa-solid fa-envelope text-gold-500 mr-2"></i>advisor@prospera.ai</p>
+          <p class="text-xs text-slate-500 mb-4"><i class="fa-solid fa-phone text-gold-500 mr-2"></i>+91 1800-PROSPERA</p>
+          <div class="flex gap-3">
+            <a aria-label="LinkedIn" class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors" href="#"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+            <a aria-label="Twitter / X" class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors" href="#"><i class="fa-brands fa-x-twitter text-xs"></i></a>
+            <a aria-label="Instagram" class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors" href="#"><i class="fa-brands fa-instagram text-xs"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-slate-200 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>© 2026 Prospera AI Realtors Inc. All rights reserved.</p>
+        <p class="text-slate-500">RERA Reg: UPRERA/AI/2026/001</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating AI Advisor -->
+  <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40" id="floatingAIWidget">
+    <button
+      class="relative group flex items-center gap-3 bg-[#000000] border-2 border-gold-500 text-white p-3 sm:px-5 sm:py-3.5 rounded-full shadow-gold-glow hover:shadow-gold-glow-lg transition-all hover:scale-105"
+      onclick="window.location.href='ai-property-finder.html'">
+      <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-gold-300 via-gold-500 to-gold-700 flex items-center justify-center text-[#000000] font-bold">
+        <i class="fa-solid fa-robot text-sm"></i>
+      </div>
+      <span class="hidden sm:inline-block font-semibold text-xs text-gold-300 tracking-wider uppercase">AI Advisor</span>
+      <span class="w-2.5 h-2.5 rounded-full bg-gold-400 animate-ping absolute top-1 right-1"></span>
+    </button>
+  </div>
+
+  <!-- =============================================
+       SCRIPTS
+       ============================================= -->
+  <script>
+    /* ── Nav JS (master) ── */
+    function toggleAboutDropdown(event, id) {
+      if (event) { event.preventDefault(); event.stopPropagation(); }
+      const wrap = document.getElementById(id);
+      if (!wrap) return;
+      const isOpen = wrap.classList.toggle("is-open");
+      const trigger = wrap.querySelector(".prospera-about-trigger,.prospera-mobile-about-trigger");
+      if (trigger) trigger.setAttribute("aria-expanded", String(isOpen));
+    }
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".prospera-about-dropdown.is-open,.prospera-mobile-about.is-open").forEach((wrap) => {
+        if (!wrap.contains(event.target)) {
+          wrap.classList.remove("is-open");
+          const trigger = wrap.querySelector(".prospera-about-trigger,.prospera-mobile-about-trigger");
+          if (trigger) trigger.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+    function toggleMobileMenu() {
+      const menu = document.getElementById("mobileMenu"), icon = document.getElementById("mobileMenuIcon");
+      if (!menu) return;
+      const hidden = menu.classList.contains("hidden");
+      menu.classList.toggle("hidden", !hidden);
+      if (icon) { icon.classList.toggle("fa-bars", !hidden); icon.classList.toggle("fa-xmark", hidden); }
+    }
+
+    /* ── Footer helper ── */
+    function askAILocation(loc) {
+      window.location.href = 'ai-property-finder.html?q=' + encodeURIComponent('Find best properties and appreciation rate in ' + loc);
+    }
+
+    /* ── Filter sidebar ── */
+    function openBuilderFilters() {
+      document.getElementById('builderFilters')?.classList.add('is-open');
+      document.getElementById('filterOverlay')?.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeBuilderFilters() {
+      document.getElementById('builderFilters')?.classList.remove('is-open');
+      document.getElementById('filterOverlay')?.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    /* ── Filter logic ── */
+    function getChecked(type) {
+      return [...document.querySelectorAll(`[data-filter-type="${type}"]:checked`)].map(el => el.value.toLowerCase());
+    }
+    function priceMatches(card, range) {
+      if (range === 'all') return true;
+      const min = Number(card.dataset.priceMin || 0), max = Number(card.dataset.priceMax || 9999);
+      const ranges = { under75: [0,75], '75to150': [75,150], '150to300': [150,300], '300plus': [300,9999] };
+      const r = ranges[range];
+      return r ? max >= r[0] && min <= r[1] : true;
+    }
+    function portfolioMatches(card, size) {
+      if (size === 'all') return true;
+      const p = Number(card.dataset.projects || 0);
+      return size === 'small' ? p >= 1 && p <= 5 : size === 'mid' ? p >= 6 && p <= 20 : p >= 21;
+    }
+
+    function applyBuilderFilters() {
+      const search   = (document.getElementById('builderSearch')?.value || '').trim().toLowerCase();
+      const location = (document.getElementById('builderLocation')?.value || 'all').toLowerCase();
+      const exp      = document.getElementById('builderExperience')?.value || 'all';
+      const portfolio= document.getElementById('builderPortfolioSize')?.value || 'all';
+      const price    = document.getElementById('builderPriceRange')?.value || 'all';
+      const types    = getChecked('type');
+      const statuses = getChecked('status');
+      const reraOnly = !!document.getElementById('builderReraOnly')?.checked;
+      const agentOnly= !!document.getElementById('builderAgentOnly')?.checked;
+      const sort     = document.getElementById('builderSort')?.value || 'relevance';
+
+      const cards   = [...document.querySelectorAll('.builder-card')];
+      const visible = [];
+
+      cards.forEach(card => {
+        const text       = card.innerText.toLowerCase();
+        const locations  = (card.dataset.location || '').toLowerCase();
+        const cardTypes  = (card.dataset.type || '').toLowerCase();
+        const cardStatus = (card.dataset.status || '').toLowerCase();
+        const cardExp    = Number(card.dataset.experience || 0);
+
+        const show =
+          (!search   || text.includes(search)) &&
+          (location === 'all' || locations.split('|').some(x => x.trim() === location)) &&
+          (!types.length   || types.some(x => cardTypes.includes(x))) &&
+          (!statuses.length|| statuses.some(x => cardStatus.includes(x))) &&
+          (exp === 'all'   || cardExp >= Number(exp)) &&
+          portfolioMatches(card, portfolio) &&
+          priceMatches(card, price) &&
+          (!reraOnly  || card.dataset.rera  === 'yes') &&
+          (!agentOnly || card.dataset.agent === 'yes');
+
+        card.hidden = !show;
+        if (show) visible.push(card);
+      });
+
+      visible.sort((a, b) =>
+        sort === 'projects'    ? Number(b.dataset.projects)   - Number(a.dataset.projects)    :
+        sort === 'experience'  ? Number(b.dataset.experience) - Number(a.dataset.experience)  :
+        sort === 'price-low'   ? Number(a.dataset.priceMin)   - Number(b.dataset.priceMin)    :
+        sort === 'name'        ? a.querySelector('.card-name').textContent.trim().localeCompare(b.querySelector('.card-name').textContent.trim()) : 0
+      );
+
+      const grid = document.getElementById('builderGrid');
+      visible.forEach(card => grid.appendChild(card));
+      document.getElementById('visibleBuilderCount').textContent = visible.length;
+      document.getElementById('emptyBuilders').hidden = visible.length !== 0;
+    }
+
+    function resetBuilderFilters() {
+      ['builderSearch','builderLocation','builderExperience','builderPortfolioSize','builderPriceRange'].forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        if (id === 'builderSearch') el.value = '';
+        else el.value = 'all';
+      });
+      ['builderReraOnly','builderAgentOnly'].forEach(id => { const el = document.getElementById(id); if (el) el.checked = false; });
+      const sort = document.getElementById('builderSort'); if (sort) sort.value = 'relevance';
+      document.querySelectorAll('[data-filter-type="type"],[data-filter-type="status"]').forEach(el => el.checked = false);
+      applyBuilderFilters();
+      closeBuilderFilters();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      ['builderSearch','builderLocation','builderExperience','builderPortfolioSize','builderPriceRange','builderReraOnly','builderAgentOnly','builderSort'].forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.addEventListener(el.type === 'search' ? 'input' : 'change', applyBuilderFilters);
+      });
+      document.querySelectorAll('[data-filter-type="type"],[data-filter-type="status"]').forEach(el => el.addEventListener('change', applyBuilderFilters));
+      applyBuilderFilters();
+    });
+  </script>
+
+  <script src="theme.js"></script>
+</body>
+</html>

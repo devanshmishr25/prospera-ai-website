@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en-IN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Prospera AI Realtors | Real Estate in Lucknow | Direct Developer Connect</title>
+<meta name="description" content="Explore residential and commercial properties in Lucknow with Prospera AI Realtors. Discover projects, compare property options, explore locations, and connect directly with developers.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Prospera AI Realtors">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#FAF8F5">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Prospera AI Realtors">
+<meta property="og:title" content="Prospera AI Realtors | Real Estate in Lucknow | Direct Developer Connect">
+<meta property="og:description" content="Explore property projects and locations in Lucknow, compare options, and connect directly with developers through Prospera AI Realtors.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Prospera AI Realtors | Real Estate in Lucknow">
+<meta name="twitter:description" content="Explore property projects and locations in Lucknow and connect directly with developers.">
+<link rel="icon" type="image/png" href="./assets/images/logos/dark_mode.png">
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- FontAwesome Icons CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"/>
+<!-- Google Fonts: Plus Jakarta Sans & DM Serif Display -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#FCF9EE',
+                            100: '#FAF3D3',
+                            200: '#F4E5A1',
+                            300: '#EDD36E',
+                            400: '#E4BF3F',
+                            500: '#D4AF37', // Metallic Signature Gold
+                            600: '#AA8524',
+                            700: '#806118',
+                            800: '#57400F',
+                            900: '#332407',
+                        },
+                        obsidian: {
+                            950: '#070708',
+                            900: '#0E0E11',
+                            800: '#16161C',
+                            700: '#22222A',
+                            600: '#30303B',
+                        },
+                        brandDark: '#121619',
+                        brandGray: '#4A5568',
+                        softBg: '#FAF8F5',
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['DM Serif Display', 'serif'],
+                        heading: ['DM Serif Display', 'serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 0 35px -5px rgba(212, 175, 55, 0.3)',
+                        'gold-glow-lg': '0 0 60px -10px rgba(212, 175, 55, 0.45)',
+                        'card-glow': '0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 1px 1px rgba(212, 175, 55, 0.2)',
+                        'soft-gold': '0 20px 40px -15px rgba(197, 160, 89, 0.25)',
+                        'card-hover': '0 25px 50px -12px rgba(0, 0, 0, 0.08)',
+                        'avatar-ring': '0 0 0 6px rgba(197, 160, 89, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+
+<!-- Theme Stylesheet & Pre-Render Theme Loader (Defaults to Light Mode) -->
+<link href="theme.css" rel="stylesheet"/>
+<script>
+        /* Prospera AI uses a single light visual system. */
+        (function() {
+            document.documentElement.setAttribute("data-theme", "light");
+            document.documentElement.classList.remove("dark");
+        })();
+    </script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <style id="prospera-compare-design-system">
+    /* ============================================================
+       PROSPERA AI — COMPARE PROJECTS DESIGN SYSTEM
+       Strict 3-Color Identity: BLACK (#000000), WHITE (#FFFFFF), GOLD (#D4AF37)
+       ============================================================ */
+    body {
+      background-color: #FAF8F5 !important;
+      color: #000000 !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* Hero Section: Ditto from builders.html */
+    .builders-hero {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%) !important;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.22) !important;
+      padding: 104px 0 48px !important;
+    }
+
+    /* Hero Buttons */
+    .btn-compare-primary {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      padding: 11px 22px !important;
+      background: #000000 !important;
+      background-color: #000000 !important;
+      background-image: none !important;
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      border: 1px solid #000000 !important;
+      border-radius: 12px !important;
+      font-size: 13px !important;
+      font-weight: 700 !important;
+      cursor: pointer !important;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+    }
+    .btn-compare-primary:hover,
+    .btn-compare-primary:focus {
+      background: #000000 !important;
+      background-color: #000000 !important;
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      border: 1.5px solid #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35) !important;
+      transform: translateY(-1px) !important;
+    }
+    .btn-compare-primary * {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+    }
+
+    html body main .btn-compare-secondary,
+    html body .btn-compare-secondary,
+    .btn-compare-secondary {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      padding: 11px 22px !important;
+      background: #FFFFFF !important;
+      background-color: #FFFFFF !important;
+      background-image: none !important;
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
+      border-radius: 12px !important;
+      font-size: 13px !important;
+      font-weight: 700 !important;
+      cursor: pointer !important;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+    }
+    html body main .btn-compare-secondary:hover,
+    html body .btn-compare-secondary:hover,
+    .btn-compare-secondary:hover,
+    html body main .btn-compare-secondary:focus,
+    html body .btn-compare-secondary:focus,
+    .btn-compare-secondary:focus {
+      background: #D4AF37 !important;
+      background-color: #D4AF37 !important;
+      background-image: none !important;
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+      border: 1.5px solid #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      box-shadow: 0 6px 18px rgba(212, 175, 55, 0.3) !important;
+      transform: translateY(-1px) !important;
+    }
+    html body main .btn-compare-secondary *,
+    html body .btn-compare-secondary *,
+    .btn-compare-secondary * {
+      color: inherit !important;
+      -webkit-text-fill-color: inherit !important;
+    }
+
+    /* Comparison Table Container */
+    .compare-table-container {
+      background: #FFFFFF !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.32) !important;
+      border-radius: 24px !important;
+      box-shadow: 0 10px 32px -6px rgba(0, 0, 0, 0.05) !important;
+      overflow-x: auto !important;
+      position: relative !important;
+      margin-bottom: 40px !important;
+    }
+
+    table.compare-table {
+      width: 100% !important;
+      text-align: left !important;
+      border-collapse: collapse !important;
+      min-width: 960px !important;
+    }
+
+    /* Sticky Head Columns */
+    .compare-table thead th {
+      background: #FAF8F5 !important;
+      padding: 24px 20px !important;
+      border-bottom: 2px solid rgba(212, 175, 55, 0.28) !important;
+      vertical-align: top !important;
+      position: relative !important;
+    }
+    .compare-table thead th.th-label {
+      width: 180px !important;
+      background: #F7F4EE !important;
+      border-right: 1.5px solid rgba(212, 175, 55, 0.28) !important;
+      vertical-align: bottom !important;
+    }
+    .compare-table thead th.th-col {
+      width: 270px !important;
+      border-left: 1px solid rgba(212, 175, 55, 0.18) !important;
+    }
+
+    /* Winner Top Pick Card Frame */
+    .compare-card-frame {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 12px !important;
+      position: relative !important;
+    }
+    .compare-img-wrap {
+      position: relative !important;
+      height: 136px !important;
+      border-radius: 14px !important;
+      overflow: hidden !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.35) !important;
+      background: #EFECE6 !important;
+    }
+    .compare-img-wrap img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+    }
+    .compare-img-overlay {
+      position: absolute !important;
+      inset: 0 !important;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.55) 100%) !important;
+    }
+
+    /* AI Top Pick Badge */
+    .badge-top-pick {
+      position: absolute !important;
+      top: 10px !important;
+      left: 10px !important;
+      z-index: 10 !important;
+      padding: 4px 10px !important;
+      border-radius: 8px !important;
+      background: #D4AF37 !important;
+      color: #000000 !important;
+      font-size: 10px !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.06em !important;
+      text-transform: uppercase !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 4px !important;
+    }
+
+    /* Close / Remove Column Button */
+    .compare-remove-btn {
+      position: absolute !important;
+      top: 12px !important;
+      right: 12px !important;
+      width: 26px !important;
+      height: 26px !important;
+      border-radius: 9999px !important;
+      background: #FFFFFF !important;
+      border: 1px solid rgba(0, 0, 0, 0.25) !important;
+      color: #000000 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 11px !important;
+      cursor: pointer !important;
+      z-index: 15 !important;
+      transition: all 0.2s ease !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12) !important;
+    }
+    .compare-remove-btn:hover {
+      background: #000000 !important;
+      color: #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      transform: scale(1.08) !important;
+    }
+
+    /* Card Titles & Prices */
+    .compare-card-title {
+      font-family: 'DM Serif Display', serif !important;
+      font-size: 20px !important;
+      font-weight: 700 !important;
+      color: #000000 !important;
+      line-height: 1.25 !important;
+      margin: 0 !important;
+    }
+    .compare-card-price {
+      font-size: 16px !important;
+      font-weight: 800 !important;
+      color: #AA8524 !important;
+      margin: 2px 0 0 !important;
+    }
+    .compare-card-price small {
+      font-size: 11px !important;
+      font-weight: 500 !important;
+      color: #666666 !important;
+    }
+
+    /* View Details Button */
+    .btn-compare-view-details {
+      width: 100% !important;
+      padding: 10px 14px !important;
+      background: #000000 !important;
+      background-color: #000000 !important;
+      background-image: none !important;
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      border: 1px solid #000000 !important;
+      border-radius: 10px !important;
+      font-size: 11.5px !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+      cursor: pointer !important;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+    }
+    .btn-compare-view-details:hover,
+    .btn-compare-view-details:focus {
+      background: #000000 !important;
+      background-color: #000000 !important;
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      border: 1.5px solid #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35) !important;
+      transform: translateY(-1px) !important;
+    }
+    .btn-compare-view-details * {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+    }
+
+    /* Table Body */
+    .compare-table tbody tr {
+      border-bottom: 1px solid rgba(212, 175, 55, 0.15) !important;
+      transition: background 0.15s ease !important;
+    }
+    .compare-table tbody tr:nth-child(even) {
+      background: #FAF8F5 !important;
+    }
+    .compare-table tbody tr:nth-child(odd) {
+      background: #FFFFFF !important;
+    }
+    .compare-table tbody tr:hover {
+      background: rgba(212, 175, 55, 0.05) !important;
+    }
+
+    .compare-table td {
+      padding: 18px 20px !important;
+      font-size: 13.5px !important;
+      color: #000000 !important;
+      vertical-align: middle !important;
+      border-left: 1px solid rgba(212, 175, 55, 0.15) !important;
+    }
+    .compare-table td.td-label {
+      font-weight: 800 !important;
+      font-size: 11px !important;
+      color: #AA8524 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+      background: #F7F4EE !important;
+      border-left: none !important;
+      border-right: 1.5px solid rgba(212, 175, 55, 0.28) !important;
+    }
+
+    /* Badges & Metrics in Table */
+    .compare-status-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      padding: 3px 10px !important;
+      border-radius: 8px !important;
+      background: #FAF3D3 !important;
+      color: #806118 !important;
+      border: 1px solid rgba(212, 175, 55, 0.4) !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      margin-bottom: 4px !important;
+    }
+    .roi-number {
+      font-size: 22px !important;
+      font-weight: 900 !important;
+      color: #AA8524 !important;
+      line-height: 1 !important;
+    }
+    .roi-bar-bg {
+      width: 100% !important;
+      height: 6px !important;
+      border-radius: 9999px !important;
+      background: #EFECE6 !important;
+      overflow: hidden !important;
+      margin-top: 6px !important;
+    }
+    .roi-bar-fill {
+      height: 100% !important;
+      border-radius: 9999px !important;
+      background: linear-gradient(90deg, #D4AF37 0%, #AA8524 100%) !important;
+    }
+
+    /* AI Pros & Considerations Boxes */
+    .ai-pros-box {
+      background: #FCF9EE !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.35) !important;
+      border-radius: 12px !important;
+      padding: 12px !important;
+      margin-bottom: 10px !important;
+    }
+    .ai-pros-box span {
+      display: flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      font-size: 10.5px !important;
+      font-weight: 800 !important;
+      color: #806118 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.06em !important;
+      margin-bottom: 6px !important;
+    }
+    .ai-pros-box ul {
+      margin: 0 !important;
+      padding-left: 16px !important;
+      font-size: 12px !important;
+      color: #222222 !important;
+      line-height: 1.5 !important;
+    }
+
+    .ai-cons-box {
+      background: #F7F5F0 !important;
+      border: 1px solid rgba(0, 0, 0, 0.12) !important;
+      border-radius: 12px !important;
+      padding: 12px !important;
+    }
+    .ai-cons-box span {
+      display: flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      font-size: 10.5px !important;
+      font-weight: 800 !important;
+      color: #444444 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.06em !important;
+      margin-bottom: 6px !important;
+    }
+    .ai-cons-box ul {
+      margin: 0 !important;
+      padding-left: 16px !important;
+      font-size: 12px !important;
+      color: #444444 !important;
+      line-height: 1.5 !important;
+    }
+
+    /* Property Picker Modal */
+    .compare-picker {
+      position: fixed !important;
+      inset: 0 !important;
+      z-index: 9999 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 16px !important;
+    }
+    .compare-picker.hidden {
+      display: none !important;
+    }
+    .compare-picker-backdrop {
+      position: absolute !important;
+      inset: 0 !important;
+      background: rgba(0, 0, 0, 0.65) !important;
+      backdrop-filter: blur(8px) !important;
+      -webkit-backdrop-filter: blur(8px) !important;
+    }
+    .compare-picker-panel {
+      position: relative !important;
+      width: 100% !important;
+      max-width: 680px !important;
+      max-height: 85vh !important;
+      background: #FFFFFF !important;
+      border: 1.5px solid #D4AF37 !important;
+      border-radius: 24px !important;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      overflow: hidden !important;
+      z-index: 10 !important;
+    }
+    .compare-picker-head {
+      padding: 22px 26px !important;
+      background: #FAF8F5 !important;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25) !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: flex-start !important;
+    }
+    .compare-picker-eyebrow {
+      font-size: 10px !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.12em !important;
+      color: #AA8524 !important;
+      text-transform: uppercase !important;
+      margin: 0 0 4px !important;
+    }
+    .compare-picker-head h2 {
+      font-family: 'DM Serif Display', serif !important;
+      font-size: 24px !important;
+      font-weight: 700 !important;
+      color: #000000 !important;
+      margin: 0 0 4px !important;
+    }
+    .compare-picker-head p {
+      font-size: 12.5px !important;
+      color: #555555 !important;
+      margin: 0 !important;
+    }
+    .compare-picker-close {
+      width: 32px !important;
+      height: 32px !important;
+      border-radius: 9999px !important;
+      background: #FFFFFF !important;
+      border: 1px solid rgba(0, 0, 0, 0.2) !important;
+      color: #000000 !important;
+      cursor: pointer !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      transition: all 0.2s ease !important;
+    }
+    .compare-picker-close:hover {
+      background: #000000 !important;
+      color: #D4AF37 !important;
+      border-color: #D4AF37 !important;
+    }
+    .compare-picker-search {
+      position: relative !important;
+      padding: 16px 26px 8px !important;
+    }
+    .compare-picker-search i {
+      position: absolute !important;
+      left: 38px !important;
+      top: 50% !important;
+      transform: translateY(-20%) !important;
+      color: #AA8524 !important;
+      font-size: 14px !important;
+    }
+    .compare-picker-search input {
+      width: 100% !important;
+      padding: 10px 16px 10px 38px !important;
+      background: #FAF8F5 !important;
+      border: 1px solid rgba(212, 175, 55, 0.3) !important;
+      border-radius: 12px !important;
+      font-size: 13.5px !important;
+      color: #000000 !important;
+      outline: none !important;
+      box-sizing: border-box !important;
+    }
+    .compare-picker-search input:focus {
+      border-color: #D4AF37 !important;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15) !important;
+    }
+    .compare-picker-status {
+      padding: 0 26px 8px !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      color: #806118 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+    }
+    .compare-picker-list {
+      padding: 8px 26px 24px !important;
+      overflow-y: auto !important;
+      display: grid !important;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+      gap: 12px !important;
+    }
+    .compare-property-option {
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      padding: 10px 14px !important;
+      background: #FFFFFF !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.25) !important;
+      border-radius: 14px !important;
+      cursor: pointer !important;
+      text-align: left !important;
+      transition: all 0.2s ease !important;
+    }
+    .compare-property-option:hover:not(:disabled) {
+      border-color: #D4AF37 !important;
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.2) !important;
+      transform: translateY(-1px) !important;
+    }
+    .compare-property-option img {
+      width: 52px !important;
+      height: 52px !important;
+      border-radius: 10px !important;
+      object-fit: cover !important;
+      border: 1px solid rgba(212, 175, 55, 0.3) !important;
+      flex-shrink: 0 !important;
+    }
+    .compare-property-option h3 {
+      font-family: 'DM Serif Display', serif !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      color: #000000 !important;
+      margin: 0 !important;
+    }
+    .compare-property-option p {
+      font-size: 11px !important;
+      color: #555555 !important;
+      margin: 2px 0 0 !important;
+    }
+    .compare-property-option span {
+      font-size: 11.5px !important;
+      font-weight: 800 !important;
+      color: #AA8524 !important;
+      display: block !important;
+      margin-top: 2px !important;
+    }
+
+    /* Print Stylesheet for Pristine Comparison Sheet */
+    @media print {
+      header, footer, #floatingAIWidget, .btn-compare-primary, .btn-compare-secondary, .compare-picker, #direct-modal, #toast, .compare-remove-btn, .btn-compare-view-details {
+        display: none !important;
+      }
+      body {
+        background: #FFFFFF !important;
+        color: #000000 !important;
+        font-size: 10pt !important;
+      }
+      .builders-hero {
+        padding: 16px 0 !important;
+        background: #FFFFFF !important;
+        border-bottom: 2px solid #D4AF37 !important;
+      }
+      .compare-table-container {
+        border: 1px solid #D4AF37 !important;
+        box-shadow: none !important;
+      }
+      .compare-table thead th,
+      .compare-table td {
+        border-color: #CBD5E1 !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#FAF8F5] text-[#000000] font-sans selection:bg-gold-200 selection:text-black relative antialiased min-h-screen overflow-x-hidden">
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-white border-b border-slate-200 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a aria-label="Prospera AI Realtors" class="prospera-brand-logo group flex-shrink-0" href="index.html">
+        <span aria-hidden="true" class="prospera-logo-frame">
+          <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+        </span>
+      </a>
+      <!-- Desktop Primary Navigation -->
+      <nav aria-label="Primary navigation"
+        class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-700">
+        <a class="hover:text-gold-500 transition-colors" href="index.html">Home</a>
+        <a class="hover:text-gold-500 transition-colors" href="builders.html">Builders</a>
+        <a class="hover:text-gold-500 transition-colors" href="explore.html">Properties</a>
+        <a class="hover:text-gold-500 transition-colors" href="agents.html">Agents</a>
+        <a class="hover:text-gold-500 transition-colors" href="market-insights.html">Market Insights</a>
+        <a class="hover:text-gold-500 transition-colors" href="compare-projects.html">Compare</a>
+        <a class="hover:text-gold-500 transition-colors" href="book-site-visit.html">Book Site Visit</a>
+        <div class="prospera-about-dropdown" id="desktopAboutDropdown">
+          <button aria-controls="desktopAboutMenu" aria-expanded="false"
+            class="prospera-about-trigger hover:text-gold-500 transition-colors"
+            onclick="toggleAboutDropdown(event, 'desktopAboutDropdown')" type="button">
+            <span>About</span>
+            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+          </button>
+          <div aria-label="About links" class="prospera-about-menu" id="desktopAboutMenu" role="menu">
+            <a href="about-us.html" role="menuitem">About Us</a>
+            <a href="why-prospera-ai.html" role="menuitem">Why Prospera AI</a>
+            <a href="reviews.html" role="menuitem">Reviews</a>
+            <a href="contact.html" role="menuitem">Contact Us</a>
+            <a href="privacy-terms.html" role="menuitem">Privacy Policy</a>
+          </div>
+        </div>
+      </nav>
+      <!-- Right: Mobile Navigation -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button aria-label="Open menu"
+          class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl border border-gold-500/30 bg-gold-500/10 text-gold-500 hover:bg-gold-500/20 transition-all"
+          id="mobileMenuBtn" onclick="toggleMobileMenu()">
+          <i class="fa-solid fa-bars text-base" id="mobileMenuIcon"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Navigation Dropdown -->
+    <div class="hidden md:hidden border-t border-slate-200 bg-white" id="mobileMenu">
+      <nav aria-label="Mobile navigation" class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="index.html">Home</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="builders.html">Builders</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="explore.html">Properties</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="agents.html">Agents</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="market-insights.html">Market Insights</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="compare-projects.html">Compare</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="book-site-visit.html">Book Site Visit</a>
+        <div class="prospera-mobile-about" id="mobileAboutDropdown">
+          <button aria-controls="mobileAboutMenu" aria-expanded="false" class="prospera-mobile-about-trigger"
+            onclick="toggleAboutDropdown(event, 'mobileAboutDropdown')" type="button">
+            <span>About</span>
+            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+          </button>
+          <div class="prospera-mobile-about-menu" id="mobileAboutMenu">
+            <a href="about-us.html">About Us</a>
+            <a href="why-prospera-ai.html">Why Prospera AI</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="privacy-terms.html">Privacy Policy</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- =============================================
+       MAIN CONTENT: HERO (ditto from builders.html)
+       ============================================= -->
+  <div class="builders-hero">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-black/60 mb-6" aria-label="Breadcrumb">
+        <a href="index.html" class="hover:text-gold-600 transition-colors">Prospera AI</a>
+        <i class="fa-solid fa-chevron-right text-[8px] text-gold-500"></i>
+        <span class="text-gold-600 font-semibold">Compare Projects</span>
+      </nav>
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+          <h1 class="font-heading text-4xl sm:text-5xl font-bold text-[#000000] mb-3 leading-tight">
+            Head-to-Head <span class="text-gold-600">Comparison.</span>
+          </h1>
+          <p class="text-black/75 text-base max-w-2xl leading-relaxed">
+            Evaluate top properties across pricing, ROI, amenities, and AI-driven insights to make the best decision.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-3">
+          <button type="button" onclick="openPropertyPicker()" class="btn-compare-primary">
+            <i class="fa-solid fa-plus text-xs"></i> Add Property
+          </button>
+          <button type="button" onclick="exportPDFReport()" class="btn-compare-secondary bg-white">
+            <i class="fa-solid fa-download text-xs"></i> PDF Report
+          </button>
+          <button type="button" onclick="shareComparison()" class="btn-compare-secondary bg-white">
+            <i class="fa-solid fa-share-nodes text-xs"></i> Share
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full space-y-8">
+    <!-- COMPARISON TABLE CONTAINER -->
+    <div class="compare-table-container">
+      <table class="compare-table">
+        <!-- STICKY HEADER (PROJECT CARDS) -->
+        <thead>
+          <tr>
+            <!-- Top Left Label -->
+            <th class="th-label">
+              <span class="text-xs font-bold uppercase tracking-wider text-gold-700">Compare By</span>
+            </th>
+
+            <!-- Project 1 (Winner / AI Top Pick) -->
+            <th class="th-col">
+              <button type="button" onclick="removeCompareColumn(0)" class="compare-remove-btn" title="Remove property" aria-label="Remove ATS HomeKraft">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <div class="compare-card-frame">
+                <div class="compare-img-wrap">
+                  <span class="badge-top-pick">
+                    <i class="fa-solid fa-trophy"></i> AI Top Pick
+                  </span>
+                  <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80" alt="ATS HomeKraft">
+                  <div class="compare-img-overlay"></div>
+                </div>
+                <div>
+                  <h3 class="compare-card-title">ATS HomeKraft</h3>
+                  <p class="compare-card-price">₹ 1.45 Cr <small>Onwards</small></p>
+                </div>
+                <button type="button" onclick="triggerDirectConnectModal('ATS HomeKraft', 'ATS Infrastructure')" class="btn-compare-view-details">
+                  View Details
+                </button>
+              </div>
+            </th>
+
+            <!-- Project 2 -->
+            <th class="th-col">
+              <button type="button" onclick="removeCompareColumn(1)" class="compare-remove-btn" title="Remove property" aria-label="Remove Godrej Tropical">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <div class="compare-card-frame">
+                <div class="compare-img-wrap">
+                  <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Godrej Tropical">
+                  <div class="compare-img-overlay"></div>
+                </div>
+                <div>
+                  <h3 class="compare-card-title">Godrej Tropical</h3>
+                  <p class="compare-card-price">₹ 1.62 Cr <small>Onwards</small></p>
+                </div>
+                <button type="button" onclick="triggerDirectConnectModal('Godrej Tropical', 'Godrej Properties')" class="btn-compare-view-details">
+                  View Details
+                </button>
+              </div>
+            </th>
+
+            <!-- Project 3 -->
+            <th class="th-col">
+              <button type="button" onclick="removeCompareColumn(2)" class="compare-remove-btn" title="Remove property" aria-label="Remove Samridhi Luxuriate">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <div class="compare-card-frame">
+                <div class="compare-img-wrap">
+                  <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80" alt="Samridhi Luxuriate">
+                  <div class="compare-img-overlay"></div>
+                </div>
+                <div>
+                  <h3 class="compare-card-title">Samridhi Luxuriate</h3>
+                  <p class="compare-card-price">₹ 1.35 Cr <small>Onwards</small></p>
+                </div>
+                <button type="button" onclick="triggerDirectConnectModal('Samridhi Luxuriate', 'Samridhi Group')" class="btn-compare-view-details">
+                  View Details
+                </button>
+              </div>
+            </th>
+          </tr>
+        </thead>
+
+        <!-- COMPARISON ROWS -->
+        <tbody>
+          <!-- Builder Row -->
+          <tr>
+            <td class="td-label">Builder</td>
+            <td class="font-bold text-black">ATS Infrastructure</td>
+            <td class="font-bold text-black">Godrej Properties</td>
+            <td class="font-bold text-black">Samridhi Group</td>
+          </tr>
+
+          <!-- Location Row -->
+          <tr>
+            <td class="td-label">Location</td>
+            <td>Sector 150, Noida<br><span class="text-[11px] text-black/60 block mt-1"><i class="fa-solid fa-train-subway text-gold-600 mr-1"></i> 1.5km to Metro</span></td>
+            <td>Sector 146, Noida<br><span class="text-[11px] text-black/60 block mt-1"><i class="fa-solid fa-train-subway text-gold-600 mr-1"></i> 500m to Metro</span></td>
+            <td>Sector 150, Noida<br><span class="text-[11px] text-black/60 block mt-1"><i class="fa-solid fa-car text-gold-600 mr-1"></i> Expressway Facing</span></td>
+          </tr>
+
+          <!-- Status & Possession -->
+          <tr>
+            <td class="td-label">Status &amp; Possession</td>
+            <td>
+              <span class="compare-status-badge">
+                <i class="fa-solid fa-clock-rotate-left"></i> Under Construction
+              </span>
+              <p class="font-semibold text-black mt-1">December 2026</p>
+            </td>
+            <td>
+              <span class="compare-status-badge">
+                <i class="fa-solid fa-sparkles"></i> New Launch
+              </span>
+              <p class="font-semibold text-black mt-1">Mid 2027</p>
+            </td>
+            <td>
+              <span class="compare-status-badge">
+                <i class="fa-solid fa-clock-rotate-left"></i> Under Construction
+              </span>
+              <p class="font-semibold text-black mt-1">March 2026</p>
+            </td>
+          </tr>
+
+          <!-- ROI Potential (AI) -->
+          <tr>
+            <td class="td-label">ROI Potential (AI)</td>
+            <td>
+              <div class="flex items-baseline gap-2">
+                <span class="roi-number">14.2%</span>
+                <span class="text-[10px] font-bold text-black/60 uppercase">Est. YoY Yield</span>
+              </div>
+              <div class="roi-bar-bg">
+                <div class="roi-bar-fill" style="width: 88%;"></div>
+              </div>
+            </td>
+            <td>
+              <div class="flex items-baseline gap-2">
+                <span class="roi-number">12.5%</span>
+                <span class="text-[10px] font-bold text-black/60 uppercase">Est. YoY Yield</span>
+              </div>
+              <div class="roi-bar-bg">
+                <div class="roi-bar-fill" style="width: 76%;"></div>
+              </div>
+            </td>
+            <td>
+              <div class="flex items-baseline gap-2">
+                <span class="roi-number">11.8%</span>
+                <span class="text-[10px] font-bold text-black/60 uppercase">Est. YoY Yield</span>
+              </div>
+              <div class="roi-bar-bg">
+                <div class="roi-bar-fill" style="width: 68%;"></div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Amenities List -->
+          <tr>
+            <td class="td-label" style="vertical-align: top; padding-top: 24px !important;">Amenities</td>
+            <td class="space-y-2">
+              <div class="flex items-center gap-2.5 text-xs text-black/90"><i class="fa-solid fa-check text-gold-600 font-bold"></i> 30,000 SqFt Club House</div>
+              <div class="flex items-center gap-2.5 text-xs text-black/90"><i class="fa-solid fa-check text-gold-600 font-bold"></i> Olympic Pool</div>
+              <div class="flex items-center gap-2.5 text-xs text-black/90"><i class="fa-solid fa-check text-gold-600 font-bold"></i> 9-Hole Golf Putting</div>
+              <div class="flex items-center gap-2.5 text-xs text-black/90"><i class="fa-solid fa-check text-gold-600 font-bold"></i> 80% Green Open Area</div>
+              <div class="flex items-center gap-2.5 text-xs text-black/35"><i class="fa-solid fa-xmark text-black/30"></i> Private Concierge</div>
+            </td>
+            <td class="space-y-2">
+              <div class="flex items-center gap-2.5 text-xs text-black/90"><i class="fa-solid fa-check text-gold-600 font-bold"></i> Resort Theme Club</div>
+              <div class="flex items-center gap-2.5 text-xs text-black/90"><i class="fa-solid fa-check text-gold-600 font-bold"></i> Infinity Pool</div>
+              <div class="flex items-center gap-2.5 text-xs text-black/35"><i class="fa-solid fa-xmark text-black/30"></i> Golf Putting</div>
+              <div class="flex items-center gap-2.5 text-xs text-black/90"><i class="fa-solid fa-check text-gold-600 font-bold"></i> High-Street Retail Inside</div>
+              <div class="flex items-center gap-2.5 text-xs text-black/90"><i class="fa-solid fa-check text-gold-600 font-bold"></i> Private Concierge</div>
+            </td>
+            <td class="space-y-2">
+              <div class="flex items-center gap-2.5 text-xs text-black/90"><i class="fa-solid fa-check text-gold-600 font-bold"></i> Luxury Club House</div>
+              <div class="flex items-center gap-2.5 text-xs text-black/90"><i class="fa-solid fa-check text-gold-600 font-bold"></i> Standard Pool</div>
+              <div class="flex items-center gap-2.5 text-xs text-black/35"><i class="fa-solid fa-xmark text-black/30"></i> Golf Putting</div>
+              <div class="flex items-center gap-2.5 text-xs text-black/90"><i class="fa-solid fa-check text-gold-600 font-bold"></i> 70% Green Area</div>
+              <div class="flex items-center gap-2.5 text-xs text-black/35"><i class="fa-solid fa-xmark text-black/30"></i> Private Concierge</div>
+            </td>
+          </tr>
+
+          <!-- AI Summary (Pros & Considerations) -->
+          <tr>
+            <td class="td-label" style="vertical-align: top; padding-top: 24px !important;">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-robot text-gold-600 text-base"></i>
+                <span>AI Summary</span>
+              </div>
+            </td>
+            <td>
+              <div class="ai-pros-box">
+                <span><i class="fa-solid fa-arrow-trend-up"></i> AI Strengths</span>
+                <ul>
+                  <li>Lowest density master plan in Sector 150.</li>
+                  <li>Exceptional historical track record of builder delivery.</li>
+                  <li>Highest projected ROI due to sports city infra.</li>
+                </ul>
+              </div>
+              <div class="ai-cons-box">
+                <span><i class="fa-solid fa-circle-info"></i> Considerations</span>
+                <ul>
+                  <li>Metro station is 1.5km away (not walking distance).</li>
+                  <li>Premium pricing compared to immediate neighbors.</li>
+                </ul>
+              </div>
+            </td>
+            <td>
+              <div class="ai-pros-box">
+                <span><i class="fa-solid fa-arrow-trend-up"></i> AI Strengths</span>
+                <ul>
+                  <li>Top tier national developer credibility (Godrej).</li>
+                  <li>Very close to Sector 146 Metro (500m).</li>
+                  <li>Resort-living concept attracts high rental demand.</li>
+                </ul>
+              </div>
+              <div class="ai-cons-box">
+                <span><i class="fa-solid fa-circle-info"></i> Considerations</span>
+                <ul>
+                  <li>Possession timeline is later (Mid 2027).</li>
+                  <li>Higher unit density layout than ATS.</li>
+                </ul>
+              </div>
+            </td>
+            <td>
+              <div class="ai-pros-box">
+                <span><i class="fa-solid fa-arrow-trend-up"></i> AI Strengths</span>
+                <ul>
+                  <li>Most competitive pricing entry in Sector 150.</li>
+                  <li>Early possession timeline (March 2026).</li>
+                  <li>Direct expressway facing units available.</li>
+                </ul>
+              </div>
+              <div class="ai-cons-box">
+                <span><i class="fa-solid fa-circle-info"></i> Considerations</span>
+                <ul>
+                  <li>Amenities scale is smaller compared to Tier-1 builders.</li>
+                  <li>Lower brand premium for resale market.</li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+<footer class="bg-white border-t border-slate-200 text-slate-600 text-sm py-12 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div aria-label="Prospera AI Realtors" class="prospera-footer-brand mb-4">
+            <span aria-hidden="true" class="prospera-logo-frame">
+              <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+            </span>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            India’s premier AI-first conversational real estate network. Unbiased recommendations, voice search, and
+            predictive market intelligence.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="about-us.html">About Us</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="why-prospera-ai.html">Why Prospera
+                AI</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="reviews.html">Reviews</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="contact.html">Contact Us</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="privacy-terms.html">Privacy
+                Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Top Locations</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Gomti Nagar'); return false;">Gomti
+                Nagar</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Gomti Nagar Extension'); return false;">Gomti Nagar Extension</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Shaheed Path'); return false;">Shaheed
+                Path</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Sultanpur Road'); return false;">Sultanpur Road</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Contact &amp; Legal</h4>
+          <p class="text-xs text-slate-500 mb-2"><i class="fa-solid fa-envelope text-gold-500 mr-2"></i>
+            advisor@prospera.ai</p>
+          <p class="text-xs text-slate-500 mb-4"><i class="fa-solid fa-phone text-gold-500 mr-2"></i> +91 1800-PROSPERA
+          </p>
+          <div class="flex gap-3">
+            <a aria-label="LinkedIn"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+            <a aria-label="Twitter / X"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-x-twitter text-xs"></i></a>
+            <a aria-label="Instagram"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-instagram text-xs"></i></a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pt-8 border-t border-slate-200 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>© 2026 Prospera AI Realtors Inc. All rights reserved.</p>
+        <p class="text-slate-500">RERA Reg: UPRERA/AI/2026/001</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DIRECT CONNECT WITH BUILDER MODAL -->
+  <div class="fixed inset-0 bg-black/65 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4" id="direct-modal" onclick="if(event.target===this)closeDirectConnectModal()">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 relative border border-gold-500/40 shadow-2xl">
+      <button class="absolute top-4 right-4 w-8 h-8 rounded-full border border-black/15 bg-white text-black hover:border-gold-500 hover:text-gold-600 transition-colors flex items-center justify-center cursor-pointer" onclick="closeDirectConnectModal()" aria-label="Close modal">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+      <div class="text-center mb-6">
+        <div class="w-12 h-12 bg-gold-50 text-gold-600 rounded-full flex items-center justify-center mx-auto text-xl mb-3 border border-gold-500/30">
+          <i class="fa-solid fa-handshake"></i>
+        </div>
+        <h3 class="font-heading font-bold text-2xl text-black">Connect Directly With Developer</h3>
+        <p class="text-xs text-gold-600 font-semibold mt-1" id="modal-project-name">Official Builder Sales Team Connect</p>
+        <p class="text-xs text-black/60 mt-2">Zero brokerage fee, direct official price guaranteed.</p>
+      </div>
+      <form class="space-y-3.5" onsubmit="handleModalSubmit(event)">
+        <div>
+          <label class="text-xs font-semibold text-black/80 block mb-1">Your Full Name</label>
+          <input class="w-full bg-[#FAF8F5] border border-gold-500/30 rounded-xl py-2.5 px-3 text-sm focus:outline-none focus:border-gold-500 text-black" placeholder="e.g. Rahul Verma" required type="text"/>
+        </div>
+        <div>
+          <label class="text-xs font-semibold text-black/80 block mb-1">Mobile Number (For Callback)</label>
+          <input class="w-full bg-[#FAF8F5] border border-gold-500/30 rounded-xl py-2.5 px-3 text-sm focus:outline-none focus:border-gold-500 text-black" placeholder="+91 98765 43210" required type="tel"/>
+        </div>
+        <div>
+          <label class="text-xs font-semibold text-black/80 block mb-1">Preferred Visit Date</label>
+          <input class="w-full bg-[#FAF8F5] border border-gold-500/30 rounded-xl py-2.5 px-3 text-sm focus:outline-none focus:border-gold-500 text-black" type="date"/>
+        </div>
+        <button class="w-full py-3 rounded-xl bg-black text-white font-bold text-xs uppercase tracking-wider mt-3 border border-black hover:border-gold-500 transition-all hover:shadow-lg" type="submit">
+          Request Direct Callback
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="fixed bottom-6 right-6 bg-black text-white px-5 py-3 rounded-2xl shadow-2xl text-xs flex items-center gap-3 hidden z-50 border border-gold-500/40" id="toast">
+    <i class="fa-solid fa-circle-check text-gold-500 text-base"></i>
+    <span id="toast-message">Connected with official builder sales team!</span>
+  </div>
+
+  <!-- FLOATING AI ADVISOR WIDGET -->
+  <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end max-w-[calc(100vw-2rem)]" id="floatingAIWidget">
+    <button aria-label="Open Prospera AI Property Finder" class="relative group flex items-center gap-3 bg-black border-2 border-gold-500 text-white p-3 sm:px-5 sm:py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105" onclick="window.location.href='ai-property-finder.html'" type="button">
+      <div class="w-8 h-8 rounded-full bg-gold-500 flex items-center justify-center text-black font-bold">
+        <i class="fa-solid fa-robot text-sm"></i>
+      </div>
+      <span class="hidden sm:inline-block font-semibold text-xs text-gold-400 tracking-wider uppercase">AI Advisor</span>
+      <span class="w-2.5 h-2.5 rounded-full bg-gold-400 animate-ping absolute top-1 right-1"></span>
+    </button>
+  </div>
+
+  <!-- COMPARE PROPERTY PICKER MODAL -->
+  <div id="propertyPicker" class="compare-picker hidden" aria-hidden="true">
+    <div class="compare-picker-backdrop" onclick="closePropertyPicker()"></div>
+    <div class="compare-picker-panel" role="dialog" aria-modal="true" aria-labelledby="propertyPickerTitle">
+      <div class="compare-picker-head">
+        <div>
+          <p class="compare-picker-eyebrow">PROPERTY DATABASE</p>
+          <h2 id="propertyPickerTitle">Add Property</h2>
+          <p>Select a property to add to your comparison (max 3 properties).</p>
+        </div>
+        <button type="button" onclick="closePropertyPicker()" class="compare-picker-close" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="compare-picker-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input id="propertyPickerSearch" type="search" placeholder="Search property name, builder or location..." oninput="filterPropertyPicker()">
+      </div>
+      <div id="propertyPickerStatus" class="compare-picker-status">Loading properties...</div>
+      <div id="propertyPickerList" class="compare-picker-list"></div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    function triggerDirectConnectModal(projectName, builderName) {
+      const nameEl = document.getElementById('modal-project-name');
+      const modal = document.getElementById('direct-modal');
+      if (nameEl) nameEl.innerText = projectName + ' • ' + builderName;
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeDirectConnectModal() {
+      document.getElementById('direct-modal')?.classList.add('hidden');
+    }
+
+    function handleModalSubmit(event) {
+      event.preventDefault();
+      closeDirectConnectModal();
+      showToast('Success! Direct developer sales team has been notified. They will call you shortly.');
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const messageEl = document.getElementById('toast-message');
+      if (!toast) return;
+      if (messageEl) messageEl.innerText = message;
+      toast.classList.remove('hidden');
+      window.clearTimeout(window.__prosperaToastTimer);
+      window.__prosperaToastTimer = window.setTimeout(() => toast.classList.add('hidden'), 4000);
+    }
+
+    function exportPDFReport() {
+      window.print();
+    }
+
+    function shareComparison() {
+      const shareData = {
+        title: 'Prospera AI - Project Comparison',
+        text: 'Evaluate top properties across pricing, ROI, amenities, and AI insights.',
+        url: window.location.href
+      };
+      if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+        navigator.share(shareData).catch(() => {});
+      } else {
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(window.location.href).then(() => {
+            showToast('Comparison link copied to clipboard!');
+          }).catch(() => {
+            showToast('Link: ' + window.location.href);
+          });
+        } else {
+          showToast('Link: ' + window.location.href);
+        }
+      }
+    }
+
+    /* Database of properties for comparison */
+    const defaultCompareProperties = [
+      {
+        id: 'ats-homekraft',
+        name: 'ATS HomeKraft',
+        builder: 'ATS Infrastructure',
+        location: 'Sector 150, Noida',
+        price: '₹ 1.45 Cr',
+        status: 'Under Construction',
+        possession: 'December 2026',
+        roi: '14.2%',
+        image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80',
+        amenities: ['30,000 SqFt Club House', 'Olympic Pool', '9-Hole Golf Putting', '80% Green Open Area'],
+        pros: 'Lowest density in Sector 150. Exceptional track record. Highest projected ROI.',
+        cons: 'Metro station is 1.5km away. Premium pricing.'
+      },
+      {
+        id: 'godrej-tropical',
+        name: 'Godrej Tropical',
+        builder: 'Godrej Properties',
+        location: 'Sector 146, Noida',
+        price: '₹ 1.62 Cr',
+        status: 'New Launch',
+        possession: 'Mid 2027',
+        roi: '12.5%',
+        image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80',
+        amenities: ['Resort Theme Club', 'Infinity Pool', '500m to Metro Station', 'High-Street Retail Inside'],
+        pros: 'Brand value of Godrej Properties. Very close to Sector 146 Metro.',
+        cons: 'Possession timeline is later (Mid 2027). Higher unit density.'
+      },
+      {
+        id: 'samridhi-luxuriate',
+        name: 'Samridhi Luxuriate',
+        builder: 'Samridhi Group',
+        location: 'Sector 150, Noida',
+        price: '₹ 1.35 Cr',
+        status: 'Under Construction',
+        possession: 'March 2026',
+        roi: '11.8%',
+        image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80',
+        amenities: ['Luxury Club House', 'Standard Pool', 'Expressway Facing', '70% Green Area'],
+        pros: 'Most affordable entry price in this premium sector. Early possession timeline.',
+        cons: 'Amenities scale is smaller compared to Tier-1 builders.'
+      },
+      {
+        id: 'm3m-golfestate',
+        name: 'M3M Golfestate Crown',
+        builder: 'M3M India',
+        location: 'Sector 65, Gurgaon',
+        price: '₹ 3.20 Cr',
+        status: 'Ready to Move',
+        possession: 'Immediate',
+        roi: '15.8%',
+        image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80',
+        amenities: ['9-Hole Golf Course', '7-Star Concierge', 'Private Elevator Foyer', 'Temperature Controlled Pool'],
+        pros: 'Ultra-luxury golf living on Golf Course Extension Road with high rental demand.',
+        cons: 'High investment ticket size.'
+      },
+      {
+        id: 'prestige-city',
+        name: 'Prestige City Boulevard',
+        builder: 'Prestige Group',
+        location: 'Sector 128, Noida',
+        price: '₹ 2.10 Cr',
+        status: 'Under Construction',
+        possession: 'Late 2026',
+        roi: '13.6%',
+        image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=600&q=80',
+        amenities: ['Master-Planned Township', 'High-Street Retail', 'Helipad Access', 'Infinity Edge Pool'],
+        pros: 'Integrated township ecosystem on Noida-Greater Noida Expressway.',
+        cons: 'Large scale township has higher footfall traffic.'
+      },
+      {
+        id: 'oberoi-commercial',
+        name: 'Oberoi Commercial Hub',
+        builder: 'Oberoi Realty',
+        location: 'Gaur City, Greater Noida',
+        price: '₹ 85 Lac',
+        status: 'Ready to Move',
+        possession: 'Immediate',
+        roi: '16.4%',
+        image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80',
+        amenities: ['Grade A Office Suites', 'Double Height Atrium', '24/7 Power Backup', 'Multi-level Parking'],
+        pros: 'High commercial rental yields with long-term corporate lease potential.',
+        cons: 'Commercial property tenancy dependent on business cycles.'
+      },
+      {
+        id: 'max-estates',
+        name: 'Max Estates 128',
+        builder: 'Max Estates',
+        location: 'Sector 128, Noida',
+        price: '₹ 4.50 Cr',
+        status: 'New Launch',
+        possession: 'Early 2028',
+        roi: '14.8%',
+        image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=80',
+        amenities: ['IGBC Platinum Certified', 'Biophilic Architecture', 'Wellness Center', 'Private Plunge Pools'],
+        pros: 'Ultra-premium eco-luxury residence with focus on well-being and exclusive low-density living.',
+        cons: 'High price point; possession in 2028.'
+      }
+    ];
+
+    const comparePropertyState = {
+      properties: [...defaultCompareProperties],
+      selected: [defaultCompareProperties[0], defaultCompareProperties[1], defaultCompareProperties[2]]
+    };
+
+    async function openPropertyPicker(){
+      const modal = document.getElementById('propertyPicker');
+      if(!modal) return;
+      modal.classList.remove('hidden');
+      modal.setAttribute('aria-hidden','false');
+      document.body.style.overflow = 'hidden';
+      renderPropertyPicker();
+    }
+
+    function closePropertyPicker(){
+      const m = document.getElementById('propertyPicker');
+      if(m){
+        m.classList.add('hidden');
+        m.setAttribute('aria-hidden','true');
+      }
+      document.body.style.overflow = '';
+    }
+
+    function filterPropertyPicker(){
+      renderPropertyPicker();
+    }
+
+    function renderPropertyPicker(){
+      const list = document.getElementById('propertyPickerList');
+      const status = document.getElementById('propertyPickerStatus');
+      const q = (document.getElementById('propertyPickerSearch')?.value || '').trim().toLowerCase();
+
+      const available = comparePropertyState.properties.filter(p => {
+        const text = [p.name, p.title, p.builder, p.builderName, p.location, p.city, p.price].filter(Boolean).join(' ').toLowerCase();
+        return !q || text.includes(q);
+      });
+      const selectedCount = comparePropertyState.selected.length;
+      if(status){
+        status.textContent = `${selectedCount}/3 properties selected • ${available.length} available`;
+      }
+
+      if(!available.length){
+        if(list) list.innerHTML = '<div style="grid-column: 1/-1; padding: 24px; text-align: center; color: #666; font-size: 13px;">No properties found matching your search.</div>';
+        return;
+      }
+
+      if(list){
+        list.innerHTML = available.map((p, i) => {
+          const id = String(p.id || p._id || p.slug || i);
+          const chosen = comparePropertyState.selected.some(x => String(x.id || x._id || x.slug) === id);
+          const img = p.image || p.imageUrl || 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=400&q=80';
+          const name = p.name || p.title || 'Property';
+          const builder = p.builder || p.builderName || 'Prospera AI';
+          const location = p.location || p.city || 'Location available';
+          const price = p.price || p.priceFrom || 'Price on request';
+          const safeId = id.replace(/'/g, "\'");
+
+          return `<button type="button" class="compare-property-option ${chosen ? 'opacity-50 cursor-not-allowed bg-[#F8F6F2]' : ''}" onclick="selectCompareProperty('${safeId}')" ${chosen ? 'disabled' : ''}>
+            <img loading="lazy" decoding="async" src="${img}" alt="${name}">
+            <div style="flex: 1; min-width: 0;">
+              <h3>${name}</h3>
+              <p>${builder} • ${location}</p>
+              <span>${price}${chosen ? ' • <strong style="color:#AA8524">Added</strong>' : ''}</span>
+            </div>
+          </button>`;
+        }).join('');
+      }
+    }
+
+    function selectCompareProperty(id){
+      const targetId = String(id);
+      if(comparePropertyState.selected.length >= 3){
+        alert('You can compare up to 3 properties. Please remove one first, then add another.');
+        return;
+      }
+      const p = comparePropertyState.properties.find(x => String(x.id || x._id || x.slug) === targetId);
+      if(!p) return;
+      if(comparePropertyState.selected.some(x => String(x.id || x._id || x.slug) === targetId)) return;
+
+      comparePropertyState.selected.push(p);
+      addPropertyColumn(p);
+      closePropertyPicker();
+      showToast(`Added ${p.name} to comparison!`);
+    }
+
+    function escHtml(v){
+      return String(v ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+    }
+
+    function addPropertyColumn(p){
+      const table = document.querySelector('main table.compare-table');
+      if(!table) return;
+      const head = table.querySelector('thead tr');
+      const colIndex = head.children.length - 1;
+      const name = escHtml(p.name || p.title || 'Property');
+      const builder = escHtml(p.builder || p.builderName || 'Builder');
+      const location = escHtml(p.location || p.city || 'Location available');
+      const price = escHtml(p.price || p.priceFrom || 'Price on request');
+      const status = escHtml(p.status || 'Available');
+      const possession = escHtml(p.possession || 'Available');
+      const roi = escHtml(p.roi || '12.0%');
+      const img = escHtml(p.image || p.imageUrl || 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80');
+      const pros = escHtml(p.pros || 'Optimal pricing, builder credibility, and prime connectivity.');
+      const cons = escHtml(p.cons || 'Check delivery timeline and registration status.');
+
+      const th = document.createElement('th');
+      th.className = 'th-col';
+      th.innerHTML = `
+        <button type="button" onclick="removeCompareColumn(${colIndex})" class="compare-remove-btn" title="Remove property" aria-label="Remove ${name}">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="compare-card-frame">
+          <div class="compare-img-wrap">
+            <img loading="lazy" decoding="async" src="${img}" alt="${name}">
+            <div class="compare-img-overlay"></div>
+          </div>
+          <div>
+            <h3 class="compare-card-title">${name}</h3>
+            <p class="compare-card-price">${price} <small>Onwards</small></p>
+          </div>
+          <button type="button" onclick="triggerDirectConnectModal('${name}', '${builder}')" class="btn-compare-view-details">
+            View Details
+          </button>
+        </div>
+      `;
+      head.appendChild(th);
+
+      let amenitiesHTML = '';
+      if(Array.isArray(p.amenities) && p.amenities.length){
+        amenitiesHTML = p.amenities.map(a => `<div class="flex items-center gap-2.5 text-xs text-black/90"><i class="fa-solid fa-check text-gold-600 font-bold"></i> ${escHtml(a)}</div>`).join('');
+      } else {
+        amenitiesHTML = `<div class="flex items-center gap-2.5 text-xs text-black/90"><i class="fa-solid fa-check text-gold-600 font-bold"></i> Modern Amenities</div><div class="flex items-center gap-2.5 text-xs text-black/90"><i class="fa-solid fa-check text-gold-600 font-bold"></i> Dedicated Parking</div>`;
+      }
+
+      const rows = table.querySelectorAll('tbody tr');
+      const cells = [
+        `<td class="font-bold text-black">${builder}</td>`,
+        `<td>${location}</td>`,
+        `<td><span class="compare-status-badge"><i class="fa-solid fa-clock-rotate-left"></i> ${status}</span><p class="font-semibold text-black mt-1">${possession}</p></td>`,
+        `<td><div class="flex items-baseline gap-2"><span class="roi-number">${roi}</span><span class="text-[10px] font-bold text-black/60 uppercase">Est. YoY Yield</span></div><div class="roi-bar-bg"><div class="roi-bar-fill" style="width: 75%;"></div></div></td>`,
+        `<td class="space-y-2">${amenitiesHTML}</td>`,
+        `<td><div class="ai-pros-box"><span><i class="fa-solid fa-arrow-trend-up"></i> AI Strengths</span><p class="text-xs text-black/90 m-0">${pros}</p></div><div class="ai-cons-box"><span><i class="fa-solid fa-circle-info"></i> Considerations</span><p class="text-xs text-black/70 m-0">${cons}</p></div></td>`
+      ];
+
+      rows.forEach((row, i) => {
+        const td = document.createElement('td');
+        td.innerHTML = (cells[i] || '<td></td>').replace(/^<td[^>]*>|<\/td>$/g, '');
+        row.appendChild(td);
+      });
+    }
+
+    function removeCompareColumn(index){
+      const table = document.querySelector('main table.compare-table');
+      if(!table) return;
+      const head = table.querySelector('thead tr');
+      const cellIndex = index + 1;
+      if(!head || !head.children[cellIndex]) return;
+
+      const removedCol = head.children[cellIndex];
+      const removedName = removedCol.querySelector('.compare-card-title')?.textContent || 'Property';
+
+      head.removeChild(head.children[cellIndex]);
+      table.querySelectorAll('tbody tr').forEach(row => {
+        if(row.children[cellIndex]) row.removeChild(row.children[cellIndex]);
+      });
+
+      if(index >= 0 && index < comparePropertyState.selected.length){
+        comparePropertyState.selected.splice(index, 1);
+      }
+
+      table.querySelectorAll('thead tr th.th-col').forEach((th, i) => {
+        const b = th.querySelector('.compare-remove-btn');
+        if(b) b.setAttribute('onclick', `removeCompareColumn(${i})`);
+      });
+
+      showToast(`Removed ${removedName} from comparison`);
+    }
+
+    function toggleAboutDropdown(event, id) {
+      if(event){ event.preventDefault(); event.stopPropagation(); }
+      const wrap = document.getElementById(id);
+      if(!wrap) return;
+      const isOpen = wrap.classList.toggle("is-open");
+      const trigger = wrap.querySelector(".prospera-about-trigger, .prospera-mobile-about-trigger");
+      if(trigger) trigger.setAttribute("aria-expanded", String(isOpen));
+    }
+
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".prospera-about-dropdown.is-open, .prospera-mobile-about.is-open").forEach((wrap) => {
+        if(!wrap.contains(event.target)){
+          wrap.classList.remove("is-open");
+          const trigger = wrap.querySelector(".prospera-about-trigger, .prospera-mobile-about-trigger");
+          if(trigger) trigger.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById("mobileMenu");
+      const icon = document.getElementById("mobileMenuIcon");
+      if(!menu) return;
+      const hidden = menu.classList.contains("hidden");
+      menu.classList.toggle("hidden", !hidden);
+      if(icon){
+        icon.classList.toggle("fa-bars", !hidden);
+        icon.classList.toggle("fa-xmark", hidden);
+      }
+    }
+
+    function askAILocation(loc) {
+      window.location.href = 'ai-property-finder.html?q=' + encodeURIComponent('Find best properties and appreciation rate in ' + loc);
+    }
+  </script>
+  <script src="theme.js"></script>
+</body>
+</html>

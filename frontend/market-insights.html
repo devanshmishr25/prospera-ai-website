@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Insights | Prospera AI Realtors</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+    <link href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#FCF9EE',
+                            100: '#FAF3D3',
+                            200: '#F4E5A1',
+                            300: '#EDD36E',
+                            400: '#E4BF3F',
+                            500: '#D4AF37', // Signature Gold
+                            600: '#AA8524',
+                            700: '#806118',
+                            800: '#57400F',
+                            900: '#332407',
+                        },
+                        obsidian: {
+                            950: '#070708',
+                            900: '#0E0E11',
+                            800: '#16161C',
+                            700: '#22222A',
+                            600: '#30303B',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"DM Serif Display"', 'serif'],
+                        heading: ['"DM Serif Display"', 'serif'],
+                        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 0 35px -5px rgba(212, 175, 55, 0.3)',
+                        'gold-glow-lg': '0 0 60px -10px rgba(212, 175, 55, 0.45)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Theme Stylesheet & Pre-Render Theme Loader (Defaults to Light Mode) -->
+    <link rel="stylesheet" href="theme.css">
+    <script>
+      /* Prospera AI uses a single light visual system. */
+      (function () {
+        document.documentElement.setAttribute("data-theme", "light");
+        document.documentElement.classList.remove("dark");
+      })();
+    </script>
+
+    <style id="prospera-market-insights-design-system">
+    /* ============================================================
+       PROSPERA AI — MARKET INSIGHTS DESIGN SYSTEM
+       STRICT 3-COLOR PALETTE: BLACK (#000000), WHITE (#FFFFFF), GOLD (#D4AF37)
+       ZERO ITALICS — STRICT NO-ITALIC TYPOGRAPHY
+       ============================================================ */
+
+    *, *::before, *::after {
+      font-style: normal !important;
+    }
+
+    .font-heading, .font-serif, h1, h2, h3, h4, h5, h6 {
+      font-family: 'DM Serif Display', serif !important;
+      font-style: normal !important;
+    }
+    .font-sans, body, p, span, li, a, button, input, select, textarea {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-style: normal !important;
+    }
+
+    body {
+      background-color: #FAF8F5 !important;
+      color: #000000 !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* Hero Section: Ditto from builders.html / explore.html */
+    .builders-hero {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%) !important;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.22) !important;
+      padding: 104px 0 48px !important;
+    }
+
+    /* Gold gradients and accents — Strictly Non-Italic */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #D4AF37 0%, #AA820A 100%) !important;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      font-style: normal !important;
+    }
+
+    .text-gold-600 {
+      color: #AA8524 !important;
+      -webkit-text-fill-color: #AA8524 !important;
+    }
+    .text-gold-500 {
+      color: #D4AF37 !important;
+      -webkit-text-fill-color: #D4AF37 !important;
+    }
+
+    .accent-line {
+      width: 50px;
+      height: 2px;
+      background: linear-gradient(90deg, #D4AF37, transparent) !important;
+      margin-top: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Filter Bar Container */
+    .filter-bar-wrap {
+      background: #FFFFFF !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.3) !important;
+      border-radius: 16px !important;
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04) !important;
+      padding: 12px 16px !important;
+    }
+
+    /* Filter buttons — STRICT BLACK + WHITE + GOLD */
+    html body main .cat-btn,
+    button.cat-btn {
+      background: #FFFFFF !important;
+      background-color: #FFFFFF !important;
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.4) !important;
+      border-radius: 10px !important;
+      padding: 9px 18px !important;
+      font-size: 12px !important;
+      font-weight: 700 !important;
+      font-style: normal !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      cursor: pointer !important;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+    }
+    html body main .cat-btn:not(.is-active):not(.active):hover,
+    button.cat-btn:not(.is-active):not(.active):hover {
+      border-color: #D4AF37 !important;
+      background: #D4AF37 !important;
+      background-color: #D4AF37 !important;
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.28) !important;
+    }
+    html body main .cat-btn.is-active,
+    html body main .cat-btn.active,
+    button.cat-btn.is-active,
+    button.cat-btn.active {
+      background: #000000 !important;
+      background-color: #000000 !important;
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      border: 1.5px solid #000000 !important;
+      font-weight: 800 !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+    }
+    html body main .cat-btn.is-active:hover,
+    html body main .cat-btn.active:hover,
+    button.cat-btn.is-active:hover,
+    button.cat-btn.active:hover {
+      background: #000000 !important;
+      background-color: #000000 !important;
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      border: 1.5px solid #D4AF37 !important;
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35) !important;
+    }
+    html body main .cat-btn * {
+      color: inherit !important;
+      -webkit-text-fill-color: inherit !important;
+    }
+
+    /* All Cards */
+    .insight-card {
+      background: #FFFFFF !important;
+      background-color: #FFFFFF !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.3) !important;
+      border-radius: 20px !important;
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04) !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .insight-card:hover {
+      border-color: #D4AF37 !important;
+      box-shadow: 0 10px 30px -5px rgba(212, 175, 55, 0.22) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    /* Close / X Button — Strictly Transparent, Black icon on light, Gold hover */
+    .modal-close-btn,
+    button.modal-close-btn,
+    html body main .modal-close-btn,
+    html body main button.modal-close-btn {
+      background: transparent !important;
+      background-color: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+      padding: 6px !important;
+      border-radius: 8px !important;
+      cursor: pointer !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      line-height: 1 !important;
+      transition: all 0.2s ease !important;
+    }
+    .modal-close-btn:hover,
+    button.modal-close-btn:hover,
+    html body main .modal-close-btn:hover,
+    html body main button.modal-close-btn:hover {
+      background: transparent !important;
+      background-color: transparent !important;
+      color: #D4AF37 !important;
+      -webkit-text-fill-color: #D4AF37 !important;
+      transform: scale(1.1) !important;
+    }
+    .modal-close-btn *,
+    button.modal-close-btn * {
+      color: inherit !important;
+      -webkit-text-fill-color: inherit !important;
+    }
+
+    /* Subcard / Mini-cards */
+    .mini-card {
+      background: #FAF8F5 !important;
+      background-color: #FAF8F5 !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.3) !important;
+      border-radius: 12px !important;
+      padding: 16px !important;
+      transition: all 0.2s ease !important;
+    }
+    .mini-card:hover {
+      background: #FFFFFF !important;
+      background-color: #FFFFFF !important;
+      border-color: #D4AF37 !important;
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.18) !important;
+    }
+
+    /* Metrics Grid Box */
+    .metrics-box {
+      background: #FAF8F5 !important;
+      background-color: #FAF8F5 !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.3) !important;
+      border-radius: 14px !important;
+      padding: 16px !important;
+    }
+
+    /* Badges — GOLD ONLY */
+    .badge-gold {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      padding: 4px 10px !important;
+      background: rgba(212, 175, 55, 0.12) !important;
+      border: 1.5px solid #D4AF37 !important;
+      color: #8C6D1F !important;
+      -webkit-text-fill-color: #8C6D1F !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      font-style: normal !important;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+      border-radius: 9999px !important;
+    }
+
+    /* Action Buttons — STRICT BLACK OR GOLD */
+    /* Black Button: Black bg, White text -> Hover Gold bg, Black text */
+    .btn-insight-primary {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      padding: 12px 24px !important;
+      background: #000000 !important;
+      background-color: #000000 !important;
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      border: 1.5px solid #000000 !important;
+      border-radius: 12px !important;
+      font-size: 13px !important;
+      font-weight: 700 !important;
+      font-style: normal !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      cursor: pointer !important;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12) !important;
+      text-decoration: none !important;
+    }
+    .btn-insight-primary:hover {
+      background: #D4AF37 !important;
+      background-color: #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35) !important;
+    }
+
+    /* Secondary / Card Buttons: White bg, Black text, Gold border -> Hover Gold bg, Black text */
+    .btn-insight-secondary {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      padding: 9px 18px !important;
+      background: #FFFFFF !important;
+      background-color: #FFFFFF !important;
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.5) !important;
+      border-radius: 10px !important;
+      font-size: 12px !important;
+      font-weight: 700 !important;
+      font-style: normal !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      cursor: pointer !important;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      text-decoration: none !important;
+    }
+    .btn-insight-secondary:hover {
+      background: #D4AF37 !important;
+      background-color: #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3) !important;
+    }
+
+    /* Gold Button for Dark Sections: Gold bg, Black text -> Hover Black bg, White text */
+    .btn-insight-gold {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      padding: 14px 28px !important;
+      background: #D4AF37 !important;
+      background-color: #D4AF37 !important;
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+      border: 1.5px solid #D4AF37 !important;
+      border-radius: 12px !important;
+      font-size: 13px !important;
+      font-weight: 800 !important;
+      font-style: normal !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.06em !important;
+      cursor: pointer !important;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3) !important;
+      text-decoration: none !important;
+    }
+    .btn-insight-gold:hover {
+      background: #000000 !important;
+      background-color: #000000 !important;
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      border-color: #D4AF37 !important;
+      box-shadow: 0 6px 22px rgba(212, 175, 55, 0.4) !important;
+    }
+
+    /* Typography & Contrast — BLACK ON LIGHT, WHITE ON DARK */
+    .section-title {
+      font-family: 'DM Serif Display', serif !important;
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+      font-size: clamp(1.75rem, 3.5vw, 2.35rem) !important;
+      font-weight: 700 !important;
+      font-style: normal !important;
+      line-height: 1.25 !important;
+      margin: 0 !important;
+    }
+    .section-subtitle {
+      color: #000000 !important;
+      font-size: 15px !important;
+      font-weight: 400 !important;
+      font-style: normal !important;
+      line-height: 1.65 !important;
+      margin-top: 8px !important;
+      margin-bottom: 24px !important;
+      max-width: 680px !important;
+    }
+    .card-title {
+      font-family: 'DM Serif Display', serif !important;
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+      font-style: normal !important;
+      font-weight: 700 !important;
+    }
+    .card-text {
+      color: #000000 !important;
+      line-height: 1.65 !important;
+      font-size: 13.5px !important;
+      font-style: normal !important;
+    }
+    .gold-link {
+      color: #000000 !important;
+      font-weight: 700 !important;
+      font-size: 13px !important;
+      font-style: normal !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      text-decoration: none !important;
+      transition: color 0.2s ease !important;
+    }
+    .gold-link:hover {
+      color: #D4AF37 !important;
+    }
+
+    /* Dark Section Specific Strict Overrides */
+    .dark-card {
+      background: #000000 !important;
+      background-color: #000000 !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
+      border-radius: 24px !important;
+      box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5) !important;
+    }
+    .dark-card h2,
+    .dark-card .dark-heading {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      font-family: 'DM Serif Display', serif !important;
+      font-style: normal !important;
+      font-weight: 700 !important;
+    }
+    .dark-card p,
+    .dark-card .dark-text {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      font-style: normal !important;
+      opacity: 0.92 !important;
+      line-height: 1.65 !important;
+    }
+  </style>
+</head>
+<body class="bg-[#FAF8F5] text-black font-sans selection:bg-gold-200 selection:text-black antialiased min-h-screen">
+
+    <!-- =========================================
+         PROSPERA MASTER HEADER
+         ========================================= -->
+    <header class="fixed top-0 left-0 right-0 w-full z-50 bg-white border-b border-slate-200 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a aria-label="Prospera AI Realtors" class="prospera-brand-logo group flex-shrink-0" href="index.html">
+        <span aria-hidden="true" class="prospera-logo-frame">
+          <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+        </span>
+      </a>
+      <!-- Desktop Primary Navigation -->
+      <nav aria-label="Primary navigation"
+        class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-700">
+        <a class="hover:text-gold-500 transition-colors" href="index.html">Home</a>
+        <a class="hover:text-gold-500 transition-colors" href="builders.html">Builders</a>
+        <a class="hover:text-gold-500 transition-colors" href="explore.html">Properties</a>
+        <a class="hover:text-gold-500 transition-colors" href="agents.html">Agents</a>
+        <a class="hover:text-gold-500 transition-colors" href="market-insights.html">Market Insights</a>
+        <a class="hover:text-gold-500 transition-colors" href="compare-projects.html">Compare</a>
+        <a class="hover:text-gold-500 transition-colors" href="book-site-visit.html">Book Site Visit</a>
+        <div class="prospera-about-dropdown" id="desktopAboutDropdown">
+          <button aria-controls="desktopAboutMenu" aria-expanded="false"
+            class="prospera-about-trigger hover:text-gold-500 transition-colors"
+            onclick="toggleAboutDropdown(event, 'desktopAboutDropdown')" type="button">
+            <span>About</span>
+            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+          </button>
+          <div aria-label="About links" class="prospera-about-menu" id="desktopAboutMenu" role="menu">
+            <a href="about-us.html" role="menuitem">About Us</a>
+            <a href="why-prospera-ai.html" role="menuitem">Why Prospera AI</a>
+            <a href="reviews.html" role="menuitem">Reviews</a>
+            <a href="contact.html" role="menuitem">Contact Us</a>
+            <a href="privacy-terms.html" role="menuitem">Privacy Policy</a>
+          </div>
+        </div>
+      </nav>
+      <!-- Right: Mobile Navigation -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button aria-label="Open menu"
+          class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl border border-gold-500/30 bg-gold-500/10 text-gold-500 hover:bg-gold-500/20 transition-all"
+          id="mobileMenuBtn" onclick="toggleMobileMenu()">
+          <i class="fa-solid fa-bars text-base" id="mobileMenuIcon"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Navigation Dropdown -->
+    <div class="hidden md:hidden border-t border-slate-200 bg-white" id="mobileMenu">
+      <nav aria-label="Mobile navigation" class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="index.html">Home</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="builders.html">Builders</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="explore.html">Properties</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="agents.html">Agents</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="market-insights.html">Market Insights</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="compare-projects.html">Compare</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="book-site-visit.html">Book Site Visit</a>
+        <div class="prospera-mobile-about" id="mobileAboutDropdown">
+          <button aria-controls="mobileAboutMenu" aria-expanded="false" class="prospera-mobile-about-trigger"
+            onclick="toggleAboutDropdown(event, 'mobileAboutDropdown')" type="button">
+            <span>About</span>
+            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+          </button>
+          <div class="prospera-mobile-about-menu" id="mobileAboutMenu">
+            <a href="about-us.html">About Us</a>
+            <a href="why-prospera-ai.html">Why Prospera AI</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="privacy-terms.html">Privacy Policy</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+    <!-- =========================================
+         END PROSPERA MASTER HEADER
+         ========================================= -->
+
+    <!-- =============================================
+       MAIN CONTENT: HERO (ditto from compare-projects.html)
+       ============================================= -->
+    <div class="builders-hero">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Breadcrumb -->
+        <nav class="flex items-center gap-2 text-xs text-black/60 mb-6" aria-label="Breadcrumb">
+          <a href="index.html" class="hover:text-gold-600 transition-colors">Prospera AI</a>
+          <i class="fa-solid fa-chevron-right text-[8px] text-gold-500"></i>
+          <span class="text-gold-600 font-semibold">Market Insights</span>
+        </nav>
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <h1 class="font-heading text-4xl sm:text-5xl font-bold text-[#000000] mb-3 leading-tight">
+              Market <span class="text-gold-600">Insights.</span>
+            </h1>
+            <p class="text-black/75 text-base max-w-2xl leading-relaxed">
+              Data-driven educational intelligence, micro-location trends, and predictive growth models for India's premier luxury real estate corridors.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 space-y-16">
+
+        <!-- CATEGORY QUICK FILTER BAR -->
+        <section class="filter-bar-wrap">
+            <div class="flex flex-wrap gap-2.5 justify-center items-center">
+                <button onclick="filterCategory('all')" id="btn-all" class="cat-btn is-active active">All Categories</button>
+                <button onclick="filterCategory('noida')" id="btn-noida" class="cat-btn">Noida Market</button>
+                <button onclick="filterCategory('gurgaon')" id="btn-gurgaon" class="cat-btn">Gurgaon Market</button>
+                <button onclick="filterCategory('tips')" id="btn-tips" class="cat-btn">Investment Tips</button>
+                <button onclick="filterCategory('guides')" id="btn-guides" class="cat-btn">Buyer Guides</button>
+                <button onclick="filterCategory('news')" id="btn-news" class="cat-btn">Real Estate News</button>
+                <button onclick="filterCategory('reports')" id="btn-reports" class="cat-btn">AI Reports</button>
+            </div>
+        </section>
+
+        <!-- SECTION 11.1: NOIDA MARKET -->
+        <section id="noida-market" class="cat-section" data-category="noida">
+            <div class="flex items-center space-x-3 mb-2">
+                <div class="h-px w-8 bg-[#D4AF37]"></div>
+                <span class="text-xs uppercase tracking-widest text-[#8C6D1F] font-bold">Micro-Location Analysis</span>
+            </div>
+            <h2 class="section-title">Noida & Greater Noida Market Intelligence</h2>
+            <div class="accent-line"></div>
+            <p class="section-subtitle">
+                Driven by massive infrastructure investments including the Jewar International Airport and Yamuna Expressway developments, Noida has evolved into an ultra-luxury asset epicenter.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Market Deep Dive Card -->
+                <div class="lg:col-span-7 insight-card p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex flex-wrap justify-between items-start gap-4 mb-6">
+                            <div>
+                                <span class="text-xs font-mono text-[#8C6D1F] uppercase font-bold tracking-wider">Infrastructure Corridor</span>
+                                <h3 class="text-2xl card-title mt-1">Noida Expressway & Sector 128 / 150 Hub</h3>
+                            </div>
+                            <span class="badge-gold">
+                                +18.4% YoY Growth
+                            </span>
+                        </div>
+
+                        <p class="card-text mb-6">
+                            Prospera AI algorithms indicate a significant shift in HNWI capital toward low-density golf-centric communities along Sector 128 and Sector 150. Commercial park expansions in Sector 142 are driving executive residential demand.
+                        </p>
+
+                        <!-- Key Metrics Grid -->
+                        <div class="grid grid-cols-3 gap-4 metrics-box font-mono">
+                            <div>
+                                <span class="text-neutral-600 block text-[10px] uppercase font-bold">Avg. Luxury Price</span>
+                                <span class="text-black font-bold text-sm sm:text-base">₹16,500 - ₹24,000</span>
+                                <span class="text-neutral-500 text-[10px] block">per sq. ft.</span>
+                            </div>
+                            <div>
+                                <span class="text-neutral-600 block text-[10px] uppercase font-bold">Jewar Catalyst</span>
+                                <span class="text-[#8C6D1F] font-bold text-sm sm:text-base">2.4x Multiplier</span>
+                                <span class="text-neutral-500 text-[10px] block">5-Yr Projected</span>
+                            </div>
+                            <div>
+                                <span class="text-neutral-600 block text-[10px] uppercase font-bold">Rental Yield</span>
+                                <span class="text-black font-bold text-sm sm:text-base">4.2% - 5.1%</span>
+                                <span class="text-neutral-500 text-[10px] block">Executive Segment</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-neutral-200 flex flex-wrap justify-between items-center gap-4 text-xs">
+                        <span class="text-neutral-700">Target Ticket Size: <strong class="text-black font-mono font-bold">₹5.5 Cr – ₹35 Cr</strong></span>
+                        <a href="#contact" class="gold-link">
+                            Request Noida Intelligence Report &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hotspots Breakdown -->
+                <div class="lg:col-span-5 insight-card p-6 sm:p-7 space-y-4">
+                    <h3 class="text-lg card-title pb-3 border-b border-neutral-200">Key Noida Micro-Markets</h3>
+
+                    <div class="mini-card">
+                        <div class="flex justify-between items-center mb-1.5">
+                            <h4 class="text-sm font-bold text-black">Sector 128 (Jaypee Greens Corridor)</h4>
+                            <span class="badge-gold">Top Pick</span>
+                        </div>
+                        <p class="text-xs text-black leading-relaxed">Ultra-luxury golf view apartments & private villas with high security.</p>
+                    </div>
+
+                    <div class="mini-card">
+                        <div class="flex justify-between items-center mb-1.5">
+                            <h4 class="text-sm font-bold text-black">Sector 150 (Greenest Sector)</h4>
+                            <span class="badge-gold">High Yield</span>
+                        </div>
+                        <p class="text-xs text-black leading-relaxed">Low-density sports city projects with 80% dedicated green canopy.</p>
+                    </div>
+
+                    <div class="mini-card">
+                        <div class="flex justify-between items-center mb-1.5">
+                            <h4 class="text-sm font-bold text-black">Yamuna Expressway (Jewar Zone)</h4>
+                            <span class="badge-gold">Max Growth</span>
+                        </div>
+                        <p class="text-xs text-black leading-relaxed">Commercial plots, industrial parks, and integrated township land holdings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 11.2: GURGAON MARKET -->
+        <section id="gurgaon-market" class="cat-section" data-category="gurgaon">
+            <div class="flex items-center space-x-3 mb-2">
+                <div class="h-px w-8 bg-[#D4AF37]"></div>
+                <span class="text-xs uppercase tracking-widest text-[#8C6D1F] font-bold">Millennium City Dynamics</span>
+            </div>
+            <h2 class="section-title">Gurgaon (Gurugram) Market Intelligence</h2>
+            <div class="accent-line"></div>
+            <p class="section-subtitle">
+                Home to Fortune 500 headquarters, Golf Course Road, and the Dwarka Expressway boom, Gurgaon represents India's most liquidity-dense luxury real estate corridor.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Prime Gurgaon Corridors -->
+                <div class="lg:col-span-5 insight-card p-6 sm:p-7 space-y-4">
+                    <h3 class="text-lg card-title pb-3 border-b border-neutral-200">Prime Gurgaon Corridors</h3>
+
+                    <div class="mini-card">
+                        <div class="flex justify-between items-center mb-1.5">
+                            <h4 class="text-sm font-bold text-black">Golf Course Road (Sectors 42 & 54)</h4>
+                            <span class="badge-gold">₹45k+/sq.ft.</span>
+                        </div>
+                        <p class="text-xs text-black leading-relaxed">The "Billionaires' Mile" of NCR—super-luxury condominiums with private elevators.</p>
+                    </div>
+
+                    <div class="mini-card">
+                        <div class="flex justify-between items-center mb-1.5">
+                            <h4 class="text-sm font-bold text-black">Golf Course Extension Road</h4>
+                            <span class="badge-gold">+22.1% Growth</span>
+                        </div>
+                        <p class="text-xs text-black leading-relaxed">Emerging as the primary upgrade destination for corporate CXOs and tech founders.</p>
+                    </div>
+
+                    <div class="mini-card">
+                        <div class="flex justify-between items-center mb-1.5">
+                            <h4 class="text-sm font-bold text-black">Dwarka Expressway (Sectors 102 - 113)</h4>
+                            <span class="badge-gold">High Liquidity</span>
+                        </div>
+                        <p class="text-xs text-black leading-relaxed">Seamless Delhi connectivity driving high rental yield and pre-launch capital gains.</p>
+                    </div>
+                </div>
+
+                <!-- AI Market Insight Panel -->
+                <div class="lg:col-span-7 insight-card p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex flex-wrap justify-between items-start gap-4 mb-6">
+                            <div>
+                                <span class="text-xs font-mono text-[#8C6D1F] uppercase font-bold tracking-wider">Institutional Index</span>
+                                <h3 class="text-2xl card-title mt-1">Gurgaon Ultra-Luxe Residential Sentiment</h3>
+                            </div>
+                            <span class="badge-gold">
+                                Bullish Accumulation
+                            </span>
+                        </div>
+
+                        <p class="card-text mb-6">
+                            Our proprietary neural matching engine tracks over 1,200 UHNWI buyer profiles looking specifically for 4,000+ sq. ft. penthouses in Gurgaon. Reduced inventory availability in Golf Course Road is causing secondary market premiums to spike by 15-20% year-on-year.
+                        </p>
+
+                        <div class="grid grid-cols-3 gap-4 metrics-box font-mono">
+                            <div>
+                                <span class="text-neutral-600 block text-[10px] uppercase font-bold">Average Penthouse</span>
+                                <span class="text-black font-bold text-sm sm:text-base">₹12 Cr – ₹85 Cr</span>
+                                <span class="text-neutral-500 text-[10px] block">Super Built-up</span>
+                            </div>
+                            <div>
+                                <span class="text-neutral-600 block text-[10px] uppercase font-bold">NRI Inflow Share</span>
+                                <span class="text-[#8C6D1F] font-bold text-sm sm:text-base">38.5%</span>
+                                <span class="text-neutral-500 text-[10px] block">Gulf & US Capital</span>
+                            </div>
+                            <div>
+                                <span class="text-neutral-600 block text-[10px] uppercase font-bold">5-Yr Appr. Index</span>
+                                <span class="text-black font-bold text-sm sm:text-base">+84.2%</span>
+                                <span class="text-neutral-500 text-[10px] block">Compound Model</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-neutral-200 flex flex-wrap justify-between items-center gap-4 text-xs">
+                        <span class="text-neutral-700">Featured Inventory: <strong class="text-black font-mono font-bold">Sector 42 Penthouse (₹32 Cr)</strong></span>
+                        <a href="#contact" class="gold-link">
+                            View Off-Market Gurgaon Inventory &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 11.3: INVESTMENT TIPS -->
+        <section id="investment-tips" class="cat-section" data-category="tips">
+            <div class="flex items-center space-x-3 mb-2">
+                <div class="h-px w-8 bg-[#D4AF37]"></div>
+                <span class="text-xs uppercase tracking-widest text-[#8C6D1F] font-bold">Strategic Wealth Preservation</span>
+            </div>
+            <h2 class="section-title">AI-Curated Real Estate Investment Tips</h2>
+            <div class="accent-line"></div>
+            <p class="section-subtitle">
+                Actionable wealth rules developed by Prospera AI algorithms to optimize cash flow, de-risk acquisitions, and maximize capital appreciation.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Tip 1 -->
+                <div class="insight-card p-6 sm:p-7 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[rgba(212,175,55,0.4)] text-[#8C6D1F] flex items-center justify-center font-bold font-mono text-sm mb-4">
+                            01
+                        </div>
+                        <h3 class="card-title text-lg mb-2">Evaluate Infra-Lag Windows</h3>
+                        <p class="card-text mb-4">
+                            Invest during the "Infrastructure Lag Phase"—the 18-month window between government approval of major transit corridors and physical breaking of ground. This maximizes capital entry discount.
+                        </p>
+                    </div>
+                    <span class="text-xs font-mono text-[#8C6D1F] font-bold pt-4 border-t border-neutral-100">Expected IRR Uplift: +4.8%</span>
+                </div>
+
+                <!-- Tip 2 -->
+                <div class="insight-card p-6 sm:p-7 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[rgba(212,175,55,0.4)] text-[#8C6D1F] flex items-center justify-center font-bold font-mono text-sm mb-4">
+                            02
+                        </div>
+                        <h3 class="card-title text-lg mb-2">Target High Land-Share Ratios</h3>
+                        <p class="card-text mb-4">
+                            Prioritize low-density luxury developments where the Undivided Share of Land (UDS) exceeds 40% of the flat area. Land value appreciates, while physical concrete depreciates over time.
+                        </p>
+                    </div>
+                    <span class="text-xs font-mono text-[#8C6D1F] font-bold pt-4 border-t border-neutral-100">Asset Longevity Index: High</span>
+                </div>
+
+                <!-- Tip 3 -->
+                <div class="insight-card p-6 sm:p-7 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[rgba(212,175,55,0.4)] text-[#8C6D1F] flex items-center justify-center font-bold font-mono text-sm mb-4">
+                            03
+                        </div>
+                        <h3 class="card-title text-lg mb-2">Hedge via Tax-Optimized Holding</h3>
+                        <p class="card-text mb-4">
+                            Utilize Section 54/54F tax exemptions and specialized Indian Family Trust structures when re-investing long-term capital gains from equity sales into luxury residential assets.
+                        </p>
+                    </div>
+                    <span class="text-xs font-mono text-[#8C6D1F] font-bold pt-4 border-t border-neutral-100">Tax Efficiency Impact: Max</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 11.4: BUYER GUIDES -->
+        <section id="buyer-guides" class="cat-section" data-category="guides">
+            <div class="flex items-center space-x-3 mb-2">
+                <div class="h-px w-8 bg-[#D4AF37]"></div>
+                <span class="text-xs uppercase tracking-widest text-[#8C6D1F] font-bold">Step-by-Step Playbooks</span>
+            </div>
+            <h2 class="section-title">Luxury Buyer Guides & Due Diligence</h2>
+            <div class="accent-line"></div>
+            <p class="section-subtitle">
+                Comprehensive advisory guides designed for high-net-worth buyers, NRIs, and institutional family offices navigating high-ticket transactions.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Guide 1 -->
+                <div class="insight-card p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                            <span class="badge-gold">Guide 01 &bull; Legal Framework</span>
+                            <span class="text-xs text-neutral-600 font-bold">12 Min Read</span>
+                        </div>
+                        <h3 class="text-xl card-title mb-3">The Ultra-Luxury Due Diligence Playbook</h3>
+                        <p class="card-text mb-6">
+                            A rigorous step-by-step checklist for verifying clear land titles, encumbrance certificates, RERA approvals, and environmental clearances for multi-crore estates in NCR.
+                        </p>
+
+                        <ul class="space-y-3 text-xs text-black border-t border-neutral-200 pt-5 mb-8">
+                            <li class="flex items-center gap-2.5 font-semibold">
+                                <i class="fa-solid fa-circle-check text-[#D4AF37]"></i> 30-Year Title Search Protocol
+                            </li>
+                            <li class="flex items-center gap-2.5 font-semibold">
+                                <i class="fa-solid fa-circle-check text-[#D4AF37]"></i> Joint Development Agreement (JDA) Ownership Splits
+                            </li>
+                            <li class="flex items-center gap-2.5 font-semibold">
+                                <i class="fa-solid fa-circle-check text-[#D4AF37]"></i> Occupancy Certificate (OC) vs Possession Timeline Risk
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#contact" class="btn-insight-secondary self-start">
+                        Download Full Playbook PDF
+                    </a>
+                </div>
+
+                <!-- Guide 2 -->
+                <div class="insight-card p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                            <span class="badge-gold">Guide 02 &bull; Cross-Border Capital</span>
+                            <span class="text-xs text-neutral-600 font-bold">15 Min Read</span>
+                        </div>
+                        <h3 class="text-xl card-title mb-3">NRI Real Estate Acquisition in India</h3>
+                        <p class="card-text mb-6">
+                            Essential guide covering FEMA regulations, NRE/NRO banking channels, repatriation limits, and power-of-attorney execution for non-resident Indian investors.
+                        </p>
+
+                        <ul class="space-y-3 text-xs text-black border-t border-neutral-200 pt-5 mb-8">
+                            <li class="flex items-center gap-2.5 font-semibold">
+                                <i class="fa-solid fa-circle-check text-[#D4AF37]"></i> Repatriation Rules (USD $1 Million Annual Cap)
+                            </li>
+                            <li class="flex items-center gap-2.5 font-semibold">
+                                <i class="fa-solid fa-circle-check text-[#D4AF37]"></i> Lower TDS Certificate Application Procedures
+                            </li>
+                            <li class="flex items-center gap-2.5 font-semibold">
+                                <i class="fa-solid fa-circle-check text-[#D4AF37]"></i> Virtual Title Verification & Remote Signing Protocols
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#contact" class="btn-insight-secondary self-start">
+                        Download NRI Investment Guide
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 11.5: REAL ESTATE NEWS -->
+        <section id="real-estate-news" class="cat-section" data-category="news">
+            <div class="flex items-center space-x-3 mb-2">
+                <div class="h-px w-8 bg-[#D4AF37]"></div>
+                <span class="text-xs uppercase tracking-widest text-[#8C6D1F] font-bold">Macro & Regulatory Feed</span>
+            </div>
+            <h2 class="section-title">Real Estate News & Industry Trends</h2>
+            <div class="accent-line"></div>
+            <p class="section-subtitle">
+                Curated policy updates, RBI interest rate adjustments, and infrastructure milestones shaping high-value property markets.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- News 1 -->
+                <article class="insight-card p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center text-[10px] font-mono text-[#8C6D1F] font-bold mb-3">
+                            <span>POLICY UPDATE</span>
+                            <span>SEPTEMBER 2026</span>
+                        </div>
+                        <h3 class="text-base card-title mb-2.5 leading-snug">RBI Maintains Repo Rate: Ultra-Luxury Housing Liquidity Remains Strong</h3>
+                        <p class="card-text mb-4">
+                            Stable lending rates continue to fuel confidence among high-net-worth borrowers, with luxury segment mortgage approvals rising by 14% quarter-on-quarter.
+                        </p>
+                    </div>
+                    <a href="#" class="gold-link pt-3 border-t border-neutral-100">
+                        Read Full Analysis &rarr;
+                    </a>
+                </article>
+
+                <!-- News 2 -->
+                <article class="insight-card p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center text-[10px] font-mono text-[#8C6D1F] font-bold mb-3">
+                            <span>INFRASTRUCTURE</span>
+                            <span>AUGUST 2026</span>
+                        </div>
+                        <h3 class="text-base card-title mb-2.5 leading-snug">Jewar Airport Terminal Testing Completed: Expressways Rerouted</h3>
+                        <p class="card-text mb-4">
+                            Phase 1 trials at Noida International Airport trigger renewed institutional land acquisition along the Yamuna Expressway corridor.
+                        </p>
+                    </div>
+                    <a href="#" class="gold-link pt-3 border-t border-neutral-100">
+                        Read Full Analysis &rarr;
+                    </a>
+                </article>
+
+                <!-- News 3 -->
+                <article class="insight-card p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center text-[10px] font-mono text-[#8C6D1F] font-bold mb-3">
+                            <span>MARKET ABSORPTION</span>
+                            <span>AUGUST 2026</span>
+                        </div>
+                        <h3 class="text-base card-title mb-2.5 leading-snug">NCR Ultra-Luxury Sales Cross ₹25,000 Cr Mark in First Half of 2026</h3>
+                        <p class="card-text mb-4">
+                            Demand for 5,000+ sq. ft. residences outpaces supply in Golf Course Extension Road, leading to rapid presale sell-outs.
+                        </p>
+                    </div>
+                    <a href="#" class="gold-link pt-3 border-t border-neutral-100">
+                        Read Full Analysis &rarr;
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION 11.6: AI MARKET REPORTS -->
+        <section id="ai-market-reports" class="cat-section" data-category="reports">
+            <div class="insight-card p-6 sm:p-10 relative overflow-hidden" style="background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%) !important;">
+                <div class="max-w-3xl mb-8">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <div class="h-px w-8 bg-[#D4AF37]"></div>
+                        <span class="text-xs uppercase tracking-widest text-[#8C6D1F] font-bold">Predictive Analytics</span>
+                    </div>
+                    <h2 class="section-title">AI Market Reports & Predictive Dossiers</h2>
+                    <div class="accent-line"></div>
+                    <p class="section-subtitle">
+                        Proprietary neural reports generated using 40+ micro-economic data feeds, tracking capital migration, yield projections, and price signals.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Report Item 1 -->
+                    <div class="mini-card flex flex-wrap justify-between items-center gap-4">
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-mono text-[#8C6D1F] font-bold uppercase">Quarterly AI Dossier</span>
+                            <h3 class="text-base card-title">NCR Ultra-Luxury Index Q3 2026</h3>
+                            <p class="text-xs text-black">Includes 5-Year CAGR predictions for Noida & Gurgaon.</p>
+                        </div>
+                        <button onclick="previewReport('NCR Ultra-Luxury Index Q3 2026')" class="btn-insight-secondary">
+                            Preview
+                        </button>
+                    </div>
+
+                    <!-- Report Item 2 -->
+                    <div class="mini-card flex flex-wrap justify-between items-center gap-4">
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-mono text-[#8C6D1F] font-bold uppercase">Corridor Deep Dive</span>
+                            <h3 class="text-base card-title">Noida Airport Corridor 2026-2030</h3>
+                            <p class="text-xs text-black">Evaluating multi-phase land value appreciation curves.</p>
+                        </div>
+                        <button onclick="previewReport('Noida Airport Corridor Report')" class="btn-insight-secondary">
+                            Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Live Report Preview Box Modal Simulation -->
+                <div id="reportPreviewBox" class="mt-8 hidden p-6 rounded-2xl bg-white border-2 border-[#D4AF37] font-mono text-xs shadow-lg">
+                    <div class="flex justify-between items-center pb-3 border-b border-neutral-200 mb-4">
+                        <span class="text-[#8C6D1F] font-bold text-sm" id="reportTitle">Report Preview</span>
+                        <button type="button" onclick="closeReportPreview()" class="modal-close-btn" aria-label="Close report preview" title="Close">
+                            <i class="fa-solid fa-xmark text-xl"></i>
+                        </button>
+                    </div>
+                    <div class="space-y-2 text-black">
+                        <p><strong class="text-black">&bull; Algorithmic Summary:</strong> Capital velocity in target sector elevated by +24.1%. Supply deficit forecast to persist for 14 months.</p>
+                        <p><strong class="text-black">&bull; Recommended Action:</strong> Accumulate off-market inventory in presale stage for optimal capital cap rates.</p>
+                        <p><strong class="text-black">&bull; Data Confidence Rating:</strong> 98.7% (Validated via 14,000 land registry points)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHAPTER PAGINATION & CALL TO ACTION — STRICT BLACK CARD -->
+        <section id="contact" class="pt-6">
+            <div class="dark-card p-8 sm:p-12 text-center relative overflow-hidden">
+                <div class="max-w-2xl mx-auto space-y-5">
+                    <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold">Subscribe to Private Market Signals</span>
+                    <h2 class="dark-heading text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight">
+                        Receive Exclusive AI Intelligence Ahead of the Market
+                    </h2>
+                    <p class="dark-text text-sm sm:text-base font-normal max-w-xl mx-auto">
+                        Join over 2,500 accredited high-net-worth investors and family offices receiving our confidential bi-weekly market dossiers.
+                    </p>
+                    <div class="pt-4 flex justify-center">
+                        <a href="ai-property-finder.html" class="btn-insight-gold">
+                            Subscribe to AI Intelligence
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================
+         PROSPERA MASTER FOOTER
+         ========================================= -->
+    <footer class="bg-white border-t border-slate-200 text-slate-600 text-sm py-12 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div aria-label="Prospera AI Realtors" class="prospera-footer-brand mb-4">
+            <span aria-hidden="true" class="prospera-logo-frame">
+              <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+            </span>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            India’s premier AI-first conversational real estate network. Unbiased recommendations, voice search, and
+            predictive market intelligence.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="about-us.html">About Us</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="why-prospera-ai.html">Why Prospera
+                AI</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="reviews.html">Reviews</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="contact.html">Contact Us</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="privacy-terms.html">Privacy
+                Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Top Locations</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Gomti Nagar'); return false;">Gomti
+                Nagar</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Gomti Nagar Extension'); return false;">Gomti Nagar Extension</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Shaheed Path'); return false;">Shaheed
+                Path</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Sultanpur Road'); return false;">Sultanpur Road</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Contact &amp; Legal</h4>
+          <p class="text-xs text-slate-500 mb-2"><i class="fa-solid fa-envelope text-gold-500 mr-2"></i>
+            advisor@prospera.ai</p>
+          <p class="text-xs text-slate-500 mb-4"><i class="fa-solid fa-phone text-gold-500 mr-2"></i> +91 1800-PROSPERA
+          </p>
+          <div class="flex gap-3">
+            <a aria-label="LinkedIn"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+            <a aria-label="Twitter / X"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-x-twitter text-xs"></i></a>
+            <a aria-label="Instagram"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-instagram text-xs"></i></a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pt-8 border-t border-slate-200 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>© 2026 Prospera AI Realtors Inc. All rights reserved.</p>
+        <p class="text-slate-500">RERA Reg: UPRERA/AI/2026/001</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+        <!-- FLOATING AI ASSISTANT WIDGET & VOICE INTERFACE -->
+    <div id="floatingAIWidget" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end max-w-[calc(100vw-2rem)]">
+
+        <!-- Collapsible Chat Drawer -->
+        <div id="aiChatDrawer" class="hidden w-[calc(100vw-2rem)] sm:w-[380px] md:w-[400px] max-w-[400px] h-[500px] max-h-[calc(100vh-7rem)] rounded-3xl glass-card border border-gold-500/40 shadow-gold-glow-lg flex-col overflow-hidden mb-3 sm:mb-4 transition-all transform duration-300 box-border">
+            <!-- Chat Drawer Header -->
+            <div class="p-4 bg-obsidian-900 border-b border-gold-500/20 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-gold-500 to-gold-300 p-0.5 shadow-gold-glow">
+                        <div class="w-full h-full bg-obsidian-950 rounded-full flex items-center justify-center text-gold-400">
+                            <i class="fa-solid fa-robot text-sm"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm">Prospera Voice AI</h4>
+                        <span class="text-[10px] text-emerald-400 flex items-center gap-1">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Live & Listening
+                        </span>
+                    </div>
+                </div>
+                <button onclick="toggleFloatingChat()" class="text-slate-400 hover:text-white p-1">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Chat Drawer Body Messages -->
+            <div id="chatMessages" class="flex-1 p-4 overflow-y-auto space-y-3 text-xs">
+                <!-- AI Welcome Message -->
+                <div class="flex gap-2.5">
+                    <div class="w-7 h-7 rounded-full bg-gold-500/20 border border-gold-500/40 flex items-center justify-center text-gold-400 flex-shrink-0">
+                        <i class="fa-solid fa-robot text-xs"></i>
+                    </div>
+                    <div class="bg-obsidian-800 border border-gold-500/20 p-3 rounded-2xl rounded-tl-none text-slate-200 max-w-[82%] leading-relaxed">
+                        Hi, welcome to Prospera AI Realtors. Tell me your budget or city, and I'll help you find the right property.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Drawer Quick Chips -->
+            <div class="px-3 py-2 bg-obsidian-900/60 border-t border-slate-800 flex gap-2 overflow-x-auto text-[11px] whitespace-nowrap">
+                <button onclick="sendQuickMessage('Find 3BHK in Noida under 1.8 Cr')" class="px-2.5 py-1 rounded-full bg-obsidian-800 border border-gold-500/20 text-slate-300 hover:text-gold-300">
+                    3BHK Noida &lt; 1.8Cr
+                </button>
+                <button onclick="sendQuickMessage('Top luxury projects in Gurgaon')" class="px-2.5 py-1 rounded-full bg-obsidian-800 border border-gold-500/20 text-slate-300 hover:text-gold-300">
+                    Gurgaon Luxury
+                </button>
+            </div>
+
+            <!-- Chat Drawer Input Footer -->
+            <div class="p-3 bg-obsidian-900 border-t border-gold-500/20 flex items-center gap-2">
+                <button onclick="triggerVoiceModal()" class="w-9 h-9 rounded-xl bg-gold-500/20 border border-gold-500/40 text-gold-400 flex items-center justify-center hover:bg-gold-500/30 transition-colors" title="Speak to AI">
+                    <i class="fa-solid fa-microphone text-xs"></i>
+                </button>
+                <input type="text" id="floatingInput" placeholder="Type requirement..." onkeypress="handleKeyPress(event)" class="flex-1 bg-obsidian-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-gold-400">
+                <button onclick="sendFloatingMessage()" class="w-9 h-9 rounded-xl gold-btn-gradient text-obsidian-950 font-bold flex items-center justify-center hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Floating Action Button Orb -->
+        <button onclick="window.location.href='ai-property-finder.html'" class="relative group flex items-center gap-3 bg-gradient-to-r from-obsidian-900 via-obsidian-800 to-obsidian-950 border-2 border-gold-500 text-white p-3 sm:px-5 sm:py-3.5 rounded-full shadow-gold-glow hover:shadow-gold-glow-lg transition-all transform hover:scale-105">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-gold-300 via-gold-500 to-gold-700 flex items-center justify-center text-obsidian-950 font-bold">
+                <i class="fa-solid fa-robot text-sm"></i>
+            </div>
+            <span class="hidden sm:inline-block font-semibold text-xs text-gold-300 tracking-wider uppercase">AI Advisor</span>
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping absolute top-1 right-1"></span>
+        </button>
+
+    </div>
+
+    <!-- FULLSCREEN / MODAL VOICE EXPERIENCE OVERLAY -->
+    <div id="voiceModal" class="fixed inset-0 z-50 bg-obsidian-950/95 backdrop-blur-2xl hidden flex-col items-center justify-center p-4">
+        <button onclick="closeVoiceModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-gold-500/30 bg-obsidian-900 text-slate-300 hover:text-white hover:border-gold-400 flex items-center justify-center transition-all">
+            <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+
+        <div class="max-w-xl w-full text-center space-y-6 sm:space-y-8">
+            <div class="inline-block px-4 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold tracking-widest uppercase">
+                Interactive Voice Session
+            </div>
+
+            <!-- Pulsing Voice Visualizer -->
+            <div class="relative w-36 h-36 sm:w-44 sm:h-44 mx-auto flex items-center justify-center">
+                <div id="modalPulseRing" class="absolute inset-0 rounded-full border-2 border-gold-500/30 avatar-pulse"></div>
+                <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-gradient-to-tr from-obsidian-900 via-gold-900/40 to-obsidian-800 border border-gold-400 flex items-center justify-center shadow-gold-glow-lg">
+                    <i class="fa-solid fa-microphone text-4xl sm:text-5xl text-gold-400 animate-pulse"></i>
+                </div>
+            </div>
+
+            <!-- Soundwave graphic -->
+            <div class="flex justify-center items-center gap-1.5 h-10">
+                <div class="w-1.5 bg-gold-400 rounded-full animate-wave-1 h-6"></div>
+                <div class="w-1.5 bg-gold-300 rounded-full animate-wave-2 h-10"></div>
+                <div class="w-1.5 bg-gold-500 rounded-full animate-wave-3 h-8"></div>
+                <div class="w-1.5 bg-gold-400 rounded-full animate-wave-4 h-5"></div>
+                <div class="w-1.5 bg-gold-300 rounded-full animate-wave-5 h-9"></div>
+            </div>
+
+            <!-- Live Transcript Text -->
+            <div class="space-y-2">
+                <h3 id="modalVoiceStatus" class="font-serif text-xl sm:text-2xl font-bold text-white">Listening to your voice...</h3>
+                <p id="modalVoiceTranscript" class="text-slate-300 text-xs sm:text-sm max-w-md mx-auto ">
+                    "Looking for a 3 BHK luxury apartment in Gurgaon under 3.5 Crores near metro station..."
+                </p>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 px-2">
+                <button onclick="simulateVoiceInput('Looking for 3 BHK in Gurgaon Golf Course Road under 4 Cr')" class="px-4 py-2 rounded-xl bg-obsidian-900 border border-gold-500/30 text-xs text-gold-300 hover:bg-gold-500/20 transition-all">
+                    "3 BHK Gurgaon Golf Course"
+                </button>
+                <button onclick="simulateVoiceInput('Plots in Greater Noida West near Metro')" class="px-4 py-2 rounded-xl bg-obsidian-900 border border-gold-500/30 text-xs text-gold-300 hover:bg-gold-500/20 transition-all">
+                    "Plots Greater Noida West"
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Category Filtering Functionality
+                // Category Filtering Functionality
+                // Category Filtering Functionality
+        function filterCategory(cat) {
+            const sections = document.querySelectorAll('.cat-section');
+            const buttons = document.querySelectorAll('.cat-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('is-active', 'active');
+            });
+
+            const activeBtn = document.getElementById(`btn-${cat}`);
+            if (activeBtn) {
+                activeBtn.classList.add('is-active', 'active');
+            }
+
+            sections.forEach(sec => {
+                if (cat === 'all' || sec.getAttribute('data-category') === cat) {
+                    sec.style.display = 'block';
+                } else {
+                    sec.style.display = 'none';
+                }
+            });
+        }
+
+        function previewReport(title) {
+            const previewBox = document.getElementById('reportPreviewBox');
+            const reportTitle = document.getElementById('reportTitle');
+            reportTitle.innerText = "Simulated Live AI Preview: " + title;
+            previewBox.classList.remove('hidden');
+            previewBox.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function closeReportPreview() {
+            document.getElementById('reportPreviewBox').classList.add('hidden');
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('mobileMenuIcon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                if (icon) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            } else {
+                menu.classList.add('hidden');
+                if (icon) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        }
+
+        function askAILocation(loc) {
+            window.location.href = 'ai-property-finder.html?q=' + encodeURIComponent('Find best properties and appreciation rate in ' + loc);
+        }
+
+function triggerVoiceModal() {
+            const modal = document.getElementById('voiceModal');
+            if (modal) { modal.classList.remove('hidden'); modal.classList.add('flex'); }
+        }
+        function closeVoiceModal() {
+            const modal = document.getElementById('voiceModal');
+            if (modal) { modal.classList.add('hidden'); modal.classList.remove('flex'); }
+        }
+        function simulateVoiceInput(text) {
+            const transcript = document.getElementById('modalVoiceTranscript');
+            const status = document.getElementById('modalVoiceStatus');
+            if (transcript) transcript.innerText = '"' + text + '"';
+            if (status) status.innerText = "Analyzing requirements with AI...";
+            setTimeout(() => {
+                closeVoiceModal();
+                const heroInput = document.getElementById('heroPromptInput');
+                if (heroInput) { heroInput.value = text; if (typeof submitHeroQuery === 'function') submitHeroQuery(); }
+                else {
+                    const drawer = document.getElementById('aiChatDrawer');
+                    if (drawer && drawer.classList.contains('hidden')) toggleFloatingChat();
+                    const floatingInput = document.getElementById('floatingInput');
+                    if (floatingInput) { floatingInput.value = text; sendFloatingMessage(); }
+                }
+            }, 1500);
+        }
+        function toggleFloatingChat() {
+            const drawer = document.getElementById('aiChatDrawer');
+            if (!drawer) return;
+            if (drawer.classList.contains('hidden')) { drawer.classList.remove('hidden'); drawer.classList.add('flex'); }
+            else { drawer.classList.add('hidden'); drawer.classList.remove('flex'); }
+        }
+        function handleKeyPress(e) { if (e.key === 'Enter') sendFloatingMessage(); }
+        function sendQuickMessage(text) {
+            const input = document.getElementById('floatingInput');
+            if (input) { input.value = text; sendFloatingMessage(); }
+        }
+        function sendFloatingMessage() {
+            const input = document.getElementById('floatingInput');
+            if (!input || !input.value.trim()) return;
+            const val = input.value.trim();
+            const chatMessages = document.getElementById('chatMessages');
+            if (chatMessages) {
+                const userDiv = document.createElement('div');
+                userDiv.className = 'flex justify-end';
+                userDiv.innerHTML = '<div class="bg-gold-500 text-obsidian-950 font-semibold p-2.5 rounded-2xl rounded-tr-none max-w-[80%]">' + val + '</div>';
+                chatMessages.appendChild(userDiv);
+                input.value = '';
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                setTimeout(() => {
+                    const aiDiv = document.createElement('div');
+                    aiDiv.className = 'flex gap-2.5';
+                    aiDiv.innerHTML = `<div class="w-7 h-7 rounded-full bg-gold-500/20 border border-gold-500/40 flex items-center justify-center text-gold-400 flex-shrink-0"><i class="fa-solid fa-robot text-xs"></i></div><div class="bg-obsidian-800 border border-gold-500/20 p-3 rounded-2xl rounded-tl-none text-slate-200 max-w-[82%] leading-relaxed">I found several verified projects matching "${val}". Explore them above or speak with our luxury advisor.</div>`;
+                    chatMessages.appendChild(aiDiv);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 600);
+            }
+        }
+    </script>
+    <!-- Global Theme Toggle JS -->
+    <script src="theme.js"></script>
+  <script>
+    function toggleAboutDropdown(event, id) {
+      if (event) { event.preventDefault(); event.stopPropagation(); }
+      const wrap = document.getElementById(id);
+      if (!wrap) return;
+      const isOpen = wrap.classList.toggle("is-open");
+      const trigger = wrap.querySelector(".prospera-about-trigger,.prospera-mobile-about-trigger");
+      if (trigger) trigger.setAttribute("aria-expanded", String(isOpen));
+    }
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".prospera-about-dropdown.is-open,.prospera-mobile-about.is-open").forEach((wrap) => {
+        if (!wrap.contains(event.target)) {
+          wrap.classList.remove("is-open");
+          const trigger = wrap.querySelector(".prospera-about-trigger,.prospera-mobile-about-trigger");
+          if (trigger) trigger.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+    function toggleMobileMenu() {
+      const menu = document.getElementById("mobileMenu"), icon = document.getElementById("mobileMenuIcon");
+      if (!menu) return;
+      const hidden = menu.classList.contains("hidden");
+      menu.classList.toggle("hidden", !hidden);
+      if (icon) { icon.classList.toggle("fa-bars", !hidden); icon.classList.toggle("fa-xmark", hidden); }
+    }
+  </script>
+
+</body>
+</html>
+

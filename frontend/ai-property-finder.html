@@ -1,0 +1,2160 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AI Property Finder | Prospera AI Realtors</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Theme Stylesheet & Defaults to Light Mode -->
+    <link rel="stylesheet" href="theme.css">
+    <script>
+      (function () {
+        document.documentElement.setAttribute("data-theme", "light");
+        document.documentElement.classList.remove("dark");
+      })();
+    </script>
+
+    <style id="prospera-ai-chat-system">
+    /* ============================================================
+       PROSPERA AI — FULL SCREEN LUXURY CHATBOT INTERFACE
+       STRICT 3-COLOR SYSTEM: BLACK (#000000), WHITE (#FFFFFF), GOLD (#D4AF37)
+       ZERO ITALICS — 100% RESPONSIVE CHAT UI
+       ============================================================ */
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      font-style: normal !important;
+    }
+
+    html, body {
+      height: 100%;
+      height: 100dvh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #FAF8F5 !important;
+      color: #000000 !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+    }
+
+    /* Top Atmosphere Glow */
+    .chat-ambient-glow {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Main Shell */
+    .prospera-chat-shell {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      height: 100dvh;
+      max-width: 100vw;
+      background-color: #FAF8F5;
+      overflow: hidden;
+    }
+
+    /* ── CHAT TOPBAR ── */
+    .chat-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      padding: 0 24px;
+      background: #FFFFFF;
+      border-bottom: 1.5px solid rgba(212, 175, 55, 0.28);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+      flex-shrink: 0;
+      z-index: 30;
+    }
+
+    .chat-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .chat-brand-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: #000000;
+      border: 1.5px solid #D4AF37;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #D4AF37;
+      font-size: 16px;
+      box-shadow: 0 2px 8px rgba(212, 175, 55, 0.25);
+    }
+
+    .chat-brand-title {
+      font-family: 'DM Serif Display', serif !important;
+      font-size: 20px;
+      font-weight: 700;
+      color: #000000;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    .chat-brand-subtitle {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #8C6D1F;
+    }
+
+    .chat-topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .chat-theme-button {
+      display: none !important;
+    }
+
+    /* Rule 10: X / Close Button strictly transparent background with clean icon */
+    .chat-close-button {
+      background: transparent !important;
+      background-color: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      color: #000000 !important;
+      font-size: 22px !important;
+      cursor: pointer !important;
+      padding: 8px 12px !important;
+      border-radius: 8px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      transition: all 0.2s ease !important;
+    }
+    .chat-close-button:hover {
+      color: #D4AF37 !important;
+      transform: scale(1.1) !important;
+    }
+
+    /* ── SCROLLABLE CHAT CONTAINER ── */
+    .chat-scroll {
+      flex: 1 1 auto;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 24px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      scroll-behavior: smooth;
+    }
+
+    /* Custom Luxury Scrollbar */
+    .chat-scroll::-webkit-scrollbar {
+      width: 6px;
+    }
+    .chat-scroll::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .chat-scroll::-webkit-scrollbar-thumb {
+      background: rgba(212, 175, 55, 0.35);
+      border-radius: 4px;
+    }
+    .chat-scroll::-webkit-scrollbar-thumb:hover {
+      background: #D4AF37;
+    }
+
+    .ai-main-content {
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .chat-area {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      padding-bottom: 20px;
+    }
+
+    /* ── WELCOME / EMPTY STATE ── */
+    .welcome-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 48vh;
+      text-align: center;
+      padding: 30px 16px;
+      margin: auto 0;
+    }
+
+    .welcome-content {
+      max-width: 620px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .welcome-logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 20px;
+      background: #000000;
+      border: 2px solid #D4AF37;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #D4AF37;
+      font-size: 26px;
+      margin-bottom: 22px;
+      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+    }
+
+    .welcome-content h1 {
+      font-family: 'DM Serif Display', serif !important;
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 700;
+      color: #000000;
+      margin: 0 0 10px 0;
+      line-height: 1.2;
+    }
+
+    .welcome-content p {
+      font-size: 16px;
+      color: #4B5563;
+      margin: 0 0 8px 0;
+      line-height: 1.5;
+    }
+
+    .welcome-content strong {
+      font-size: 15px;
+      color: #000000;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .welcome-suggestions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 12px;
+      width: 100%;
+      margin-top: 16px;
+    }
+
+    .suggestion-chip {
+      background: #FFFFFF !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.38) !important;
+      border-radius: 14px !important;
+      padding: 14px 18px !important;
+      text-align: left !important;
+      cursor: pointer !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      color: #000000 !important;
+      font-size: 13px !important;
+      font-weight: 600 !important;
+    }
+    .suggestion-chip:hover {
+      background: #D4AF37 !important;
+      background-color: #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      color: #000000 !important;
+      box-shadow: 0 6px 18px rgba(212, 175, 55, 0.3) !important;
+      transform: translateY(-2px) !important;
+    }
+    .suggestion-chip:hover i {
+      color: #000000 !important;
+    }
+
+    /* ── MESSAGES ── */
+    .chat-message {
+      display: flex;
+      gap: 14px;
+      width: 100%;
+      animation: fadeInMsg 0.3s ease forwards;
+    }
+
+    @keyframes fadeInMsg {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .user-message {
+      justify-content: flex-end;
+    }
+
+    .user-message .message-content {
+      align-items: flex-end;
+      max-width: 80%;
+    }
+
+    .user-message .message-bubble {
+      background: #000000 !important;
+      color: #FFFFFF !important;
+      border: 1px solid #000000 !important;
+      border-radius: 20px 20px 4px 20px;
+      padding: 14px 20px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+      font-size: 14.5px;
+      line-height: 1.55;
+    }
+    .user-message .message-bubble p {
+      margin: 0;
+      color: #FFFFFF !important;
+    }
+
+    .ai-message {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .ai-message .message-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: #000000;
+      border: 1.5px solid #D4AF37;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #D4AF37;
+      flex-shrink: 0;
+      margin-top: 4px;
+      box-shadow: 0 2px 8px rgba(212, 175, 55, 0.2);
+    }
+
+    .ai-message .message-content {
+      align-items: flex-start;
+      max-width: 85%;
+    }
+
+    .message-label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: #8C6D1F;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    .ai-message .message-bubble {
+      background: #FFFFFF !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.32) !important;
+      border-radius: 4px 20px 20px 20px;
+      padding: 16px 22px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+      font-size: 14px;
+      line-height: 1.65;
+      color: #000000 !important;
+    }
+    .ai-message .message-bubble p {
+      margin: 0;
+      color: #000000 !important;
+    }
+
+    /* Typing Dots */
+    .typing-dots {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 0;
+    }
+    .typing-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #D4AF37;
+      animation: typingPulse 1.2s infinite ease-in-out;
+    }
+    .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes typingPulse {
+      0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+      40% { transform: scale(1.1); opacity: 1; }
+    }
+
+    /* ── PROPERTY CAROUSEL & CARDS ── */
+    .property-section {
+      width: 100%;
+      margin-top: 14px;
+      background: #FFFFFF;
+      border: 1.5px solid rgba(212, 175, 55, 0.3);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    .carousel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .result-count {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: #8C6D1F;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .carousel-header h2 {
+      font-family: 'DM Serif Display', serif !important;
+      font-size: 20px;
+      font-weight: 700;
+      color: #000000;
+      margin: 0;
+    }
+
+    .carousel-controls {
+      display: flex;
+      gap: 8px;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #FFFFFF !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.4) !important;
+      color: #000000 !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 12px;
+      transition: all 0.2s ease;
+    }
+    .carousel-prev:hover,
+    .carousel-next:hover {
+      background: #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      color: #000000 !important;
+    }
+    .carousel-prev:disabled,
+    .carousel-next:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    .property-carousel {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 8px;
+    }
+    .property-carousel::-webkit-scrollbar {
+      height: 4px;
+    }
+    .property-carousel::-webkit-scrollbar-thumb {
+      background: rgba(212, 175, 55, 0.3);
+      border-radius: 4px;
+    }
+
+    .property-card {
+      flex: 0 0 260px;
+      scroll-snap-align: start;
+      background: #FAF8F5;
+      border: 1.5px solid rgba(212, 175, 55, 0.25);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s ease;
+    }
+    .property-card:hover {
+      border-color: #D4AF37;
+      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.18);
+      transform: translateY(-2px);
+    }
+
+    .property-image-wrapper {
+      position: relative;
+      width: 100%;
+      height: 140px;
+      overflow: hidden;
+      background: #171717;
+    }
+    .property-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .property-card:hover .property-image {
+      transform: scale(1.05);
+    }
+
+    .property-type {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #000000;
+      border: 1px solid #D4AF37;
+      color: #FFFFFF;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+
+    .favorite-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.65);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .favorite-button:hover {
+      color: #D4AF37;
+    }
+
+    .property-body {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    .property-location {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      color: #4B5563;
+      margin-bottom: 6px;
+    }
+    .property-location i {
+      color: #D4AF37;
+      font-size: 10px;
+    }
+
+    .property-body h3 {
+      font-family: 'DM Serif Display', serif !important;
+      font-size: 16px;
+      font-weight: 700;
+      color: #000000;
+      margin: 0 0 6px 0;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .property-price {
+      font-size: 17px;
+      font-weight: 800;
+      color: #000000;
+      margin-bottom: 10px;
+    }
+
+    .property-features {
+      display: flex;
+      gap: 12px;
+      font-size: 11px;
+      color: #000000;
+      font-weight: 600;
+      padding: 8px 0;
+      border-top: 1px solid rgba(212, 175, 55, 0.18);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+      margin-bottom: 12px;
+    }
+    .property-features span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .property-features i {
+      color: #8C6D1F;
+      font-size: 10px;
+    }
+
+    .property-details-button {
+      width: 100% !important;
+      padding: 9px 14px !important;
+      background: #000000 !important;
+      color: #FFFFFF !important;
+      border: 1.5px solid #000000 !important;
+      border-radius: 10px !important;
+      font-size: 12px !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      cursor: pointer !important;
+      transition: all 0.2s ease !important;
+    }
+    .property-details-button:hover {
+      background: #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      color: #000000 !important;
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.3) !important;
+    }
+
+    /* ── INPUT FOOTER ── */
+    .input-footer {
+      flex-shrink: 0;
+      padding: 14px 20px 18px;
+      background: #FFFFFF;
+      border-top: 1.5px solid rgba(212, 175, 55, 0.28);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 25;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    .input-section {
+      width: 100%;
+      max-width: 860px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .message-form {
+      display: flex;
+      align-items: center;
+      background: #FFFFFF;
+      border: 2px solid rgba(212, 175, 55, 0.45);
+      border-radius: 18px;
+      padding: 6px 8px 6px 18px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+      transition: all 0.2s ease;
+      gap: 8px;
+    }
+    .message-form:focus-within {
+      border-color: #D4AF37;
+      box-shadow: 0 6px 24px rgba(212, 175, 55, 0.22);
+    }
+
+    #messageInput {
+      flex: 1;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 14.5px;
+      color: #000000;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 8px 4px;
+    }
+    #messageInput::placeholder {
+      color: #9CA3AF;
+    }
+
+    .voice-button {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: #FAF8F5 !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.4) !important;
+      color: #8C6D1F !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+    .voice-button:hover {
+      background: #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      color: #000000 !important;
+    }
+    .voice-button[aria-pressed="true"] {
+      background: #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      color: #000000 !important;
+      animation: pulseMic 1.2s infinite ease-in-out;
+    }
+
+    @keyframes pulseMic {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6); }
+      50% { box-shadow: 0 0 0 8px rgba(212, 175, 55, 0); }
+    }
+
+    .send-button {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: #000000 !important;
+      border: 1.5px solid #000000 !important;
+      color: #FFFFFF !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+    .send-button:hover:not(:disabled) {
+      background: #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      color: #000000 !important;
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35) !important;
+    }
+    .send-button:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    .voice-hint {
+      font-size: 11px;
+      color: #8C6D1F;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding-left: 6px;
+      font-weight: 600;
+    }
+
+    .disclaimer {
+      font-size: 11px;
+      color: #6B7280;
+      margin: 6px 0 0 0;
+      text-align: center;
+    }
+
+    /* ── LIGHTBOX ── */
+    .image-lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .image-lightbox.open {
+      display: flex;
+    }
+    .image-lightbox img {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: 16px;
+      border: 2px solid #D4AF37;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    }
+    .image-lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: transparent !important;
+      border: none !important;
+      color: #FFFFFF !important;
+      font-size: 28px !important;
+      cursor: pointer !important;
+    }
+    .image-lightbox-close:hover {
+      color: #D4AF37 !important;
+    }
+
+    /* ── ERROR BOX ── */
+    .api-error {
+      background: #000000;
+      border: 1.5px solid #D4AF37;
+      color: #FFFFFF;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      margin: 12px 0;
+    }
+    .api-error.hidden {
+      display: none;
+    }
+
+    /* Carousel dots */
+    .carousel-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(212, 175, 55, 0.15);
+    }
+    .carousel-dots {
+      display: flex;
+      gap: 6px;
+    }
+    .carousel-dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.3);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .carousel-dots span.active {
+      background: #D4AF37;
+      width: 20px;
+      border-radius: 4px;
+    }
+    .view-more-button {
+      background: transparent !important;
+      border: none !important;
+      color: #8C6D1F !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      cursor: pointer !important;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .view-more-button:hover {
+      color: #000000 !important;
+    }
+  </style>
+</head>
+
+<body>
+
+    <div class="chat-ambient-glow"></div>
+
+    <main class="prospera-chat-shell">
+
+        <!-- Topbar -->
+        <header class="chat-topbar">
+            <div class="chat-brand">
+                <div class="chat-brand-icon">
+                    <i class="fa-solid fa-sparkles"></i>
+                </div>
+                <div>
+                    <div class="chat-brand-title">Prospera AI</div>
+                    <div class="chat-brand-subtitle">Real Estate Assistant</div>
+                </div>
+            </div>
+
+            <div class="chat-topbar-actions">
+                <button
+                    type="button"
+                    class="chat-close-button"
+                    id="chatCloseButton"
+                    onclick="closeAIChat()"
+                    aria-label="Close Prospera AI"
+                    title="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Chat Scroll Container -->
+        <div class="chat-scroll" id="chatScroll">
+
+            <div class="ai-main-content">
+
+                <div class="chat-area" id="chatArea">
+
+                    <!-- Welcome / empty state -->
+                    <section class="welcome-section" id="welcomeSection">
+                        <div class="welcome-content">
+                            <div class="welcome-logo">
+                                <i class="fa-solid fa-sparkles"></i>
+                            </div>
+                            <h1>Hi! I'm Prospera AI <span>👋</span></h1>
+                            <p>Your personal conversational real estate advisor.</p>
+                            <strong>How can I assist your property search today?</strong>
+
+                            <div class="welcome-suggestions">
+                                <button type="button" class="suggestion-chip" onclick="sendSuggestion('Find 3 BHK luxury apartment in Gurgaon under 3.5 Cr')">
+                                    <i class="fa-solid fa-magnifying-glass text-[#D4AF37]"></i>
+                                    <span>3 BHK in Gurgaon &lt; ₹3.5 Cr</span>
+                                </button>
+                                <button type="button" class="suggestion-chip" onclick="sendSuggestion('Top investment properties near Jewar Airport Noida')">
+                                    <i class="fa-solid fa-chart-line text-[#D4AF37]"></i>
+                                    <span>Jewar Airport High ROI Projects</span>
+                                </button>
+                                <button type="button" class="suggestion-chip" onclick="sendSuggestion('Ready to move golf view villas in Sector 128')">
+                                    <i class="fa-solid fa-house-chimney text-[#D4AF37]"></i>
+                                    <span>Golf View Villas in Noida</span>
+                                </button>
+                                <button type="button" class="suggestion-chip" onclick="sendSuggestion('Compare Golf Course Road vs Dwarka Expressway')">
+                                    <i class="fa-solid fa-code-compare text-[#D4AF37]"></i>
+                                    <span>Compare Top Luxury Corridors</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- messages get inserted here, before the sentinel -->
+                    <div id="bottomSentinel" aria-hidden="true"></div>
+                </div>
+
+                <div class="api-error hidden" id="apiErrorBox" role="alert"></div>
+            </div>
+
+        </div>
+
+        <!-- Sticky Input Footer -->
+        <footer class="input-footer">
+            <div class="input-section">
+                <form class="message-form" id="messageForm">
+                    <input
+                        type="text"
+                        id="messageInput"
+                        placeholder="Message Prospera AI (e.g. 4 BHK penthouse in Golf Course Road)..."
+                        aria-label="Message"
+                        autocomplete="off">
+
+                    <button
+                        type="button"
+                        class="voice-button"
+                        id="voiceButton"
+                        aria-label="Start voice assistant"
+                        aria-pressed="false"
+                        title="Voice Assistant">
+                        <i class="fa-solid fa-microphone text-sm"></i>
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="send-button"
+                        id="sendButton"
+                        aria-label="Send message"
+                        title="Send message"
+                        disabled>
+                        <i class="fa-solid fa-arrow-up text-sm"></i>
+                    </button>
+                </form>
+
+                <div class="voice-hint" id="voiceHint">
+                    <span class="hint-mic">🎙</span>
+                    <span>Tap mic to speak or type your requirement above</span>
+                </div>
+            </div>
+
+            <p class="disclaimer">
+                Prospera AI provides predictive intelligence and verified real estate guidance.
+            </p>
+        </footer>
+
+    </main>
+
+    <!-- Image lightbox -->
+    <div
+        class="image-lightbox"
+        id="imageLightbox"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Property image preview">
+
+        <button
+            type="button"
+            class="image-lightbox-close"
+            id="imageLightboxClose"
+            aria-label="Close image preview">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <img
+            id="imageLightboxImage"
+            src=""
+            alt="Property image preview">
+
+    </div>
+
+    <!-- Application Logic -->
+    <script>
+/* =====================================================
+           CONFIG
+           ===================================================== */
+
+        const API_BASE_URL =
+            window.PROSPERA_API_BASE_URL ||
+            `${window.location.protocol}//${window.location.hostname}:5000/api`;
+
+        /*
+         * If your backend runs on a different host/port, set
+         * window.PROSPERA_API_BASE_URL = 'http://localhost:5000/api';
+         * before this script tag loads.
+         */
+
+        /* =====================================================
+           APP STATE  (mirrors App.jsx useState hooks)
+           ===================================================== */
+
+        let messages = [];
+        let conversationStarted = false;
+        let loading = false;
+        let previousResponseId = null;
+        let realtimeInstance = null;
+        let voiceActive = false;
+
+        /* =====================================================
+           DOM REFERENCES
+           ===================================================== */
+
+        const chatArea = document.getElementById("chatArea");
+        const welcomeSection = document.getElementById("welcomeSection");
+        const bottomSentinel = document.getElementById("bottomSentinel");
+        const apiErrorBox = document.getElementById("apiErrorBox");
+
+        const messageForm = document.getElementById("messageForm");
+        const messageInputEl = document.getElementById("messageInput");
+        const sendButton = document.getElementById("sendButton");
+        const voiceButton = document.getElementById("voiceButton");
+        const voiceHint = document.getElementById("voiceHint");
+
+        const imageLightbox = document.getElementById("imageLightbox");
+        const imageLightboxClose = document.getElementById("imageLightboxClose");
+
+        imageLightboxClose?.addEventListener("click", closeImageLightbox);
+
+        imageLightbox?.addEventListener("click", (event) => {
+            if (event.target === imageLightbox) {
+                closeImageLightbox();
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                closeImageLightbox();
+            }
+        });
+
+        /* =====================================================
+           HELPERS
+           ===================================================== */
+
+        function escapeHTML(value) {
+            if (value === null || value === undefined) return "";
+            return String(value)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        function formatAssistantText(text) {
+            if (typeof text !== "string") {
+                return "";
+            }
+
+            let formatted = text
+                .replace(/\r\n/g, "\n")
+                .replace(/\r/g, "\n")
+                .trim();
+
+            /*
+            * Remove Markdown formatting markers.
+            * This prevents **text**, __text__, etc.
+            * from appearing literally in the chat.
+            */
+            formatted = formatted
+                .replace(/\*\*(.*?)\*\*/g, "$1")
+                .replace(/__(.*?)__/g, "$1")
+                .replace(/`([^`]+)`/g, "$1");
+
+            /*
+            * Make numbered property results clearly separated.
+            *
+            * Example:
+            * 1. Property A
+            * 2. Property B
+            *
+            * becomes separate visual blocks.
+            */
+            formatted = formatted.replace(
+                /(?:^|\n)\s*(\d+)\.\s+/g,
+                (match, number) => {
+                    return `\n\n${number}. `;
+                }
+            );
+
+            /*
+            * Prevent excessively large gaps while preserving
+            * the intentional spacing between property results.
+            */
+            formatted = formatted
+                .replace(/\n{3,}/g, "\n\n")
+                .trim();
+
+            /*
+            * Escape HTML after formatting so the AI response
+            * remains safe to render.
+            */
+            return escapeHTML(formatted).replace(/\n/g, "<br>");
+        }
+
+        function toggleTheme() {
+            const root = document.documentElement;
+            const current = root.getAttribute("data-theme") || "light";
+            const next = current === "dark" ? "light" : "dark";
+
+            root.setAttribute("data-theme", next);
+            root.classList.toggle("dark", next === "dark");
+
+            try {
+                localStorage.setItem("prospera-theme", next);
+            } catch {}
+
+            const icon = document.getElementById("chatThemeIcon");
+            if (icon) {
+                icon.classList.toggle("fa-sun", next === "dark");
+                icon.classList.toggle("fa-moon", next !== "dark");
+            }
+        }
+
+        function syncThemeButton() {
+            const theme = document.documentElement.getAttribute("data-theme") || "light";
+            const icon = document.getElementById("chatThemeIcon");
+
+            if (icon) {
+                icon.classList.toggle("fa-sun", theme === "dark");
+                icon.classList.toggle("fa-moon", theme !== "dark");
+            }
+        }
+
+        function closeAIChat() {
+            /*
+             * Prospera AI is opened from the current website page.
+             * history.back() returns the user to that exact page
+             * (About Us, Agents, Explore, etc.) instead of always
+             * redirecting to one fixed page.
+             */
+            if (window.history.length > 1) {
+                window.history.back();
+                return;
+            }
+
+            /*
+             * Fallback for someone who opened the AI page directly
+             * without a previous page in this browser tab.
+             */
+            window.location.href = "index.html";
+        }
+
+        syncThemeButton();
+
+        function setConversationStarted(value) {
+            conversationStarted = value;
+            welcomeSection.style.display = value ? "none" : "flex";
+        }
+
+        function showError(message) {
+            if (!message) {
+                apiErrorBox.classList.add("hidden");
+                apiErrorBox.textContent = "";
+                return;
+            }
+            apiErrorBox.textContent = message;
+            apiErrorBox.classList.remove("hidden");
+        }
+
+        function scrollToBottom() {
+            requestAnimationFrame(() => {
+                const chatScroll = document.getElementById("chatScroll");
+
+                if (chatScroll) {
+                    chatScroll.scrollTo({
+                        top: chatScroll.scrollHeight,
+                        behavior: "smooth",
+                    });
+                    return;
+                }
+
+                bottomSentinel.scrollIntoView({
+                    behavior: "smooth",
+                    block: "end",
+                });
+            });
+        }
+
+        /* =====================================================
+           CHAT MESSAGE (ChatMessage.jsx)
+           ===================================================== */
+
+        function removeImageUrls(value) {
+            if (!value || typeof value !== "string") return "";
+
+            return value
+                .replace(/https?:\/\/(?:images\.unsplash\.com|plus\.unsplash\.com|[^\s<>()]+\.(?:jpg|jpeg|png|webp|gif)(?:\?[^\s<>()]*)?)/gi, "")
+                .replace(/(?:https?:\/\/)?images\s+dot\s+unsplash\s+dot\s+com[^\s<>()]*/gi, "")
+                .replace(/\s{2,}/g, " ")
+                .trim();
+        }
+
+        function buildAIImageGallery(images, altText = "Property image") {
+            const urls = Array.isArray(images)
+                ? images.filter((url) => typeof url === "string" && url.trim()).slice(0, 6)
+                : [];
+
+            if (!urls.length) return null;
+
+            const gallery = document.createElement("div");
+            gallery.className = "ai-image-gallery";
+
+            urls.forEach((url, index) => {
+                const card = document.createElement("div");
+                card.className = "ai-image-card";
+                card.setAttribute("role", "button");
+                card.setAttribute("tabindex", "0");
+                card.setAttribute("aria-label", `Open ${altText} ${index + 1}`);
+
+                const img = document.createElement("img");
+                img.src = url;
+                img.alt = `${altText} ${index + 1}`;
+                img.loading = "lazy";
+
+                img.addEventListener("error", () => {
+                    card.remove();
+                });
+
+                const openPreview = () => openImageLightbox(
+                    url,
+                    `${altText} ${index + 1}`
+                );
+
+                card.addEventListener("click", openPreview);
+
+                card.addEventListener("keydown", (event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        openPreview();
+                    }
+                });
+
+                card.appendChild(img);
+                gallery.appendChild(card);
+            });
+
+            return gallery;
+        }
+
+        function openImageLightbox(url, altText = "Property image") {
+            const lightbox = document.getElementById("imageLightbox");
+            const image = document.getElementById("imageLightboxImage");
+
+            if (!lightbox || !image || !url) return;
+
+            image.src = url;
+            image.alt = altText;
+            lightbox.classList.add("open");
+            lightbox.setAttribute("aria-hidden", "false");
+            document.body.classList.add("lightbox-open");
+        }
+
+        function closeImageLightbox() {
+            const lightbox = document.getElementById("imageLightbox");
+            const image = document.getElementById("imageLightboxImage");
+
+            if (!lightbox) return;
+
+            lightbox.classList.remove("open");
+            lightbox.setAttribute("aria-hidden", "true");
+
+            if (image) {
+                image.src = "";
+            }
+
+            document.body.classList.remove("lightbox-open");
+        }
+
+        function createMessageElement(message) {
+            const isUser = message.type === "user";
+
+            const wrapper = document.createElement("div");
+            wrapper.className = `chat-message ${isUser ? "user-message" : "ai-message"}`;
+
+            const cleanMessageText = !isUser && !message.thinking
+                ? removeImageUrls(message.content)
+                : message.content;
+
+            wrapper.innerHTML = `
+                ${!isUser ? '<div class="message-avatar">✨</div>' : ""}
+                <div class="message-content">
+                    <div class="message-label">${isUser ? "YOU" : "PROSPERA AI"}</div>
+                    <div class="message-bubble"><p>${
+                        message.thinking
+                            ? '<span class="typing-dots"><span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span></span>'
+                            : isUser
+                                ? escapeHTML(cleanMessageText)
+                                : formatAssistantText(cleanMessageText)
+                    }</p></div>
+                </div>
+            `;
+
+            const messageContent = wrapper.querySelector(".message-content");
+
+            /*
+             * Two mutually exclusive display modes:
+             *
+             * 1) Explicit photo request -> ONLY verified image gallery.
+             * 2) Property search -> ONLY property cards.
+             */
+            if (
+                !isUser &&
+                Array.isArray(message.images) &&
+                message.images.length > 0
+            ) {
+                const imageGallery =
+                    buildAIImageGallery(
+                        message.images,
+                        message.imageAlt ||
+                            "Property image"
+                    );
+
+                if (imageGallery) {
+                    messageContent.appendChild(
+                        imageGallery
+                    );
+                }
+            }
+
+            if (
+                !isUser &&
+                (!Array.isArray(message.images) ||
+                    message.images.length === 0) &&
+                Array.isArray(message.properties) &&
+                message.properties.length > 0
+            ) {
+                messageContent.appendChild(
+                    buildPropertyCarousel(
+                        message.properties
+                    )
+                );
+            }
+
+            return wrapper;
+        }
+
+        /* =====================================================
+           RENDER  (ChatMessages.jsx)
+           ===================================================== */
+
+        function renderAll() {
+            chatArea.querySelectorAll(".chat-message").forEach((el) => el.remove());
+
+            messages.forEach((message) => {
+                chatArea.insertBefore(createMessageElement(message), bottomSentinel);
+            });
+
+            if (loading) {
+                chatArea.insertBefore(
+                    createMessageElement({ type: "ai", thinking: true }),
+                    bottomSentinel
+                );
+            }
+
+            scrollToBottom();
+        }
+
+        /* =====================================================
+           PROPERTY HELPERS  (PropertyCard.jsx)
+           ===================================================== */
+
+        function formatPrice(price, listingType) {
+            if (typeof price !== "number") return "Price on request";
+            if (listingType === "Rent") return `₹${price.toLocaleString("en-IN")}/month`;
+            if (price >= 10000000) return `₹${(price / 10000000).toFixed(2)} Cr`;
+            if (price >= 100000) return `₹${(price / 100000).toFixed(1)} Lakh`;
+            return `₹${price.toLocaleString("en-IN")}`;
+        }
+
+        function getLocationText(location) {
+            if (!location) return "Location unavailable";
+            if (typeof location === "string") return location;
+            return [location.locality, location.city].filter(Boolean).join(", ");
+        }
+
+        function getImage(property) {
+            if (Array.isArray(property.images) && property.images.length > 0) {
+                return property.images[0];
+            }
+            return "";
+        }
+
+        function buildPropertyCard(property) {
+            const card = document.createElement("article");
+            card.className = "property-card";
+
+            const image = getImage(property);
+            const title = property.title || "Property";
+
+            card.innerHTML = `
+                <div class="property-image-wrapper">
+                    <img
+                        class="property-image"
+                        src="${escapeHTML(image)}"
+                        alt="${escapeHTML(title)}"
+                        onerror="this.style.opacity='0';">
+                    ${property.type ? `<span class="property-type">${escapeHTML(property.type)}</span>` : ""}
+                    <button type="button" class="favorite-button" aria-label="Add property to favorites">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+                <div class="property-body">
+                    <div class="property-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>${escapeHTML(getLocationText(property.location))}</span>
+                    </div>
+                    <h3>${escapeHTML(title)}</h3>
+                    <div class="property-price">${formatPrice(property.price, property.listingType)}</div>
+                    <div class="property-features">
+                        <span><i class="fa-solid fa-bed"></i>${escapeHTML(property.bedrooms)} BHK</span>
+                        <span><i class="fa-solid fa-ruler-combined"></i>${
+                            property.areaSqft ? Number(property.areaSqft).toLocaleString("en-IN") : "--"
+                        } sq.ft</span>
+                        <span><i class="fa-solid fa-bath"></i>${escapeHTML(property.bathrooms)} Bath</span>
+                    </div>
+                    <button type="button" class="property-details-button">View Property</button>
+                </div>
+            `;
+
+            card.querySelector(".favorite-button")?.addEventListener("click", (e) => {
+                e.stopPropagation();
+                const heartIcon = e.currentTarget.querySelector("i");
+                if (heartIcon) {
+                    heartIcon.classList.toggle("fa-solid");
+                    heartIcon.classList.toggle("fa-regular");
+                    heartIcon.classList.toggle("text-[#D4AF37]");
+                }
+            });
+
+            card.querySelector(".property-details-button").addEventListener("click", () => {
+                if (property.propertyId) {
+                    window.location.href = `project-details.html?id=${encodeURIComponent(property.propertyId)}`;
+                }
+            });
+
+            return card;
+        }
+
+        /* =====================================================
+           PROPERTY CAROUSEL  (PropertyCarousel.jsx)
+           ===================================================== */
+
+        function buildPropertyCarousel(properties) {
+            const section = document.createElement("section");
+            section.className = "property-section";
+
+            section.innerHTML = `
+                <div class="carousel-header">
+                    <div>
+                        <span class="result-count">${properties.length} ${properties.length === 1 ? "PROPERTY" : "PROPERTIES"}</span>
+                        <h2>Properties</h2>
+                    </div>
+                    ${properties.length > 1 ? `
+                        <div class="carousel-controls">
+                            <button type="button" class="carousel-prev" aria-label="Previous properties">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button type="button" class="carousel-next" aria-label="Next properties">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    ` : ""}
+                </div>
+                <div class="property-carousel"></div>
+                <div class="carousel-footer">
+                    <div class="carousel-dots"></div>
+                    ${properties.length > 1 ? `
+                        <button type="button" class="view-more-button">
+                            More <i class="fa-solid fa-chevron-right" style="font-size:10px"></i>
+                        </button>
+                    ` : ""}
+                </div>
+            `;
+
+            const track = section.querySelector(".property-carousel");
+            const dotsWrap = section.querySelector(".carousel-dots");
+            const prevBtn = section.querySelector(".carousel-prev");
+            const nextBtn = section.querySelector(".carousel-next");
+            const moreBtn = section.querySelector(".view-more-button");
+
+            let activeIndex = 0;
+
+            properties.forEach((property, index) => {
+                track.appendChild(buildPropertyCard(property));
+
+                const dot = document.createElement("span");
+                dot.setAttribute("role", "button");
+                dot.tabIndex = 0;
+                dot.setAttribute("aria-label", `Go to property ${index + 1}`);
+                if (index === 0) dot.classList.add("active");
+
+                dot.addEventListener("click", () => scrollToIndex(index));
+                dot.addEventListener("keydown", (event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        scrollToIndex(index);
+                    }
+                });
+
+                dotsWrap.appendChild(dot);
+            });
+
+            function getCardWidth() {
+                const card = track.querySelector(".property-card");
+                return card ? card.offsetWidth + 16 : 0;
+            }
+
+            function updateUI() {
+                Array.from(dotsWrap.children).forEach((dot, index) => {
+                    dot.classList.toggle("active", index === activeIndex);
+                });
+                if (prevBtn) prevBtn.disabled = activeIndex === 0;
+                if (nextBtn) nextBtn.disabled = activeIndex === properties.length - 1;
+                if (moreBtn) moreBtn.disabled = activeIndex === properties.length - 1;
+            }
+
+            function updateActiveIndexFromScroll() {
+                const width = getCardWidth();
+                if (!width) return;
+                activeIndex = Math.max(
+                    0,
+                    Math.min(Math.round(track.scrollLeft / width), properties.length - 1)
+                );
+                updateUI();
+            }
+
+            function scrollToIndex(index) {
+                const width = getCardWidth();
+                if (!width) return;
+                track.scrollTo({ left: index * width, behavior: "smooth" });
+                activeIndex = Math.max(0, Math.min(index, properties.length - 1));
+                updateUI();
+            }
+
+            function scrollByDirection(direction) {
+                const width = getCardWidth();
+                if (!width) return;
+                const current = Math.round(track.scrollLeft / width);
+                scrollToIndex(current + direction);
+            }
+
+            track.addEventListener("scroll", updateActiveIndexFromScroll, { passive: true });
+            if (prevBtn) prevBtn.addEventListener("click", () => scrollByDirection(-1));
+            if (nextBtn) nextBtn.addEventListener("click", () => scrollByDirection(1));
+            if (moreBtn) moreBtn.addEventListener("click", () => scrollByDirection(1));
+
+            requestAnimationFrame(updateUI);
+
+            return section;
+        }
+
+        /* =====================================================
+           TEXT CHAT  (services/api.js -> sendChat, App.jsx -> handleSubmit)
+           ===================================================== */
+
+        messageInputEl.addEventListener("input", () => {
+            sendButton.disabled = !messageInputEl.value.trim();
+        });
+
+        messageForm.addEventListener("submit", handleSubmit);
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+
+            const userMessage = messageInputEl.value.trim();
+            if (!userMessage || loading) return;
+
+            setConversationStarted(true);
+            showError("");
+
+            messages.push({ id: `${Date.now()}-user`, type: "user", content: userMessage });
+
+            messageInputEl.value = "";
+            sendButton.disabled = true;
+            loading = true;
+            renderAll();
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/chat`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ message: userMessage, previousResponseId }),
+                });
+
+                const result = await response.json();
+
+                if (!response.ok || result.success === false) {
+                    throw new Error(result.message || "Something went wrong.");
+                }
+
+                const assistantText = result.data?.text || "I couldn't generate a response.";
+
+                messages.push({
+                    id: `${Date.now()}-ai`,
+                    type: "ai",
+                    content: assistantText,
+                    properties: Array.isArray(result.data?.properties) ? result.data.properties : [],
+                    images: Array.isArray(result.data?.images)
+                        ? result.data.images
+                        : [],
+                    imageAlt: result.data?.imageAlt || "Property image",
+                });
+
+                if (result.data?.responseId) {
+                    previousResponseId = result.data.responseId;
+                }
+            } catch (requestError) {
+                console.error("AI chat failed:", requestError);
+                showError(requestError.message || "Unable to process your request.");
+                messages.push({
+                    id: `${Date.now()}-error`,
+                    type: "ai",
+                    content: "Sorry, I couldn't process that right now.",
+                });
+            } finally {
+                loading = false;
+                renderAll();
+            }
+        }
+
+        /* =====================================================
+           REALTIME VOICE  (services/realtime.js -> ProsperaRealtime)
+           ===================================================== */
+
+        function createRealtimeController(handlers = {}) {
+            return {
+                pc: null,
+                dataChannel: null,
+                audioElement: null,
+                localStream: null,
+                connected: false,
+                processedFunctionCalls: new Set(),
+
+                async connect() {
+                    handlers.onStatus?.("connecting");
+
+                    if (!window.RTCPeerConnection) {
+                        throw new Error("This browser does not support WebRTC.");
+                    }
+                    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                        throw new Error("Microphone access is not available in this browser.");
+                    }
+
+                    this.pc = new RTCPeerConnection();
+
+                    this.audioElement = document.createElement("audio");
+                    this.audioElement.autoplay = true;
+                    this.audioElement.setAttribute("aria-hidden", "true");
+                    document.body.appendChild(this.audioElement);
+
+                    this.pc.ontrack = (event) => {
+                        const remoteStream = event.streams?.[0];
+                        if (remoteStream && this.audioElement) {
+                            this.audioElement.srcObject = remoteStream;
+                            this.audioElement.play().catch(() => {});
+                        }
+                    };
+
+                    this.localStream = await navigator.mediaDevices.getUserMedia({
+                        audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true },
+                    });
+
+                    for (const track of this.localStream.getTracks()) {
+                        this.pc.addTrack(track, this.localStream);
+                    }
+
+                    this.dataChannel = this.pc.createDataChannel("oai-events");
+
+                    this.dataChannel.addEventListener("open", () => {
+                        this.connected = true;
+                        handlers.onStatus?.("connected");
+                        handlers.onEvent?.({ type: "realtime.connected" });
+                    });
+
+                    this.dataChannel.addEventListener("close", () => {
+                        this.connected = false;
+                        handlers.onStatus?.("disconnected");
+                    });
+
+                    this.dataChannel.addEventListener("error", (event) => {
+                        console.error("Realtime data channel error:", event);
+                        handlers.onError?.(new Error("Realtime data channel error."));
+                    });
+
+                    this.dataChannel.addEventListener("message", async (event) => {
+                        try {
+                            await this.handleServerEvent(event);
+                        } catch (error) {
+                            console.error("Realtime event handling error:", error);
+                            handlers.onError?.(error);
+                        }
+                    });
+
+                    const offer = await this.pc.createOffer();
+                    await this.pc.setLocalDescription(offer);
+
+                    if (!offer.sdp) {
+                        throw new Error("WebRTC SDP offer was not created.");
+                    }
+
+                    const response = await fetch(`${API_BASE_URL}/realtime/session`, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/sdp" },
+                        body: offer.sdp,
+                    });
+
+                    const answerSdp = await response.text();
+
+                    if (!response.ok) {
+                        throw new Error(answerSdp || "Failed to create Realtime session.");
+                    }
+
+                    await this.pc.setRemoteDescription({ type: "answer", sdp: answerSdp });
+
+                    handlers.onStatus?.("listening");
+                    return true;
+                },
+
+                async handleServerEvent(event) {
+                    let data;
+                    try {
+                        data = JSON.parse(event.data);
+                    } catch {
+                        return;
+                    }
+
+                    handlers.onEvent?.(data);
+
+                    if (data.type === "session.created") {
+                        handlers.onStatus?.("connected");
+                        return;
+                    }
+
+                    if (data.type === "input_audio_buffer.speech_started") {
+                        handlers.onStatus?.("listening");
+                        return;
+                    }
+
+                    if (data.type === "input_audio_buffer.speech_stopped") {
+                        handlers.onStatus?.("processing");
+                        return;
+                    }
+
+                    if (
+                        data.type === "conversation.item.input_audio_transcription.completed" ||
+                        data.type === "input_audio_transcription.completed"
+                    ) {
+                        const transcript = typeof data.transcript === "string" ? data.transcript.trim() : "";
+                        if (transcript) handlers.onTranscript?.(transcript);
+                        return;
+                    }
+
+                    if (data.type === "response.output_item.done" && data.item?.type === "function_call") {
+                        await this.handleFunctionCall(data.item);
+                        return;
+                    }
+
+                    if (data.type === "response.function_call_arguments.done") {
+                        await this.handleFunctionCall({
+                            type: "function_call",
+                            call_id: data.call_id,
+                            name: data.name,
+                            arguments: data.arguments,
+                        });
+                        return;
+                    }
+
+                    if (
+                        data.type === "response.audio_transcript.done" ||
+                        data.type === "response.output_audio_transcript.done"
+                    ) {
+                        const transcript = typeof data.transcript === "string" ? data.transcript.trim() : "";
+                        if (transcript) handlers.onAssistantTranscript?.(transcript);
+                        return;
+                    }
+
+                    if (data.type === "response.output_text.done") {
+                        const text = typeof data.text === "string" ? data.text.trim() : "";
+                        if (text) handlers.onAssistantTranscript?.(text);
+                        return;
+                    }
+
+                    if (data.type === "response.done") {
+                        handlers.onStatus?.("listening");
+                        return;
+                    }
+
+                    if (data.type === "error") {
+                        const message = data.error?.message || "Realtime API returned an error.";
+                        console.error("Realtime API error:", data.error || data);
+                        handlers.onError?.(new Error(message));
+                    }
+                },
+
+                async handleFunctionCall(functionCall) {
+                    if (!functionCall || !functionCall.call_id) return;
+                    if (this.processedFunctionCalls.has(functionCall.call_id)) return;
+                    this.processedFunctionCalls.add(functionCall.call_id);
+
+                    let args;
+                    try {
+                        args = JSON.parse(functionCall.arguments || "{}");
+                    } catch (error) {
+                        console.error("Invalid function call arguments:", error);
+                        args = {};
+                    }
+
+                    try {
+                        const response = await fetch(`${API_BASE_URL}/realtime/tool`, {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({ name: functionCall.name, arguments: args }),
+                        });
+
+                        const result = await response.json();
+
+                        if (!response.ok || result.success === false) {
+                            throw new Error(
+                                result.message ||
+                                "Realtime tool execution failed."
+                            );
+                        }
+
+                        const modelResult =
+                            result?.data?.model ??
+                            result?.data ??
+                            result;
+
+                        const uiResult =
+                            result?.data?.ui ?? {
+                                properties: [],
+                                images: [],
+                            };
+
+                        handlers.onToolResult?.({
+                            name: functionCall.name,
+                            arguments: args,
+                            result: modelResult,
+                            ui: uiResult,
+                        });
+
+                        this.sendEvent({
+                            type: "conversation.item.create",
+                            item: {
+                                type: "function_call_output",
+                                call_id: functionCall.call_id,
+                                output: JSON.stringify(modelResult),
+                            },
+                        });
+
+                        this.sendEvent({ type: "response.create" });
+                    } catch (error) {
+                        console.error("Realtime tool execution failed:", error);
+
+                        this.sendEvent({
+                            type: "conversation.item.create",
+                            item: {
+                                type: "function_call_output",
+                                call_id: functionCall.call_id,
+                                output: JSON.stringify({ error: error.message || "Tool execution failed." }),
+                            },
+                        });
+
+                        this.sendEvent({ type: "response.create" });
+                    }
+                },
+
+                sendEvent(event) {
+                    if (!this.dataChannel || this.dataChannel.readyState !== "open") {
+                        throw new Error("Realtime connection is not ready.");
+                    }
+                    this.dataChannel.send(JSON.stringify(event));
+                },
+
+                disconnect() {
+                    try {
+                        this.localStream?.getTracks().forEach((track) => track.stop());
+                    } catch {}
+                    this.localStream = null;
+
+                    try {
+                        this.dataChannel?.close();
+                    } catch {}
+                    this.dataChannel = null;
+
+                    try {
+                        this.pc?.close();
+                    } catch {}
+                    this.pc = null;
+
+                    if (this.audioElement) {
+                        try {
+                            this.audioElement.pause();
+                            this.audioElement.srcObject = null;
+                            this.audioElement.remove();
+                        } catch {}
+                    }
+                    this.audioElement = null;
+
+                    this.connected = false;
+                    this.processedFunctionCalls.clear();
+                    handlers.onStatus?.("disconnected");
+                },
+            };
+        }
+
+        /* =====================================================
+           VOICE HANDLERS  (App.jsx -> handleVoiceStart / handleVoiceStop)
+           ===================================================== */
+
+        function updateVoiceUI(status) {
+            const isBusy = ["connecting", "connected", "listening", "processing"].includes(status);
+
+            voiceButton.classList.toggle("active", isBusy);
+            voiceHint.classList.toggle("voice-active", isBusy);
+
+            voiceHint.innerHTML = isBusy
+                ? '<span class="voice-pulse"></span>Listening...'
+                : '<span class="hint-mic">🎙</span>Tap the mic to start';
+        }
+
+        async function handleVoiceStart() {
+            if (realtimeInstance) return;
+
+            showError("");
+
+            const controller = createRealtimeController({
+                onEvent: (event) => console.log("Realtime event:", event),
+
+                onTranscript: (transcript) => {
+                    if (!transcript.trim()) return;
+                    setConversationStarted(true);
+                    messages.push({ id: `${Date.now()}-voice-user`, type: "user", content: transcript });
+                    renderAll();
+                },
+
+                onAssistantTranscript: (transcript) => {
+                    if (!transcript.trim()) return;
+                    setConversationStarted(true);
+                    messages.push({
+                        id: `${Date.now()}-voice-ai`,
+                        type: "ai",
+                        content: transcript,
+                        images: [],
+                        imageAlt: "Property image",
+                        properties: []
+                    });
+                    renderAll();
+                },
+
+                onToolResult: ({ name, result, ui }) => {
+                    const nextProperties =
+                        name === "search_properties" &&
+                        Array.isArray(ui?.properties)
+                            ? ui.properties
+                            : [];
+
+                    const nextImages =
+                        name === "get_property" &&
+                        Array.isArray(ui?.images)
+                            ? ui.images
+                            : [];
+
+                    if (
+                        nextProperties.length === 0 &&
+                        nextImages.length === 0
+                    ) {
+                        return;
+                    }
+
+                    /*
+                     * Explicit photo request:
+                     * show ONLY the verified images.
+                     */
+                    if (nextImages.length > 0) {
+                        messages.push({
+                            id: `${Date.now()}-voice-property-images`,
+                            type: "ai",
+                            content:
+                                "Bilkul, is property ki verified photos dikha raha hoon.",
+                            properties: [],
+                            images:
+                                nextImages.map(
+                                    (item) => item.image
+                                ),
+                            imageAlt:
+                                nextImages[0]?.title ||
+                                "Property image",
+                        });
+
+                        renderAll();
+                        return;
+                    }
+
+                    /*
+                     * Property search:
+                     * show ONLY property cards.
+                     */
+                    if (nextProperties.length > 0) {
+                        messages.push({
+                            id: `${Date.now()}-voice-properties`,
+                            type: "ai",
+                            content:
+                                "Yeh properties available hain.",
+                            properties:
+                                nextProperties,
+                            images: [],
+                        });
+
+                        renderAll();
+                    }
+                },
+
+                onStatus: (status) => {
+                    console.log("Realtime status:", status);
+                    updateVoiceUI(status);
+                },
+
+                onError: (voiceError) => {
+                    console.error("Realtime voice error:", voiceError);
+                    showError(voiceError.message || "Realtime voice error.");
+                },
+            });
+
+            realtimeInstance = controller;
+
+            try {
+                await controller.connect();
+                setConversationStarted(true);
+            } catch (voiceError) {
+                realtimeInstance = null;
+                showError(voiceError.message || "Unable to start voice.");
+                throw voiceError;
+            }
+        }
+
+        function handleVoiceStop() {
+            if (realtimeInstance) {
+                realtimeInstance.disconnect();
+                realtimeInstance = null;
+            }
+            updateVoiceUI("idle");
+        }
+
+        voiceButton.addEventListener("click", async () => {
+            if (voiceActive) {
+                handleVoiceStop();
+                voiceActive = false;
+                voiceButton.setAttribute("aria-pressed", "false");
+                voiceButton.setAttribute("aria-label", "Start voice assistant");
+                return;
+            }
+
+            try {
+                await handleVoiceStart();
+                voiceActive = true;
+                voiceButton.setAttribute("aria-pressed", "true");
+                voiceButton.setAttribute("aria-label", "Stop voice assistant");
+            } catch {
+                voiceActive = false;
+            }
+        });
+
+        /* =====================================================
+           FOOTER QUICK-LOCATION LINKS
+           ===================================================== */
+
+        function sendSuggestion(text) {
+            messageInputEl.value = text;
+            sendButton.disabled = false;
+            messageForm.scrollIntoView({ behavior: "smooth", block: "center" });
+            handleSubmit(new Event("submit", { cancelable: true }));
+        }
+
+        /* =====================================================
+           MOBILE MENU
+           ===================================================== */
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById("mobileMenu");
+            const icon = document.getElementById("mobileMenuIcon");
+            if (!menu) return;
+
+            const isHidden = menu.classList.contains("hidden");
+            menu.classList.toggle("hidden", !isHidden);
+
+            if (icon) {
+                icon.classList.toggle("fa-bars", !isHidden);
+                icon.classList.toggle("fa-xmark", isHidden);
+            }
+        }
+
+        /* =====================================================
+           HEADER VOICE SEARCH BUTTON
+           (site header/mobile menu — scroll to input + toggle mic)
+           ===================================================== */
+
+        function triggerHeaderVoice() {
+            messageForm.scrollIntoView({ behavior: "smooth", block: "center" });
+            voiceButton.click();
+        }
+
+        /* =====================================================
+           CLOSE VOICE ON PAGE UNLOAD
+           ===================================================== */
+
+        window.addEventListener("beforeunload", () => {
+            realtimeInstance?.disconnect();
+        });
+    </script>
+
+    <!-- Existing Prospera Theme JS -->
+    
+    <script src="theme.js"></script>
+    <script>
+        /* Auto-trigger search from query param (?q=...) */
+        window.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get("q");
+            if (query && query.trim()) {
+                setTimeout(() => {
+                    sendSuggestion(query.trim());
+                }, 400);
+            }
+        });
+    </script>
+</body>
+</html>

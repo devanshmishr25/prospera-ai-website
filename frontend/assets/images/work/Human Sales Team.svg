@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgSalesTeam" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </radialGradient>
+    
+    <!-- Solid Blue Circle Badge Container -->
+    <linearGradient id="blueGradSales" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+
+    <!-- Metallic Edge Gradient -->
+    <linearGradient id="edgeSalesTeam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#1e40af" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Circular Badge Background -->
+  <circle cx="256" cy="256" r="230" fill="url(#bgSalesTeam)" stroke="url(#edgeSalesTeam)" stroke-width="12" />
+
+  <!-- Solid Blue Circle Badge Container -->
+  <circle cx="256" cy="256" r="140" fill="url(#blueGradSales)" stroke="#60a5fa" stroke-width="4" />
+
+  <!-- Human Sales Team / Group Icon (3 people) -->
+  <g transform="translate(180, 180) scale(0.9)">
+    <!-- Person 1 (Left) -->
+    <g transform="translate(-10, 15)">
+        <circle cx="80" cy="80" r="40" fill="#ffffff" opacity="0.9"/>
+        <path d="M80 120C58 120 40 138 40 160H120C120 138 102 120 80 120Z" fill="#ffffff" opacity="0.9"/>
+    </g>
+    
+    <!-- Person 2 (Right) -->
+    <g transform="translate(70, 15)">
+        <circle cx="80" cy="80" r="40" fill="#ffffff" opacity="0.9"/>
+        <path d="M80 120C58 120 40 138 40 160H120C120 138 102 120 80 120Z" fill="#ffffff" opacity="0.9"/>
+    </g>
+
+    <!-- Person 3 (Center, slightly larger/forward) -->
+    <g transform="translate(30, -10)">
+        <circle cx="80" cy="80" r="45" fill="#ffffff"/>
+        <path d="M80 125C56 125 36 145 36 170H124C124 145 104 125 80 125Z" fill="#ffffff"/>
+    </g>
+  </g>
+</svg>

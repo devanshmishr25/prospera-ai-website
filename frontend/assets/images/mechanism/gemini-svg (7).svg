@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGradSales" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </radialGradient>
+    
+    <!-- Manager/Suit Gradient -->
+    <linearGradient id="managerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+
+    <!-- Metallic Edge Gradient -->
+    <linearGradient id="edgeGradSales" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#1e40af" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Circular Badge Background -->
+  <circle cx="256" cy="256" r="230" fill="url(#bgGradSales)" stroke="url(#edgeGradSales)" stroke-width="12" />
+
+  <!-- Sales Manager Silhouette with Headset & Tie -->
+  <g transform="translate(150, 130)">
+    <!-- Head -->
+    <circle cx="106" cy="70" r="45" fill="url(#managerGrad)" stroke="#bfdbfe" stroke-width="4"/>
+    <!-- Body / Suit -->
+    <path d="M106 125C65 125 30 150 30 200H182C182 150 147 125 106 125Z" fill="url(#managerGrad)" stroke="#bfdbfe" stroke-width="4"/>
+    <!-- Shirt Collar & Tie -->
+    <path d="M90 125L106 155L122 125H90Z" fill="#ffffff"/>
+    <path d="M102 155L96 195H116L110 155H102Z" fill="#3b82f6"/>
+  </g>
+
+  <!-- Headset Element -->
+  <path d="M180 180C170 140 210 110 256 110C302 110 342 140 332 180" fill="none" stroke="#93c5fd" stroke-width="10" stroke-linecap="round"/>
+  <!-- Left Earpiece -->
+  <rect x="175" y="170" width="20" height="35" rx="10" fill="#1e40af" stroke="#93c5fd" stroke-width="3"/>
+  <!-- Mic Boom & Mic -->
+  <path d="M185 200C185 240 210 260 230 265" fill="none" stroke="#93c5fd" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="235" cy="268" r="8" fill="#ffffff"/>
+
+  <!-- AI Star / Quality Badge Overlay -->
+  <g transform="translate(320, 290)">
+    <circle cx="40" cy="40" r="30" fill="#1e40af" stroke="#93c5fd" stroke-width="4"/>
+    <!-- Star Shape -->
+    <path d="M40 20L46 32L59 34L50 43L52 56L40 50L28 56L30 43L21 34L34 32L40 20Z" fill="#facc15" stroke="#ffffff" stroke-width="2"/>
+  </g>
+</svg>

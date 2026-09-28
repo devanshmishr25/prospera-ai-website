@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Prospera AI | Technology & AI Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#FCF9EE',
+                            100: '#FAF3D3',
+                            200: '#F4E5A1',
+                            300: '#EDD36E',
+                            400: '#E4BF3F',
+                            500: '#D4AF37',
+                            600: '#8C6D1F',
+                            700: '#806118',
+                            800: '#57400F',
+                            900: '#332407',
+                            light: '#F2D280',
+                            DEFAULT: '#D4AF37',
+                            dark: '#8C6D1F'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['DM Serif Display', 'serif'],
+                        heading: ['DM Serif Display', 'serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Theme Stylesheet & Pre-Render Theme Loader (Defaults to Light Mode) -->
+    <link rel="stylesheet" href="theme.css">
+    <script>
+      (function () {
+        document.documentElement.setAttribute("data-theme", "light");
+        document.documentElement.classList.remove("dark");
+      })();
+    </script>
+
+    <style id="prospera-why-ai-system">
+    /* ============================================================
+       PROSPERA AI — WHY PROSPERA AI LUXURY DESIGN SYSTEM
+       STRICT 3-COLOR SYSTEM: BLACK (#000000), WHITE (#FFFFFF), GOLD (#D4AF37)
+       ZERO ITALICS — 100% RESPONSIVE AND ACCESSIBLE
+       ============================================================ */
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      font-style: normal !important;
+    }
+
+    html {
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      background-color: #FAF8F5 !important;
+      color: #000000 !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ── HERO SECTION (DITTO FROM COMPARE & MARKET INSIGHTS) ── */
+    .builders-hero {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%) !important;
+      border-bottom: 1.5px solid rgba(212, 175, 55, 0.28) !important;
+      padding-top: 120px !important;
+      padding-bottom: 40px !important;
+    }
+
+    /* ── GOLD ACCENT LINE ── */
+    .accent-line {
+      width: 50px;
+      height: 3px;
+      margin-top: 10px;
+      margin-bottom: 16px;
+      background: #D4AF37;
+      border-radius: 999px;
+    }
+
+    /* ── LUXURY WHITE CARDS ── */
+    .about-card {
+      background: #FFFFFF !important;
+      background-color: #FFFFFF !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.3) !important;
+      border-radius: 20px !important;
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04) !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .about-card:hover {
+      border-color: #D4AF37 !important;
+      box-shadow: 0 12px 32px -4px rgba(212, 175, 55, 0.22) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    /* ── TYPOGRAPHY OVERRIDES ── */
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'DM Serif Display', serif !important;
+      font-style: normal !important;
+    }
+
+    /* ============================================================
+       STRICT DARK CONTAINERS: 100% PURE WHITE TEXT (NO NAVY / NO BLACK)
+       ============================================================ */
+    html body [class*="bg-[#000000]"],
+    html body [class*="bg-[#141414]"],
+    html body [class*="bg-[#1A1A1A]"],
+    html body [class*="bg-[#1E1E1E]"],
+    html body [class*="bg-[#0A0A0A]"],
+    html body [class*="bg-black"],
+    html body #crm-automation,
+    html body #contact,
+    html body .dark-card,
+    html body .dark-container {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+    }
+
+    html body [class*="bg-[#000000]"] h1, html body [class*="bg-[#000000]"] h2, html body [class*="bg-[#000000]"] h3, html body [class*="bg-[#000000]"] h4, html body [class*="bg-[#000000]"] h5, html body [class*="bg-[#000000]"] h6,
+    html body [class*="bg-[#141414]"] h1, html body [class*="bg-[#141414]"] h2, html body [class*="bg-[#141414]"] h3, html body [class*="bg-[#141414]"] h4, html body [class*="bg-[#141414]"] h5, html body [class*="bg-[#141414]"] h6,
+    html body [class*="bg-black"] h1, html body [class*="bg-black"] h2, html body [class*="bg-black"] h3, html body [class*="bg-black"] h4, html body [class*="bg-black"] h5, html body [class*="bg-black"] h6,
+    html body #crm-automation h1, html body #crm-automation h2, html body #crm-automation h3, html body #crm-automation h4,
+    html body #contact h1, html body #contact h2, html body #contact h3, html body #contact h4 {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+    }
+
+    html body [class*="bg-[#000000]"] .text-white,
+    html body [class*="bg-[#141414]"] .text-white,
+    html body [class*="bg-black"] .text-white,
+    html body #crm-automation .text-white,
+    html body #contact .text-white {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+    }
+
+    html body [class*="bg-[#000000]"] p,
+    html body [class*="bg-[#141414]"] p,
+    html body [class*="bg-black"] p,
+    html body #crm-automation p,
+    html body #contact p {
+      color: rgba(255, 255, 255, 0.88) !important;
+      -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;
+    }
+
+    /* Preserve Gold accents inside dark containers */
+    html body [class*="bg-[#000000]"] .text-gold-500,
+    html body [class*="bg-[#000000]"] .text-gold-600,
+    html body [class*="bg-[#000000]"] .text-\[\#D4AF37\],
+    html body [class*="bg-[#141414]"] .text-gold-500,
+    html body [class*="bg-[#141414]"] .text-gold-600,
+    html body [class*="bg-[#141414]"] .text-\[\#D4AF37\],
+    html body #crm-automation .text-gold-500,
+    html body #crm-automation .text-gold-600,
+    html body #crm-automation .text-\[\#D4AF37\],
+    html body #contact .text-gold-500,
+    html body #contact .text-gold-600,
+    html body #contact .text-\[\#D4AF37\] {
+      color: #D4AF37 !important;
+      -webkit-text-fill-color: #D4AF37 !important;
+    }
+
+    /* ── BUTTONS & HOVER STATES ── */
+    .prospera-primary-btn,
+    .why-btn-primary {
+      background: #D4AF37 !important;
+      background-color: #D4AF37 !important;
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+      border: 1.5px solid #D4AF37 !important;
+      border-radius: 12px !important;
+      padding: 12px 28px !important;
+      font-weight: 800 !important;
+      font-size: 12px !important;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-decoration: none !important;
+      transition: all 0.25s ease !important;
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.25) !important;
+      cursor: pointer !important;
+    }
+    .prospera-primary-btn:hover,
+    .why-btn-primary:hover {
+      background: #000000 !important;
+      background-color: #000000 !important;
+      color: #D4AF37 !important;
+      -webkit-text-fill-color: #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4) !important;
+    }
+
+    /* Soundwave bars */
+    .bar {
+      width: 3px;
+      height: 12px;
+      background-color: #D4AF37;
+      border-radius: 2px;
+      animation: bounce 1.2s ease-in-out infinite alternate;
+    }
+    .bar:nth-child(2) { animation-delay: 0.2s; }
+    .bar:nth-child(3) { animation-delay: 0.4s; }
+    .bar:nth-child(4) { animation-delay: 0.1s; }
+    .bar:nth-child(5) { animation-delay: 0.5s; }
+    @keyframes bounce {
+      0% { height: 6px; opacity: 0.4; }
+      100% { height: 28px; opacity: 1; }
+    }
+
+    /* ── MASTER HEADER ABOUT DROPDOWN FIXES ── */
+    html[data-theme="light"] .prospera-about-dropdown {
+      position: relative !important;
+      flex-shrink: 0 !important;
+    }
+    html[data-theme="light"] .prospera-about-menu {
+      position: absolute !important;
+      top: calc(100% + 12px) !important;
+      right: 0 !important;
+      left: auto !important;
+      z-index: 100 !important;
+      width: 230px !important;
+      min-width: 230px !important;
+      max-width: 230px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      padding: 8px !important;
+      margin: 0 !important;
+      background: #FFFFFF !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.3) !important;
+      border-radius: 18px !important;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12) !important;
+    }
+    html[data-theme="light"] .prospera-about-menu > a {
+      display: block !important;
+      width: 100% !important;
+      padding: 10px 12px !important;
+      color: #000000 !important;
+      background: transparent !important;
+      font-size: 13px !important;
+      font-weight: 600 !important;
+      border-radius: 10px !important;
+      text-decoration: none !important;
+      transition: all 0.15s ease !important;
+    }
+    html[data-theme="light"] .prospera-about-menu > a:hover {
+      color: #000000 !important;
+      background: #FAF8F5 !important;
+      border-left: 2px solid #D4AF37 !important;
+    }
+
+    /* Floating widget overflow shield */
+    #floatingAIWidget {
+      z-index: 60 !important;
+      max-width: calc(100vw - 1.5rem) !important;
+    }
+    </style>
+</head>
+<body class="bg-[#FAF8F5] text-[#000000] font-sans antialiased min-h-screen overflow-x-hidden">
+    <!-- =========================================
+         PROSPERA MASTER HEADER
+         ========================================= -->
+    <header class="fixed top-0 left-0 right-0 w-full z-50 bg-white border-b border-slate-200 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a aria-label="Prospera AI Realtors" class="prospera-brand-logo group flex-shrink-0" href="index.html">
+        <span aria-hidden="true" class="prospera-logo-frame">
+          <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+        </span>
+      </a>
+      <!-- Desktop Primary Navigation -->
+      <nav aria-label="Primary navigation"
+        class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-700">
+        <a class="hover:text-gold-500 transition-colors" href="index.html">Home</a>
+        <a class="hover:text-gold-500 transition-colors" href="builders.html">Builders</a>
+        <a class="hover:text-gold-500 transition-colors" href="explore.html">Properties</a>
+        <a class="hover:text-gold-500 transition-colors" href="agents.html">Agents</a>
+        <a class="hover:text-gold-500 transition-colors" href="market-insights.html">Market Insights</a>
+        <a class="hover:text-gold-500 transition-colors" href="compare-projects.html">Compare</a>
+        <a class="hover:text-gold-500 transition-colors" href="book-site-visit.html">Book Site Visit</a>
+        <div class="prospera-about-dropdown" id="desktopAboutDropdown">
+          <button aria-controls="desktopAboutMenu" aria-expanded="false"
+            class="prospera-about-trigger hover:text-gold-500 transition-colors"
+            onclick="toggleAboutDropdown(event, 'desktopAboutDropdown')" type="button">
+            <span>About</span>
+            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+          </button>
+          <div aria-label="About links" class="prospera-about-menu" id="desktopAboutMenu" role="menu">
+            <a href="about-us.html" role="menuitem">About Us</a>
+            <a href="why-prospera-ai.html" role="menuitem">Why Prospera AI</a>
+            <a href="reviews.html" role="menuitem">Reviews</a>
+            <a href="contact.html" role="menuitem">Contact Us</a>
+            <a href="privacy-terms.html" role="menuitem">Privacy Policy</a>
+          </div>
+        </div>
+      </nav>
+      <!-- Right: Mobile Navigation -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button aria-label="Open menu"
+          class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl border border-gold-500/30 bg-gold-500/10 text-gold-500 hover:bg-gold-500/20 transition-all"
+          id="mobileMenuBtn" onclick="toggleMobileMenu()">
+          <i class="fa-solid fa-bars text-base" id="mobileMenuIcon"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Navigation Dropdown -->
+    <div class="hidden md:hidden border-t border-slate-200 bg-white" id="mobileMenu">
+      <nav aria-label="Mobile navigation" class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="index.html">Home</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="builders.html">Builders</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="explore.html">Properties</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="agents.html">Agents</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="market-insights.html">Market Insights</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="compare-projects.html">Compare</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="book-site-visit.html">Book Site Visit</a>
+        <div class="prospera-mobile-about" id="mobileAboutDropdown">
+          <button aria-controls="mobileAboutMenu" aria-expanded="false" class="prospera-mobile-about-trigger"
+            onclick="toggleAboutDropdown(event, 'mobileAboutDropdown')" type="button">
+            <span>About</span>
+            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+          </button>
+          <div class="prospera-mobile-about-menu" id="mobileAboutMenu">
+            <a href="about-us.html">About Us</a>
+            <a href="why-prospera-ai.html">Why Prospera AI</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="privacy-terms.html">Privacy Policy</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+    <!-- =========================================
+         END PROSPERA MASTER HEADER
+         ========================================= -->
+    <!-- =============================================
+       MAIN CONTENT: HERO (ditto from compare-projects.html & about-us.html)
+       ============================================= -->
+    <div class="builders-hero">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Breadcrumb -->
+        <nav class="flex items-center gap-2 text-xs text-black/60 mb-6" aria-label="Breadcrumb">
+          <a href="index.html" class="hover:text-gold-600 transition-colors">Prospera AI</a>
+          <i class="fa-solid fa-chevron-right text-[8px] text-gold-500"></i>
+          <span class="text-gold-600 font-semibold">Why Prospera AI</span>
+        </nav>
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <h1 class="font-heading text-4xl sm:text-5xl font-bold text-[#000000] mb-3 leading-tight">
+              Why Prospera <span class="text-gold-600">AI.</span>
+            </h1>
+            <p class="text-black/75 text-base max-w-2xl leading-relaxed">
+              An end-to-end proprietary artificial intelligence stack engineered to automate ultra-luxury real estate acquisition, lead conversion, and personalized client nurture.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 space-y-20">
+
+        <!-- SECTION 1: AI VOICE ASSISTANT -->
+        <section id="voice-assistant" class="relative">
+            <div class="flex items-center space-x-3 mb-2">
+                <div class="h-px w-8 bg-[#D4AF37]"></div>
+                <span class="text-xs uppercase tracking-widest text-[#8C6D1F] font-bold">Voice Intelligence</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-serif text-[#000000] font-bold">AI Voice <span class="text-gold-600">Assistant.</span></h2>
+            <div class="accent-line"></div>
+            <p class="text-black/75 max-w-2xl text-sm sm:text-base leading-relaxed mb-10">
+                Human-like conversational intelligence capable of handling high-net-worth inbound calls, qualifying buyer criteria in real-time, and booking estate viewings automatically.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- How Conversations Work Visual Flow -->
+                <div class="lg:col-span-7 bg-[#000000] p-8 rounded-2xl border border-[#D4AF37]/40 flex flex-col justify-between shadow-xl text-white">
+                    <h3 class="text-lg font-serif mb-6 flex items-center justify-between" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                        <span class="font-bold" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">How AI Conversations Work</span>
+                        <span class="text-xs font-mono text-[#D4AF37] bg-[#141414] px-3 py-1 rounded border border-[#D4AF37]/40 font-bold">Latency &lt; 350ms</span>
+                    </h3>
+
+                    <div class="space-y-6 relative border-l-2 border-[#D4AF37]/40 pl-6 my-2">
+                        <!-- Step 1 -->
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-[#D4AF37] ring-4 ring-[#000000]"></div>
+                            <h4 class="font-bold text-sm" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                                01. Inbound Call & Natural Language Processing
+                            </h4>
+                            <p class="text-xs mt-1 leading-relaxed" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">
+                                Speech-to-Text neural models stream audio into high-accuracy phoneme maps, detecting client accents, intent, and subtle context.
+                            </p>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-[#D4AF37] ring-4 ring-[#000000]"></div>
+                            <h4 class="font-bold text-sm" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                                02. Intent Extraction & Preference Mapping
+                            </h4>
+                            <p class="text-xs mt-1 leading-relaxed" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">
+                                The assistant queries the live property database to extract budget parameters, preferred pin codes, architectural preferences, and liquidity timelines.
+                            </p>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-[#D4AF37] ring-4 ring-[#000000]"></div>
+                            <h4 class="font-bold text-sm" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                                03. Ultra-Realistic Speech Synthesis
+                            </h4>
+                            <p class="text-xs mt-1 leading-relaxed" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">
+                                Generates nuanced, warm, and professional human audio responses with zero robotic pauses or conversational collision.
+                            </p>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-[#D4AF37] ring-4 ring-[#000000]"></div>
+                            <h4 class="font-bold text-sm" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                                04. Automated Viewing Booking & Calendar Sync
+                            </h4>
+                            <p class="text-xs mt-1 leading-relaxed" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">
+                                Directly books an exclusive private tour with the assigned senior advisor and dispatches immediate WhatsApp itinerary confirmation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 grid grid-cols-3 gap-4 text-center border-t border-[rgba(212,175,55,0.3)] mt-6">
+                        <div class="bg-[#141414] p-3 rounded-xl border border-[rgba(212,175,55,0.3)]">
+                            <span class="text-lg font-serif text-[#D4AF37] block font-bold">24/7</span>
+                            <span class="text-[10px] uppercase font-bold" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">Availability</span>
+                        </div>
+                        <div class="bg-[#141414] p-3 rounded-xl border border-[rgba(212,175,55,0.3)]">
+                            <span class="text-lg font-serif text-[#D4AF37] block font-bold">30+</span>
+                            <span class="text-[10px] uppercase font-bold" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">Languages</span>
+                        </div>
+                        <div class="bg-[#141414] p-3 rounded-xl border border-[rgba(212,175,55,0.3)]">
+                            <span class="text-lg font-serif text-[#D4AF37] block font-bold">98.2%</span>
+                            <span class="text-[10px] uppercase font-bold" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">Intent Precision</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Voice Call Box Mockup -->
+                <div class="lg:col-span-5 bg-[#000000] p-6 rounded-2xl border border-[#D4AF37]/40 flex flex-col justify-between shadow-xl text-white">
+                    <div>
+                        <div class="flex justify-between items-center pb-4 border-b border-[rgba(212,175,55,0.3)]">
+                            <div class="flex items-center space-x-3">
+                                <div class="relative">
+                                    <div class="w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center text-black font-bold">
+                                        <i class="fa-solid fa-microphone text-sm"></i>
+                                    </div>
+                                    <span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 rounded-full border-2 border-[#000000]"></span>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Prospera Voice Agent</h4>
+                                    <span class="text-xs text-emerald-400 font-mono flex items-center gap-1 font-bold">
+                                        <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-ping"></span> Active Call Simulation
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Animated Soundwave -->
+                            <div class="flex items-end space-x-1 h-7">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </div>
+                        </div>
+
+                        <!-- Live Call Dialogue Box with 100% Readable Text -->
+                        <div class="mt-6 space-y-4 font-mono text-xs">
+                            <div class="bg-[#141414] p-3.5 rounded-xl border border-[rgba(212,175,55,0.3)]">
+                                <span class="text-[#D4AF37] block font-bold mb-1">[00:04] Prospera AI:</span>
+                                <p class="leading-relaxed" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">"Good afternoon, Mr. Singhania. I noticed your interest in our South Mumbai off-market estate. Are you seeking primary residential occupancy or an investment holding?"</p>
+                            </div>
+
+                            <div class="bg-[#1F2428] p-3.5 rounded-xl border border-[rgba(212,175,55,0.2)] text-right">
+                                <span class="text-[#D4AF37] block font-bold mb-1">[00:09] Client:</span>
+                                <p class="leading-relaxed" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">"Investment holding. Looking for minimum 12% projected ROI and high security."</p>
+                            </div>
+
+                            <div class="bg-[#141414] p-3.5 rounded-xl border border-[rgba(212,175,55,0.3)]">
+                                <span class="text-[#D4AF37] block font-bold mb-1">[00:13] Prospera AI:</span>
+                                <p class="leading-relaxed" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">"Understood. I have locked two off-market properties matching 14.2% projected appreciation. Would Thursday at 3 PM work for a private confidential viewing?"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-[rgba(212,175,55,0.3)] text-center">
+                        <button id="voiceSimBtn" onclick="toggleVoiceSim()" class="w-full py-3.5 why-btn-primary rounded-xl transition-all text-xs uppercase tracking-widest font-bold flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-microphone text-sm mr-2"></i>
+                            <span id="voiceSimText">Simulate Live Voice Interaction</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: AI RECOMMENDATION ENGINE -->
+        <section id="recommendation-engine">
+            <div class="flex items-center space-x-3 mb-2">
+                <div class="h-px w-8 bg-[#D4AF37]"></div>
+                <span class="text-xs uppercase tracking-widest text-[#8C6D1F] font-bold">Property Matching</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-serif text-[#000000] font-bold">AI Recommendation <span class="text-gold-600">Engine.</span></h2>
+            <div class="accent-line"></div>
+            <p class="text-black/75 max-w-2xl text-sm sm:text-base leading-relaxed mb-10">
+                Multi-vector algorithmic matching that evaluates thousands of micro-variables—from architectural lineage to neighborhood capital expansion—delivering hyper-personalized asset recommendations.
+            </p>
+
+            <div class="bg-[#000000] p-8 sm:p-10 rounded-3xl border border-[#D4AF37]/40 relative overflow-hidden shadow-xl text-white">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- Control Panel Input Simulator -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <h3 class="text-xl font-serif font-bold mb-2" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Hyper-Targeted Vector Filtering</h3>
+                        <p class="text-xs leading-relaxed" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">
+                            Adjust criteria parameters to see real-time algorithmic weight calculations and property match precision index.
+                        </p>
+
+                        <div class="space-y-5 text-xs">
+                            <div>
+                                <div class="flex justify-between mb-1.5">
+                                    <span class="font-bold" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Target Capital Investment</span>
+                                    <span class="text-[#D4AF37] font-mono font-bold">₹50 Cr - ₹250 Cr</span>
+                                </div>
+                                <input type="range" min="5" max="50" value="25" class="w-full accent-[#D4AF37] bg-[#2A2A2A] rounded-lg h-2 cursor-pointer">
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-1.5">
+                                    <span class="font-bold" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Yield & Capital Growth Target</span>
+                                    <span class="text-[#D4AF37] font-mono font-bold">14.5% YoY</span>
+                                </div>
+                                <input type="range" min="5" max="25" value="14" class="w-full accent-[#D4AF37] bg-[#2A2A2A] rounded-lg h-2 cursor-pointer">
+                            </div>
+
+                            <div class="pt-2">
+                                <span class="font-bold block mb-2" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Primary Aesthetic Vector</span>
+                                <div class="grid grid-cols-3 gap-2">
+                                    <button class="py-2.5 px-3 bg-[#D4AF37] text-black font-bold rounded-xl text-[11px] text-center border border-[#D4AF37]">Modern Minimalist</button>
+                                    <button class="py-2.5 px-3 bg-[#141414] border border-[rgba(212,175,55,0.3)] text-white rounded-xl text-[11px] text-center hover:border-[#D4AF37] transition-all font-semibold">Mediterranean</button>
+                                    <button class="py-2.5 px-3 bg-[#141414] border border-[rgba(212,175,55,0.3)] text-white rounded-xl text-[11px] text-center hover:border-[#D4AF37] transition-all font-semibold">Penthouse Luxe</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Output Recommendation Card -->
+                    <div class="lg:col-span-7 bg-[#141414] p-6 rounded-2xl border border-[rgba(212,175,55,0.4)] relative shadow-lg">
+                        <div class="absolute top-4 right-4 bg-[#000000] border border-[#D4AF37] px-3 py-1 rounded-full flex items-center space-x-1.5 shadow">
+                            <span class="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+                            <span class="text-[11px] font-mono text-[#D4AF37] font-bold">99.4% Match Score</span>
+                        </div>
+
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-[#000000] border border-[#D4AF37] flex items-center justify-center text-[#D4AF37]">
+                                <i class="fa-solid fa-building text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-serif font-bold" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">The Malabar Hill Horizon Estate</h4>
+                                <span class="text-xs font-mono text-[#D4AF37]">Off-Market ID: #PR-90422</span>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 my-4 py-3 border-y border-[rgba(212,175,55,0.25)] text-xs">
+                            <div>
+                                <span class="block text-[10px] uppercase font-semibold" style="color: rgba(255, 255, 255, 0.7) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.7) !important;">Valuation</span>
+                                <span class="font-bold font-mono text-sm" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">₹185 Cr</span>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] uppercase font-semibold" style="color: rgba(255, 255, 255, 0.7) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.7) !important;">5-Yr Appr. Signal</span>
+                                <span class="text-[#D4AF37] font-bold font-mono text-sm">+16.8%</span>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] uppercase font-semibold" style="color: rgba(255, 255, 255, 0.7) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.7) !important;">Privacy Rating</span>
+                                <span class="text-[#D4AF37] font-bold font-mono text-sm">Tier-1 Vault</span>
+                            </div>
+                        </div>
+
+                        <p class="text-xs leading-relaxed mb-4" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">
+                            <strong class="text-[#D4AF37] font-bold">AI Reason Matrix:</strong> Matched based on high structural rarity score, optimal tax zone efficiency, and prospective institutional buyer interest within a 5-km radius over the next 18 months.
+                        </p>
+
+                        <div class="flex justify-between items-center text-xs pt-2">
+                            <span class="font-mono text-[11px]" style="color: rgba(255, 255, 255, 0.75) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.75) !important;">Algorithm Latency: 0.04s</span>
+                            <a href="book-site-visit.html" class="text-[#D4AF37] hover:underline font-bold flex items-center gap-1">
+                                Access Full AI Dossier &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: WHATSAPP AUTOMATION -->
+        <section id="whatsapp-automation">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-2">
+                            <div class="h-px w-8 bg-[#D4AF37]"></div>
+                            <span class="text-xs uppercase tracking-widest text-[#8C6D1F] font-bold">Instant Nurture</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-serif text-[#000000] font-bold">WhatsApp <span class="text-gold-600">Automation.</span></h2>
+                        <div class="accent-line"></div>
+                    </div>
+
+                    <p class="text-black/80 text-sm sm:text-base leading-relaxed">
+                        High-touch luxury client relationship management executed where global decision-makers communicate most: WhatsApp Business API.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="about-card p-5 rounded-2xl bg-white border border-[rgba(212,175,55,0.3)] flex items-start space-x-4 shadow-sm">
+                            <div class="w-10 h-10 rounded-xl bg-black border border-[#D4AF37] text-[#D4AF37] flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">
+                                <i class="fa-solid fa-bolt text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-[#000000] text-sm font-bold">Instant Smart Response</h3>
+                                <p class="text-xs text-black/75 mt-1 leading-relaxed">Delivers personalized digital estate viewings and PDF brochures within 3 seconds of initial client inquiry.</p>
+                            </div>
+                        </div>
+
+                        <div class="about-card p-5 rounded-2xl bg-white border border-[rgba(212,175,55,0.3)] flex items-start space-x-4 shadow-sm">
+                            <div class="w-10 h-10 rounded-xl bg-black border border-[#D4AF37] text-[#D4AF37] flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">
+                                <i class="fa-solid fa-calendar-check text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-[#000000] text-sm font-bold">Automated Inspection Follow-Ups</h3>
+                                <p class="text-xs text-black/75 mt-1 leading-relaxed">Sends automated, polite feedback inquiries and legal document links following physical property walk-throughs.</p>
+                            </div>
+                        </div>
+
+                        <div class="about-card p-5 rounded-2xl bg-white border border-[rgba(212,175,55,0.3)] flex items-start space-x-4 shadow-sm">
+                            <div class="w-10 h-10 rounded-xl bg-black border border-[#D4AF37] text-[#D4AF37] flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">
+                                <i class="fa-solid fa-chart-line text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-[#000000] text-sm font-bold">Predictive Re-Engagement</h3>
+                                <p class="text-xs text-black/75 mt-1 leading-relaxed">Monitors market price adjustments and alerts qualified investors when target estates meet their target valuation thresholds.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Mobile Visual Mockup -->
+                <div class="lg:col-span-6 flex justify-center">
+                    <div class="w-full max-w-sm bg-[#0D1418] rounded-3xl border-4 border-[#2A2A2A] p-4 shadow-2xl space-y-3 font-sans relative overflow-hidden text-white">
+                        <!-- Chat Header -->
+                        <div class="flex items-center justify-between pb-3 border-b border-[#222D34]">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-9 h-9 rounded-full bg-[#D4AF37] text-black font-bold flex items-center justify-center text-xs">
+                                    P
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold flex items-center gap-1" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                                        Prospera Concierge
+                                        <i class="fa-solid fa-circle-check text-emerald-400 text-xs"></i>
+                                    </div>
+                                    <div class="text-[10px] text-gray-400">Verified Business Account</div>
+                                </div>
+                            </div>
+                            <span class="text-[10px] text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800 font-bold">Verified AI</span>
+                        </div>
+
+                        <!-- Chat Messages Bubble -->
+                        <div class="space-y-3 text-xs pt-2">
+                            <div class="bg-[#056162] text-white p-3.5 rounded-2xl rounded-tl-none max-w-[85%] space-y-1.5 shadow">
+                                <p class="text-[11px] font-bold">Hello Mr. Kapoor,</p>
+                                <p class="text-[11px] leading-relaxed">As requested, here is the confidential off-market dossier for the Worli Sea Face Residence (₹180 Cr).</p>
+                                <div class="bg-[#024344] p-2 rounded flex items-center justify-between mt-2 border border-emerald-600/30">
+                                    <span class="text-[10px] truncate font-mono">Dossier_WorliSeaFace.pdf</span>
+                                    <span class="text-[9px] bg-[#D4AF37] text-black px-2 py-0.5 rounded font-bold">VIEW</span>
+                                </div>
+                                <span class="text-[9px] text-emerald-200 block text-right font-mono">10:42 AM ✓✓</span>
+                            </div>
+
+                            <div class="bg-[#262D31] text-white p-3.5 rounded-2xl rounded-tr-none ml-auto max-w-[80%] shadow">
+                                <p class="text-[11px] leading-relaxed" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Excellent. Can we schedule a private helicopter transfer for viewing this Friday?</p>
+                                <span class="text-[9px] text-gray-400 block text-right font-mono">10:43 AM</span>
+                            </div>
+
+                            <div class="bg-[#056162] text-white p-3.5 rounded-2xl rounded-tl-none max-w-[85%] space-y-1 shadow">
+                                <p class="text-[11px] leading-relaxed">Consider it arranged. Flight departure confirmed for Friday at 11:00 AM from Mahalaxmi Race Course Helipad. Calendar invite dispatched.</p>
+                                <span class="text-[9px] text-emerald-200 block text-right font-mono">10:43 AM ✓✓</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 border-t border-[#222D34] flex items-center space-x-2 text-xs">
+                            <span class="w-full bg-[#1E2428] py-2 px-3 rounded-full text-[10px] text-gray-300">Type a response...</span>
+                            <div class="w-8 h-8 rounded-full bg-[#D4AF37] text-black flex items-center justify-center font-bold text-xs shrink-0">
+                                <i class="fa-solid fa-paper-plane text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 4: CRM AUTOMATION -->
+        <section id="crm-automation">
+            <div class="bg-[#000000] p-8 sm:p-12 rounded-3xl border border-[#D4AF37]/40 shadow-xl relative overflow-hidden text-white" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                <div class="max-w-3xl mb-10">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <div class="h-px w-8 bg-[#D4AF37]"></div>
+                        <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold">Workflow Efficiency</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">CRM Automation & Smart Agent Routing</h2>
+                    <div class="accent-line"></div>
+                    <p class="text-sm sm:text-base leading-relaxed" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">
+                        Elimination of response delays. Our intelligent CRM categorizes incoming buyer leads by liquidity status, region, and interest level, immediately assigning them to the optimal senior partner.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-[#141414] p-6 rounded-2xl border border-[rgba(212,175,55,0.3)] text-white" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                        <div class="w-10 h-10 rounded-xl bg-[#000000] border border-[#D4AF37] text-[#D4AF37] flex items-center justify-center font-bold font-mono text-sm mb-4">
+                            01
+                        </div>
+                        <h3 class="font-serif text-lg font-bold mb-2" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Algorithmic Lead Scoring</h3>
+                        <p class="text-xs leading-relaxed" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">
+                            Calculates financial capacity and timeline urgency using public wealth signals, institutional filings, and digital engagement.
+                        </p>
+                    </div>
+
+                    <div class="bg-[#141414] p-6 rounded-2xl border border-[rgba(212,175,55,0.3)] text-white" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                        <div class="w-10 h-10 rounded-xl bg-[#000000] border border-[#D4AF37] text-[#D4AF37] flex items-center justify-center font-bold font-mono text-sm mb-4">
+                            02
+                        </div>
+                        <h3 class="font-serif text-lg font-bold mb-2" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Instant Agent Dispatch</h3>
+                        <p class="text-xs leading-relaxed" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">
+                            Routes Tier-1 VIP clients directly to Senior Managing Directors within 15 seconds, pre-populating a complete client interest profile.
+                        </p>
+                    </div>
+
+                    <div class="bg-[#141414] p-6 rounded-2xl border border-[rgba(212,175,55,0.3)] text-white" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                        <div class="w-10 h-10 rounded-xl bg-[#000000] border border-[#D4AF37] text-[#D4AF37] flex items-center justify-center font-bold font-mono text-sm mb-4">
+                            03
+                        </div>
+                        <h3 class="font-serif text-lg font-bold mb-2" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Zero-Leakage Pipeline</h3>
+                        <p class="text-xs leading-relaxed" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">
+                            Automated task escalation ensures every inquiry receives bespoke attention, guaranteeing zero drop-offs in high-value lead pipelines.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: MULTI-PLATFORM AI (FIXED 100% VISIBLE CRISP WHITE TEXT) -->
+        <section id="multi-platform">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#8C6D1F] block mb-2">Omnichannel Integration</span>
+                <h2 class="text-3xl sm:text-4xl font-serif text-[#000000] font-bold">Multi-Platform AI <span class="text-gold-600">Engine.</span></h2>
+                <div class="accent-line mx-auto"></div>
+                <p class="text-black/75 text-sm sm:text-base">Seamless, synchronized artificial intelligence operating across every primary digital touchpoint.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Platform 1: Web -->
+                <div class="bg-[#000000] p-6 rounded-2xl border border-[#D4AF37]/40 shadow-xl flex flex-col justify-between text-white" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-[#141414] border-1.5 border-[#D4AF37] text-[#D4AF37] flex items-center justify-center mb-5 shadow-sm" style="border: 1.5px solid #D4AF37 !important;">
+                            <i class="fa-solid fa-globe text-2xl text-[#D4AF37]" style="color: #D4AF37 !important; -webkit-text-fill-color: #D4AF37 !important; font-size: 22px !important;"></i>
+                        </div>
+                        <span class="text-xs font-mono text-[#D4AF37] font-bold block mb-1">Web Platform</span>
+                        <h3 class="font-serif text-lg font-bold mb-2" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Proprietary Web Portal</h3>
+                        <p class="text-xs leading-relaxed" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">
+                            Embedded AI search console delivering instant valuation reports, private virtual tours, and automated financial advisory.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Platform 2: Instagram -->
+                <div class="bg-[#000000] p-6 rounded-2xl border border-[#D4AF37]/40 shadow-xl flex flex-col justify-between text-white" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-[#141414] border-1.5 border-[#D4AF37] text-[#D4AF37] flex items-center justify-center mb-5 shadow-sm" style="border: 1.5px solid #D4AF37 !important;">
+                            <i class="fa-brands fa-instagram text-2xl text-[#D4AF37]" style="color: #D4AF37 !important; -webkit-text-fill-color: #D4AF37 !important; font-size: 22px !important;"></i>
+                        </div>
+                        <span class="text-xs font-mono text-[#D4AF37] font-bold block mb-1">Social DM Automation</span>
+                        <h3 class="font-serif text-lg font-bold mb-2" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Instagram Auto-Reply</h3>
+                        <p class="text-xs leading-relaxed" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">
+                            Converts story replies and high-value DM inquiries into qualified leads through automated voice notes and off-market links.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Platform 3: Facebook -->
+                <div class="bg-[#000000] p-6 rounded-2xl border border-[#D4AF37]/40 shadow-xl flex flex-col justify-between text-white" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-[#141414] border-1.5 border-[#D4AF37] text-[#D4AF37] flex items-center justify-center mb-5 shadow-sm" style="border: 1.5px solid #D4AF37 !important;">
+                            <i class="fa-brands fa-facebook-messenger text-2xl text-[#D4AF37]" style="color: #D4AF37 !important; -webkit-text-fill-color: #D4AF37 !important; font-size: 22px !important;"></i>
+                        </div>
+                        <span class="text-xs font-mono text-[#D4AF37] font-bold block mb-1">Meta Messenger</span>
+                        <h3 class="font-serif text-lg font-bold mb-2" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Facebook Messenger</h3>
+                        <p class="text-xs leading-relaxed" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">
+                            Automated lead intake funnel serving high-net-worth demographic campaigns with multi-language conversational support.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Platform 4: WhatsApp -->
+                <div class="bg-[#000000] p-6 rounded-2xl border border-[#D4AF37]/40 shadow-xl flex flex-col justify-between text-white" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-[#141414] border-1.5 border-[#D4AF37] text-[#D4AF37] flex items-center justify-center mb-5 shadow-sm" style="border: 1.5px solid #D4AF37 !important;">
+                            <i class="fa-brands fa-whatsapp text-2xl text-[#D4AF37]" style="color: #D4AF37 !important; -webkit-text-fill-color: #D4AF37 !important; font-size: 22px !important;"></i>
+                        </div>
+                        <span class="text-xs font-mono text-[#D4AF37] font-bold block mb-1">WhatsApp API</span>
+                        <h3 class="font-serif text-lg font-bold mb-2" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">WhatsApp Business Core</h3>
+                        <p class="text-xs leading-relaxed" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">
+                            Direct encrypted messaging gateway for transaction updates, document signing, and instant private viewing arrangements.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CHAPTER PAGINATION & CALL TO ACTION -->
+        <section id="contact" class="pt-6">
+            <div class="bg-[#000000] rounded-3xl p-8 sm:p-14 text-center border border-[#D4AF37]/50 shadow-2xl relative overflow-hidden text-white" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                <div class="max-w-2xl mx-auto space-y-6">
+                    <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold">Integrate The AI Engine</span>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                        Experience AI-Powered <span class="text-gold-500" style="color: #D4AF37 !important; -webkit-text-fill-color: #D4AF37 !important;">Real Estate Advisory</span>
+                    </h2>
+                    <p class="text-sm sm:text-base leading-relaxed" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">
+                        Schedule an executive demonstration of our multi-platform AI voice assistant, matching engine, and automated CRM workflows.
+                    </p>
+                    <div class="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <a href="book-site-visit.html" id="scheduleLiveAiDemoBtn" class="w-full sm:w-auto px-8 py-3.5 rounded-xl why-btn-primary font-bold text-xs uppercase tracking-widest inline-flex items-center justify-center gap-2">
+                            Schedule Live AI Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- =========================================
+         PROSPERA MASTER FOOTER
+         ========================================= -->
+    <footer class="bg-white border-t border-slate-200 text-slate-600 text-sm py-12 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div aria-label="Prospera AI Realtors" class="prospera-footer-brand mb-4">
+            <span aria-hidden="true" class="prospera-logo-frame">
+              <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+            </span>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            India’s premier AI-first conversational real estate network. Unbiased recommendations, voice search, and
+            predictive market intelligence.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="about-us.html">About Us</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="why-prospera-ai.html">Why Prospera
+                AI</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="reviews.html">Reviews</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="contact.html">Contact Us</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="privacy-terms.html">Privacy
+                Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Top Locations</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Gomti Nagar'); return false;">Gomti
+                Nagar</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Gomti Nagar Extension'); return false;">Gomti Nagar Extension</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Shaheed Path'); return false;">Shaheed
+                Path</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Sultanpur Road'); return false;">Sultanpur Road</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Contact &amp; Legal</h4>
+          <p class="text-xs text-slate-500 mb-2"><i class="fa-solid fa-envelope text-gold-500 mr-2"></i>
+            advisor@prospera.ai</p>
+          <p class="text-xs text-slate-500 mb-4"><i class="fa-solid fa-phone text-gold-500 mr-2"></i> +91 1800-PROSPERA
+          </p>
+          <div class="flex gap-3">
+            <a aria-label="LinkedIn"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+            <a aria-label="Twitter / X"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-x-twitter text-xs"></i></a>
+            <a aria-label="Instagram"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-instagram text-xs"></i></a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pt-8 border-t border-slate-200 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>© 2026 Prospera AI Realtors Inc. All rights reserved.</p>
+        <p class="text-slate-500">RERA Reg: UPRERA/AI/2026/001</p>
+      </div>
+    </div>
+  </footer>
+
+        <!-- FLOATING AI ASSISTANT WIDGET & VOICE INTERFACE -->
+    <div id="floatingAIWidget" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end max-w-[calc(100vw-2rem)]">
+
+        <!-- Collapsible Chat Drawer -->
+        <div id="aiChatDrawer" class="hidden w-[calc(100vw-2rem)] sm:w-[380px] md:w-[400px] max-w-[400px] h-[500px] max-h-[calc(100vh-7rem)] rounded-3xl glass-card border border-gold-500/40 shadow-gold-glow-lg flex-col overflow-hidden mb-3 sm:mb-4 transition-all transform duration-300 box-border">
+            <!-- Chat Drawer Header -->
+            <div class="p-4 bg-obsidian-900 border-b border-gold-500/20 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-gold-500 to-gold-300 p-0.5 shadow-gold-glow">
+                        <div class="w-full h-full bg-obsidian-950 rounded-full flex items-center justify-center text-gold-400">
+                            <i class="fa-solid fa-robot text-sm"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm">Prospera Voice AI</h4>
+                        <span class="text-[10px] text-emerald-400 flex items-center gap-1">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Live & Listening
+                        </span>
+                    </div>
+                </div>
+                <button onclick="toggleFloatingChat()" class="text-slate-400 hover:text-white p-1">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Chat Drawer Body Messages -->
+            <div id="chatMessages" class="flex-1 p-4 overflow-y-auto space-y-3 text-xs">
+                <!-- AI Welcome Message -->
+                <div class="flex gap-2.5">
+                    <div class="w-7 h-7 rounded-full bg-gold-500/20 border border-gold-500/40 flex items-center justify-center text-gold-400 flex-shrink-0">
+                        <i class="fa-solid fa-robot text-xs"></i>
+                    </div>
+                    <div class="bg-obsidian-800 border border-gold-500/20 p-3 rounded-2xl rounded-tl-none text-slate-200 max-w-[82%] leading-relaxed">
+                        Hi, welcome to Prospera AI Realtors. Tell me your budget or city, and I'll help you find the right property.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Drawer Quick Chips -->
+            <div class="px-3 py-2 bg-obsidian-900/60 border-t border-slate-800 flex gap-2 overflow-x-auto text-[11px] whitespace-nowrap">
+                <button onclick="sendQuickMessage('Find 3BHK in Noida under 1.8 Cr')" class="px-2.5 py-1 rounded-full bg-obsidian-800 border border-gold-500/20 text-slate-300 hover:text-gold-300">
+                    3BHK Noida &lt; 1.8Cr
+                </button>
+                <button onclick="sendQuickMessage('Top luxury projects in Gurgaon')" class="px-2.5 py-1 rounded-full bg-obsidian-800 border border-gold-500/20 text-slate-300 hover:text-gold-300">
+                    Gurgaon Luxury
+                </button>
+            </div>
+
+            <!-- Chat Drawer Input Footer -->
+            <div class="p-3 bg-obsidian-900 border-t border-gold-500/20 flex items-center gap-2">
+                <button onclick="triggerVoiceModal()" class="w-9 h-9 rounded-xl bg-gold-500/20 border border-gold-500/40 text-gold-400 flex items-center justify-center hover:bg-gold-500/30 transition-colors" title="Speak to AI">
+                    <i class="fa-solid fa-microphone text-xs"></i>
+                </button>
+                <input type="text" id="floatingInput" placeholder="Type requirement..." onkeypress="handleKeyPress(event)" class="flex-1 bg-obsidian-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-gold-400">
+                <button onclick="sendFloatingMessage()" class="w-9 h-9 rounded-xl gold-btn-gradient text-obsidian-950 font-bold flex items-center justify-center hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Floating Action Button Orb -->
+        <button onclick="window.location.href='ai-property-finder.html'" class="relative group flex items-center gap-3 bg-gradient-to-r from-obsidian-900 via-obsidian-800 to-obsidian-950 border-2 border-gold-500 text-white p-3 sm:px-5 sm:py-3.5 rounded-full shadow-gold-glow hover:shadow-gold-glow-lg transition-all transform hover:scale-105">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-gold-300 via-gold-500 to-gold-700 flex items-center justify-center text-obsidian-950 font-bold">
+                <i class="fa-solid fa-robot text-sm"></i>
+            </div>
+            <span class="hidden sm:inline-block font-semibold text-xs text-gold-300 tracking-wider uppercase">AI Advisor</span>
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping absolute top-1 right-1"></span>
+        </button>
+
+    </div>
+
+    <!-- FULLSCREEN / MODAL VOICE EXPERIENCE OVERLAY -->
+    <div id="voiceModal" class="fixed inset-0 z-50 bg-obsidian-950/95 backdrop-blur-2xl hidden flex-col items-center justify-center p-4">
+        <button onclick="closeVoiceModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-gold-500/30 bg-obsidian-900 text-slate-300 hover:text-white hover:border-gold-400 flex items-center justify-center transition-all">
+            <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+
+        <div class="max-w-xl w-full text-center space-y-6 sm:space-y-8">
+            <div class="inline-block px-4 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold tracking-widest uppercase">
+                Interactive Voice Session
+            </div>
+
+            <!-- Pulsing Voice Visualizer -->
+            <div class="relative w-36 h-36 sm:w-44 sm:h-44 mx-auto flex items-center justify-center">
+                <div id="modalPulseRing" class="absolute inset-0 rounded-full border-2 border-gold-500/30 avatar-pulse"></div>
+                <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-gradient-to-tr from-obsidian-900 via-gold-900/40 to-obsidian-800 border border-gold-400 flex items-center justify-center shadow-gold-glow-lg">
+                    <i class="fa-solid fa-microphone text-4xl sm:text-5xl text-gold-400 animate-pulse"></i>
+                </div>
+            </div>
+
+            <!-- Soundwave graphic -->
+            <div class="flex justify-center items-center gap-1.5 h-10">
+                <div class="w-1.5 bg-gold-400 rounded-full animate-wave-1 h-6"></div>
+                <div class="w-1.5 bg-gold-300 rounded-full animate-wave-2 h-10"></div>
+                <div class="w-1.5 bg-gold-500 rounded-full animate-wave-3 h-8"></div>
+                <div class="w-1.5 bg-gold-400 rounded-full animate-wave-4 h-5"></div>
+                <div class="w-1.5 bg-gold-300 rounded-full animate-wave-5 h-9"></div>
+            </div>
+
+            <!-- Live Transcript Text -->
+            <div class="space-y-2">
+                <h3 id="modalVoiceStatus" class="font-serif text-xl sm:text-2xl font-bold text-white">Listening to your voice...</h3>
+                <p id="modalVoiceTranscript" class="text-slate-300 text-xs sm:text-sm max-w-md mx-auto not-italic font-normal">
+                    "Looking for a 3 BHK luxury apartment in Gurgaon under 3.5 Crores near metro station..."
+                </p>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 px-2">
+                <button onclick="simulateVoiceInput('Looking for 3 BHK in Gurgaon Golf Course Road under 4 Cr')" class="px-4 py-2 rounded-xl bg-obsidian-900 border border-gold-500/30 text-xs text-gold-300 hover:bg-gold-500/20 transition-all">
+                    "3 BHK Gurgaon Golf Course"
+                </button>
+                <button onclick="simulateVoiceInput('Plots in Greater Noida West near Metro')" class="px-4 py-2 rounded-xl bg-obsidian-900 border border-gold-500/30 text-xs text-gold-300 hover:bg-gold-500/20 transition-all">
+                    "Plots Greater Noida West"
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let isSimulating = false;
+        function toggleVoiceSim() {
+            const btnText = document.getElementById('voiceSimText');
+            if (!isSimulating) {
+                isSimulating = true;
+                btnText.innerText = "Voice Simulation Active (Listening...)";
+                btnText.parentElement.classList.add("bg-[#D4AF37]", "text-black");
+                btnText.parentElement.classList.remove("text-[#D4AF37]");
+                setTimeout(() => {
+                    btnText.innerText = "Simulate Live Voice Interaction";
+                    btnText.parentElement.classList.remove("bg-[#D4AF37]", "text-black");
+                    btnText.parentElement.classList.add("text-[#D4AF37]");
+                    isSimulating = false;
+                }, 4000);
+            }
+        }
+
+        // Smooth highlighting for nav bar on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= (sectionTop - 220)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(a => {
+                    if (a.getAttribute('href') === `#${current}`) {
+                        a.classList.add('text-[#D4AF37]');
+                        a.classList.remove('text-gray-400');
+                    }
+                });
+            });
+        });
+    
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('mobileMenuIcon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                if (icon) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            } else {
+                menu.classList.add('hidden');
+                if (icon) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        }
+
+        function askAILocation(loc) {
+            window.location.href = 'ai-property-finder.html?q=' + encodeURIComponent('Find best properties and appreciation rate in ' + loc);
+        }
+
+function triggerVoiceModal() {
+            const modal = document.getElementById('voiceModal');
+            if (modal) { modal.classList.remove('hidden'); modal.classList.add('flex'); }
+        }
+        function closeVoiceModal() {
+            const modal = document.getElementById('voiceModal');
+            if (modal) { modal.classList.add('hidden'); modal.classList.remove('flex'); }
+        }
+        function simulateVoiceInput(text) {
+            const transcript = document.getElementById('modalVoiceTranscript');
+            const status = document.getElementById('modalVoiceStatus');
+            if (transcript) transcript.innerText = '"' + text + '"';
+            if (status) status.innerText = "Analyzing requirements with AI...";
+            setTimeout(() => {
+                closeVoiceModal();
+                const heroInput = document.getElementById('heroPromptInput');
+                if (heroInput) { heroInput.value = text; if (typeof submitHeroQuery === 'function') submitHeroQuery(); }
+                else {
+                    const drawer = document.getElementById('aiChatDrawer');
+                    if (drawer && drawer.classList.contains('hidden')) toggleFloatingChat();
+                    const floatingInput = document.getElementById('floatingInput');
+                    if (floatingInput) { floatingInput.value = text; sendFloatingMessage(); }
+                }
+            }, 1500);
+        }
+        function toggleFloatingChat() {
+            const drawer = document.getElementById('aiChatDrawer');
+            if (!drawer) return;
+            if (drawer.classList.contains('hidden')) { drawer.classList.remove('hidden'); drawer.classList.add('flex'); }
+            else { drawer.classList.add('hidden'); drawer.classList.remove('flex'); }
+        }
+        function handleKeyPress(e) { if (e.key === 'Enter') sendFloatingMessage(); }
+        function sendQuickMessage(text) {
+            const input = document.getElementById('floatingInput');
+            if (input) { input.value = text; sendFloatingMessage(); }
+        }
+        function sendFloatingMessage() {
+            const input = document.getElementById('floatingInput');
+            if (!input || !input.value.trim()) return;
+            const val = input.value.trim();
+            const chatMessages = document.getElementById('chatMessages');
+            if (chatMessages) {
+                const userDiv = document.createElement('div');
+                userDiv.className = 'flex justify-end';
+                userDiv.innerHTML = '<div class="bg-gold-500 text-obsidian-950 font-semibold p-2.5 rounded-2xl rounded-tr-none max-w-[80%]">' + val + '</div>';
+                chatMessages.appendChild(userDiv);
+                input.value = '';
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                setTimeout(() => {
+                    const aiDiv = document.createElement('div');
+                    aiDiv.className = 'flex gap-2.5';
+                    aiDiv.innerHTML = `<div class="w-7 h-7 rounded-full bg-gold-500/20 border border-gold-500/40 flex items-center justify-center text-gold-400 flex-shrink-0"><i class="fa-solid fa-robot text-xs"></i></div><div class="bg-obsidian-800 border border-gold-500/20 p-3 rounded-2xl rounded-tl-none text-slate-200 max-w-[82%] leading-relaxed">I found several verified projects matching "${val}". Explore them above or speak with our luxury advisor.</div>`;
+                    chatMessages.appendChild(aiDiv);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 600);
+            }
+        }
+    </script>
+    <!-- Global Theme Toggle JS -->
+    <script src="theme.js"></script>
+  <script>
+    function toggleAboutDropdown(event, id) {
+      if (event) { event.preventDefault(); event.stopPropagation(); }
+      const wrap = document.getElementById(id);
+      if (!wrap) return;
+      const isOpen = wrap.classList.toggle("is-open");
+      const trigger = wrap.querySelector(".prospera-about-trigger,.prospera-mobile-about-trigger");
+      if (trigger) trigger.setAttribute("aria-expanded", String(isOpen));
+    }
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".prospera-about-dropdown.is-open,.prospera-mobile-about.is-open").forEach((wrap) => {
+        if (!wrap.contains(event.target)) {
+          wrap.classList.remove("is-open");
+          const trigger = wrap.querySelector(".prospera-about-trigger,.prospera-mobile-about-trigger");
+          if (trigger) trigger.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+    function toggleMobileMenu() {
+      const menu = document.getElementById("mobileMenu"), icon = document.getElementById("mobileMenuIcon");
+      if (!menu) return;
+      const hidden = menu.classList.contains("hidden");
+      menu.classList.toggle("hidden", !hidden);
+      if (icon) { icon.classList.toggle("fa-bars", !hidden); icon.classList.toggle("fa-xmark", hidden); }
+    }
+  </script>
+
+</body>
+</html>

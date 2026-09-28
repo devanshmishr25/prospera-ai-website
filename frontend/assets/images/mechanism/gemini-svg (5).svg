@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGradWa" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </radialGradient>
+    
+    <!-- WhatsApp Green/Blue Hybrid Gradient -->
+    <linearGradient id="waGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+
+    <!-- Metallic Edge Gradient -->
+    <linearGradient id="edgeGradWa" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#1e40af" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Circular Badge Background -->
+  <circle cx="256" cy="256" r="230" fill="url(#bgGradWa)" stroke="url(#edgeGradWa)" stroke-width="12" />
+
+  <!-- WhatsApp Bubble Base -->
+  <path d="M256 120C180.8 120 120 180.8 120 256C120 280.8 126.8 304 138.8 324L120 392L190.8 373.2C210.4 384.8 232.8 392 256 392C331.2 392 392 331.2 392 256C392 180.8 331.2 120 256 120Z" fill="url(#waGrad)" stroke="#93c5fd" stroke-width="6" stroke-linejoin="round"/>
+
+  <!-- Phone / Chat Icon Inside -->
+  <path d="M220 200C215 190 205 190 195 195C185 200 175 215 185 235C195 255 220 285 250 305C280 325 295 320 310 310C320 300 325 290 315 280L285 260C275 255 265 260 260 270C245 260 230 245 220 230C230 225 235 215 230 205L220 200Z" fill="#ffffff" opacity="0.95"/>
+
+  <!-- Automation Gear / Settings Element -->
+  <g transform="translate(310, 160) scale(0.9)">
+    <circle cx="40" cy="40" r="30" fill="#1e40af" stroke="#93c5fd" stroke-width="4"/>
+    <!-- Gear teeth representation -->
+    <path d="M40 5V15M40 65V75M5 40H15M65 40H75M15 15L22 22M58 58L65 65M15 65L22 58M58 22L65 15" stroke="#93c5fd" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="40" cy="40" r="12" fill="#3b82f6"/>
+  </g>
+</svg>

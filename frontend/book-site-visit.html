@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Site Visit | Prospera AI</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#FCF9EE',
+                            100: '#FAF3D3',
+                            200: '#F4E5A1',
+                            300: '#EDD36E',
+                            400: '#E4BF3F',
+                            500: '#D4AF37',
+                            600: '#AA8524',
+                            700: '#806118',
+                            800: '#57400F',
+                            900: '#332407'
+                        },
+                        dark: {
+                            100: '#23232A',
+                            200: '#1A1A20',
+                            300: '#141418',
+                            400: '#0E0E11',
+                            500: '#08080A'
+                        },
+                        obsidian: {
+                            950: '#070708',
+                            900: '#0E0E11',
+                            800: '#16161C',
+                            700: '#22222A',
+                            600: '#30303B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['DM Serif Display', 'serif'],
+                        heading: ['DM Serif Display', 'serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+
+    
+
+      <script>
+      /* Prospera AI uses a single light visual system. */
+      (function () {
+        document.documentElement.setAttribute("data-theme", "light");
+        document.documentElement.classList.remove("dark");
+      })();
+  </script>
+    <link rel="stylesheet" href="theme.css">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <style id="prospera-book-visit-design-system">
+    /* ============================================================
+       PROSPERA AI — BOOK SITE VISIT DESIGN SYSTEM
+       Strict 3-Color Identity: BLACK (#000000), WHITE (#FFFFFF), GOLD (#D4AF37)
+       ============================================================ */
+    body {
+      background-color: #FAF8F5 !important;
+      color: #000000 !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* Hero Section: Ditto from builders.html */
+    .builders-hero {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%) !important;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.22) !important;
+      padding: 104px 0 48px !important;
+    }
+
+    /* Step Tabs Progress Bar */
+    .step-tabs-container {
+      background: #FFFFFF !important;
+      border: 1px solid rgba(212, 175, 55, 0.3) !important;
+      border-radius: 20px !important;
+      padding: 16px 20px !important;
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04) !important;
+      margin-bottom: 32px !important;
+    }
+    .step-tab {
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      padding: 12px 16px !important;
+      border-radius: 14px !important;
+      border: 1.5px solid transparent !important;
+      background: transparent !important;
+      cursor: pointer !important;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .step-tab.is-active {
+      background: #FAF3D3 !important;
+      border-color: #D4AF37 !important;
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.2) !important;
+    }
+    .step-tab.is-inactive {
+      opacity: 0.65 !important;
+      background: #FAF8F5 !important;
+      border-color: rgba(212, 175, 55, 0.2) !important;
+    }
+    .step-tab:hover:not(.is-active) {
+      opacity: 0.9 !important;
+      border-color: rgba(212, 175, 55, 0.45) !important;
+    }
+    .step-circle {
+      width: 32px !important;
+      height: 32px !important;
+      border-radius: 9999px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 13px !important;
+      font-weight: 800 !important;
+      flex-shrink: 0 !important;
+      transition: all 0.2s ease !important;
+    }
+    .step-tab.is-active .step-circle {
+      background: #D4AF37 !important;
+      color: #000000 !important;
+      box-shadow: 0 2px 8px rgba(212, 175, 55, 0.4) !important;
+    }
+    .step-tab.is-inactive .step-circle {
+      background: #FFFFFF !important;
+      border: 1px solid rgba(212, 175, 55, 0.4) !important;
+      color: #AA8524 !important;
+    }
+
+    /* Cards & Panels */
+    .visit-card-panel {
+      background: #FFFFFF !important;
+      border: 1px solid rgba(212, 175, 55, 0.28) !important;
+      border-radius: 20px !important;
+      padding: 24px !important;
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    /* Project Cards (Step 1) */
+    .project-card {
+      background: #FFFFFF !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.28) !important;
+      border-radius: 18px !important;
+      padding: 16px !important;
+      cursor: pointer !important;
+      position: relative !important;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+    }
+    .project-card:hover {
+      border-color: #D4AF37 !important;
+      transform: translateY(-3px) !important;
+      box-shadow: 0 12px 28px -4px rgba(212, 175, 55, 0.22) !important;
+    }
+    .project-card.gold-card-active {
+      border: 2px solid #D4AF37 !important;
+      background: #FFFDF9 !important;
+      box-shadow: 0 12px 32px -4px rgba(212, 175, 55, 0.3) !important;
+    }
+    .project-card .badge-selected {
+      position: absolute !important;
+      top: 14px !important;
+      right: 14px !important;
+      z-index: 10 !important;
+      background: #D4AF37 !important;
+      color: #000000 !important;
+      font-size: 10px !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.06em !important;
+      text-transform: uppercase !important;
+      padding: 3px 10px !important;
+      border-radius: 9999px !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+    }
+    .project-card-img {
+      height: 140px !important;
+      border-radius: 14px !important;
+      overflow: hidden !important;
+      position: relative !important;
+      margin-bottom: 12px !important;
+      border: 1px solid rgba(212, 175, 55, 0.25) !important;
+    }
+    .project-card-img img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      transition: transform 0.4s ease !important;
+    }
+    .project-card:hover .project-card-img img {
+      transform: scale(1.04) !important;
+    }
+    .project-location-tag {
+      position: absolute !important;
+      bottom: 8px !important;
+      left: 8px !important;
+      background: rgba(0, 0, 0, 0.75) !important;
+      color: #D4AF37 !important;
+      border: 1px solid rgba(212, 175, 55, 0.4) !important;
+      border-radius: 6px !important;
+      padding: 2px 8px !important;
+      font-size: 10px !important;
+      font-weight: 700 !important;
+    }
+
+    /* Date & Time Buttons (Step 2) */
+    .date-quick-btn {
+      padding: 12px 10px !important;
+      border-radius: 14px !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.25) !important;
+      background: #FFFFFF !important;
+      color: #000000 !important;
+      text-align: center !important;
+      cursor: pointer !important;
+      transition: all 0.2s ease !important;
+    }
+    .date-quick-btn:hover {
+      border-color: #D4AF37 !important;
+      transform: translateY(-1px) !important;
+    }
+    .date-quick-btn.is-selected {
+      background: #FAF3D3 !important;
+      border-color: #D4AF37 !important;
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25) !important;
+    }
+    .time-slot-btn {
+      padding: 12px 16px !important;
+      border-radius: 14px !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.25) !important;
+      background: #FFFFFF !important;
+      color: #000000 !important;
+      cursor: pointer !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      transition: all 0.2s ease !important;
+    }
+    .time-slot-btn:hover {
+      border-color: #D4AF37 !important;
+      transform: translateY(-1px) !important;
+    }
+    .time-slot-btn.is-selected {
+      background: #FAF3D3 !important;
+      border-color: #D4AF37 !important;
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25) !important;
+    }
+
+    /* Agent Cards (Step 3) */
+    .agent-card {
+      background: #FFFFFF !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.25) !important;
+      border-radius: 18px !important;
+      padding: 18px 16px !important;
+      text-align: center !important;
+      cursor: pointer !important;
+      transition: all 0.2s ease !important;
+    }
+    .agent-card:hover {
+      border-color: #D4AF37 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 10px 24px -4px rgba(212, 175, 55, 0.2) !important;
+    }
+    .agent-card.gold-card-active {
+      border: 2px solid #D4AF37 !important;
+      background: #FFFDF9 !important;
+      box-shadow: 0 10px 28px -4px rgba(212, 175, 55, 0.28) !important;
+    }
+    .agent-avatar-frame {
+      width: 76px !important;
+      height: 76px !important;
+      border-radius: 9999px !important;
+      overflow: hidden !important;
+      margin: 0 auto 12px !important;
+      border: 2px solid #D4AF37 !important;
+      background: #FAF8F5 !important;
+    }
+    .agent-avatar-frame img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: top center !important;
+    }
+
+    /* Form Inputs (Step 4) */
+    .visit-input {
+      width: 100% !important;
+      padding: 12px 14px 12px 40px !important;
+      background: #FAF8F5 !important;
+      border: 1px solid rgba(212, 175, 55, 0.35) !important;
+      border-radius: 12px !important;
+      color: #000000 !important;
+      font-size: 13px !important;
+      outline: none !important;
+      box-sizing: border-box !important;
+      transition: all 0.2s ease !important;
+    }
+    .visit-input:focus {
+      border-color: #D4AF37 !important;
+      background: #FFFFFF !important;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.18) !important;
+    }
+    .channel-card {
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      padding: 12px 14px !important;
+      border-radius: 14px !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.25) !important;
+      background: #FFFFFF !important;
+      cursor: pointer !important;
+      transition: all 0.2s ease !important;
+    }
+    .channel-card.is-active,
+    .channel-card:has(input:checked) {
+      background: #FAF3D3 !important;
+      border-color: #D4AF37 !important;
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2) !important;
+    }
+
+    /* Buttons: Strict BLACK -> GOLD hover (White text stays white) */
+    .btn-visit-primary {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      padding: 12px 26px !important;
+      background: #000000 !important;
+      background-color: #000000 !important;
+      background-image: none !important;
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      border: 1px solid #000000 !important;
+      border-radius: 12px !important;
+      font-size: 12.5px !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+      cursor: pointer !important;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    }
+    .btn-visit-primary:hover,
+    .btn-visit-primary:focus {
+      background: #000000 !important;
+      background-color: #000000 !important;
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      border: 1.5px solid #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35) !important;
+      transform: translateY(-1px) !important;
+    }
+    .btn-visit-primary * {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+    }
+
+    html body main .btn-visit-secondary,
+    html body main button.btn-visit-secondary,
+    html body .btn-visit-secondary,
+    button.btn-visit-secondary,
+    .btn-visit-secondary {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      padding: 12px 22px !important;
+      background: #FFFFFF !important;
+      background-color: #FFFFFF !important;
+      background-image: none !important;
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
+      border-radius: 12px !important;
+      font-size: 12.5px !important;
+      font-weight: 700 !important;
+      cursor: pointer !important;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+    }
+    html body main .btn-visit-secondary:hover,
+    html body main button.btn-visit-secondary:hover,
+    html body .btn-visit-secondary:hover,
+    button.btn-visit-secondary:hover,
+    .btn-visit-secondary:hover,
+    html body main .btn-visit-secondary:focus,
+    html body main button.btn-visit-secondary:focus,
+    html body .btn-visit-secondary:focus,
+    button.btn-visit-secondary:focus,
+    .btn-visit-secondary:focus {
+      background: #D4AF37 !important;
+      background-color: #D4AF37 !important;
+      background-image: none !important;
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+      border: 1.5px solid #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35) !important;
+      transform: translateY(-1px) !important;
+    }
+    html body main .btn-visit-secondary *,
+    html body main button.btn-visit-secondary *,
+    html body .btn-visit-secondary *,
+    .btn-visit-secondary * {
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+    }
+
+    /* Right Sticky Summary Ticket */
+    .summary-ticket {
+      background: #FFFFFF !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.35) !important;
+      border-radius: 24px !important;
+      padding: 24px !important;
+      box-shadow: 0 10px 32px -4px rgba(0, 0, 0, 0.06) !important;
+      position: sticky !important;
+      top: 110px !important;
+    }
+    .summary-ticket-head {
+      border-bottom: 1px solid rgba(212, 175, 55, 0.22) !important;
+      padding-bottom: 14px !important;
+      margin-bottom: 16px !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+    }
+    .summary-item-card {
+      display: flex !important;
+      align-items: flex-start !important;
+      gap: 12px !important;
+      padding: 12px 14px !important;
+      border-radius: 14px !important;
+      background: #FAF8F5 !important;
+      border: 1px solid rgba(212, 175, 55, 0.2) !important;
+      margin-bottom: 12px !important;
+    }
+    .summary-item-icon {
+      width: 32px !important;
+      height: 32px !important;
+      border-radius: 10px !important;
+      background: #FAF3D3 !important;
+      color: #AA8524 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 13px !important;
+      flex-shrink: 0 !important;
+    }
+
+    /* Success Modal */
+    .success-modal-panel {
+      background: #FFFFFF !important;
+      border: 2px solid #D4AF37 !important;
+      border-radius: 24px !important;
+      padding: 32px !important;
+      max-width: 520px !important;
+      width: 100% !important;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25) !important;
+      text-align: center !important;
+    }
+  </style>
+</head>
+<body class="bg-[#FAF8F5] text-[#000000] font-sans selection:bg-gold-200 selection:text-black relative antialiased min-h-screen overflow-x-hidden">
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-white border-b border-slate-200 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a aria-label="Prospera AI Realtors" class="prospera-brand-logo group flex-shrink-0" href="index.html">
+        <span aria-hidden="true" class="prospera-logo-frame">
+          <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+        </span>
+      </a>
+      <!-- Desktop Primary Navigation -->
+      <nav aria-label="Primary navigation"
+        class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-700">
+        <a class="hover:text-gold-500 transition-colors" href="index.html">Home</a>
+        <a class="hover:text-gold-500 transition-colors" href="builders.html">Builders</a>
+        <a class="hover:text-gold-500 transition-colors" href="explore.html">Properties</a>
+        <a class="hover:text-gold-500 transition-colors" href="agents.html">Agents</a>
+        <a class="hover:text-gold-500 transition-colors" href="market-insights.html">Market Insights</a>
+        <a class="hover:text-gold-500 transition-colors" href="compare-projects.html">Compare</a>
+        <a class="hover:text-gold-500 transition-colors" href="book-site-visit.html">Book Site Visit</a>
+        <div class="prospera-about-dropdown" id="desktopAboutDropdown">
+          <button aria-controls="desktopAboutMenu" aria-expanded="false"
+            class="prospera-about-trigger hover:text-gold-500 transition-colors"
+            onclick="toggleAboutDropdown(event, 'desktopAboutDropdown')" type="button">
+            <span>About</span>
+            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+          </button>
+          <div aria-label="About links" class="prospera-about-menu" id="desktopAboutMenu" role="menu">
+            <a href="about-us.html" role="menuitem">About Us</a>
+            <a href="why-prospera-ai.html" role="menuitem">Why Prospera AI</a>
+            <a href="reviews.html" role="menuitem">Reviews</a>
+            <a href="contact.html" role="menuitem">Contact Us</a>
+            <a href="privacy-terms.html" role="menuitem">Privacy Policy</a>
+          </div>
+        </div>
+      </nav>
+      <!-- Right: Mobile Navigation -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button aria-label="Open menu"
+          class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl border border-gold-500/30 bg-gold-500/10 text-gold-500 hover:bg-gold-500/20 transition-all"
+          id="mobileMenuBtn" onclick="toggleMobileMenu()">
+          <i class="fa-solid fa-bars text-base" id="mobileMenuIcon"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Navigation Dropdown -->
+    <div class="hidden md:hidden border-t border-slate-200 bg-white" id="mobileMenu">
+      <nav aria-label="Mobile navigation" class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="index.html">Home</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="builders.html">Builders</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="explore.html">Properties</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="agents.html">Agents</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="market-insights.html">Market Insights</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="compare-projects.html">Compare</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="book-site-visit.html">Book Site Visit</a>
+        <div class="prospera-mobile-about" id="mobileAboutDropdown">
+          <button aria-controls="mobileAboutMenu" aria-expanded="false" class="prospera-mobile-about-trigger"
+            onclick="toggleAboutDropdown(event, 'mobileAboutDropdown')" type="button">
+            <span>About</span>
+            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+          </button>
+          <div class="prospera-mobile-about-menu" id="mobileAboutMenu">
+            <a href="about-us.html">About Us</a>
+            <a href="why-prospera-ai.html">Why Prospera AI</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="privacy-terms.html">Privacy Policy</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- =============================================
+       MAIN CONTENT: HERO (ditto from builders.html)
+       ============================================= -->
+  <div class="builders-hero">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-black/60 mb-6" aria-label="Breadcrumb">
+        <a href="index.html" class="hover:text-gold-600 transition-colors">Prospera AI</a>
+        <i class="fa-solid fa-chevron-right text-[8px] text-gold-500"></i>
+        <span class="text-gold-600 font-semibold">Book Site Visit</span>
+      </nav>
+      <h1 class="font-heading text-4xl sm:text-5xl font-bold text-[#000000] mb-3 leading-tight">
+        Schedule a Private <span class="text-gold-600">Site Visit.</span>
+      </h1>
+      <p class="text-black/75 text-base max-w-2xl leading-relaxed">
+        Experience luxury real estate in person. Reserve a private tour with our senior property relationship managers and complimentary executive chauffeur service.
+      </p>
+      <div class="flex flex-wrap items-center gap-4 mt-6">
+        <div class="px-4 py-2 rounded-xl bg-white border border-gold-500/30 text-xs font-semibold text-black">
+          <strong class="text-gold-600 font-bold mr-1">VIP Access</strong> Direct Builder Sales Tour
+        </div>
+        <div class="px-4 py-2 rounded-xl bg-white border border-gold-500/30 text-xs font-semibold text-black">
+          <strong class="text-gold-600 font-bold mr-1">Zero Cost</strong> 100% Free Executive Cab
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow w-full">
+    <!-- STEP TABS -->
+    <div class="step-tabs-container">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
+        <div id="step-tab-1" class="step-tab is-active" onclick="goToStep(1)">
+          <div class="step-circle">1</div>
+          <div class="text-left hidden sm:block">
+            <span class="text-[10px] text-gold-700 uppercase font-bold block">Step 01</span>
+            <span class="text-xs font-bold text-black block truncate">Select Project</span>
+          </div>
+        </div>
+
+        <div id="step-tab-2" class="step-tab is-inactive" onclick="goToStep(2)">
+          <div class="step-circle">2</div>
+          <div class="text-left hidden sm:block">
+            <span class="text-[10px] text-black/60 uppercase font-bold block">Step 02</span>
+            <span class="text-xs font-semibold text-black/80 block truncate">Date &amp; Time</span>
+          </div>
+        </div>
+
+        <div id="step-tab-3" class="step-tab is-inactive" onclick="goToStep(3)">
+          <div class="step-circle">3</div>
+          <div class="text-left hidden sm:block">
+            <span class="text-[10px] text-black/60 uppercase font-bold block">Step 03</span>
+            <span class="text-xs font-semibold text-black/80 block truncate">Assigned Agent</span>
+          </div>
+        </div>
+
+        <div id="step-tab-4" class="step-tab is-inactive" onclick="goToStep(4)">
+          <div class="step-circle">4</div>
+          <div class="text-left hidden sm:block">
+            <span class="text-[10px] text-black/60 uppercase font-bold block">Step 04</span>
+            <span class="text-xs font-semibold text-black/80 block truncate">Confirmation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN FORM GRID (LEFT 8 COLS, RIGHT 4 COLS) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div class="lg:col-span-8">
+        <!-- STEP 1: SELECT PROJECT -->
+        <div id="step-content-1" class="step-panel space-y-6">
+          <div class="border-b border-gold-500/25 pb-4">
+            <h2 class="font-heading text-2xl font-bold text-black flex items-center gap-3">
+              <i class="fa-solid fa-city text-gold-600"></i>
+              <span>Select Your Preferred Project</span>
+            </h2>
+            <p class="text-black/65 text-xs sm:text-sm mt-1">Choose one of our premium verified developments for your exclusive guided tour.</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Project 1 -->
+            <div class="project-card gold-card-active" onclick="selectProject(this, 'Grand Imperial Towers', 'Sector 150, Noida', '3, 4 & 5 BHK Luxury Apartments')">
+              <span class="badge-selected">Selected</span>
+              <div class="project-card-img">
+                <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80" alt="Grand Imperial Towers">
+                <span class="project-location-tag">Sector 150, Noida</span>
+              </div>
+              <h3 class="font-heading font-bold text-black text-lg">Grand Imperial Towers</h3>
+              <p class="text-xs text-black/60 mt-1">3, 4 &amp; 5 BHK Ultra Luxury Residences</p>
+              <div class="mt-3 pt-3 border-t border-gold-500/20 flex items-center justify-between text-xs">
+                <span class="text-gold-600 font-extrabold"><i class="fa-solid fa-tag mr-1"></i> From ₹2.45 Cr*</span>
+                <span class="text-black/60 text-[11px]"><i class="fa-solid fa-clock text-gold-600 mr-1"></i> Ready for Tour</span>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card" onclick="selectProject(this, 'The Sovereign Estates', 'Sector 128, Noida Expressway', '4 & 5 BHK Golf Villas')">
+              <span class="badge-selected hidden">Selected</span>
+              <div class="project-card-img">
+                <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80" alt="The Sovereign Estates">
+                <span class="project-location-tag">Sector 128, Noida</span>
+              </div>
+              <h3 class="font-heading font-bold text-black text-lg">The Sovereign Estates</h3>
+              <p class="text-xs text-black/60 mt-1">4 &amp; 5 BHK Golf Facing Villas</p>
+              <div class="mt-3 pt-3 border-t border-gold-500/20 flex items-center justify-between text-xs">
+                <span class="text-gold-600 font-extrabold"><i class="fa-solid fa-tag mr-1"></i> From ₹4.80 Cr*</span>
+                <span class="text-black/60 text-[11px]"><i class="fa-solid fa-clock text-gold-600 mr-1"></i> Ready for Tour</span>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card" onclick="selectProject(this, 'Aura Corporate Square', 'Sector 62, Noida', 'Premium Executive Retail & Office')">
+              <span class="badge-selected hidden">Selected</span>
+              <div class="project-card-img">
+                <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Aura Corporate Square">
+                <span class="project-location-tag">Sector 62, Noida</span>
+              </div>
+              <h3 class="font-heading font-bold text-black text-lg">Aura Corporate Square</h3>
+              <p class="text-xs text-black/60 mt-1">Grade-A Commercial &amp; Retail Spaces</p>
+              <div class="mt-3 pt-3 border-t border-gold-500/20 flex items-center justify-between text-xs">
+                <span class="text-gold-600 font-extrabold"><i class="fa-solid fa-tag mr-1"></i> From ₹85 Lakhs*</span>
+                <span class="text-black/60 text-[11px]"><i class="fa-solid fa-clock text-gold-600 mr-1"></i> Ready for Tour</span>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card" onclick="selectProject(this, 'Emerald Valley Greens', 'Greater Noida West', 'Luxury Sky Suites')">
+              <span class="badge-selected hidden">Selected</span>
+              <div class="project-card-img">
+                <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="Emerald Valley Greens">
+                <span class="project-location-tag">Gr. Noida West</span>
+              </div>
+              <h3 class="font-heading font-bold text-black text-lg">Emerald Valley Greens</h3>
+              <p class="text-xs text-black/60 mt-1">2 &amp; 3 BHK High-Rise Apartments</p>
+              <div class="mt-3 pt-3 border-t border-gold-500/20 flex items-center justify-between text-xs">
+                <span class="text-gold-600 font-extrabold"><i class="fa-solid fa-tag mr-1"></i> From ₹1.15 Cr*</span>
+                <span class="text-black/60 text-[11px]"><i class="fa-solid fa-clock text-gold-600 mr-1"></i> Ready for Tour</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 flex justify-end">
+            <button type="button" onclick="goToStep(2)" class="btn-visit-primary">
+              <span>Proceed to Date &amp; Time</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 2: DATE & TIME -->
+        <div id="step-content-2" class="step-panel hidden space-y-6">
+          <div class="border-b border-gold-500/25 pb-4">
+            <h2 class="font-heading text-2xl font-bold text-black flex items-center gap-3">
+              <i class="fa-solid fa-calendar-days text-gold-600"></i>
+              <span>Choose Visit Date &amp; Time Slot</span>
+            </h2>
+            <p class="text-black/65 text-xs sm:text-sm mt-1">Select a comfortable day and time window for your personalized walkthrough.</p>
+          </div>
+
+          <div class="visit-card-panel space-y-4">
+            <label class="block text-xs font-bold text-black/80 uppercase tracking-wider">
+              1. Select Visit Date <span class="text-gold-600">*</span>
+            </label>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <button type="button" onclick="setQuickDate(0, this)" class="date-quick-btn is-selected">
+                <span class="block text-[10px] text-gold-700 uppercase font-bold">Today</span>
+                <span id="date-label-today" class="block font-bold text-black text-sm mt-0.5">Sep 08</span>
+              </button>
+              <button type="button" onclick="setQuickDate(1, this)" class="date-quick-btn">
+                <span class="block text-[10px] text-black/50 uppercase font-bold">Tomorrow</span>
+                <span id="date-label-tomorrow" class="block font-bold text-black text-sm mt-0.5">Sep 09</span>
+              </button>
+              <button type="button" onclick="setQuickDate(2, this)" class="date-quick-btn">
+                <span class="block text-[10px] text-black/50 uppercase font-bold">This Weekend</span>
+                <span id="date-label-weekend" class="block font-bold text-black text-sm mt-0.5">Sep 12</span>
+              </button>
+              <div class="relative">
+                <input type="date" id="custom-date-picker" onchange="handleCustomDate(this)" class="w-full h-full py-2.5 px-3 bg-[#FAF8F5] border border-gold-500/30 rounded-xl text-black text-xs focus:outline-none focus:border-gold-500">
+              </div>
+            </div>
+          </div>
+
+          <div class="visit-card-panel space-y-4">
+            <label class="block text-xs font-bold text-black/80 uppercase tracking-wider">
+              2. Choose Preferred Time Window <span class="text-gold-600">*</span>
+            </label>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <button type="button" onclick="selectTimeSlot(this, '10:00 AM - 11:30 AM')" class="time-slot-btn is-selected">
+                <div><span class="block text-xs font-bold text-black">10:00 AM</span><span class="text-[10px] text-gold-700 font-semibold">Morning Slot</span></div>
+                <i class="fa-regular fa-clock text-gold-600 text-sm"></i>
+              </button>
+              <button type="button" onclick="selectTimeSlot(this, '11:30 AM - 01:00 PM')" class="time-slot-btn">
+                <div><span class="block text-xs font-bold text-black">11:30 AM</span><span class="text-[10px] text-black/50">Morning Slot</span></div>
+                <i class="fa-regular fa-clock text-black/40 text-sm"></i>
+              </button>
+              <button type="button" onclick="selectTimeSlot(this, '02:00 PM - 03:30 PM')" class="time-slot-btn">
+                <div><span class="block text-xs font-bold text-black">02:00 PM</span><span class="text-[10px] text-black/50">Afternoon Slot</span></div>
+                <i class="fa-regular fa-clock text-black/40 text-sm"></i>
+              </button>
+              <button type="button" onclick="selectTimeSlot(this, '03:30 PM - 05:00 PM')" class="time-slot-btn">
+                <div><span class="block text-xs font-bold text-black">03:30 PM</span><span class="text-[10px] text-black/50">Afternoon Slot</span></div>
+                <i class="fa-regular fa-clock text-black/40 text-sm"></i>
+              </button>
+              <button type="button" onclick="selectTimeSlot(this, '05:00 PM - 06:30 PM')" class="time-slot-btn">
+                <div><span class="block text-xs font-bold text-black">05:00 PM</span><span class="text-[10px] text-gold-700 font-semibold">Sunset Slot (Popular)</span></div>
+                <i class="fa-regular fa-clock text-gold-600 text-sm"></i>
+              </button>
+              <button type="button" onclick="selectTimeSlot(this, '06:30 PM - 08:00 PM')" class="time-slot-btn">
+                <div><span class="block text-xs font-bold text-black">06:30 PM</span><span class="text-[10px] text-black/50">Evening View</span></div>
+                <i class="fa-regular fa-clock text-black/40 text-sm"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-white border border-gold-500/30 flex items-center gap-3">
+            <input type="checkbox" id="pickup-service" class="w-4 h-4 accent-[#D4AF37] rounded cursor-pointer" onchange="togglePickupService(this)">
+            <label for="pickup-service" class="text-xs text-black/80 font-medium cursor-pointer">
+              Request Complimentary Executive Chauffeur Pick-up from Metro Station / Delhi NCR address.
+            </label>
+          </div>
+
+          <div class="pt-4 flex justify-between items-center">
+            <button type="button" onclick="goToStep(1)" class="btn-visit-secondary bg-white">
+              <i class="fa-solid fa-arrow-left"></i>
+              <span>Back to Projects</span>
+            </button>
+            <button type="button" onclick="goToStep(3)" class="btn-visit-primary">
+              <span>Proceed to Assigned Agent</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3: ASSIGNED AGENT -->
+        <div id="step-content-3" class="step-panel hidden space-y-6">
+          <div class="border-b border-gold-500/25 pb-4">
+            <h2 class="font-heading text-2xl font-bold text-black flex items-center gap-3">
+              <i class="fa-solid fa-user-tie text-gold-600"></i>
+              <span>Assigned Executive Relationship Manager</span>
+            </h2>
+            <p class="text-black/65 text-xs sm:text-sm mt-1">Our certified luxury property experts will host your private tour.</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <!-- Agent 1 -->
+            <div class="agent-card gold-card-active" onclick="selectAgent(this, 'Vikramaditya Verma', 'Senior Luxury Portfolio Manager', '+91 98765 11223', '4.9 ★ (180+ Tours)')">
+              <div class="agent-avatar-frame">
+                <img loading="lazy" decoding="async" src="./assets/images/agents/Arjun AI.png" alt="Vikramaditya Verma">
+              </div>
+              <span class="text-[10px] bg-gold-50 text-gold-700 font-bold px-2.5 py-0.5 rounded-full border border-gold-500/30">Noida HQ Senior Expert</span>
+              <h3 class="font-heading font-bold text-black text-base mt-2">Vikramaditya Verma</h3>
+              <p class="text-xs text-black/60">Senior Luxury Advisor</p>
+              <div class="mt-3 pt-3 border-t border-gold-500/20 text-xs text-gold-700 font-bold">
+                <span><i class="fa-solid fa-star text-gold-500 mr-1"></i> 4.9 (180+ Tours)</span>
+              </div>
+            </div>
+
+            <!-- Agent 2 -->
+            <div class="agent-card" onclick="selectAgent(this, 'Ananya Sharma', 'Principal Residential Specialist', '+91 98765 44556', '4.8 ★ (140+ Tours)')">
+              <div class="agent-avatar-frame">
+                <img loading="lazy" decoding="async" src="./assets/images/agents/Ananya AI.png" alt="Ananya Sharma">
+              </div>
+              <span class="text-[10px] bg-white text-black/60 px-2.5 py-0.5 rounded-full border border-black/15 font-bold">Golf Villa Specialist</span>
+              <h3 class="font-heading font-bold text-black text-base mt-2">Ananya Sharma</h3>
+              <p class="text-xs text-black/60">Residential Specialist</p>
+              <div class="mt-3 pt-3 border-t border-gold-500/20 text-xs text-gold-700 font-bold">
+                <span><i class="fa-solid fa-star text-gold-500 mr-1"></i> 4.8 (140+ Tours)</span>
+              </div>
+            </div>
+
+            <!-- Agent 3 -->
+            <div class="agent-card" onclick="selectAgent(this, 'Rohan Kapoor', 'Commercial Investment Consultant', '+91 98765 77889', '4.9 ★ (210+ Tours)')">
+              <div class="agent-avatar-frame">
+                <img loading="lazy" decoding="async" src="./assets/images/agents/Kabir AI.png" alt="Rohan Kapoor">
+              </div>
+              <span class="text-[10px] bg-white text-black/60 px-2.5 py-0.5 rounded-full border border-black/15 font-bold">Commercial &amp; Retail</span>
+              <h3 class="font-heading font-bold text-black text-base mt-2">Rohan Kapoor</h3>
+              <p class="text-xs text-black/60">Investment Consultant</p>
+              <div class="mt-3 pt-3 border-t border-gold-500/20 text-xs text-gold-700 font-bold">
+                <span><i class="fa-solid fa-star text-gold-500 mr-1"></i> 4.9 (210+ Tours)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="visit-card-panel space-y-3 bg-[#FAF8F5]">
+            <h4 class="text-xs font-bold text-gold-700 uppercase tracking-wider flex items-center gap-2">
+              <i class="fa-solid fa-gem text-gold-600"></i>
+              <span>What's Included in Your VIP Visit</span>
+            </h4>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-black/85 font-medium">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-600 font-bold"></i><span>Sample Flat Walkthrough</span></div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-600 font-bold"></i><span>Architecture &amp; Master Plan Brief</span></div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-600 font-bold"></i><span>Exclusive On-spot Pricing Offer</span></div>
+            </div>
+          </div>
+
+          <div class="pt-4 flex justify-between items-center">
+            <button type="button" onclick="goToStep(2)" class="btn-visit-secondary bg-white">
+              <i class="fa-solid fa-arrow-left"></i>
+              <span>Back to Date &amp; Time</span>
+            </button>
+            <button type="button" onclick="goToStep(4)" class="btn-visit-primary">
+              <span>Proceed to Contact Info</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 4: VISITOR DETAILS & CONFIRMATION -->
+        <div id="step-content-4" class="step-panel hidden space-y-6">
+          <div class="border-b border-gold-500/25 pb-4">
+            <h2 class="font-heading text-2xl font-bold text-black flex items-center gap-3">
+              <i class="fa-solid fa-address-card text-gold-600"></i>
+              <span>Visitor Details &amp; Confirmation Channel</span>
+            </h2>
+            <p class="text-black/65 text-xs sm:text-sm mt-1">Enter your details to generate your digital Site Visit Pass.</p>
+          </div>
+
+          <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="visitor-name" class="block text-xs font-bold text-black/80 uppercase tracking-wider mb-2">Full Name <span class="text-gold-600">*</span></label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gold-600"><i class="fa-solid fa-user text-xs"></i></div>
+                  <input type="text" id="visitor-name" required placeholder="e.g. Rajesh Kumar" class="visit-input">
+                </div>
+              </div>
+
+              <div>
+                <label for="visitor-phone" class="block text-xs font-bold text-black/80 uppercase tracking-wider mb-2">WhatsApp Phone Number <span class="text-gold-600">*</span></label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gold-600"><i class="fa-solid fa-phone text-xs"></i></div>
+                  <input type="tel" id="visitor-phone" required placeholder="+91 9876543210" class="visit-input">
+                </div>
+              </div>
+
+              <div class="sm:col-span-2">
+                <label for="visitor-email" class="block text-xs font-bold text-black/80 uppercase tracking-wider mb-2">Email Address <span class="text-gold-600">*</span></label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gold-600"><i class="fa-solid fa-envelope text-xs"></i></div>
+                  <input type="email" id="visitor-email" required placeholder="rajesh@example.com" class="visit-input">
+                </div>
+              </div>
+            </div>
+
+            <div class="visit-card-panel space-y-3">
+              <label class="block text-xs font-bold text-black/80 uppercase tracking-wider">Receive Booking Confirmation &amp; Gate Pass via <span class="text-gold-600">*</span></label>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <label class="channel-card is-active">
+                  <input type="radio" name="confirm-channel" value="WhatsApp" checked class="accent-[#D4AF37]" onchange="updateChannelText('WhatsApp')">
+                  <i class="fa-brands fa-whatsapp text-gold-600 text-lg"></i>
+                  <div><span class="block font-bold text-black text-xs">WhatsApp</span><span class="text-[10px] text-black/60">Instant Digital Pass</span></div>
+                </label>
+
+                <label class="channel-card">
+                  <input type="radio" name="confirm-channel" value="Email" class="accent-[#D4AF37]" onchange="updateChannelText('Email')">
+                  <i class="fa-solid fa-envelope text-gold-600 text-base"></i>
+                  <div><span class="block font-bold text-black text-xs">Official Email</span><span class="text-[10px] text-black/60">PDF Calendar Invite</span></div>
+                </label>
+
+                <label class="channel-card">
+                  <input type="radio" name="confirm-channel" value="Both" class="accent-[#D4AF37]" onchange="updateChannelText('WhatsApp & Email')">
+                  <i class="fa-solid fa-paper-plane text-gold-600 text-base"></i>
+                  <div><span class="block font-bold text-black text-xs">Both Channels</span><span class="text-[10px] text-black/60">Maximum Priority</span></div>
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <label for="visitor-notes" class="block text-xs font-bold text-black/80 uppercase tracking-wider mb-2">Special Requests or Pick-Up Address (Optional)</label>
+              <textarea id="visitor-notes" rows="3" placeholder="e.g. Please arrange pick-up from Sector 62 Metro Station for 2 adults." class="w-full p-3 bg-[#FAF8F5] border border-gold-500/35 rounded-xl text-black text-xs focus:outline-none focus:border-gold-500 resize-none"></textarea>
+            </div>
+
+            <div class="pt-4 flex justify-between items-center">
+              <button type="button" onclick="goToStep(3)" class="btn-visit-secondary bg-white">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Back to Agent</span>
+              </button>
+
+              <button type="submit" id="confirm-submit-btn" class="btn-visit-primary">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Confirm VIP Appointment</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- RIGHT SUMMARY TICKET -->
+      <div class="lg:col-span-4">
+        <div class="summary-ticket">
+          <div class="summary-ticket-head">
+            <h3 class="font-heading text-lg font-bold text-black">Appointment Summary</h3>
+            <span class="text-[10px] bg-gold-50 text-gold-700 border border-gold-500/30 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">Live Ticket</span>
+          </div>
+
+          <div class="space-y-3">
+            <div class="summary-item-card">
+              <div class="summary-item-icon"><i class="fa-solid fa-building"></i></div>
+              <div class="flex-grow min-w-0">
+                <span class="text-[10px] text-black/50 uppercase block font-bold">Selected Project</span>
+                <strong id="summary-project-name" class="text-black font-bold text-sm block truncate">Grand Imperial Towers</strong>
+                <span id="summary-project-loc" class="text-gold-700 text-xs font-semibold block">Sector 150, Noida</span>
+              </div>
+            </div>
+
+            <div class="summary-item-card">
+              <div class="summary-item-icon"><i class="fa-solid fa-clock"></i></div>
+              <div class="flex-grow min-w-0">
+                <span class="text-[10px] text-black/50 uppercase block font-bold">Scheduled Date &amp; Time</span>
+                <strong id="summary-date-time" class="text-black font-bold text-xs block">Sep 08, 2026 • 10:00 AM</strong>
+                <span id="summary-pickup-status" class="text-black/60 text-[10px] block mt-0.5 font-medium"><i class="fa-solid fa-car text-gold-600 mr-1"></i> Self Arrival</span>
+              </div>
+            </div>
+
+            <div class="summary-item-card">
+              <div class="summary-item-icon"><i class="fa-solid fa-user-shield"></i></div>
+              <div class="flex-grow min-w-0">
+                <span class="text-[10px] text-black/50 uppercase block font-bold">Assigned Agent</span>
+                <strong id="summary-agent-name" class="text-black font-bold text-xs block">Vikramaditya Verma</strong>
+                <span id="summary-agent-role" class="text-black/60 text-[10px] block">Senior Luxury Advisor</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between p-3 rounded-xl bg-[#FAF8F5] border border-gold-500/20 text-xs">
+              <span class="text-black/60 font-medium">Confirmation Channel:</span>
+              <span id="summary-channel" class="text-gold-700 font-bold">WhatsApp</span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-gold-500/20 text-[11px] text-black/60 space-y-2">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-shield-halved text-gold-600"></i><span>Free cancellation anytime via WhatsApp</span></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold-600"></i><span>Instant QR Pass upon confirmation</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- SUCCESS CONFIRMATION MODAL -->
+  <div id="confirmation-modal" class="fixed inset-0 z-[65] flex items-center justify-center bg-black/65 backdrop-blur-sm hidden px-4">
+    <div class="success-modal-panel space-y-6">
+      <div class="w-16 h-16 rounded-full bg-gold-50 text-gold-600 border border-gold-500/40 flex items-center justify-center mx-auto text-2xl shadow-md">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+
+      <div>
+        <span class="text-[10px] bg-gold-50 text-gold-700 border border-gold-500/30 px-3 py-1 rounded-full uppercase tracking-wider font-bold">Appointment Confirmed #SV-2026-8892</span>
+        <h2 class="font-heading text-2xl font-bold text-black mt-3">Site Visit Booked Successfully!</h2>
+        <p class="text-black/65 text-xs mt-1">Your digital pass and agent contact details have been sent to your chosen channel.</p>
+      </div>
+
+      <div class="bg-[#FAF8F5] border border-gold-500/25 rounded-2xl p-4 text-left space-y-2.5 text-xs">
+        <div class="flex justify-between border-b border-gold-500/15 pb-2"><span class="text-black/60">Project:</span><span id="modal-project" class="text-black font-bold">Grand Imperial Towers</span></div>
+        <div class="flex justify-between border-b border-gold-500/15 pb-2"><span class="text-black/60">Date &amp; Slot:</span><span id="modal-datetime" class="text-gold-700 font-bold">Sep 08, 2026 - 10:00 AM</span></div>
+        <div class="flex justify-between border-b border-gold-500/15 pb-2"><span class="text-black/60">Assigned Agent:</span><span id="modal-agent" class="text-black font-bold">Vikramaditya Verma</span></div>
+        <div class="flex justify-between"><span class="text-black/60">Pass Delivered To:</span><span id="modal-contact" class="text-gold-700 font-bold">+91 9876543210 (WhatsApp)</span></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+        <a id="modal-whatsapp-btn" href="https://wa.me/919876543210" target="_blank" class="btn-visit-primary py-3">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Open WhatsApp Pass</span>
+        </a>
+        <button type="button" onclick="closeModal()" class="btn-visit-secondary bg-white py-3">Done &amp; Return</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING AI ADVISOR WIDGET -->
+  <div id="floatingAIWidget" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end max-w-[calc(100vw-2rem)]">
+    <button aria-label="Open Prospera AI Property Finder" class="relative group flex items-center gap-3 bg-black border-2 border-gold-500 text-white p-3 sm:px-5 sm:py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105" onclick="window.location.href='ai-property-finder.html'" type="button">
+      <div class="w-8 h-8 rounded-full bg-gold-500 flex items-center justify-center text-black font-bold">
+        <i class="fa-solid fa-robot text-sm"></i>
+      </div>
+      <span class="hidden sm:inline-block font-semibold text-xs text-gold-400 tracking-wider uppercase">AI Advisor</span>
+      <span class="w-2.5 h-2.5 rounded-full bg-gold-400 animate-ping absolute top-1 right-1"></span>
+    </button>
+  </div>
+
+<footer class="bg-white border-t border-slate-200 text-slate-600 text-sm py-12 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div aria-label="Prospera AI Realtors" class="prospera-footer-brand mb-4">
+            <span aria-hidden="true" class="prospera-logo-frame">
+              <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+            </span>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            India’s premier AI-first conversational real estate network. Unbiased recommendations, voice search, and
+            predictive market intelligence.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="about-us.html">About Us</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="why-prospera-ai.html">Why Prospera
+                AI</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="reviews.html">Reviews</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="contact.html">Contact Us</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="privacy-terms.html">Privacy
+                Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Top Locations</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Gomti Nagar'); return false;">Gomti
+                Nagar</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Gomti Nagar Extension'); return false;">Gomti Nagar Extension</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Shaheed Path'); return false;">Shaheed
+                Path</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Sultanpur Road'); return false;">Sultanpur Road</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Contact &amp; Legal</h4>
+          <p class="text-xs text-slate-500 mb-2"><i class="fa-solid fa-envelope text-gold-500 mr-2"></i>
+            advisor@prospera.ai</p>
+          <p class="text-xs text-slate-500 mb-4"><i class="fa-solid fa-phone text-gold-500 mr-2"></i> +91 1800-PROSPERA
+          </p>
+          <div class="flex gap-3">
+            <a aria-label="LinkedIn"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+            <a aria-label="Twitter / X"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-x-twitter text-xs"></i></a>
+            <a aria-label="Instagram"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-instagram text-xs"></i></a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pt-8 border-t border-slate-200 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>© 2026 Prospera AI Realtors Inc. All rights reserved.</p>
+        <p class="text-slate-500">RERA Reg: UPRERA/AI/2026/001</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    let currentStep = 1;
+    let selectedProject = "Grand Imperial Towers";
+    let selectedProjectLoc = "Sector 150, Noida";
+    let selectedDate = "Sep 08, 2026";
+    let selectedTime = "10:00 AM - 11:30 AM";
+    let selectedAgent = "Vikramaditya Verma";
+    let selectedAgentRole = "Senior Luxury Advisor";
+    let isPickupRequested = false;
+    let selectedChannel = "WhatsApp";
+
+    function goToStep(step) {
+      currentStep = step;
+
+      for (let i = 1; i <= 4; i++) {
+        const panel = document.getElementById(`step-content-${i}`);
+        const tab = document.getElementById(`step-tab-${i}`);
+        if (!panel || !tab) continue;
+
+        panel.classList.add('hidden');
+
+        if (i === step) {
+          tab.classList.remove('is-inactive');
+          tab.classList.add('is-active');
+        } else {
+          tab.classList.remove('is-active');
+          tab.classList.add('is-inactive');
+        }
+      }
+
+      const activePanel = document.getElementById(`step-content-${step}`);
+      if (activePanel) activePanel.classList.remove('hidden');
+
+      // Scroll to step header smoothly on mobile
+      if (window.innerWidth < 768) {
+        document.querySelector('.step-tabs-container')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function selectProject(element, name, loc, details) {
+      document.querySelectorAll('.project-card').forEach(card => {
+        card.classList.remove('gold-card-active');
+        const badge = card.querySelector('.badge-selected');
+        if (badge) badge.classList.add('hidden');
+      });
+
+      element.classList.add('gold-card-active');
+      const badge = element.querySelector('.badge-selected');
+      if (badge) badge.classList.remove('hidden');
+
+      selectedProject = name;
+      selectedProjectLoc = loc;
+
+      const pName = document.getElementById('summary-project-name');
+      const pLoc = document.getElementById('summary-project-loc');
+      if (pName) pName.innerText = name;
+      if (pLoc) pLoc.innerText = loc;
+    }
+
+    function setQuickDate(dayOffset, btn) {
+      document.querySelectorAll('.date-quick-btn').forEach(b => {
+        b.classList.remove('is-selected');
+      });
+
+      btn.classList.add('is-selected');
+
+      const date = new Date();
+      date.setDate(date.getDate() + (dayOffset === 2 ? 4 : dayOffset));
+
+      const formatted = date.toLocaleDateString('en-US', {
+        month: 'short',
+        day: '2-digit',
+        year: 'numeric'
+      });
+
+      selectedDate = formatted;
+      updateDateTimeSummary();
+    }
+
+    function handleCustomDate(input) {
+      if (!input.value) return;
+
+      const date = new Date(input.value);
+      selectedDate = date.toLocaleDateString('en-US', {
+        month: 'short',
+        day: '2-digit',
+        year: 'numeric'
+      });
+
+      document.querySelectorAll('.date-quick-btn').forEach(b => {
+        b.classList.remove('is-selected');
+      });
+
+      updateDateTimeSummary();
+    }
+
+    function selectTimeSlot(btn, slotText) {
+      document.querySelectorAll('.time-slot-btn').forEach(b => {
+        b.classList.remove('is-selected');
+      });
+
+      btn.classList.add('is-selected');
+      selectedTime = slotText;
+      updateDateTimeSummary();
+    }
+
+    function updateDateTimeSummary() {
+      const summaryEl = document.getElementById('summary-date-time');
+      if (summaryEl) {
+        summaryEl.innerText = `${selectedDate} • ${selectedTime.split(' - ')[0]}`;
+      }
+    }
+
+    function togglePickupService(checkbox) {
+      isPickupRequested = checkbox.checked;
+      const statusEl = document.getElementById('summary-pickup-status');
+      if (!statusEl) return;
+
+      if (isPickupRequested) {
+        statusEl.innerHTML = '<i class="fa-solid fa-car text-gold-600 mr-1"></i> Executive Cab Pick-up Included';
+        statusEl.classList.add('text-gold-700', 'font-bold');
+      } else {
+        statusEl.innerHTML = '<i class="fa-solid fa-car text-gold-600 mr-1"></i> Self Arrival';
+        statusEl.classList.remove('text-gold-700', 'font-bold');
+      }
+    }
+
+    function selectAgent(element, name, role, phone, rating) {
+      document.querySelectorAll('.agent-card').forEach(card => {
+        card.classList.remove('gold-card-active');
+      });
+
+      element.classList.add('gold-card-active');
+      selectedAgent = name;
+      selectedAgentRole = role;
+
+      const aName = document.getElementById('summary-agent-name');
+      const aRole = document.getElementById('summary-agent-role');
+      if (aName) aName.innerText = name;
+      if (aRole) aRole.innerText = role;
+    }
+
+    function updateChannelText(channel) {
+      selectedChannel = channel;
+      const cEl = document.getElementById('summary-channel');
+      if (cEl) cEl.innerText = channel;
+
+      document.querySelectorAll('.channel-card').forEach(card => {
+        const radio = card.querySelector('input[type="radio"]');
+        if (radio && radio.checked) {
+          card.classList.add('is-active');
+        } else {
+          card.classList.remove('is-active');
+        }
+      });
+    }
+
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+
+      const submitBtn = document.getElementById('confirm-submit-btn');
+      const phoneInput = document.getElementById('visitor-phone');
+      const phone = phoneInput ? phoneInput.value : '';
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i><span>Generating VIP Pass...</span>';
+      }
+
+      setTimeout(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i class="fa-solid fa-calendar-check"></i><span>Confirm VIP Appointment</span>';
+        }
+
+        const mProj = document.getElementById('modal-project');
+        const mDate = document.getElementById('modal-datetime');
+        const mAgent = document.getElementById('modal-agent');
+        const mContact = document.getElementById('modal-contact');
+        const mModal = document.getElementById('confirmation-modal');
+
+        if (mProj) mProj.innerText = `${selectedProject} (${selectedProjectLoc})`;
+        if (mDate) mDate.innerText = `${selectedDate} at ${selectedTime}`;
+        if (mAgent) mAgent.innerText = selectedAgent;
+        if (mContact) mContact.innerText = `${phone} (${selectedChannel})`;
+
+        if (mModal) mModal.classList.remove('hidden');
+      }, 900);
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('confirmation-modal');
+      if (modal) modal.classList.add('hidden');
+      goToStep(1);
+    }
+
+    function toggleAboutDropdown(event, id) {
+      if (event) { event.preventDefault(); event.stopPropagation(); }
+      const wrap = document.getElementById(id);
+      if (!wrap) return;
+      const isOpen = wrap.classList.toggle("is-open");
+      const trigger = wrap.querySelector(".prospera-about-trigger,.prospera-mobile-about-trigger");
+      if (trigger) trigger.setAttribute("aria-expanded", String(isOpen));
+    }
+
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".prospera-about-dropdown.is-open,.prospera-mobile-about.is-open").forEach((wrap) => {
+        if (!wrap.contains(event.target)) {
+          wrap.classList.remove("is-open");
+          const trigger = wrap.querySelector(".prospera-about-trigger,.prospera-mobile-about-trigger");
+          if (trigger) trigger.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById("mobileMenu");
+      const icon = document.getElementById("mobileMenuIcon");
+      if (!menu) return;
+      const hidden = menu.classList.contains("hidden");
+      menu.classList.toggle("hidden", !hidden);
+      if (icon) { icon.classList.toggle("fa-bars", !hidden); icon.classList.toggle("fa-xmark", hidden); }
+    }
+
+    function askAILocation(loc) {
+      window.location.href = 'ai-property-finder.html?q=' + encodeURIComponent('Find best properties and appreciation rate in ' + loc);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      goToStep(1);
+    });
+  </script>
+  <script src="theme.js"></script>
+</body>
+</html>

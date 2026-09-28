@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGradConv" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </radialGradient>
+    
+    <!-- Target / Arrow Gradient -->
+    <linearGradient id="targetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+
+    <!-- Metallic Edge Gradient -->
+    <linearGradient id="edgeGradConv" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#1e40af" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Circular Badge Background -->
+  <circle cx="256" cy="256" r="230" fill="url(#bgGradConv)" stroke="url(#edgeGradConv)" stroke-width="12" />
+
+  <!-- Target Rings (Bullseye) -->
+  <circle cx="256" cy="256" r="130" fill="none" stroke="#1e40af" stroke-width="16" opacity="0.6"/>
+  <circle cx="256" cy="256" r="90" fill="none" stroke="#3b82f6" stroke-width="18" opacity="0.8"/>
+  <circle cx="256" cy="256" r="45" fill="url(#targetGrad)" stroke="#bfdbfe" stroke-width="4"/>
+
+  <!-- Center Bullseye Dot / Star -->
+  <circle cx="256" cy="256" r="15" fill="#ffffff"/>
+
+  <!-- Arrow Piercing the Target -->
+  <path d="M130 382L230 282" fill="none" stroke="#facc15" stroke-width="12" stroke-linecap="round"/>
+  <!-- Arrow Head -->
+  <path d="M210 262L256 256L250 302L210 262Z" fill="#facc15" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Arrow Feathers / Tail -->
+  <path d="M110 372L120 402L150 392L130 372Z" fill="#60a5fa" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- Conversion / Currency / Growth Coins Stack at bottom-right -->
+  <g transform="translate(320, 310)">
+    <ellipse cx="40" cy="50" rx="35" ry="15" fill="#3b82f6" stroke="#bfdbfe" stroke-width="3"/>
+    <path d="M5 50V70C5 78 20 85 40 85C60 85 75 78 75 70V50" fill="none" stroke="#bfdbfe" stroke-width="3"/>
+    
+    <ellipse cx="40" cy="25" rx="35" ry="15" fill="#60a5fa" stroke="#bfdbfe" stroke-width="3"/>
+    <path d="M5 25V45C5 53 20 60 40 60C60 60 75 53 75 45V25" fill="none" stroke="#bfdbfe" stroke-width="3"/>
+
+    <ellipse cx="40" cy="0" rx="35" ry="15" fill="#93c5fd" stroke="#ffffff" stroke-width="3"/>
+  </g>
+</svg>

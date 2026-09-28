@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGradSite" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </radialGradient>
+    
+    <!-- Location Pin Gradient -->
+    <linearGradient id="pinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+
+    <!-- Metallic Edge Gradient -->
+    <linearGradient id="edgeGradSite" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#1e40af" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Circular Badge Background -->
+  <circle cx="256" cy="256" r="230" fill="url(#bgGradSite)" stroke="url(#edgeGradSite)" stroke-width="12" />
+
+  <!-- Map / Compass Background Elements -->
+  <path d="M140 320L200 360L312 280L372 320V192L312 152L200 232L140 192V320Z" fill="#1e40af" opacity="0.4" stroke="#93c5fd" stroke-width="2" stroke-linejoin="round"/>
+  
+  <!-- Location Pin (Main) -->
+  <path d="M256 120C205 120 164 161 164 212C164 280 256 372 256 372C256 372 348 280 348 212C348 161 307 120 256 120Z" fill="url(#pinGrad)" stroke="#ffffff" stroke-width="6"/>
+  
+  <!-- Inner Circle of Pin -->
+  <circle cx="256" cy="212" r="38" fill="#1e40af" stroke="#bfdbfe" stroke-width="4"/>
+  
+  <!-- Building Icon Inside Pin Center -->
+  <path d="M242 225V200H270V225H285V185L256 165L227 185V225H242Z" fill="#ffffff"/>
+
+  <!-- Compass Needle Detail -->
+  <g transform="translate(330, 130) scale(0.6)">
+      <circle cx="40" cy="40" r="30" fill="#1e40af" stroke="#93c5fd" stroke-width="4"/>
+      <path d="M40 15L48 40H40V15Z" fill="#ef4444"/>
+      <path d="M40 65L32 40H40V65Z" fill="#ffffff"/>
+  </g>
+</svg>

@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Prospera AI Realtors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#FCF9EE',
+                            100: '#FFF6D6',
+                            200: '#FCE798',
+                            300: '#FAD45A',
+                            400: '#F5BE2E',
+                            500: '#D4AF37',
+                            600: '#8C6D1F',
+                            700: '#805E00',
+                            800: '#573E00',
+                            900: '#302100',
+                            light: '#F2D280',
+                            DEFAULT: '#D4AF37',
+                            dark: '#8C6D1F'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['DM Serif Display', 'serif'],
+                        heading: ['DM Serif Display', 'serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Theme Stylesheet & Pre-Render Theme Loader (Defaults to Light Mode) -->
+    <link rel="stylesheet" href="theme.css">
+    <script>
+      (function () {
+        document.documentElement.setAttribute("data-theme", "light");
+        document.documentElement.classList.remove("dark");
+      })();
+    </script>
+
+    <style id="prospera-about-premium-system">
+    /* ============================================================
+       PROSPERA AI — ABOUT US LUXURY DESIGN SYSTEM
+       STRICT 3-COLOR SYSTEM: BLACK (#000000), WHITE (#FFFFFF), GOLD (#D4AF37)
+       ZERO ITALICS — 100% RESPONSIVE AND ACCESSIBLE
+       ============================================================ */
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      font-style: normal !important;
+    }
+
+    html {
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      background-color: #FAF8F5 !important;
+      color: #000000 !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ── HERO SECTION (DITTO FROM COMPARE & MARKET INSIGHTS) ── */
+    .builders-hero {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%) !important;
+      border-bottom: 1.5px solid rgba(212, 175, 55, 0.28) !important;
+      padding-top: 120px !important;
+      padding-bottom: 40px !important;
+    }
+
+    /* ── GOLD ACCENT LINE ── */
+    .accent-line {
+      width: 50px;
+      height: 3px;
+      margin-top: 10px;
+      margin-bottom: 16px;
+      background: #D4AF37;
+      border-radius: 999px;
+    }
+
+    /* ── LUXURY WHITE CARDS ── */
+    .about-card {
+      background: #FFFFFF !important;
+      background-color: #FFFFFF !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.3) !important;
+      border-radius: 20px !important;
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04) !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .about-card:hover {
+      border-color: #D4AF37 !important;
+      box-shadow: 0 12px 32px -4px rgba(212, 175, 55, 0.22) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    /* ── TYPOGRAPHY OVERRIDES ── */
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'DM Serif Display', serif !important;
+      font-style: normal !important;
+    }
+
+    /* ============================================================
+       STRICT DARK CONTAINERS: 100% PURE WHITE TEXT (NO NAVY / NO BLACK)
+       ============================================================ */
+    html body [class*="bg-[#000000]"],
+    html body [class*="bg-[#141414]"],
+    html body [class*="bg-[#1A1A1A]"],
+    html body [class*="bg-[#1E1E1E]"],
+    html body [class*="bg-[#0A0A0A]"],
+    html body [class*="bg-black"],
+    html body #motivation,
+    html body #contact,
+    html body .dark-card,
+    html body .dark-container {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+    }
+
+    html body [class*="bg-[#000000]"] h1, html body [class*="bg-[#000000]"] h2, html body [class*="bg-[#000000]"] h3, html body [class*="bg-[#000000]"] h4, html body [class*="bg-[#000000]"] h5, html body [class*="bg-[#000000]"] h6,
+    html body [class*="bg-[#141414]"] h1, html body [class*="bg-[#141414]"] h2, html body [class*="bg-[#141414]"] h3, html body [class*="bg-[#141414]"] h4, html body [class*="bg-[#141414]"] h5, html body [class*="bg-[#141414]"] h6,
+    html body [class*="bg-black"] h1, html body [class*="bg-black"] h2, html body [class*="bg-black"] h3, html body [class*="bg-black"] h4, html body [class*="bg-black"] h5, html body [class*="bg-black"] h6,
+    html body #motivation h1, html body #motivation h2, html body #motivation h3, html body #motivation h4, html body #motivation h5, html body #motivation h6,
+    html body #contact h1, html body #contact h2, html body #contact h3, html body #contact h4, html body #contact h5, html body #contact h6,
+    html body #why-different [class*="bg-[#000000]"] *,
+    html body #why-different [class*="bg-black"] * {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+    }
+
+    html body [class*="bg-[#000000]"] .text-white,
+    html body [class*="bg-[#141414]"] .text-white,
+    html body [class*="bg-black"] .text-white,
+    html body #motivation .text-white,
+    html body #contact .text-white {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+    }
+
+    html body [class*="bg-[#000000]"] p,
+    html body [class*="bg-[#141414]"] p,
+    html body [class*="bg-black"] p,
+    html body #motivation p,
+    html body #contact p {
+      color: rgba(255, 255, 255, 0.88) !important;
+      -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;
+    }
+
+    /* Preserve Gold accents inside dark containers */
+    html body [class*="bg-[#000000]"] .text-gold-500,
+    html body [class*="bg-[#000000]"] .text-gold-600,
+    html body [class*="bg-[#000000]"] .text-\[\#D4AF37\],
+    html body [class*="bg-[#141414]"] .text-gold-500,
+    html body [class*="bg-[#141414]"] .text-gold-600,
+    html body [class*="bg-[#141414]"] .text-\[\#D4AF37\],
+    html body #motivation .text-gold-500,
+    html body #motivation .text-gold-600,
+    html body #motivation .text-\[\#D4AF37\],
+    html body #contact .text-gold-500,
+    html body #contact .text-gold-600,
+    html body #contact .text-\[\#D4AF37\],
+    html body #why-different .text-\[\#D4AF37\],
+    html body #why-different .text-gold-500 {
+      color: #D4AF37 !important;
+      -webkit-text-fill-color: #D4AF37 !important;
+    }
+
+    /* ── BUTTONS & HOVER STATES ── */
+    .about-btn-primary {
+      background: #D4AF37 !important;
+      background-color: #D4AF37 !important;
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+      border: 1.5px solid #D4AF37 !important;
+      border-radius: 12px !important;
+      padding: 12px 28px !important;
+      font-weight: 800 !important;
+      font-size: 12px !important;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-decoration: none !important;
+      transition: all 0.25s ease !important;
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.25) !important;
+    }
+    .about-btn-primary:hover {
+      background: #000000 !important;
+      background-color: #000000 !important;
+      color: #D4AF37 !important;
+      -webkit-text-fill-color: #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4) !important;
+    }
+
+    .about-btn-secondary {
+      background: transparent !important;
+      background-color: transparent !important;
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      border: 1.5px solid #D4AF37 !important;
+      border-radius: 12px !important;
+      padding: 12px 28px !important;
+      font-weight: 800 !important;
+      font-size: 12px !important;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-decoration: none !important;
+      transition: all 0.25s ease !important;
+    }
+    .about-btn-secondary:hover {
+      background: #D4AF37 !important;
+      background-color: #D4AF37 !important;
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+      border-color: #D4AF37 !important;
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3) !important;
+    }
+
+    /* ── MASTER HEADER ABOUT DROPDOWN FIXES ── */
+    html[data-theme="light"] .prospera-about-dropdown {
+      position: relative !important;
+      flex-shrink: 0 !important;
+    }
+    html[data-theme="light"] .prospera-about-menu {
+      position: absolute !important;
+      top: calc(100% + 12px) !important;
+      right: 0 !important;
+      left: auto !important;
+      z-index: 100 !important;
+      width: 230px !important;
+      min-width: 230px !important;
+      max-width: 230px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      padding: 8px !important;
+      margin: 0 !important;
+      background: #FFFFFF !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.3) !important;
+      border-radius: 18px !important;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12) !important;
+    }
+    html[data-theme="light"] .prospera-about-menu > a {
+      display: block !important;
+      width: 100% !important;
+      padding: 10px 12px !important;
+      color: #000000 !important;
+      background: transparent !important;
+      font-size: 13px !important;
+      font-weight: 600 !important;
+      border-radius: 10px !important;
+      text-decoration: none !important;
+      transition: all 0.15s ease !important;
+    }
+    html[data-theme="light"] .prospera-about-menu > a:hover {
+      color: #000000 !important;
+      background: #FAF8F5 !important;
+      border-left: 2px solid #D4AF37 !important;
+    }
+
+    /* Floating widget overflow shield */
+    #floatingAIWidget {
+      z-index: 60 !important;
+      max-width: calc(100vw - 1.5rem) !important;
+    }
+    </style>
+</head>
+<body class="bg-[#FAF8F5] text-[#000000] font-sans antialiased min-h-screen overflow-x-hidden">
+    <!-- =========================================
+         PROSPERA MASTER HEADER
+         ========================================= -->
+    <header class="fixed top-0 left-0 right-0 w-full z-50 bg-white border-b border-slate-200 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a aria-label="Prospera AI Realtors" class="prospera-brand-logo group flex-shrink-0" href="index.html">
+        <span aria-hidden="true" class="prospera-logo-frame">
+          <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+        </span>
+      </a>
+      <!-- Desktop Primary Navigation -->
+      <nav aria-label="Primary navigation"
+        class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-700">
+        <a class="hover:text-gold-500 transition-colors" href="index.html">Home</a>
+        <a class="hover:text-gold-500 transition-colors" href="builders.html">Builders</a>
+        <a class="hover:text-gold-500 transition-colors" href="explore.html">Properties</a>
+        <a class="hover:text-gold-500 transition-colors" href="agents.html">Agents</a>
+        <a class="hover:text-gold-500 transition-colors" href="market-insights.html">Market Insights</a>
+        <a class="hover:text-gold-500 transition-colors" href="compare-projects.html">Compare</a>
+        <a class="hover:text-gold-500 transition-colors" href="book-site-visit.html">Book Site Visit</a>
+        <div class="prospera-about-dropdown" id="desktopAboutDropdown">
+          <button aria-controls="desktopAboutMenu" aria-expanded="false"
+            class="prospera-about-trigger hover:text-gold-500 transition-colors"
+            onclick="toggleAboutDropdown(event, 'desktopAboutDropdown')" type="button">
+            <span>About</span>
+            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+          </button>
+          <div aria-label="About links" class="prospera-about-menu" id="desktopAboutMenu" role="menu">
+            <a href="about-us.html" role="menuitem">About Us</a>
+            <a href="why-prospera-ai.html" role="menuitem">Why Prospera AI</a>
+            <a href="reviews.html" role="menuitem">Reviews</a>
+            <a href="contact.html" role="menuitem">Contact Us</a>
+            <a href="privacy-terms.html" role="menuitem">Privacy Policy</a>
+          </div>
+        </div>
+      </nav>
+      <!-- Right: Mobile Navigation -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button aria-label="Open menu"
+          class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl border border-gold-500/30 bg-gold-500/10 text-gold-500 hover:bg-gold-500/20 transition-all"
+          id="mobileMenuBtn" onclick="toggleMobileMenu()">
+          <i class="fa-solid fa-bars text-base" id="mobileMenuIcon"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Navigation Dropdown -->
+    <div class="hidden md:hidden border-t border-slate-200 bg-white" id="mobileMenu">
+      <nav aria-label="Mobile navigation" class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="index.html">Home</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="builders.html">Builders</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="explore.html">Properties</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="agents.html">Agents</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="market-insights.html">Market Insights</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="compare-projects.html">Compare</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="book-site-visit.html">Book Site Visit</a>
+        <div class="prospera-mobile-about" id="mobileAboutDropdown">
+          <button aria-controls="mobileAboutMenu" aria-expanded="false" class="prospera-mobile-about-trigger"
+            onclick="toggleAboutDropdown(event, 'mobileAboutDropdown')" type="button">
+            <span>About</span>
+            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+          </button>
+          <div class="prospera-mobile-about-menu" id="mobileAboutMenu">
+            <a href="about-us.html">About Us</a>
+            <a href="why-prospera-ai.html">Why Prospera AI</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="privacy-terms.html">Privacy Policy</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+    <!-- =========================================
+         END PROSPERA MASTER HEADER
+         ========================================= -->
+    <!-- =============================================
+       MAIN CONTENT: HERO (ditto from compare-projects.html & market-insights.html)
+       ============================================= -->
+    <div class="builders-hero">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Breadcrumb -->
+        <nav class="flex items-center gap-2 text-xs text-black/60 mb-6" aria-label="Breadcrumb">
+          <a href="index.html" class="hover:text-gold-600 transition-colors">Prospera AI</a>
+          <i class="fa-solid fa-chevron-right text-[8px] text-gold-500"></i>
+          <span class="text-gold-600 font-semibold">About Us</span>
+        </nav>
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <h1 class="font-heading text-4xl sm:text-5xl font-bold text-[#000000] mb-3 leading-tight">
+              About <span class="text-gold-600">Us.</span>
+            </h1>
+            <p class="text-black/75 text-base max-w-2xl leading-relaxed">
+              Reimagining luxury real estate acquisitions through predictive intelligence, architectural valuation, and unprecedented transparency.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 space-y-20">
+
+        <!-- SECTION 1: OUR STORY -->
+        <section id="our-story" class="relative">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-[#8C6D1F] block mb-2">Our Origins</span>
+                        <h2 class="text-3xl sm:text-4xl font-serif text-[#000000] font-bold">Our <span class="text-gold-600">Story.</span></h2>
+                        <div class="accent-line"></div>
+                    </div>
+                    
+                    <p class="text-black/80 leading-relaxed text-base">
+                        Prospera AI Realtors was born from a singular realization: the world's most valuable asset class—luxury real estate—was operating on intuition, incomplete data, and legacy relationships rather than objective intelligence.
+                    </p>
+                    
+                    <p class="text-black/75 leading-relaxed text-sm sm:text-base">
+                        Founded in 2024 by an interdisciplinary team of algorithmic scientists and veteran luxury estate directors, we established Prospera AI to dismantle information opacity. We realized that ultra-high-net-worth investors were committing tens of millions to real estate without the level of predictive analytics standard in modern capital markets.
+                    </p>
+
+                    <div class="pt-6 grid grid-cols-2 gap-6 border-t border-[rgba(212,175,55,0.3)]">
+                        <div class="p-4 rounded-xl bg-white border border-[rgba(212,175,55,0.25)] shadow-sm">
+                            <span class="text-2xl lg:text-3xl font-serif text-[#8C6D1F] block font-bold">$3.8B+</span>
+                            <span class="text-xs text-black/60 uppercase tracking-wider font-semibold">Analyzed Real Estate Value</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white border border-[rgba(212,175,55,0.25)] shadow-sm">
+                            <span class="text-2xl lg:text-3xl font-serif text-[#8C6D1F] block font-bold">99.4%</span>
+                            <span class="text-xs text-black/60 uppercase tracking-wider font-semibold">Valuation Precision Index</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="relative p-1 rounded-2xl bg-gradient-to-br from-[#D4AF37]/50 via-transparent to-[#D4AF37]/20">
+                        <div class="bg-[#000000] p-8 rounded-2xl space-y-6 border border-[#D4AF37]/40 shadow-xl text-white">
+                            <h3 class="text-xl font-serif flex items-center justify-between" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                                <span class="font-bold" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Milestones of Innovation</span>
+                                <i class="fa-solid fa-bolt text-[#D4AF37]"></i>
+                            </h3>
+                            <div class="space-y-6 border-l-2 border-[#D4AF37]/40 pl-6">
+                                <div class="relative">
+                                    <div class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-[#D4AF37] ring-4 ring-[#000000]"></div>
+                                    <span class="text-xs text-[#D4AF37] font-mono font-bold uppercase tracking-wider">Q1 2024</span>
+                                    <h4 class="font-bold text-sm mt-0.5" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Algorithm Architecture</h4>
+                                    <p class="text-xs mt-1 leading-relaxed" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">Engineered proprietary machine learning models trained on 40 years of luxury sales and micro-economic indexes.</p>
+                                </div>
+                                <div class="relative">
+                                    <div class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-[#D4AF37] ring-4 ring-[#000000]"></div>
+                                    <span class="text-xs text-[#D4AF37] font-mono font-bold uppercase tracking-wider">Q3 2024</span>
+                                    <h4 class="font-bold text-sm mt-0.5" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Off-Market Neural Network</h4>
+                                    <p class="text-xs mt-1 leading-relaxed" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">Launched private predictive matching engine connecting prospective sellers with accredited buyers discreetly.</p>
+                                </div>
+                                <div class="relative">
+                                    <div class="absolute -left-[31px] top-1 w-3.5 h-3.5 rounded-full bg-[#D4AF37] ring-4 ring-[#000000]"></div>
+                                    <span class="text-xs text-[#D4AF37] font-mono font-bold uppercase tracking-wider">Present</span>
+                                    <h4 class="font-bold text-sm mt-0.5" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Global Expansion</h4>
+                                    <p class="text-xs mt-1 leading-relaxed" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">Advising global family offices, private funds, and elite homeowners on prime residential acquisitions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2 & 3: MISSION & VISION -->
+        <section id="mission-vision">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#8C6D1F] block mb-2">Our Foundation</span>
+                <h2 class="text-3xl sm:text-4xl font-serif text-[#000000] font-bold">Mission & <span class="text-gold-600">Vision.</span></h2>
+                <div class="accent-line mx-auto"></div>
+                <p class="text-black/75 text-sm sm:text-base">Guiding principles driving the transformation of high-end real estate advisory.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Mission Card -->
+                <div class="about-card p-8 rounded-2xl bg-white border border-[rgba(212,175,55,0.3)] shadow-sm hover:border-[#D4AF37] transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-black border border-[#D4AF37] flex items-center justify-center mb-6 text-[#D4AF37]">
+                        <i class="fa-solid fa-crosshairs text-lg"></i>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-[#8C6D1F] block mb-2">Our Mission</span>
+                    <h3 class="text-2xl font-serif text-[#000000] font-bold mb-4">Empowering High-Yield Precision</h3>
+                    <p class="text-black/80 text-sm sm:text-base leading-relaxed mb-6">
+                        To empower luxury real estate buyers, sellers, and institutional investors with unmatched market clarity, utilizing proprietary AI algorithms that predict asset appreciation, de-risk acquisitions, and streamline transaction execution.
+                    </p>
+                    <ul class="space-y-3 text-xs sm:text-sm text-black/75">
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-check text-[#D4AF37] text-sm"></i>
+                            <span>Quantifiable valuation models for architectural assets</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-check text-[#D4AF37] text-sm"></i>
+                            <span>Zero-friction private off-market matchmaking</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-check text-[#D4AF37] text-sm"></i>
+                            <span>Absolute discretion backed by cryptographic security</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="about-card p-8 rounded-2xl bg-white border border-[rgba(212,175,55,0.3)] shadow-sm hover:border-[#D4AF37] transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-black border border-[#D4AF37] flex items-center justify-center mb-6 text-[#D4AF37]">
+                        <i class="fa-solid fa-eye text-lg"></i>
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-[#8C6D1F] block mb-2">Our Vision</span>
+                    <h3 class="text-2xl font-serif text-[#000000] font-bold mb-4">The Global Benchmark for AI Real Estate</h3>
+                    <p class="text-black/80 text-sm sm:text-base leading-relaxed mb-6">
+                        To become the definitive global platform for luxury estate intelligence—where technology seamlessly elevates bespoke human advisory, creating a world where every luxury property transaction is intelligent, transparent, and effortlessly profitable.
+                    </p>
+                    <ul class="space-y-3 text-xs sm:text-sm text-black/75">
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-check text-[#D4AF37] text-sm"></i>
+                            <span>Next-gen predictive urban gentrification analytics</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-check text-[#D4AF37] text-sm"></i>
+                            <span>Autonomous climate & micro-location risk profiling</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-check text-[#D4AF37] text-sm"></i>
+                            <span>Setting the standard for digital luxury advisory</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: MOTIVATION BEHIND PROSPERA AI REALTORS -->
+        <section id="motivation">
+            <div class="bg-[#000000] p-8 sm:p-12 rounded-3xl border border-[#D4AF37]/40 shadow-xl relative overflow-hidden text-white" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                <div class="max-w-3xl mb-10">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <div class="h-px w-8 bg-[#D4AF37]"></div>
+                        <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold">Purpose</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Motivation Behind Prospera AI</h2>
+                    <div class="accent-line"></div>
+                    <p class="text-sm sm:text-base leading-relaxed" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">
+                        In stock exchanges, investments are guided by real-time algorithmic signals. In real estate—often an investor's largest holding—decisions were still made based on outdated comps, subjective agent sentiment, and speculative pricing. We built Prospera AI to bridge this gap.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-[#141414] p-6 rounded-2xl border border-[rgba(212,175,55,0.3)] text-white" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                        <div class="text-[#D4AF37] text-2xl font-serif font-bold mb-3">01</div>
+                        <h3 class="text-base font-bold mb-2" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Elimination of Human Bias</h3>
+                        <p class="text-xs leading-relaxed" style="color: rgba(255, 255, 255, 0.85) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.85) !important;">Traditional valuation relies heavily on subjective emotional markup. Our motivation was to deliver data-backed truth to asset value.</p>
+                    </div>
+
+                    <div class="bg-[#141414] p-6 rounded-2xl border border-[rgba(212,175,55,0.3)] text-white" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                        <div class="text-[#D4AF37] text-2xl font-serif font-bold mb-3">02</div>
+                        <h3 class="text-base font-bold mb-2" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Predictive Asset Preservation</h3>
+                        <p class="text-xs leading-relaxed" style="color: rgba(255, 255, 255, 0.85) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.85) !important;">We aimed to give investors 5-to-10-year predictive foresight into neighborhood growth, municipal updates, and capital yield potential.</p>
+                    </div>
+
+                    <div class="bg-[#141414] p-6 rounded-2xl border border-[rgba(212,175,55,0.3)] text-white" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                        <div class="text-[#D4AF37] text-2xl font-serif font-bold mb-3">03</div>
+                        <h3 class="text-base font-bold mb-2" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Privacy-First Marketplace</h3>
+                        <p class="text-xs leading-relaxed" style="color: rgba(255, 255, 255, 0.85) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.85) !important;">High-profile sellers often avoid public listings. Prospera was engineered to facilitate high-value sales entirely off-market with high security.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: PROBLEM STATEMENT -->
+        <section id="problem-statement">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#8C6D1F] block mb-2">Market Inefficiencies</span>
+                <h2 class="text-3xl sm:text-4xl font-serif text-[#000000] font-bold">The Problem <span class="text-gold-600">Statement.</span></h2>
+                <div class="accent-line mx-auto"></div>
+                <p class="text-black/75 text-sm sm:text-base">The structural inefficiencies plaguing traditional high-end property transactions.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Friction 1 -->
+                <div class="about-card bg-white p-6 rounded-2xl border border-[rgba(212,175,55,0.3)] hover:border-[#D4AF37] transition-all shadow-sm flex flex-col">
+                    <div class="w-14 h-14 rounded-2xl bg-[#000000] border-1.5 border-[#D4AF37] flex items-center justify-center mb-5 shadow-sm" style="border: 1.5px solid #D4AF37 !important;">
+                        <i class="fa-solid fa-database text-2xl text-[#D4AF37]" style="color: #D4AF37 !important; -webkit-text-fill-color: #D4AF37 !important; font-size: 22px !important;"></i>
+                    </div>
+                    <h3 class="text-[#000000] font-bold text-lg mb-2" style="font-family: 'DM Serif Display', serif !important; color: #000000 !important;">Asymmetric Information</h3>
+                    <p class="text-xs text-black/75 leading-relaxed">
+                        Sellers and buyers rely on public MLS databases that lag months behind actual economic micro-shifts, causing overpayment or mispriced sales.
+                    </p>
+                </div>
+
+                <!-- Friction 2 -->
+                <div class="about-card bg-white p-6 rounded-2xl border border-[rgba(212,175,55,0.3)] hover:border-[#D4AF37] transition-all shadow-sm flex flex-col">
+                    <div class="w-14 h-14 rounded-2xl bg-[#000000] border-1.5 border-[#D4AF37] flex items-center justify-center mb-5 shadow-sm" style="border: 1.5px solid #D4AF37 !important;">
+                        <i class="fa-solid fa-arrow-trend-down text-2xl text-[#D4AF37]" style="color: #D4AF37 !important; -webkit-text-fill-color: #D4AF37 !important; font-size: 22px !important;"></i>
+                    </div>
+                    <h3 class="text-[#000000] font-bold text-lg mb-2" style="font-family: 'DM Serif Display', serif !important; color: #000000 !important;">Emotional Pricing Flaws</h3>
+                    <p class="text-xs text-black/75 leading-relaxed">
+                        Luxury estates often sit on the market for over 200+ days due to arbitrary price setting, destroying liquidity and asset reputation.
+                    </p>
+                </div>
+
+                <!-- Friction 3 -->
+                <div class="about-card bg-white p-6 rounded-2xl border border-[rgba(212,175,55,0.3)] hover:border-[#D4AF37] transition-all shadow-sm flex flex-col">
+                    <div class="w-14 h-14 rounded-2xl bg-[#000000] border-1.5 border-[#D4AF37] flex items-center justify-center mb-5 shadow-sm" style="border: 1.5px solid #D4AF37 !important;">
+                        <i class="fa-solid fa-user-shield text-2xl text-[#D4AF37]" style="color: #D4AF37 !important; -webkit-text-fill-color: #D4AF37 !important; font-size: 22px !important;"></i>
+                    </div>
+                    <h3 class="text-[#000000] font-bold text-lg mb-2" style="font-family: 'DM Serif Display', serif !important; color: #000000 !important;">Loss of Privacy</h3>
+                    <p class="text-xs text-black/75 leading-relaxed">
+                        Traditional public marketing exposes ultra-high-net-worth seller assets to public curiosity without filtering for verified capital buyers.
+                    </p>
+                </div>
+
+                <!-- Friction 4 -->
+                <div class="about-card bg-white p-6 rounded-2xl border border-[rgba(212,175,55,0.3)] hover:border-[#D4AF37] transition-all shadow-sm flex flex-col">
+                    <div class="w-14 h-14 rounded-2xl bg-[#000000] border-1.5 border-[#D4AF37] flex items-center justify-center mb-5 shadow-sm" style="border: 1.5px solid #D4AF37 !important;">
+                        <i class="fa-solid fa-coins text-2xl text-[#D4AF37]" style="color: #D4AF37 !important; -webkit-text-fill-color: #D4AF37 !important; font-size: 22px !important;"></i>
+                    </div>
+                    <h3 class="text-[#000000] font-bold text-lg mb-2" style="font-family: 'DM Serif Display', serif !important; color: #000000 !important;">High Friction & Fees</h3>
+                    <p class="text-xs text-black/75 leading-relaxed">
+                        Excessive intermediary overheads without clear analytical value add zero net worth return to either buyer or seller.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: WHY WE ARE DIFFERENT -->
+        <section id="why-different">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#8C6D1F] block mb-2">Comparative Advantage</span>
+                <h2 class="text-3xl sm:text-4xl font-serif text-[#000000] font-bold">Why We Are <span class="text-gold-600">Different.</span></h2>
+                <div class="accent-line mx-auto"></div>
+                <p class="text-black/75 text-sm sm:text-base">A direct comparison: Traditional Real Estate Brokers vs. Prospera AI Realtors.</p>
+            </div>
+
+            <!-- Comparison Table Container -->
+            <div class="bg-white rounded-2xl border border-[rgba(212,175,55,0.3)] overflow-hidden shadow-lg">
+                <div class="grid grid-cols-12 bg-[#000000] p-4 sm:p-5 border-b border-[#D4AF37]/30 text-xs font-bold uppercase tracking-wider text-white" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                    <div class="col-span-4" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Core Pillar</div>
+                    <div class="col-span-4" style="color: rgba(255, 255, 255, 0.75) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.75) !important;">Traditional Brokerage</div>
+                    <div class="col-span-4 text-[#D4AF37]" style="color: #D4AF37 !important; -webkit-text-fill-color: #D4AF37 !important;">Prospera AI Realtors</div>
+                </div>
+
+                <div class="divide-y divide-[rgba(212,175,55,0.2)] text-xs sm:text-sm">
+                    <!-- Row 1 -->
+                    <div class="grid grid-cols-12 p-4 sm:p-5 items-center hover:bg-[#FAF8F5] transition-colors">
+                        <div class="col-span-4 font-bold text-[#000000]">Valuation Engine</div>
+                        <div class="col-span-4 text-black/70">Manual Comps & Guesswork</div>
+                        <div class="col-span-4 text-[#000000] font-bold flex items-center space-x-2">
+                            <i class="fa-solid fa-check text-[#D4AF37] font-bold"></i>
+                            <span>Multi-Vector Neural Analytics</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="grid grid-cols-12 p-4 sm:p-5 items-center hover:bg-[#FAF8F5] transition-colors">
+                        <div class="col-span-4 font-bold text-[#000000]">Market Matching</div>
+                        <div class="col-span-4 text-black/70">Public MLS & Open Houses</div>
+                        <div class="col-span-4 text-[#000000] font-bold flex items-center space-x-2">
+                            <i class="fa-solid fa-check text-[#D4AF37] font-bold"></i>
+                            <span>Off-Market Algorithmic Match</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="grid grid-cols-12 p-4 sm:p-5 items-center hover:bg-[#FAF8F5] transition-colors">
+                        <div class="col-span-4 font-bold text-[#000000]">Future Projections</div>
+                        <div class="col-span-4 text-black/70">Historical Retrospective Data</div>
+                        <div class="col-span-4 text-[#000000] font-bold flex items-center space-x-2">
+                            <i class="fa-solid fa-check text-[#D4AF37] font-bold"></i>
+                            <span>10-Year Predictive Growth Signals</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 4 -->
+                    <div class="grid grid-cols-12 p-4 sm:p-5 items-center hover:bg-[#FAF8F5] transition-colors">
+                        <div class="col-span-4 font-bold text-[#000000]">Advisory Style</div>
+                        <div class="col-span-4 text-black/70">Sales Pitch & Commission Focus</div>
+                        <div class="col-span-4 text-[#000000] font-bold flex items-center space-x-2">
+                            <i class="fa-solid fa-check text-[#D4AF37] font-bold"></i>
+                            <span>Fiduciary Strategic Intelligence</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 5 -->
+                    <div class="grid grid-cols-12 p-4 sm:p-5 items-center hover:bg-[#FAF8F5] transition-colors">
+                        <div class="col-span-4 font-bold text-[#000000]">Privacy & Discretion</div>
+                        <div class="col-span-4 text-black/70">Standard NDAs & Mass Advertising</div>
+                        <div class="col-span-4 text-[#000000] font-bold flex items-center space-x-2">
+                            <i class="fa-solid fa-check text-[#D4AF37] font-bold"></i>
+                            <span>Cryptographic Buyer Verification</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHAPTER PAGINATION & CALL TO ACTION -->
+        <section id="contact" class="pt-6">
+            <div class="bg-[#000000] rounded-3xl p-8 sm:p-14 text-center border border-[#D4AF37]/50 shadow-2xl relative overflow-hidden text-white" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                <div class="max-w-2xl mx-auto space-y-6">
+                    <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold">Experience The Future</span>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                        Ready to Leverage AI in Luxury <span class="text-gold-500" style="color: #D4AF37 !important; -webkit-text-fill-color: #D4AF37 !important;">Real Estate?</span>
+                    </h2>
+                    <p class="text-sm sm:text-base leading-relaxed" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">
+                        Connect with our advisors to schedule a private demonstration of our AI valuation engine or access exclusive off-market listings.
+                    </p>
+                    <div class="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <a href="book-site-visit.html" class="w-full sm:w-auto px-8 py-3.5 rounded-xl about-btn-primary font-bold text-xs uppercase tracking-widest transition-all">
+                            Request Private Consultation
+                        </a>
+                        <a href="why-prospera-ai.html" class="w-full sm:w-auto px-8 py-3.5 rounded-xl about-btn-secondary font-bold text-xs uppercase tracking-widest transition-all">
+                            Explore Next Chapter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- =========================================
+         PROSPERA MASTER FOOTER
+         ========================================= -->
+    <footer class="bg-white border-t border-slate-200 text-slate-600 text-sm py-12 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div aria-label="Prospera AI Realtors" class="prospera-footer-brand mb-4">
+            <span aria-hidden="true" class="prospera-logo-frame">
+              <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+            </span>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            India’s premier AI-first conversational real estate network. Unbiased recommendations, voice search, and
+            predictive market intelligence.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="about-us.html">About Us</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="why-prospera-ai.html">Why Prospera
+                AI</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="reviews.html">Reviews</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="contact.html">Contact Us</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="privacy-terms.html">Privacy
+                Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Top Locations</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Gomti Nagar'); return false;">Gomti
+                Nagar</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Gomti Nagar Extension'); return false;">Gomti Nagar Extension</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Shaheed Path'); return false;">Shaheed
+                Path</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Sultanpur Road'); return false;">Sultanpur Road</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Contact &amp; Legal</h4>
+          <p class="text-xs text-slate-500 mb-2"><i class="fa-solid fa-envelope text-gold-500 mr-2"></i>
+            advisor@prospera.ai</p>
+          <p class="text-xs text-slate-500 mb-4"><i class="fa-solid fa-phone text-gold-500 mr-2"></i> +91 1800-PROSPERA
+          </p>
+          <div class="flex gap-3">
+            <a aria-label="LinkedIn"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+            <a aria-label="Twitter / X"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-x-twitter text-xs"></i></a>
+            <a aria-label="Instagram"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-instagram text-xs"></i></a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pt-8 border-t border-slate-200 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>© 2026 Prospera AI Realtors Inc. All rights reserved.</p>
+        <p class="text-slate-500">RERA Reg: UPRERA/AI/2026/001</p>
+      </div>
+    </div>
+  </footer>
+
+        <!-- FLOATING AI ASSISTANT WIDGET & VOICE INTERFACE -->
+    <div id="floatingAIWidget" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end max-w-[calc(100vw-2rem)]">
+
+        <!-- Collapsible Chat Drawer -->
+        <div id="aiChatDrawer" class="hidden w-[calc(100vw-2rem)] sm:w-[380px] md:w-[400px] max-w-[400px] h-[500px] max-h-[calc(100vh-7rem)] rounded-3xl glass-card border border-gold-500/40 shadow-gold-glow-lg flex-col overflow-hidden mb-3 sm:mb-4 transition-all transform duration-300 box-border">
+            <!-- Chat Drawer Header -->
+            <div class="p-4 bg-obsidian-900 border-b border-gold-500/20 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-gold-500 to-gold-300 p-0.5 shadow-gold-glow">
+                        <div class="w-full h-full bg-obsidian-950 rounded-full flex items-center justify-center text-gold-400">
+                            <i class="fa-solid fa-robot text-sm"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm">Prospera Voice AI</h4>
+                        <span class="text-[10px] text-emerald-400 flex items-center gap-1">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Live & Listening
+                        </span>
+                    </div>
+                </div>
+                <button onclick="toggleFloatingChat()" class="text-slate-400 hover:text-white p-1">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Chat Drawer Body Messages -->
+            <div id="chatMessages" class="flex-1 p-4 overflow-y-auto space-y-3 text-xs">
+                <!-- AI Welcome Message -->
+                <div class="flex gap-2.5">
+                    <div class="w-7 h-7 rounded-full bg-gold-500/20 border border-gold-500/40 flex items-center justify-center text-gold-400 flex-shrink-0">
+                        <i class="fa-solid fa-robot text-xs"></i>
+                    </div>
+                    <div class="bg-obsidian-800 border border-gold-500/20 p-3 rounded-2xl rounded-tl-none text-slate-200 max-w-[82%] leading-relaxed">
+                        Hi, welcome to Prospera AI Realtors. Tell me your budget or city, and I'll help you find the right property.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Drawer Quick Chips -->
+            <div class="px-3 py-2 bg-obsidian-900/60 border-t border-slate-800 flex gap-2 overflow-x-auto text-[11px] whitespace-nowrap">
+                <button onclick="sendQuickMessage('Find 3BHK in Noida under 1.8 Cr')" class="px-2.5 py-1 rounded-full bg-obsidian-800 border border-gold-500/20 text-slate-300 hover:text-gold-300">
+                    3BHK Noida &lt; 1.8Cr
+                </button>
+                <button onclick="sendQuickMessage('Top luxury projects in Gurgaon')" class="px-2.5 py-1 rounded-full bg-obsidian-800 border border-gold-500/20 text-slate-300 hover:text-gold-300">
+                    Gurgaon Luxury
+                </button>
+            </div>
+
+            <!-- Chat Drawer Input Footer -->
+            <div class="p-3 bg-obsidian-900 border-t border-gold-500/20 flex items-center gap-2">
+                <button onclick="triggerVoiceModal()" class="w-9 h-9 rounded-xl bg-gold-500/20 border border-gold-500/40 text-gold-400 flex items-center justify-center hover:bg-gold-500/30 transition-colors" title="Speak to AI">
+                    <i class="fa-solid fa-microphone text-xs"></i>
+                </button>
+                <input type="text" id="floatingInput" placeholder="Type requirement..." onkeypress="handleKeyPress(event)" class="flex-1 bg-obsidian-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-gold-400">
+                <button onclick="sendFloatingMessage()" class="w-9 h-9 rounded-xl gold-btn-gradient text-obsidian-950 font-bold flex items-center justify-center hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Floating Action Button Orb -->
+        <button onclick="window.location.href='ai-property-finder.html'" class="relative group flex items-center gap-3 bg-gradient-to-r from-obsidian-900 via-obsidian-800 to-obsidian-950 border-2 border-gold-500 text-white p-3 sm:px-5 sm:py-3.5 rounded-full shadow-gold-glow hover:shadow-gold-glow-lg transition-all transform hover:scale-105">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-gold-300 via-gold-500 to-gold-700 flex items-center justify-center text-obsidian-950 font-bold">
+                <i class="fa-solid fa-robot text-sm"></i>
+            </div>
+            <span class="hidden sm:inline-block font-semibold text-xs text-gold-300 tracking-wider uppercase">AI Advisor</span>
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping absolute top-1 right-1"></span>
+        </button>
+
+    </div>
+
+    <!-- FULLSCREEN / MODAL VOICE EXPERIENCE OVERLAY -->
+    <div id="voiceModal" class="fixed inset-0 z-50 bg-obsidian-950/95 backdrop-blur-2xl hidden flex-col items-center justify-center p-4">
+        <button onclick="closeVoiceModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-gold-500/30 bg-obsidian-900 text-slate-300 hover:text-white hover:border-gold-400 flex items-center justify-center transition-all">
+            <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+
+        <div class="max-w-xl w-full text-center space-y-6 sm:space-y-8">
+            <div class="inline-block px-4 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold tracking-widest uppercase">
+                Interactive Voice Session
+            </div>
+
+            <!-- Pulsing Voice Visualizer -->
+            <div class="relative w-36 h-36 sm:w-44 sm:h-44 mx-auto flex items-center justify-center">
+                <div id="modalPulseRing" class="absolute inset-0 rounded-full border-2 border-gold-500/30 avatar-pulse"></div>
+                <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-gradient-to-tr from-obsidian-900 via-gold-900/40 to-obsidian-800 border border-gold-400 flex items-center justify-center shadow-gold-glow-lg">
+                    <i class="fa-solid fa-microphone text-4xl sm:text-5xl text-gold-400 animate-pulse"></i>
+                </div>
+            </div>
+
+            <!-- Soundwave graphic -->
+            <div class="flex justify-center items-center gap-1.5 h-10">
+                <div class="w-1.5 bg-gold-400 rounded-full animate-wave-1 h-6"></div>
+                <div class="w-1.5 bg-gold-300 rounded-full animate-wave-2 h-10"></div>
+                <div class="w-1.5 bg-gold-500 rounded-full animate-wave-3 h-8"></div>
+                <div class="w-1.5 bg-gold-400 rounded-full animate-wave-4 h-5"></div>
+                <div class="w-1.5 bg-gold-300 rounded-full animate-wave-5 h-9"></div>
+            </div>
+
+            <!-- Live Transcript Text -->
+            <div class="space-y-2">
+                <h3 id="modalVoiceStatus" class="font-serif text-xl sm:text-2xl font-bold text-white">Listening to your voice...</h3>
+                <p id="modalVoiceTranscript" class="text-slate-300 text-xs sm:text-sm max-w-md mx-auto not-italic font-normal">
+                    "Looking for a 3 BHK luxury apartment in Gurgaon under 3.5 Crores near metro station..."
+                </p>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 px-2">
+                <button onclick="simulateVoiceInput('Looking for 3 BHK in Gurgaon Golf Course Road under 4 Cr')" class="px-4 py-2 rounded-xl bg-obsidian-900 border border-gold-500/30 text-xs text-gold-300 hover:bg-gold-500/20 transition-all">
+                    "3 BHK Gurgaon Golf Course"
+                </button>
+                <button onclick="simulateVoiceInput('Plots in Greater Noida West near Metro')" class="px-4 py-2 rounded-xl bg-obsidian-900 border border-gold-500/30 text-xs text-gold-300 hover:bg-gold-500/20 transition-all">
+                    "Plots Greater Noida West"
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth highlighting for nav bar on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(a => {
+                    if (a.getAttribute('href') === `#${current}`) {
+                        a.classList.add('text-[#D4AF37]');
+                        a.classList.remove('text-gray-400');
+                    }
+                });
+            });
+        });
+
+        function askAILocation(loc) {
+            window.location.href = 'ai-property-finder.html?q=' + encodeURIComponent('Find best properties and appreciation rate in ' + loc);
+        }
+
+function triggerVoiceModal() {
+            const modal = document.getElementById('voiceModal');
+            if (modal) { modal.classList.remove('hidden'); modal.classList.add('flex'); }
+        }
+        function closeVoiceModal() {
+            const modal = document.getElementById('voiceModal');
+            if (modal) { modal.classList.add('hidden'); modal.classList.remove('flex'); }
+        }
+        function simulateVoiceInput(text) {
+            const transcript = document.getElementById('modalVoiceTranscript');
+            const status = document.getElementById('modalVoiceStatus');
+            if (transcript) transcript.innerText = '"' + text + '"';
+            if (status) status.innerText = "Analyzing requirements with AI...";
+            setTimeout(() => {
+                closeVoiceModal();
+                const heroInput = document.getElementById('heroPromptInput');
+                if (heroInput) { heroInput.value = text; if (typeof submitHeroQuery === 'function') submitHeroQuery(); }
+                else {
+                    const drawer = document.getElementById('aiChatDrawer');
+                    if (drawer && drawer.classList.contains('hidden')) toggleFloatingChat();
+                    const floatingInput = document.getElementById('floatingInput');
+                    if (floatingInput) { floatingInput.value = text; sendFloatingMessage(); }
+                }
+            }, 1500);
+        }
+        function toggleFloatingChat() {
+            const drawer = document.getElementById('aiChatDrawer');
+            if (!drawer) return;
+            if (drawer.classList.contains('hidden')) { drawer.classList.remove('hidden'); drawer.classList.add('flex'); }
+            else { drawer.classList.add('hidden'); drawer.classList.remove('flex'); }
+        }
+        function handleKeyPress(e) { if (e.key === 'Enter') sendFloatingMessage(); }
+        function sendQuickMessage(text) {
+            const input = document.getElementById('floatingInput');
+            if (input) { input.value = text; sendFloatingMessage(); }
+        }
+        function sendFloatingMessage() {
+            const input = document.getElementById('floatingInput');
+            if (!input || !input.value.trim()) return;
+            const val = input.value.trim();
+            const chatMessages = document.getElementById('chatMessages');
+            if (chatMessages) {
+                const userDiv = document.createElement('div');
+                userDiv.className = 'flex justify-end';
+                userDiv.innerHTML = '<div class="bg-gold-500 text-obsidian-950 font-semibold p-2.5 rounded-2xl rounded-tr-none max-w-[80%]">' + val + '</div>';
+                chatMessages.appendChild(userDiv);
+                input.value = '';
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                setTimeout(() => {
+                    const aiDiv = document.createElement('div');
+                    aiDiv.className = 'flex gap-2.5';
+                    aiDiv.innerHTML = `<div class="w-7 h-7 rounded-full bg-gold-500/20 border border-gold-500/40 flex items-center justify-center text-gold-400 flex-shrink-0"><i class="fa-solid fa-robot text-xs"></i></div><div class="bg-obsidian-800 border border-gold-500/20 p-3 rounded-2xl rounded-tl-none text-slate-200 max-w-[82%] leading-relaxed">I found several verified projects matching "${val}". Explore them above or speak with our luxury advisor.</div>`;
+                    chatMessages.appendChild(aiDiv);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 600);
+            }
+        }
+    </script>
+    <!-- Global Theme Toggle JS -->
+    <script src="theme.js"></script>
+  <script>
+    function toggleAboutDropdown(event, id) {
+      if (event) { event.preventDefault(); event.stopPropagation(); }
+      const wrap = document.getElementById(id);
+      if (!wrap) return;
+      const isOpen = wrap.classList.toggle("is-open");
+      const trigger = wrap.querySelector(".prospera-about-trigger,.prospera-mobile-about-trigger");
+      if (trigger) trigger.setAttribute("aria-expanded", String(isOpen));
+    }
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".prospera-about-dropdown.is-open,.prospera-mobile-about.is-open").forEach((wrap) => {
+        if (!wrap.contains(event.target)) {
+          wrap.classList.remove("is-open");
+          const trigger = wrap.querySelector(".prospera-about-trigger,.prospera-mobile-about-trigger");
+          if (trigger) trigger.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+    function toggleMobileMenu() {
+      const menu = document.getElementById("mobileMenu"), icon = document.getElementById("mobileMenuIcon");
+      if (!menu) return;
+      const hidden = menu.classList.contains("hidden");
+      menu.classList.toggle("hidden", !hidden);
+      if (icon) { icon.classList.toggle("fa-bars", !hidden); icon.classList.toggle("fa-xmark", hidden); }
+    }
+  </script>
+
+</body>
+</html>

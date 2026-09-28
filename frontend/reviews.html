@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verified Buyer Reviews & Testimonials | Prospera AI Realtors</title>
+    <meta name="description" content="Read verified video reviews, homeowner feedback, and transaction case studies from luxury property buyers across Noida and Gurgaon with Prospera AI Realtors.">
+    
+    <!-- Google Fonts: DM Serif Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#FDFBF7',
+                            100: '#FAF4E6',
+                            200: '#F3E5C3',
+                            300: '#EBD29B',
+                            400: '#E0BC6A',
+                            500: '#D4AF37',
+                            600: '#8C6D1F',
+                            700: '#735817',
+                            800: '#5E4613',
+                            900: '#332408',
+                        },
+                        obsidian: {
+                            800: '#16161C',
+                            900: '#0E0E11',
+                            950: '#070708',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"DM Serif Display"', 'serif'],
+                        heading: ['"DM Serif Display"', 'serif'],
+                        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 0 35px -5px rgba(212, 175, 55, 0.3)',
+                        'gold-glow-lg': '0 0 60px -10px rgba(212, 175, 55, 0.45)',
+                        'card-glow': '0 0 25px rgba(212, 175, 55, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Theme Stylesheet & Pre-Render Theme Loader -->
+    <link rel="stylesheet" href="theme.css">
+    <script>
+      /* Prospera AI enforces single luxury light visual system */
+      (function () {
+        document.documentElement.setAttribute("data-theme", "light");
+        document.documentElement.classList.remove("dark");
+      })();
+    </script>
+
+    <style id="prospera-reviews-system">
+    /* ── STRICT TYPOGRAPHY & ZERO ITALICS ── */
+    *, *::before, *::after {
+      font-style: normal !important;
+    }
+    
+    h1, h2, h3, h4, h5, h6, .font-heading {
+      font-family: 'DM Serif Display', serif !important;
+      font-style: normal !important;
+      letter-spacing: -0.01em !important;
+    }
+
+    /* ── HERO EXACT MATCH WITH AGENTS.HTML & CONTACT.HTML ── */
+    .builders-hero {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%) !important;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.22) !important;
+      padding: 104px 0 48px !important;
+    }
+
+    /* ── GOLD ACCENTS ── */
+    .gold-text-gradient,
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #8C6D1F 0%, #D4AF37 50%, #8C6D1F 100%) !important;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+    .text-gold-600 {
+      color: #8C6D1F !important;
+    }
+    .text-gold-500 {
+      color: #D4AF37 !important;
+    }
+
+    /* ── LUXURY WHITE CARDS ── */
+    .review-card, .about-card {
+      background: #FFFFFF !important;
+      background-color: #FFFFFF !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.3) !important;
+      border-radius: 20px !important;
+      box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.04) !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .review-card:hover, .about-card:hover {
+      border-color: #D4AF37 !important;
+      box-shadow: 0 12px 32px -4px rgba(212, 175, 55, 0.2) !important;
+    }
+
+    /* ── BUTTONS: GOLD WITH CRISP WHITE TEXT & ZERO HOVER INVERSION ── */
+    html body main .btn-gold-primary,
+    html body .btn-gold-primary {
+      background: #D4AF37 !important;
+      background-color: #D4AF37 !important;
+      background-image: none !important;
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      border: 1.5px solid #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      border-radius: 12px !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.06em !important;
+      text-transform: uppercase !important;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.22) !important;
+      transition: all 0.2s ease !important;
+      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35) !important;
+      cursor: pointer !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-decoration: none !important;
+    }
+    html body main .btn-gold-primary:hover,
+    html body .btn-gold-primary:hover,
+    html body main .btn-gold-primary:focus,
+    html body .btn-gold-primary:focus {
+      background: #D4AF37 !important;
+      background-color: #D4AF37 !important;
+      background-image: none !important;
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      border-color: #D4AF37 !important;
+      transform: none !important;
+      filter: brightness(1.06) !important;
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45) !important;
+    }
+    html body .btn-gold-primary *,
+    html body .btn-gold-primary:hover * {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+    }
+
+    /* ── MASTER HEADER ABOUT DROPDOWN FIXES ── */
+    html[data-theme="light"] .prospera-about-dropdown {
+      position: relative !important;
+      flex-shrink: 0 !important;
+    }
+    html[data-theme="light"] .prospera-about-menu {
+      position: absolute !important;
+      top: calc(100% + 12px) !important;
+      right: 0 !important;
+      left: auto !important;
+      z-index: 100 !important;
+      width: 230px !important;
+      min-width: 230px !important;
+      max-width: 230px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      padding: 8px !important;
+      margin: 0 !important;
+      background: #FFFFFF !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.3) !important;
+      border-radius: 18px !important;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12) !important;
+    }
+    html[data-theme="light"] .prospera-about-menu > a {
+      display: block !important;
+      width: 100% !important;
+      padding: 10px 12px !important;
+      color: #000000 !important;
+      background: transparent !important;
+      font-size: 13px !important;
+      font-weight: 600 !important;
+      border-radius: 10px !important;
+      text-decoration: none !important;
+      transition: all 0.15s ease !important;
+    }
+    html[data-theme="light"] .prospera-about-menu > a:hover {
+      color: #000000 !important;
+      background: #FAF8F5 !important;
+      border-left: 2px solid #D4AF37 !important;
+    }
+
+    /* Floating widget overflow shield */
+    #floatingAIWidget {
+      z-index: 60 !important;
+      max-width: calc(100vw - 1.5rem) !important;
+    }
+
+    .glass-card {
+      background: rgba(14, 14, 17, 0.90) !important;
+      backdrop-filter: blur(16px) !important;
+      -webkit-backdrop-filter: blur(16px) !important;
+    }
+
+    /* Play button animation */
+    .play-pulse {
+      box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6);
+      animation: pulsePlay 2s infinite;
+    }
+    @keyframes pulsePlay {
+      0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6); }
+      70% { box-shadow: 0 0 0 16px rgba(212, 175, 55, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+    }
+    </style>
+</head>
+<body class="bg-[#FAF8F5] text-black font-sans min-h-screen flex flex-col antialiased selection:bg-gold-500 selection:text-white">
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-white border-b border-slate-200 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a aria-label="Prospera AI Realtors" class="prospera-brand-logo group flex-shrink-0" href="index.html">
+        <span aria-hidden="true" class="prospera-logo-frame">
+          <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+        </span>
+      </a>
+      <!-- Desktop Primary Navigation -->
+      <nav aria-label="Primary navigation"
+        class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-700">
+        <a class="hover:text-gold-500 transition-colors" href="index.html">Home</a>
+        <a class="hover:text-gold-500 transition-colors" href="builders.html">Builders</a>
+        <a class="hover:text-gold-500 transition-colors" href="explore.html">Properties</a>
+        <a class="hover:text-gold-500 transition-colors" href="agents.html">Agents</a>
+        <a class="hover:text-gold-500 transition-colors" href="market-insights.html">Market Insights</a>
+        <a class="hover:text-gold-500 transition-colors" href="compare-projects.html">Compare</a>
+        <a class="hover:text-gold-500 transition-colors" href="book-site-visit.html">Book Site Visit</a>
+        <div class="prospera-about-dropdown" id="desktopAboutDropdown">
+          <button aria-controls="desktopAboutMenu" aria-expanded="false"
+            class="prospera-about-trigger hover:text-gold-500 transition-colors"
+            onclick="toggleAboutDropdown(event, 'desktopAboutDropdown')" type="button">
+            <span>About</span>
+            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+          </button>
+          <div aria-label="About links" class="prospera-about-menu" id="desktopAboutMenu" role="menu">
+            <a href="about-us.html" role="menuitem">About Us</a>
+            <a href="why-prospera-ai.html" role="menuitem">Why Prospera AI</a>
+            <a href="reviews.html" role="menuitem">Reviews</a>
+            <a href="contact.html" role="menuitem">Contact Us</a>
+            <a href="privacy-terms.html" role="menuitem">Privacy Policy</a>
+          </div>
+        </div>
+      </nav>
+      <!-- Right: Mobile Navigation -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button aria-label="Open menu"
+          class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl border border-gold-500/30 bg-gold-500/10 text-gold-500 hover:bg-gold-500/20 transition-all"
+          id="mobileMenuBtn" onclick="toggleMobileMenu()">
+          <i class="fa-solid fa-bars text-base" id="mobileMenuIcon"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Navigation Dropdown -->
+    <div class="hidden md:hidden border-t border-slate-200 bg-white" id="mobileMenu">
+      <nav aria-label="Mobile navigation" class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="index.html">Home</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="builders.html">Builders</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="explore.html">Properties</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="agents.html">Agents</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="market-insights.html">Market Insights</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="compare-projects.html">Compare</a>
+        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
+          href="book-site-visit.html">Book Site Visit</a>
+        <div class="prospera-mobile-about" id="mobileAboutDropdown">
+          <button aria-controls="mobileAboutMenu" aria-expanded="false" class="prospera-mobile-about-trigger"
+            onclick="toggleAboutDropdown(event, 'mobileAboutDropdown')" type="button">
+            <span>About</span>
+            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+          </button>
+          <div class="prospera-mobile-about-menu" id="mobileAboutMenu">
+            <a href="about-us.html">About Us</a>
+            <a href="why-prospera-ai.html">Why Prospera AI</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="privacy-terms.html">Privacy Policy</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+    <!-- HERO SECTION (MATCHING AGENTS.HTML & CONTACT.HTML) -->
+    <section class="builders-hero">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+        <nav class="flex items-center gap-2 text-xs text-[#555555] mb-4">
+          <a href="index.html" class="hover:text-gold-600 transition-colors flex items-center gap-1.5 font-medium">
+            <i class="fa-solid fa-house text-[11px]"></i> Home
+          </a>
+          <span class="text-gold-500">/</span>
+          <span class="text-black font-semibold">Verified Reviews</span>
+        </nav>
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white border border-[#D4AF37]/40 text-[#8C6D1F] mb-4 shadow-sm">
+          <i class="fa-solid fa-certificate text-gold-500"></i> Authentic Resident &amp; Buyer Experiences
+        </span>
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold text-black tracking-tight font-serif mb-4">
+          Client Stories &amp; <span class="text-gold-600">Verified Reviews.</span>
+        </h1>
+        <p class="text-[#333333] text-sm sm:text-base max-w-3xl leading-relaxed mb-6">
+          Unfiltered video testimonials, verified transaction case studies, and transparent ratings from homeowners who discovered, compared, and secured luxury residences in Delhi NCR through Prospera AI Realtors.
+        </p>
+        <div class="flex flex-wrap gap-4 text-xs">
+          <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border border-[#D4AF37]/30 text-[#182033] shadow-sm font-medium">
+            <i class="fa-solid fa-star text-gold-500 text-sm"></i> <strong class="text-black font-bold">4.9 / 5.0</strong> Average CSAT Score
+          </span>
+          <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border border-[#D4AF37]/30 text-[#182033] shadow-sm font-medium">
+            <i class="fa-solid fa-users text-gold-500 text-sm"></i> <strong class="text-black font-bold">1,250+</strong> Verified Buyers &amp; Investors
+          </span>
+          <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border border-[#D4AF37]/30 text-[#182033] shadow-sm font-medium">
+            <i class="fa-solid fa-shield-halved text-gold-500 text-sm"></i> <strong class="text-black font-bold">100%</strong> RERA Clear Transactions
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN REVIEWS CONTAINER -->
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1 w-full space-y-12">
+
+        <!-- FILTER & CSAT STATS BAR -->
+        <div class="p-6 review-card flex flex-col md:flex-row items-center justify-between gap-5">
+            <div class="flex flex-wrap items-center gap-3 w-full md:w-auto">
+                <span class="text-xs text-black font-bold uppercase tracking-wider flex items-center gap-2">
+                    <i class="fa-solid fa-filter text-gold-500 text-sm"></i> Filter by Project:
+                </span>
+                <select id="projectFilter" onchange="filterReviews()" class="bg-white border-2 border-[#D4AF37]/40 text-black font-semibold text-xs rounded-xl px-4 py-2.5 focus:outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 shadow-sm transition-all cursor-pointer">
+                    <option value="all">All Verified Projects (18 Reviews)</option>
+                    <option value="godrej-tropical">Godrej Tropical Isle (Sector 146, Noida)</option>
+                    <option value="dlf-camellias">DLF The Camellias (Golf Course Rd, Gurgaon)</option>
+                    <option value="m3m-golfestate">M3M Golfestate (Golf Course Ext, Gurgaon)</option>
+                    <option value="ats-knightsbridge">ATS Knightsbridge (Sector 124, Noida)</option>
+                    <option value="experion-windchants">Experion Windchants (Sector 112, Gurgaon)</option>
+                    <option value="max-estate">Max Estate 128 (Noida Expressway)</option>
+                </select>
+            </div>
+            <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-[#333333]">
+                <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-300 text-emerald-800 font-bold">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                    <span>98.4% Buyer Satisfaction</span>
+                </div>
+                <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FAF8F5] border border-[#D4AF37]/40 text-[#8C6D1F] font-bold">
+                    <i class="fa-solid fa-shield-halved text-gold-500"></i>
+                    <span>100% RERA Verified</span>
+                </div>
+                <div class="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FAF8F5] border border-[#D4AF37]/40 text-[#8C6D1F] font-bold">
+                    <i class="fa-solid fa-bolt text-gold-500"></i>
+                    <span>Avg. 42 Days to Key Handover</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 1: FEATURED VIDEO REVIEWS -->
+        <section class="space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#D4AF37]/30 pb-4">
+                <div>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-black">Featured Video Reviews</h2>
+                    <p class="text-[#444444] text-xs sm:text-sm font-medium mt-1">Real homeowners sharing their transparent pricing, AI valuation, and zero-brokerage experience.</p>
+                </div>
+                <span class="inline-flex items-center gap-1.5 text-[#8C6D1F] text-xs font-bold bg-[#FAF8F5] px-3.5 py-1.5 rounded-full border border-[#D4AF37]/50 shadow-sm w-fit">
+                    <i class="fa-solid fa-circle-play text-gold-500"></i> HD Video Stories
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Video Card 1 -->
+                <div class="review-item review-card overflow-hidden group flex flex-col" data-project="godrej-tropical">
+                    <div class="relative h-52 bg-black overflow-hidden">
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80" alt="Buyer at Godrej Tropical Isle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-14 h-14 rounded-full bg-[#D4AF37] text-black flex items-center justify-center shadow-lg play-pulse group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-play text-base ml-1 text-black"></i>
+                            </div>
+                        </div>
+                        <span class="absolute top-3 left-3 bg-black/80 border border-[#D4AF37] text-[#FAF8F5] text-[11px] px-2.5 py-1 rounded-md font-bold">
+                            Sector 146, Noida
+                        </span>
+                        <span class="absolute bottom-3 right-3 text-white text-[11px] bg-black/80 px-2.5 py-1 rounded font-semibold border border-white/20">
+                            03:24 Min
+                        </span>
+                    </div>
+                    <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-1 text-gold-500 text-sm">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="text-[11px] text-emerald-800 font-bold bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-300">Verified Buyer</span>
+                            </div>
+                            <h3 class="font-serif font-bold text-base text-black group-hover:text-gold-600 transition-colors leading-snug">"Prospera's Voice AI saved us ₹22 Lakhs on Godrej Tropical Isle"</h3>
+                            <p class="text-[#333333] text-xs leading-relaxed font-normal">
+                                Rajesh &amp; Sunita Verma booked a 4 BHK luxury residence. Real-time developer registry audit and bank loan sanction in 48 hours with zero broker interference.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-[#D4AF37]/20 flex items-center justify-between text-xs">
+                            <span class="text-black font-bold">Rajesh &amp; Sunita Verma</span>
+                            <span class="text-gold-600 font-bold">Godrej Tropical Isle</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 2 -->
+                <div class="review-item review-card overflow-hidden group flex flex-col" data-project="dlf-camellias">
+                    <div class="relative h-52 bg-black overflow-hidden">
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="Buyer at DLF The Camellias" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-14 h-14 rounded-full bg-[#D4AF37] text-black flex items-center justify-center shadow-lg play-pulse group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-play text-base ml-1 text-black"></i>
+                            </div>
+                        </div>
+                        <span class="absolute top-3 left-3 bg-black/80 border border-[#D4AF37] text-[#FAF8F5] text-[11px] px-2.5 py-1 rounded-md font-bold">
+                            Golf Course Rd, Gurgaon
+                        </span>
+                        <span class="absolute bottom-3 right-3 text-white text-[11px] bg-black/80 px-2.5 py-1 rounded font-semibold border border-white/20">
+                            04:12 Min
+                        </span>
+                    </div>
+                    <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-1 text-gold-500 text-sm">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="text-[11px] text-emerald-800 font-bold bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-300">Verified Investor</span>
+                            </div>
+                            <h3 class="font-serif font-bold text-base text-black group-hover:text-gold-600 transition-colors leading-snug">"Effortless NRI portfolio acquisition at DLF The Camellias"</h3>
+                            <p class="text-[#333333] text-xs leading-relaxed font-normal">
+                                Vikram Singhania (Singapore) completed an end-to-end luxury penthouse acquisition with remote digital RERA verification and automated legal due diligence.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-[#D4AF37]/20 flex items-center justify-between text-xs">
+                            <span class="text-black font-bold">Vikram Singhania</span>
+                            <span class="text-gold-600 font-bold">DLF The Camellias</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 3 -->
+                <div class="review-item review-card overflow-hidden group flex flex-col" data-project="m3m-golfestate">
+                    <div class="relative h-52 bg-black overflow-hidden">
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Buyer at M3M Golfestate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-14 h-14 rounded-full bg-[#D4AF37] text-black flex items-center justify-center shadow-lg play-pulse group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-play text-base ml-1 text-black"></i>
+                            </div>
+                        </div>
+                        <span class="absolute top-3 left-3 bg-black/80 border border-[#D4AF37] text-[#FAF8F5] text-[11px] px-2.5 py-1 rounded-md font-bold">
+                            Golf Course Ext, Gurgaon
+                        </span>
+                        <span class="absolute bottom-3 right-3 text-white text-[11px] bg-black/80 px-2.5 py-1 rounded font-semibold border border-white/20">
+                            02:45 Min
+                        </span>
+                    </div>
+                    <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-1 text-gold-500 text-sm">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="text-[11px] text-emerald-800 font-bold bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-300">Verified Resident</span>
+                            </div>
+                            <h3 class="font-serif font-bold text-base text-black group-hover:text-gold-600 transition-colors leading-snug">"Instant site visit coordination &amp; zero broker pressure"</h3>
+                            <p class="text-[#333333] text-xs leading-relaxed font-normal">
+                                Dr. Alok and Priya Mehra praised the AI Property Comparison engine that helped them evaluate sunlight orientation and floor plans before booking M3M Golfestate.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-[#D4AF37]/20 flex items-center justify-between text-xs">
+                            <span class="text-black font-bold">Dr. Alok &amp; Priya Mehra</span>
+                            <span class="text-gold-600 font-bold">M3M Golfestate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: VERIFIED WRITTEN REVIEWS & AI SENTIMENT -->
+        <section class="space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#D4AF37]/30 pb-4">
+                <div>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-black">Written Resident Testimonials</h2>
+                    <p class="text-[#444444] text-xs sm:text-sm font-medium mt-1">Unfiltered experiences analyzed and verified via Prospera AI Sentiment Engine.</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs text-[#333333] font-semibold">Overall Sentiment:</span>
+                    <span class="text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-300 px-3 py-1 rounded-full shadow-sm">
+                        <i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> 99.1% Positive
+                    </span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Review 1 -->
+                <div class="review-item review-card p-6 space-y-4" data-project="godrej-tropical">
+                    <div class="flex items-start justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#D4AF37] to-[#8C6D1F] p-0.5 shadow-sm">
+                                <div class="w-full h-full rounded-full bg-white flex items-center justify-center font-bold text-gold-600 text-sm">
+                                    AK
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black text-sm">Amitabh Kapoor</h4>
+                                <p class="text-[#555555] text-xs font-medium">Director at FinTech Corp • Booked 4 BHK</p>
+                            </div>
+                        </div>
+                        <span class="text-[11px] text-emerald-800 font-bold bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-300">
+                            AI Sentiment: 99%
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-1 text-gold-500 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-[#182033] text-xs sm:text-sm leading-relaxed font-normal">
+                        "The comparison tool on Prospera between Godrej Tropical Isle and ATS Knightsbridge was revolutionary. Their predictive appreciation metrics proved 100% accurate in the subsequent quarter. Best luxury buying experience in NCR."
+                    </p>
+                    <div class="pt-3 border-t border-[#D4AF37]/20 text-xs text-[#555555] flex items-center justify-between font-medium">
+                        <span class="text-gold-600 font-bold">Godrej Tropical Isle, Sector 146 Noida</span>
+                        <span>Purchased Nov 2025</span>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-item review-card p-6 space-y-4" data-project="dlf-camellias">
+                    <div class="flex items-start justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#D4AF37] to-[#8C6D1F] p-0.5 shadow-sm">
+                                <div class="w-full h-full rounded-full bg-white flex items-center justify-center font-bold text-gold-600 text-sm">
+                                    SM
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black text-sm">Sneha Mathur</h4>
+                                <p class="text-[#555555] text-xs font-medium">Venture Partner • Booked Luxury Penthouse</p>
+                            </div>
+                        </div>
+                        <span class="text-[11px] text-emerald-800 font-bold bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-300">
+                            AI Sentiment: 98%
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-1 text-gold-500 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-[#182033] text-xs sm:text-sm leading-relaxed font-normal">
+                        "I used Prospera's Voice Search while driving to Gurgaon: 'Find me ready-to-move 5000+ sq.ft on Golf Course Road'. Within 5 minutes, agent Ananya Mukherjee sent me complete video walk-throughs and verified builder approvals."
+                    </p>
+                    <div class="pt-3 border-t border-[#D4AF37]/20 text-xs text-[#555555] flex items-center justify-between font-medium">
+                        <span class="text-gold-600 font-bold">DLF The Camellias, Gurgaon</span>
+                        <span>Purchased Jan 2026</span>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-item review-card p-6 space-y-4" data-project="ats-knightsbridge">
+                    <div class="flex items-start justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#D4AF37] to-[#8C6D1F] p-0.5 shadow-sm">
+                                <div class="w-full h-full rounded-full bg-white flex items-center justify-center font-bold text-gold-600 text-sm">
+                                    RG
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black text-sm">Rohit Gujral</h4>
+                                <p class="text-[#555555] text-xs font-medium">Industrialist • Booked 6,000 Sq.Ft Residence</p>
+                            </div>
+                        </div>
+                        <span class="text-[11px] text-emerald-800 font-bold bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-300">
+                            AI Sentiment: 100%
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-1 text-gold-500 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-[#182033] text-xs sm:text-sm leading-relaxed font-normal">
+                        "Zero spam calls. That alone makes Prospera 10x better than any traditional brokerage. You deal only with certified senior advisors who know the exact floor plan nuances and RERA clearances."
+                    </p>
+                    <div class="pt-3 border-t border-[#D4AF37]/20 text-xs text-[#555555] flex items-center justify-between font-medium">
+                        <span class="text-gold-600 font-bold">ATS Knightsbridge, Sector 124 Noida</span>
+                        <span>Purchased Dec 2025</span>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-item review-card p-6 space-y-4" data-project="m3m-golfestate">
+                    <div class="flex items-start justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#D4AF37] to-[#8C6D1F] p-0.5 shadow-sm">
+                                <div class="w-full h-full rounded-full bg-white flex items-center justify-center font-bold text-gold-600 text-sm">
+                                    ND
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black text-sm">Nandini &amp; Devansh Rao</h4>
+                                <p class="text-[#555555] text-xs font-medium">Tech Founders • Booked 3 BHK Duplex</p>
+                            </div>
+                        </div>
+                        <span class="text-[11px] text-emerald-800 font-bold bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-300">
+                            AI Sentiment: 97%
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-1 text-gold-500 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-[#182033] text-xs sm:text-sm leading-relaxed font-normal">
+                        "From our initial query on the AI Property Finder to receiving key handover took less than 45 days. The payment milestone escrow guidance saved us significant anxiety. Highly recommended."
+                    </p>
+                    <div class="pt-3 border-t border-[#D4AF37]/20 text-xs text-[#555555] flex items-center justify-between font-medium">
+                        <span class="text-gold-600 font-bold">M3M Golfestate, Gurgaon</span>
+                        <span>Purchased Feb 2026</span>
+                    </div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-item review-card p-6 space-y-4" data-project="experion-windchants">
+                    <div class="flex items-start justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#D4AF37] to-[#8C6D1F] p-0.5 shadow-sm">
+                                <div class="w-full h-full rounded-full bg-white flex items-center justify-center font-bold text-gold-600 text-sm">
+                                    SS
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black text-sm">Siddharth &amp; Tanya Singhal</h4>
+                                <p class="text-[#555555] text-xs font-medium">Strategy Partner, MNC • Booked Luxury Villa</p>
+                            </div>
+                        </div>
+                        <span class="text-[11px] text-emerald-800 font-bold bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-300">
+                            AI Sentiment: 99%
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-1 text-gold-500 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-[#182033] text-xs sm:text-sm leading-relaxed font-normal">
+                        "Prospera's micro-market appreciation prediction gave us total confidence. Their advisor handled all builder coordination, agreement vetting, and stamp duty calculation seamlessly."
+                    </p>
+                    <div class="pt-3 border-t border-[#D4AF37]/20 text-xs text-[#555555] flex items-center justify-between font-medium">
+                        <span class="text-gold-600 font-bold">Experion Windchants, Sector 112 Gurgaon</span>
+                        <span>Purchased Oct 2025</span>
+                    </div>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="review-item review-card p-6 space-y-4" data-project="max-estate">
+                    <div class="flex items-start justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#D4AF37] to-[#8C6D1F] p-0.5 shadow-sm">
+                                <div class="w-full h-full rounded-full bg-white flex items-center justify-center font-bold text-gold-600 text-sm">
+                                    RS
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black text-sm">Col. R. Singh (Retd.)</h4>
+                                <p class="text-[#555555] text-xs font-medium">Defence Veteran &amp; Investor • Booked 3 BHK</p>
+                            </div>
+                        </div>
+                        <span class="text-[11px] text-emerald-800 font-bold bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-300">
+                            AI Sentiment: 100%
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-1 text-gold-500 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-[#182033] text-xs sm:text-sm leading-relaxed font-normal">
+                        "As a senior citizen, transparency and clear legal titles were my top priorities. Prospera's team verified the title deeds and handled the registration without a single hidden charge."
+                    </p>
+                    <div class="pt-3 border-t border-[#D4AF37]/20 text-xs text-[#555555] flex items-center justify-between font-medium">
+                        <span class="text-gold-600 font-bold">Max Estate 128, Noida Expressway</span>
+                        <span>Purchased Jan 2026</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: RATING & TRUST BREAKDOWN -->
+        <section class="review-card p-8 sm:p-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-5 text-center lg:text-left border-b lg:border-b-0 lg:border-r border-[#D4AF37]/30 pb-8 lg:pb-0 lg:pr-8">
+                    <span class="text-xs font-bold uppercase tracking-wider text-[#8C6D1F]">Verified Benchmark</span>
+                    <div class="flex items-baseline justify-center lg:justify-start gap-3 mt-2">
+                        <span class="font-serif text-6xl font-bold text-black">4.9</span>
+                        <span class="text-lg font-bold text-[#555555]">/ 5.0</span>
+                    </div>
+                    <div class="flex items-center justify-center lg:justify-start gap-1 text-gold-500 text-base my-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs text-[#444444] font-medium">Based on 1,250+ verified homeowner surveys across Noida, Greater Noida, and Gurgaon.</p>
+                    
+                    <div class="mt-6 space-y-2 text-xs">
+                        <div class="flex items-center gap-3">
+                            <span class="w-12 text-black font-semibold">5 Stars</span>
+                            <div class="flex-1 bg-gray-100 rounded-full h-2.5 overflow-hidden">
+                                <div class="bg-[#D4AF37] h-full rounded-full" style="width: 92%;"></div>
+                            </div>
+                            <span class="w-10 text-right font-bold text-black">92%</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-12 text-black font-semibold">4 Stars</span>
+                            <div class="flex-1 bg-gray-100 rounded-full h-2.5 overflow-hidden">
+                                <div class="bg-[#D4AF37] h-full rounded-full" style="width: 7%;"></div>
+                            </div>
+                            <span class="w-10 text-right font-bold text-black">7%</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-12 text-black font-semibold">3 Stars</span>
+                            <div class="flex-1 bg-gray-100 rounded-full h-2.5 overflow-hidden">
+                                <div class="bg-[#D4AF37] h-full rounded-full" style="width: 1%;"></div>
+                            </div>
+                            <span class="w-10 text-right font-bold text-black">1%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#D4AF37]/30 space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-white border border-[#D4AF37]/40 flex items-center justify-center text-gold-600 text-lg shadow-sm">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h4 class="font-bold text-sm text-black">100% RERA Verified</h4>
+                        <p class="text-xs text-[#444444] leading-relaxed">
+                            Zero disputed or unapproved inventory. All listed units have verified registration numbers and bank clearances.
+                        </p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#D4AF37]/30 space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-white border border-[#D4AF37]/40 flex items-center justify-center text-gold-600 text-lg shadow-sm">
+                            <i class="fa-solid fa-handshake-slash"></i>
+                        </div>
+                        <h4 class="font-bold text-sm text-black">Zero Broker Spam</h4>
+                        <p class="text-xs text-[#444444] leading-relaxed">
+                            No persistent telephone follow-ups or pushy brokers. Connect only when you schedule a private consultation.
+                        </p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#D4AF37]/30 space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-white border border-[#D4AF37]/40 flex items-center justify-center text-gold-600 text-lg shadow-sm">
+                            <i class="fa-solid fa-piggy-bank"></i>
+                        </div>
+                        <h4 class="font-bold text-sm text-black">₹18.4L Avg. Savings</h4>
+                        <p class="text-xs text-[#444444] leading-relaxed">
+                            Direct developer negotiations and algorithm-driven market valuations ensure buyers pay fair market benchmark.
+                        </p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-[#FAF8F5] border border-[#D4AF37]/30 space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-white border border-[#D4AF37]/40 flex items-center justify-center text-gold-600 text-lg shadow-sm">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                        <h4 class="font-bold text-sm text-black">48-Hr Legal Audit</h4>
+                        <p class="text-xs text-[#444444] leading-relaxed">
+                            Complete documentation, encumbrance check, and builder escrow clearance completed in under 48 hours.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: SUBMIT REVIEW CTA (DARK LUXURY OBSIDIAN-GOLD MATCHING INDEX.HTML & AGENTS.HTML) -->
+        <section class="rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-2xl border border-gold-500/30" style="background: linear-gradient(145deg, #2a2418, #57400f);">
+            <div class="relative z-10 max-w-3xl mx-auto text-center space-y-5">
+                <div class="w-14 h-14 rounded-full bg-[#D4AF37]/20 text-[#FAF8F5] border border-[#D4AF37]/50 flex items-center justify-center mx-auto text-2xl shadow-lg">
+                    <i class="fa-solid fa-feather-pointed text-gold-400"></i>
+                </div>
+                <h3 class="font-serif text-2xl sm:text-4xl font-bold text-white tracking-wide">
+                    Are You a Prospera Homeowner?
+                </h3>
+                <p class="text-slate-200 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed font-normal">
+                    Share your property journey to help fellow luxury buyers make verified investment decisions. All verified reviews receive a complimentary annual real estate portfolio audit and yield report.
+                </p>
+                <div class="pt-3 flex flex-wrap items-center justify-center gap-4">
+                    <a href="contact.html?type=review" class="btn-gold-primary px-8 py-3.5 text-xs font-bold tracking-wider">
+                        <i class="fa-solid fa-paper-plane mr-2 text-white"></i> Submit Your Review
+                    </a>
+                    <a href="contact.html" class="inline-flex items-center justify-center px-8 py-3.5 rounded-xl border border-white/40 text-white hover:bg-white/10 font-bold text-xs uppercase tracking-wider transition-all">
+                        <i class="fa-solid fa-phone mr-2 text-gold-400"></i> Speak with Advisor
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+<footer class="bg-white border-t border-slate-200 text-slate-600 text-sm py-12 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div aria-label="Prospera AI Realtors" class="prospera-footer-brand mb-4">
+            <span aria-hidden="true" class="prospera-logo-frame">
+              <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+            </span>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            India’s premier AI-first conversational real estate network. Unbiased recommendations, voice search, and
+            predictive market intelligence.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="about-us.html">About Us</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="why-prospera-ai.html">Why Prospera
+                AI</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="reviews.html">Reviews</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="contact.html">Contact Us</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="privacy-terms.html">Privacy
+                Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Top Locations</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Gomti Nagar'); return false;">Gomti
+                Nagar</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Gomti Nagar Extension'); return false;">Gomti Nagar Extension</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Shaheed Path'); return false;">Shaheed
+                Path</a></li>
+            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
+                onclick="askAILocation('Sultanpur Road'); return false;">Sultanpur Road</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Contact &amp; Legal</h4>
+          <p class="text-xs text-slate-500 mb-2"><i class="fa-solid fa-envelope text-gold-500 mr-2"></i>
+            advisor@prospera.ai</p>
+          <p class="text-xs text-slate-500 mb-4"><i class="fa-solid fa-phone text-gold-500 mr-2"></i> +91 1800-PROSPERA
+          </p>
+          <div class="flex gap-3">
+            <a aria-label="LinkedIn"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+            <a aria-label="Twitter / X"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-x-twitter text-xs"></i></a>
+            <a aria-label="Instagram"
+              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
+              href="#"><i class="fa-brands fa-instagram text-xs"></i></a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pt-8 border-t border-slate-200 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>© 2026 Prospera AI Realtors Inc. All rights reserved.</p>
+        <p class="text-slate-500">RERA Reg: UPRERA/AI/2026/001</p>
+      </div>
+    </div>
+  </footer>
+    <!-- =========================================
+         END PROSPERA MASTER FOOTER
+         ========================================= -->
+
+    <!-- FLOATING AI ASSISTANT WIDGET & VOICE INTERFACE -->
+    <div id="floatingAIWidget" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end max-w-[calc(100vw-2rem)]">
+
+        <!-- Collapsible Chat Drawer -->
+        <div id="aiChatDrawer" class="hidden w-[calc(100vw-2rem)] sm:w-[380px] md:w-[400px] max-w-[400px] h-[500px] max-h-[calc(100vh-7rem)] rounded-3xl glass-card border border-gold-500/40 shadow-gold-glow-lg flex-col overflow-hidden mb-3 sm:mb-4 transition-all transform duration-300 box-border">
+            <!-- Chat Drawer Header -->
+            <div class="p-4 bg-obsidian-900 border-b border-gold-500/20 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-gold-500 to-gold-300 p-0.5 shadow-gold-glow">
+                        <div class="w-full h-full bg-obsidian-950 rounded-full flex items-center justify-center text-gold-400">
+                            <i class="fa-solid fa-robot text-sm"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm">Prospera Voice AI</h4>
+                        <span class="text-[10px] text-emerald-400 flex items-center gap-1">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Live &amp; Listening
+                        </span>
+                    </div>
+                </div>
+                <button onclick="toggleFloatingChat()" class="text-slate-400 hover:text-white p-1">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Chat Drawer Body Messages -->
+            <div id="chatMessages" class="flex-1 p-4 overflow-y-auto space-y-3 text-xs">
+                <!-- AI Welcome Message -->
+                <div class="flex gap-2.5">
+                    <div class="w-7 h-7 rounded-full bg-gold-500/20 border border-gold-500/40 flex items-center justify-center text-gold-400 flex-shrink-0">
+                        <i class="fa-solid fa-robot text-xs"></i>
+                    </div>
+                    <div class="bg-obsidian-800 border border-gold-500/20 p-3 rounded-2xl rounded-tl-none text-slate-200 max-w-[82%] leading-relaxed">
+                        Hi, welcome to Prospera AI Realtors. Tell me your budget or city, and I'll help you find the right property.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Drawer Quick Chips -->
+            <div class="px-3 py-2 bg-obsidian-900/60 border-t border-slate-800 flex gap-2 overflow-x-auto text-[11px] whitespace-nowrap">
+                <button onclick="sendQuickMessage('Find 3BHK in Noida under 1.8 Cr')" class="px-2.5 py-1 rounded-full bg-obsidian-800 border border-gold-500/20 text-slate-300 hover:text-gold-300">
+                    3BHK Noida &lt; 1.8Cr
+                </button>
+                <button onclick="sendQuickMessage('Top luxury projects in Gurgaon')" class="px-2.5 py-1 rounded-full bg-obsidian-800 border border-gold-500/20 text-slate-300 hover:text-gold-300">
+                    Gurgaon Luxury
+                </button>
+            </div>
+
+            <!-- Chat Drawer Input Footer -->
+            <div class="p-3 bg-obsidian-900 border-t border-gold-500/20 flex items-center gap-2">
+                <button onclick="triggerVoiceModal()" class="w-9 h-9 rounded-xl bg-gold-500/20 border border-gold-500/40 text-gold-400 flex items-center justify-center hover:bg-gold-500/30 transition-colors" title="Speak to AI">
+                    <i class="fa-solid fa-microphone text-xs"></i>
+                </button>
+                <input type="text" id="floatingInput" placeholder="Type requirement..." onkeypress="handleKeyPress(event)" class="flex-1 bg-obsidian-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-gold-400">
+                <button onclick="sendFloatingMessage()" class="w-9 h-9 rounded-xl gold-btn-gradient text-obsidian-950 font-bold flex items-center justify-center hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Floating Action Button Orb -->
+        <button onclick="window.location.href='ai-property-finder.html'" class="relative group flex items-center gap-3 bg-gradient-to-r from-obsidian-900 via-obsidian-800 to-obsidian-950 border-2 border-gold-500 text-white p-3 sm:px-5 sm:py-3.5 rounded-full shadow-gold-glow hover:shadow-gold-glow-lg transition-all transform hover:scale-105">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-gold-300 via-gold-500 to-gold-700 flex items-center justify-center text-obsidian-950 font-bold">
+                <i class="fa-solid fa-robot text-sm"></i>
+            </div>
+            <span class="hidden sm:inline-block font-semibold text-xs text-gold-300 tracking-wider uppercase">AI Advisor</span>
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping absolute top-1 right-1"></span>
+        </button>
+
+    </div>
+
+    <!-- FULLSCREEN / MODAL VOICE EXPERIENCE OVERLAY -->
+    <div id="voiceModal" class="fixed inset-0 z-50 bg-obsidian-950/95 backdrop-blur-2xl hidden flex-col items-center justify-center p-4">
+        <button onclick="closeVoiceModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-gold-500/30 bg-obsidian-900 text-slate-300 hover:text-white hover:border-gold-400 flex items-center justify-center transition-all">
+            <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+
+        <div class="max-w-xl w-full text-center space-y-6 sm:space-y-8">
+            <div class="inline-block px-4 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold tracking-widest uppercase">
+                Interactive Voice Session
+            </div>
+
+            <!-- Pulsing Voice Visualizer -->
+            <div class="relative w-36 h-36 sm:w-44 sm:h-44 mx-auto flex items-center justify-center">
+                <div id="modalPulseRing" class="absolute inset-0 rounded-full border-2 border-gold-500/30 avatar-pulse"></div>
+                <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-gradient-to-tr from-obsidian-900 via-gold-900/40 to-obsidian-800 border border-gold-400 flex items-center justify-center shadow-gold-glow-lg">
+                    <i class="fa-solid fa-microphone text-4xl sm:text-5xl text-gold-400 animate-pulse"></i>
+                </div>
+            </div>
+
+            <!-- Soundwave graphic -->
+            <div class="flex justify-center items-center gap-1.5 h-10">
+                <div class="w-1.5 bg-gold-400 rounded-full animate-wave-1 h-6"></div>
+                <div class="w-1.5 bg-gold-300 rounded-full animate-wave-2 h-10"></div>
+                <div class="w-1.5 bg-gold-500 rounded-full animate-wave-3 h-8"></div>
+                <div class="w-1.5 bg-gold-400 rounded-full animate-wave-4 h-5"></div>
+                <div class="w-1.5 bg-gold-300 rounded-full animate-wave-5 h-9"></div>
+            </div>
+
+            <!-- Live Transcript Text -->
+            <div class="space-y-2">
+                <h3 id="modalVoiceStatus" class="font-serif text-xl sm:text-2xl font-bold text-white">Listening to your voice...</h3>
+                <p id="modalVoiceTranscript" class="text-slate-300 text-xs sm:text-sm max-w-md mx-auto italic">
+                    "Looking for a 3 BHK luxury apartment in Gurgaon under 3.5 Crores near metro station..."
+                </p>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 px-2">
+                <button onclick="simulateVoiceInput('Looking for 3 BHK in Gurgaon Golf Course Road under 4 Cr')" class="px-4 py-2 rounded-xl bg-obsidian-900 border border-gold-500/30 text-xs text-gold-300 hover:bg-gold-500/20 transition-all">
+                    "3 BHK Gurgaon Golf Course"
+                </button>
+                <button onclick="simulateVoiceInput('Plots in Greater Noida West near Metro')" class="px-4 py-2 rounded-xl bg-obsidian-900 border border-gold-500/30 text-xs text-gold-300 hover:bg-gold-500/20 transition-all">
+                    "Plots Greater Noida West"
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT LOGIC -->
+    <script>
+        function filterReviews() {
+            const val = document.getElementById('projectFilter').value;
+            const items = document.querySelectorAll('.review-item');
+
+            items.forEach(item => {
+                if (val === 'all' || item.dataset.project === val) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function triggerVoiceModal() {
+            const modal = document.getElementById('voiceModal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }
+        }
+
+        function closeVoiceModal() {
+            const modal = document.getElementById('voiceModal');
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        }
+
+        function simulateVoiceInput(text) {
+            const transcript = document.getElementById('modalVoiceTranscript');
+            const status = document.getElementById('modalVoiceStatus');
+            if (transcript) transcript.innerText = '"' + text + '"';
+            if (status) status.innerText = "Analyzing requirements with AI...";
+            setTimeout(() => {
+                closeVoiceModal();
+                const heroInput = document.getElementById('heroPromptInput');
+                if (heroInput) {
+                    heroInput.value = text;
+                    if (typeof submitHeroQuery === 'function') submitHeroQuery();
+                } else {
+                    const drawer = document.getElementById('aiChatDrawer');
+                    if (drawer && drawer.classList.contains('hidden')) {
+                        toggleFloatingChat();
+                    }
+                    const floatingInput = document.getElementById('floatingInput');
+                    if (floatingInput) {
+                        floatingInput.value = text;
+                        sendFloatingMessage();
+                    }
+                }
+            }, 1500);
+        }
+
+        function toggleFloatingChat() {
+            const drawer = document.getElementById('aiChatDrawer');
+            if (!drawer) return;
+            if (drawer.classList.contains('hidden')) {
+                drawer.classList.remove('hidden');
+                drawer.classList.add('flex');
+            } else {
+                drawer.classList.add('hidden');
+                drawer.classList.remove('flex');
+            }
+        }
+
+        function handleKeyPress(e) {
+            if (e.key === 'Enter') sendFloatingMessage();
+        }
+
+        function sendQuickMessage(text) {
+            const input = document.getElementById('floatingInput');
+            if (input) {
+                input.value = text;
+                sendFloatingMessage();
+            }
+        }
+
+        function sendFloatingMessage() {
+            const input = document.getElementById('floatingInput');
+            if (!input || !input.value.trim()) return;
+            const val = input.value.trim();
+            const chatMessages = document.getElementById('chatMessages');
+            if (chatMessages) {
+                const userDiv = document.createElement('div');
+                userDiv.className = 'flex justify-end';
+                userDiv.innerHTML = '<div class="bg-gold-500 text-obsidian-950 font-semibold p-2.5 rounded-2xl rounded-tr-none max-w-[80%]">' + val + '</div>';
+                chatMessages.appendChild(userDiv);
+                input.value = '';
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                setTimeout(() => {
+                    const aiDiv = document.createElement('div');
+                    aiDiv.className = 'flex gap-2.5';
+                    aiDiv.innerHTML = `
+                        <div class="w-7 h-7 rounded-full bg-gold-500/20 border border-gold-500/40 flex items-center justify-center text-gold-400 flex-shrink-0">
+                            <i class="fa-solid fa-robot text-xs"></i>
+                        </div>
+                        <div class="bg-obsidian-800 border border-gold-500/20 p-3 rounded-2xl rounded-tl-none text-slate-200 max-w-[82%] leading-relaxed">
+                            I found several verified projects matching "${val}". Explore them above or speak with our luxury advisor.
+                        </div>
+                    `;
+                    chatMessages.appendChild(aiDiv);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 600);
+            }
+        }
+    </script>
+    <!-- Global Theme Toggle JS -->
+    <script>
+      function askAILocation(loc) {
+        window.location.href = 'ai-property-finder.html?q=' + encodeURIComponent('Find best properties and appreciation rate in ' + loc);
+      }
+    </script>
+    <script src="theme.js"></script>
+  <script>
+    function toggleAboutDropdown(event, id) {
+      if (event) { event.preventDefault(); event.stopPropagation(); }
+      const wrap = document.getElementById(id);
+      if (!wrap) return;
+      const isOpen = wrap.classList.toggle("is-open");
+      const trigger = wrap.querySelector(".prospera-about-trigger,.prospera-mobile-about-trigger");
+      if (trigger) trigger.setAttribute("aria-expanded", String(isOpen));
+    }
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".prospera-about-dropdown.is-open,.prospera-mobile-about.is-open").forEach((wrap) => {
+        if (!wrap.contains(event.target)) {
+          wrap.classList.remove("is-open");
+          const trigger = wrap.querySelector(".prospera-about-trigger,.prospera-mobile-about-trigger");
+          if (trigger) trigger.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+    function toggleMobileMenu() {
+      const menu = document.getElementById("mobileMenu"), icon = document.getElementById("mobileMenuIcon");
+      if (!menu) return;
+      const hidden = menu.classList.contains("hidden");
+      menu.classList.toggle("hidden", !hidden);
+      if (icon) { icon.classList.toggle("fa-bars", !hidden); icon.classList.toggle("fa-xmark", hidden); }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGradQual" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </radialGradient>
+    
+    <!-- User Profile Gradient -->
+    <linearGradient id="userGradQual" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+
+    <!-- Metallic Edge Gradient -->
+    <linearGradient id="edgeGradQual" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#1e40af" />
+    </linearGradient>
+    
+    <!-- Checkmark Badge Color -->
+    <linearGradient id="badgeGradQual" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#3b82f6" />
+        <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Circular Badge Background -->
+  <circle cx="256" cy="256" r="230" fill="url(#bgGradQual)" stroke="url(#edgeGradQual)" stroke-width="12" />
+
+  <!-- User Profile Icon (Stack of 2) -->
+  <!-- User 1 (Behind) -->
+  <g transform="translate(180, 190) scale(0.85)">
+    <circle cx="80" cy="70" r="50" fill="#1e40af" opacity="0.5"/>
+    <path d="M80 130C46 130 20 156 20 190H140C140 156 114 130 80 130Z" fill="#1e40af" opacity="0.5"/>
+  </g>
+  <!-- User 2 (Main) -->
+  <g transform="translate(200, 170)">
+    <circle cx="80" cy="70" r="50" fill="url(#userGradQual)" stroke="#bfdbfe" stroke-width="4"/>
+    <path d="M80 130C46 130 20 156 20 190H140C140 156 114 130 80 130Z" fill="url(#userGradQual)" stroke="#bfdbfe" stroke-width="4"/>
+  </g>
+
+  <!-- Qualification Badge (Shield with Checkmark) -->
+  <g transform="translate(310, 310)">
+    <path d="M0 30C0 13 13 0 30 0H60C77 0 90 13 90 30V60C90 77 77 90 60 90H30C13 90 0 77 0 60V30Z" fill="url(#badgeGradQual)" stroke="#ffffff" stroke-width="6"/>
+    <!-- Checkmark -->
+    <path d="M25 45L40 60L65 30" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- AI Star/Sparkle Detail on main user -->
+    <path d="M250 180L255 195L270 200L255 205L250 220L245 205L230 200L245 195L250 180Z" fill="#ffffff" opacity="0.9"/>
+
+</svg>

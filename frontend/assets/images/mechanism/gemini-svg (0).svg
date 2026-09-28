@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </radialGradient>
+    
+    <!-- Bulb Glow Gradient -->
+    <linearGradient id="bulbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+
+    <!-- Metallic Edge Gradient -->
+    <linearGradient id="edgeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#1e40af" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Circular Badge Background -->
+  <circle cx="256" cy="256" r="230" fill="url(#bgGrad)" stroke="url(#edgeGrad)" stroke-width="12" />
+
+  <!-- Bulb Body -->
+  <path d="M256 110C190 110 136 164 136 230C136 272 159 308 193 328V376C193 384 199 390 207 390H305C313 390 319 384 319 376V328C353 308 376 272 376 230C376 164 322 110 256 110Z" fill="url(#bulbGrad)" stroke="#93c5fd" stroke-width="4" opacity="0.95" />
+
+  <!-- Bulb Base / Screw Thread -->
+  <path d="M205 396H307V412C307 418 302 423 296 423H216C210 423 205 418 205 412V396Z" fill="#3b82f6" stroke="#93c5fd" stroke-width="2" />
+  <path d="M210 427H302V438C302 443 298 447 293 447H219C214 447 210 443 210 438V427Z" fill="#1e40af" stroke="#93c5fd" stroke-width="2" />
+  <path d="M225 451H287V462C287 466 284 469 280 469H232C228 469 225 466 225 462V451Z" fill="#172554" stroke="#93c5fd" stroke-width="2" />
+
+  <!-- AI Brain / Circuit Network inside Bulb -->
+  <path d="M220 230C220 210 240 190 256 190C272 190 292 210 292 230C292 245 280 260 265 270V290H247V270C232 260 220 245 220 230Z" fill="none" stroke="#e0f2fe" stroke-width="5" stroke-linejoin="round" />
+  <circle cx="256" cy="230" r="15" fill="none" stroke="#e0f2fe" stroke-width="4" />
+  <circle cx="256" cy="230" r="5" fill="#ffffff" />
+  <!-- Circuit Nodes -->
+  <circle cx="225" cy="205" r="4" fill="#ffffff" />
+  <circle cx="287" cy="205" r="4" fill="#ffffff" />
+  <circle cx="230" cy="255" r="4" fill="#ffffff" />
+  <circle cx="282" cy="255" r="4" fill="#ffffff" />
+  <line x1="225" y1="205" x2="242" y2="220" stroke="#ffffff" stroke-width="3" />
+  <line x1="287" y1="205" x2="270" y2="220" stroke="#ffffff" stroke-width="3" />
+
+  <!-- Glowing Sparkles / AI Stars -->
+  <path d="M330 140L335 155L350 160L335 165L330 180L325 165L310 160L325 155L330 140Z" fill="#ffffff" opacity="0.9" />
+  <path d="M180 160L183 170L193 173L183 176L180 186L177 176L167 173L177 170L180 160Z" fill="#ffffff" opacity="0.7" />
+  <path d="M320 290L322 296L328 298L322 300L320 306L318 300L312 298L318 296L320 290Z" fill="#ffffff" opacity="0.8" />
+</svg>
