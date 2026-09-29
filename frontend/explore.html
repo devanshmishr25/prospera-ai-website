@@ -129,12 +129,17 @@
       transform: translateY(-2px) !important;
     }
 
-    /* Project card title over image */
-    .project-item h3 {
-      color: #FFFFFF !important;
-      -webkit-text-fill-color: #FFFFFF !important;
+    /* Project card title in white body */
+    .project-item h3,
+    .project-item .font-heading {
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
       font-weight: 700 !important;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9) !important;
+      text-shadow: none !important;
+    }
+    .project-item:hover h3 {
+      color: #8C6D1F !important;
+      -webkit-text-fill-color: #8C6D1F !important;
     }
 
     /* STRICT BUTTON SYSTEM:
@@ -396,81 +401,83 @@
 
 </head>
 <body class="bg-[#f7f4ee] text-[#182033] font-sans selection:bg-gold-200 selection:text-[#182033] relative antialiased min-h-screen overflow-x-hidden">
-<header class="fixed top-0 left-0 right-0 w-full z-50 bg-white border-b border-slate-200 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <!-- Brand Logo -->
-      <a aria-label="Prospera AI Realtors" class="prospera-brand-logo group flex-shrink-0" href="index.html">
-        <span aria-hidden="true" class="prospera-logo-frame">
-          <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
-        </span>
-      </a>
-      <!-- Desktop Primary Navigation -->
-      <nav aria-label="Primary navigation"
-        class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-700">
-        <a class="hover:text-gold-500 transition-colors" href="index.html">Home</a>
-        <a class="hover:text-gold-500 transition-colors" href="builders.html">Builders</a>
-        <a class="hover:text-gold-500 transition-colors" href="explore.html">Properties</a>
-        <a class="hover:text-gold-500 transition-colors" href="agents.html">Agents</a>
-        <a class="hover:text-gold-500 transition-colors" href="market-insights.html">Market Insights</a>
-        <a class="hover:text-gold-500 transition-colors" href="compare-projects.html">Compare</a>
-        <a class="hover:text-gold-500 transition-colors" href="book-site-visit.html">Book Site Visit</a>
-        <div class="prospera-about-dropdown" id="desktopAboutDropdown">
-          <button aria-controls="desktopAboutMenu" aria-expanded="false"
-            class="prospera-about-trigger hover:text-gold-500 transition-colors"
-            onclick="toggleAboutDropdown(event, 'desktopAboutDropdown')" type="button">
-            <span>About</span>
-            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
-          </button>
-          <div aria-label="About links" class="prospera-about-menu" id="desktopAboutMenu" role="menu">
-            <a href="about-us.html" role="menuitem">About Us</a>
-            <a href="why-prospera-ai.html" role="menuitem">Why Prospera AI</a>
-            <a href="reviews.html" role="menuitem">Reviews</a>
-            <a href="contact.html" role="menuitem">Contact Us</a>
-            <a href="privacy-terms.html" role="menuitem">Privacy Policy</a>
+  <!-- ============================================================
+       PROSPERA GLOBAL MASTER NAVBAR
+       Uniform luxury real-estate navbar across all 16 pages
+       ============================================================ -->
+  <header class="prospera-site-header fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 pointer-events-none">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-2.5 sm:pt-3.5 pb-1 pointer-events-auto">
+      <div class="prospera-nav-capsule flex items-center justify-between">
+        <!-- Brand Logo -->
+        <a aria-label="Prospera AI Realtors" class="prospera-brand-logo group flex-shrink-0" href="index.html">
+          <span aria-hidden="true" class="prospera-logo-frame">
+            <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+          </span>
+        </a>
+
+        <!-- Desktop Primary Navigation -->
+        <nav aria-label="Primary navigation" class="hidden md:flex items-center gap-3.5 lg:gap-5 xl:gap-7 text-[13px] lg:text-[13.5px] xl:text-sm font-semibold text-[#182033]">
+          <a class="prospera-nav-link" href="index.html">Home</a>
+          <a class="prospera-nav-link" href="builders.html">Builders</a>
+          <a class="prospera-nav-link is-active" href="explore.html">Properties</a>
+          <a class="prospera-nav-link" href="agents.html">Agents</a>
+          <a class="prospera-nav-link" href="market-insights.html">Market Insights</a>
+          <a class="prospera-nav-link" href="compare-projects.html">Compare</a>
+          <a class="prospera-nav-link" href="book-site-visit.html">Book Site Visit</a>
+          <div class="prospera-about-dropdown" id="desktopAboutDropdown">
+            <button aria-controls="desktopAboutMenu" aria-expanded="false"
+              class="prospera-about-trigger"
+              onclick="toggleAboutDropdown(event, 'desktopAboutDropdown')" type="button">
+              <span>About</span>
+              <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+            </button>
+            <div aria-label="About links" class="prospera-about-menu" id="desktopAboutMenu" role="menu">
+              <a class="" href="about-us.html" role="menuitem">About Us</a>
+              <a class="" href="why-prospera-ai.html" role="menuitem">Why Prospera AI</a>
+              <a class="" href="reviews.html" role="menuitem">Reviews</a>
+              <a class="" href="contact.html" role="menuitem">Contact Us</a>
+              <a class="" href="privacy-terms.html" role="menuitem">Privacy Policy</a>
+            </div>
           </div>
+        </nav>
+
+        <!-- Mobile Hamburger Toggle -->
+        <div class="flex md:hidden items-center">
+          <button aria-label="Open menu"
+            class="prospera-mobile-toggle flex items-center justify-center"
+            id="mobileMenuBtn" onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-bars text-base" id="mobileMenuIcon"></i>
+          </button>
         </div>
-      </nav>
-      <!-- Right: Mobile Navigation -->
-      <div class="flex items-center gap-2 sm:gap-3">
-        <button aria-label="Open menu"
-          class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl border border-gold-500/30 bg-gold-500/10 text-gold-500 hover:bg-gold-500/20 transition-all"
-          id="mobileMenuBtn" onclick="toggleMobileMenu()">
-          <i class="fa-solid fa-bars text-base" id="mobileMenuIcon"></i>
-        </button>
       </div>
-    </div>
-    <!-- Mobile Navigation Dropdown -->
-    <div class="hidden md:hidden border-t border-slate-200 bg-white" id="mobileMenu">
-      <nav aria-label="Mobile navigation" class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="index.html">Home</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="builders.html">Builders</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="explore.html">Properties</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="agents.html">Agents</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="market-insights.html">Market Insights</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="compare-projects.html">Compare</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="book-site-visit.html">Book Site Visit</a>
-        <div class="prospera-mobile-about" id="mobileAboutDropdown">
-          <button aria-controls="mobileAboutMenu" aria-expanded="false" class="prospera-mobile-about-trigger"
-            onclick="toggleAboutDropdown(event, 'mobileAboutDropdown')" type="button">
-            <span>About</span>
-            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
-          </button>
-          <div class="prospera-mobile-about-menu" id="mobileAboutMenu">
-            <a href="about-us.html">About Us</a>
-            <a href="why-prospera-ai.html">Why Prospera AI</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="privacy-terms.html">Privacy Policy</a>
+
+      <!-- Mobile Navigation Dropdown -->
+      <div class="hidden md:hidden prospera-mobile-menu-card" id="mobileMenu">
+        <nav aria-label="Mobile navigation" class="p-3 sm:p-4 flex flex-col gap-1">
+          <a class="prospera-mobile-nav-link" href="index.html">Home</a>
+          <a class="prospera-mobile-nav-link" href="builders.html">Builders</a>
+          <a class="prospera-mobile-nav-link is-active" href="explore.html">Properties</a>
+          <a class="prospera-mobile-nav-link" href="agents.html">Agents</a>
+          <a class="prospera-mobile-nav-link" href="market-insights.html">Market Insights</a>
+          <a class="prospera-mobile-nav-link" href="compare-projects.html">Compare</a>
+          <a class="prospera-mobile-nav-link" href="book-site-visit.html">Book Site Visit</a>
+          <div class="prospera-mobile-about" id="mobileAboutDropdown">
+            <button aria-controls="mobileAboutMenu" aria-expanded="false"
+              class="prospera-mobile-about-trigger"
+              onclick="toggleAboutDropdown(event, 'mobileAboutDropdown')" type="button">
+              <span>About</span>
+              <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+            </button>
+            <div class="prospera-mobile-about-menu" id="mobileAboutMenu">
+              <a class="" href="about-us.html">About Us</a>
+              <a class="" href="why-prospera-ai.html">Why Prospera AI</a>
+              <a class="" href="reviews.html">Reviews</a>
+              <a class="" href="contact.html">Contact Us</a>
+              <a class="" href="privacy-terms.html">Privacy Policy</a>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -644,7 +651,7 @@
       <div class="project-item bg-white rounded-2xl overflow-hidden border border-gold-500/25 flex flex-col justify-between group" data-builder="M3M India" data-city="Gurgaon" data-name="M3M Golfestate Crown" data-price="3.85" data-sector="Golf Course Ext. Rd" data-status="Under Construction" data-type="Apartment">
         <div class="relative h-56 overflow-hidden">
           <img loading="lazy" decoding="async" alt="[M3M Golfestate Crown]" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+          
           <!-- Badges -->
           <div class="absolute top-3 left-3 flex gap-2">
             <span class="px-3 py-1 rounded-full badge-match-ai text-[11px] font-extrabold uppercase tracking-wide shadow-sm">
@@ -657,12 +664,17 @@
           <span class="absolute top-3 right-3 px-3 py-1 rounded-full badge-builder text-xs font-bold">
             M3M India
           </span>
-          <div class="absolute bottom-3 left-3 right-3">
-            <span class="text-[11px] text-white/90 font-medium uppercase tracking-wider block">Golf Course Ext. Rd, Gurgaon</span>
-            <h3 class="font-heading text-xl font-bold text-white">M3M Golfestate Crown</h3>
           </div>
-        </div>
         <div class="p-5 space-y-4 flex-1 flex flex-col justify-between bg-white">
+          <div>
+            <div class="flex items-center gap-1.5 text-xs text-gold-600 font-bold uppercase tracking-wider mb-1">
+              <i class="fa-solid fa-location-dot text-[11px]"></i>
+              <span>Golf Course Ext. Rd, Gurgaon</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-black group-hover:text-gold-600 transition-colors">
+              M3M Golfestate Crown
+            </h3>
+          </div>
           <div class="grid grid-cols-3 gap-2 py-2.5 border-y border-gold-500/20 text-center text-xs">
             <div>
               <span class="text-[10px] uppercase text-black/60 block">Type</span>
@@ -686,9 +698,9 @@
               <button class="p-2.5 rounded-xl btn-icon-action" onclick="openProjectModal('M3M Golfestate Crown', 'M3M India', 'Gurgaon', '₹ 3.85 Cr')" title="Ask AI about this project">
                 <i class="fa-solid fa-robot"></i>
               </button>
-              <button class="px-4 py-2 rounded-xl btn-prospera-black font-bold text-xs tracking-wider uppercase shadow-sm" onclick="openProjectModal('M3M Golfestate Crown', 'M3M India', 'Gurgaon', '₹ 3.85 Cr')">
+              <a href="property-details.html" class="px-4 py-2 rounded-xl btn-prospera-black font-bold text-xs tracking-wider uppercase shadow-sm">
                 View Details
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -698,7 +710,7 @@
       <div class="project-item bg-white rounded-2xl overflow-hidden border border-gold-500/25 flex flex-col justify-between group" data-builder="Godrej Properties" data-city="Noida" data-name="Godrej Woods Reserve" data-price="2.15" data-sector="Sector 43" data-status="Possession Soon" data-type="Apartment">
         <div class="relative h-56 overflow-hidden">
           <img loading="lazy" decoding="async" alt="[Godrej Woods Reserve]" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+          
           <div class="absolute top-3 left-3 flex gap-2">
             <span class="px-3 py-1 rounded-full badge-match-ai text-[11px] font-extrabold uppercase tracking-wide shadow-sm">
               <i class="fa-solid fa-sparkles mr-1"></i> 95% AI Match
@@ -710,12 +722,17 @@
           <span class="absolute top-3 right-3 px-3 py-1 rounded-full badge-builder text-xs font-bold">
             Godrej Properties
           </span>
-          <div class="absolute bottom-3 left-3 right-3">
-            <span class="text-[11px] text-white/90 font-medium uppercase tracking-wider block">Sector 43, Noida</span>
-            <h3 class="font-heading text-xl font-bold text-white">Godrej Woods Reserve</h3>
           </div>
-        </div>
         <div class="p-5 space-y-4 flex-1 flex flex-col justify-between bg-white">
+          <div>
+            <div class="flex items-center gap-1.5 text-xs text-gold-600 font-bold uppercase tracking-wider mb-1">
+              <i class="fa-solid fa-location-dot text-[11px]"></i>
+              <span>Sector 43, Noida</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-black group-hover:text-gold-600 transition-colors">
+              Godrej Woods Reserve
+            </h3>
+          </div>
           <div class="grid grid-cols-3 gap-2 py-2.5 border-y border-gold-500/20 text-center text-xs">
             <div>
               <span class="text-[10px] uppercase text-black/60 block">Type</span>
@@ -739,9 +756,9 @@
               <button class="p-2.5 rounded-xl btn-icon-action" onclick="openProjectModal('Godrej Woods Reserve', 'Godrej Properties', 'Noida', '₹ 2.15 Cr')" title="Ask AI about this project">
                 <i class="fa-solid fa-robot"></i>
               </button>
-              <button class="px-4 py-2 rounded-xl btn-prospera-black font-bold text-xs tracking-wider uppercase shadow-sm" onclick="openProjectModal('Godrej Woods Reserve', 'Godrej Properties', 'Noida', '₹ 2.15 Cr')">
+              <a href="property-details.html" class="px-4 py-2 rounded-xl btn-prospera-black font-bold text-xs tracking-wider uppercase shadow-sm">
                 View Details
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -751,7 +768,7 @@
       <div class="project-item bg-white rounded-2xl overflow-hidden border border-gold-500/25 flex flex-col justify-between group" data-builder="DLF Homes" data-city="Gurgaon" data-name="DLF The Aralias II" data-price="14.50" data-sector="Golf Course Road" data-status="Ready to Move" data-type="Apartment">
         <div class="relative h-56 overflow-hidden">
           <img loading="lazy" decoding="async" alt="[DLF The Aralias II]" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+          
           <div class="absolute top-3 left-3 flex gap-2">
             <span class="px-3 py-1 rounded-full badge-match-ai text-[11px] font-extrabold uppercase tracking-wide shadow-sm">
               <i class="fa-solid fa-crown mr-1"></i> Trophy Luxury
@@ -760,12 +777,17 @@
           <span class="absolute top-3 right-3 px-3 py-1 rounded-full badge-builder text-xs font-bold">
             DLF Homes
           </span>
-          <div class="absolute bottom-3 left-3 right-3">
-            <span class="text-[11px] text-white/90 font-medium uppercase tracking-wider block">Golf Course Road, Gurgaon</span>
-            <h3 class="font-heading text-xl font-bold text-white">DLF The Aralias II</h3>
           </div>
-        </div>
         <div class="p-5 space-y-4 flex-1 flex flex-col justify-between bg-white">
+          <div>
+            <div class="flex items-center gap-1.5 text-xs text-gold-600 font-bold uppercase tracking-wider mb-1">
+              <i class="fa-solid fa-location-dot text-[11px]"></i>
+              <span>Golf Course Road, Gurgaon</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-black group-hover:text-gold-600 transition-colors">
+              DLF The Aralias II
+            </h3>
+          </div>
           <div class="grid grid-cols-3 gap-2 py-2.5 border-y border-gold-500/20 text-center text-xs">
             <div>
               <span class="text-[10px] uppercase text-black/60 block">Type</span>
@@ -789,9 +811,9 @@
               <button class="p-2.5 rounded-xl btn-icon-action" onclick="openProjectModal('DLF The Aralias II', 'DLF Homes', 'Gurgaon', '₹ 14.50 Cr')" title="Ask AI about this project">
                 <i class="fa-solid fa-robot"></i>
               </button>
-              <button class="px-4 py-2 rounded-xl btn-prospera-black font-bold text-xs tracking-wider uppercase shadow-sm" onclick="openProjectModal('DLF The Aralias II', 'DLF Homes', 'Gurgaon', '₹ 14.50 Cr')">
+              <a href="property-details.html" class="px-4 py-2 rounded-xl btn-prospera-black font-bold text-xs tracking-wider uppercase shadow-sm">
                 View Details
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -801,7 +823,7 @@
       <div class="project-item bg-white rounded-2xl overflow-hidden border border-gold-500/25 flex flex-col justify-between group" data-builder="ATS Infrastructure" data-city="Greater Noida" data-name="ATS Knightsbridge Plots" data-price="0.95" data-sector="Pari Chowk" data-status="Ready to Move" data-type="Plot">
         <div class="relative h-56 overflow-hidden">
           <img loading="lazy" decoding="async" alt="[ATS Knightsbridge Plots]" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+          
           <div class="absolute top-3 left-3 flex gap-2">
             <span class="px-3 py-1 rounded-full badge-match-ai text-[11px] font-extrabold uppercase tracking-wide shadow-sm">
               <i class="fa-solid fa-sparkles mr-1"></i> 92% AI Match
@@ -810,12 +832,17 @@
           <span class="absolute top-3 right-3 px-3 py-1 rounded-full badge-builder text-xs font-bold">
             ATS Group
           </span>
-          <div class="absolute bottom-3 left-3 right-3">
-            <span class="text-[11px] text-white/90 font-medium uppercase tracking-wider block">Pari Chowk, Greater Noida</span>
-            <h3 class="font-heading text-xl font-bold text-white">ATS Knightsbridge Plots</h3>
           </div>
-        </div>
         <div class="p-5 space-y-4 flex-1 flex flex-col justify-between bg-white">
+          <div>
+            <div class="flex items-center gap-1.5 text-xs text-gold-600 font-bold uppercase tracking-wider mb-1">
+              <i class="fa-solid fa-location-dot text-[11px]"></i>
+              <span>Pari Chowk, Greater Noida</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-black group-hover:text-gold-600 transition-colors">
+              ATS Knightsbridge Plots
+            </h3>
+          </div>
           <div class="grid grid-cols-3 gap-2 py-2.5 border-y border-gold-500/20 text-center text-xs">
             <div>
               <span class="text-[10px] uppercase text-black/60 block">Type</span>
@@ -839,9 +866,9 @@
               <button class="p-2.5 rounded-xl btn-icon-action" onclick="openProjectModal('ATS Knightsbridge Plots', 'ATS Group', 'Greater Noida', '₹ 95 Lakhs')" title="Ask AI about this project">
                 <i class="fa-solid fa-robot"></i>
               </button>
-              <button class="px-4 py-2 rounded-xl btn-prospera-black font-bold text-xs tracking-wider uppercase shadow-sm" onclick="openProjectModal('ATS Knightsbridge Plots', 'ATS Group', 'Greater Noida', '₹ 95 Lakhs')">
+              <a href="property-details.html" class="px-4 py-2 rounded-xl btn-prospera-black font-bold text-xs tracking-wider uppercase shadow-sm">
                 View Details
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -851,7 +878,7 @@
       <div class="project-item bg-white rounded-2xl overflow-hidden border border-gold-500/25 flex flex-col justify-between group" data-builder="Oberoi Realty" data-city="Gurgaon" data-name="Oberoi Commercial Tower" data-price="4.20" data-sector="Cyber City" data-status="New Launch" data-type="Commercial">
         <div class="relative h-56 overflow-hidden">
           <img loading="lazy" decoding="async" alt="[Oberoi Commercial Tower]" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+          
           <div class="absolute top-3 left-3 flex gap-2">
             <span class="px-3 py-1 rounded-full badge-match-ai text-[11px] font-extrabold uppercase tracking-wide shadow-sm">
               <i class="fa-solid fa-chart-line mr-1"></i> High ROI Commercial
@@ -860,12 +887,17 @@
           <span class="absolute top-3 right-3 px-3 py-1 rounded-full badge-builder text-xs font-bold">
             Oberoi Realty
           </span>
-          <div class="absolute bottom-3 left-3 right-3">
-            <span class="text-[11px] text-white/90 font-medium uppercase tracking-wider block">Cyber City, Gurgaon</span>
-            <h3 class="font-heading text-xl font-bold text-white">Oberoi Commercial Hub</h3>
           </div>
-        </div>
         <div class="p-5 space-y-4 flex-1 flex flex-col justify-between bg-white">
+          <div>
+            <div class="flex items-center gap-1.5 text-xs text-gold-600 font-bold uppercase tracking-wider mb-1">
+              <i class="fa-solid fa-location-dot text-[11px]"></i>
+              <span>Cyber City, Gurgaon</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-black group-hover:text-gold-600 transition-colors">
+              Oberoi Commercial Hub
+            </h3>
+          </div>
           <div class="grid grid-cols-3 gap-2 py-2.5 border-y border-gold-500/20 text-center text-xs">
             <div>
               <span class="text-[10px] uppercase text-black/60 block">Type</span>
@@ -889,9 +921,9 @@
               <button class="p-2.5 rounded-xl btn-icon-action" onclick="openProjectModal('Oberoi Commercial Hub', 'Oberoi Realty', 'Gurgaon', '₹ 4.20 Cr')" title="Ask AI about this project">
                 <i class="fa-solid fa-robot"></i>
               </button>
-              <button class="px-4 py-2 rounded-xl btn-prospera-black font-bold text-xs tracking-wider uppercase shadow-sm" onclick="openProjectModal('Oberoi Commercial Hub', 'Oberoi Realty', 'Gurgaon', '₹ 4.20 Cr')">
+              <a href="property-details.html" class="px-4 py-2 rounded-xl btn-prospera-black font-bold text-xs tracking-wider uppercase shadow-sm">
                 View Details
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -901,7 +933,7 @@
       <div class="project-item bg-white rounded-2xl overflow-hidden border border-gold-500/25 flex flex-col justify-between group" data-builder="Prestige Group" data-city="Noida" data-name="Prestige City Boulevard" data-price="1.75" data-sector="Noida Expressway" data-status="Under Construction" data-type="Apartment">
         <div class="relative h-56 overflow-hidden">
           <img loading="lazy" decoding="async" alt="[Prestige City Boulevard]" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+          
           <div class="absolute top-3 left-3 flex gap-2">
             <span class="px-3 py-1 rounded-full badge-match-ai text-[11px] font-extrabold uppercase tracking-wide shadow-sm">
               <i class="fa-solid fa-sparkles mr-1"></i> 91% AI Match
@@ -910,12 +942,17 @@
           <span class="absolute top-3 right-3 px-3 py-1 rounded-full badge-builder text-xs font-bold">
             Prestige Group
           </span>
-          <div class="absolute bottom-3 left-3 right-3">
-            <span class="text-[11px] text-white/90 font-medium uppercase tracking-wider block">Expressway, Noida</span>
-            <h3 class="font-heading text-xl font-bold text-white">Prestige City Boulevard</h3>
           </div>
-        </div>
         <div class="p-5 space-y-4 flex-1 flex flex-col justify-between bg-white">
+          <div>
+            <div class="flex items-center gap-1.5 text-xs text-gold-600 font-bold uppercase tracking-wider mb-1">
+              <i class="fa-solid fa-location-dot text-[11px]"></i>
+              <span>Expressway, Noida</span>
+            </div>
+            <h3 class="font-heading text-xl font-bold text-black group-hover:text-gold-600 transition-colors">
+              Prestige City Boulevard
+            </h3>
+          </div>
           <div class="grid grid-cols-3 gap-2 py-2.5 border-y border-gold-500/20 text-center text-xs">
             <div>
               <span class="text-[10px] uppercase text-black/60 block">Type</span>
@@ -939,9 +976,9 @@
               <button class="p-2.5 rounded-xl btn-icon-action" onclick="openProjectModal('Prestige City Boulevard', 'Prestige Group', 'Noida', '₹ 1.75 Cr')" title="Ask AI about this project">
                 <i class="fa-solid fa-robot"></i>
               </button>
-              <button class="px-4 py-2 rounded-xl btn-prospera-black font-bold text-xs tracking-wider uppercase shadow-sm" onclick="openProjectModal('Prestige City Boulevard', 'Prestige Group', 'Noida', '₹ 1.75 Cr')">
+              <a href="property-details.html" class="px-4 py-2 rounded-xl btn-prospera-black font-bold text-xs tracking-wider uppercase shadow-sm">
                 View Details
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -3073,7 +3110,7 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
           <div class="property-result-card-footer">
             <div class="property-result-card-price">${price}</div>
-            <button type="button" class="property-result-card-button" data-property-index="${idx}">View Details</button>
+            <a href="property-details.html" class="property-result-card-button" data-property-index="${idx}">View Details</a>
           </div>
         </div>
       </article>`;

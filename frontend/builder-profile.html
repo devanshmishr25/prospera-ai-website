@@ -1,238 +1,1176 @@
-﻿<!DOCTYPE html>
-
-<html lang="en-IN">
+<!DOCTYPE html>
+<html lang="en-IN" class="scroll-smooth" data-theme="light">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Explore Baba Infra projects in Lucknow, including Imperial Residencia, Kailasha Arcade, Kailasha Awadh and Kailasha Enclave. View project details, contact information and connect with the assigned Prospera AI advisor." name="description"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Explore verified builder profiles in Lucknow & NCR including Baba Infra, Rishita Developers, Eldeco Group, Omaxe and Ekana. View project details, contact info and connect with dedicated Prospera AI advisors." name="description"/>
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="googlebot"/>
 <meta content="Prospera AI Realtors" name="author"/>
 <meta content="strict-origin-when-cross-origin" name="referrer"/>
 <meta content="#FAF8F5" name="theme-color"/>
 <meta content="Prospera AI Realtors" name="application-name"/>
-<meta content="Baba Infra, Baba Infra Lucknow, Baba Infra projects, Imperial Residencia, Kailasha Arcade, Kailasha Awadh, Kailasha Enclave, Lucknow real estate builder, Lucknow property projects" name="keywords"/>
-<meta content="website" property="og:type"/>
-<meta content="Prospera AI Realtors" property="og:site_name"/>
-<meta content="Baba Infra Builder Profile | Projects &amp; Contact | Prospera AI Realtors" property="og:title"/>
-<meta content="Explore Baba Infra projects in Lucknow, project details, direct contact information and the dedicated Prospera AI advisor." property="og:description"/>
-<meta content="https://www.prospera.ai/builders/baba-infra.html" property="og:url"/>
-<meta content="https://www.prospera.ai/assets/images/logos/dark_mode.png" property="og:image"/>
-<meta content="Prospera AI Realtors" property="og:image:alt"/>
-<meta content="en_IN" property="og:locale"/>
-<meta content="summary" name="twitter:card"/>
-<meta content="Baba Infra Builder Profile | Prospera AI Realtors" name="twitter:title"/>
-<meta content="Explore Baba Infra projects in Lucknow and connect directly through Prospera AI Realtors." name="twitter:description"/>
-<meta content="https://www.prospera.ai/assets/images/logos/dark_mode.png" name="twitter:image"/>
-<link href="https://www.prospera.ai/builders/baba-infra.html" rel="canonical"/>
-<link href="https://www.prospera.ai/builders/baba-infra.html" hreflang="en-IN" rel="alternate"/>
-<title>Baba Infra Builder Profile | Projects, Contact &amp; AI Advisor | Prospera AI Realtors</title>
+<title id="page-title">Baba Infra Builder Profile | Projects, Contact &amp; AI Advisor | Prospera AI Realtors</title>
 <link href="./assets/images/logos/dark_mode.png" rel="icon" type="image/png"/>
-<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Google Fonts: DM Serif Display & Plus Jakarta Sans -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <!-- FontAwesome Icons CDN -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"/>
-<!-- Google Fonts: Plus Jakarta Sans & DM Serif Display -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://cdnjs.cloudflare.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
 <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: {
-                            50: '#FCF9EE',
-                            100: '#FAF3D3',
-                            200: '#F4E5A1',
-                            300: '#EDD36E',
-                            400: '#E4BF3F',
-                            500: '#D4AF37', // Metallic Signature Gold
-                            600: '#AA8524',
-                            700: '#806118',
-                            800: '#57400F',
-                            900: '#332407',
-                        },
-                        obsidian: {
-                            950: '#070708',
-                            900: '#0E0E11',
-                            800: '#16161C',
-                            700: '#22222A',
-                            600: '#30303B',
-                        },
-                        brandDark: '#121619',
-                        brandGray: '#4A5568',
-                        softBg: '#FAF8F5',
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+                colors: {
+                    gold: {
+                        50: '#FCF9EE',
+                        100: '#FAF3D3',
+                        200: '#F4E5A1',
+                        300: '#EDD36E',
+                        400: '#E4BF3F',
+                        500: '#D4AF37',
+                        600: '#8C6D1F',
+                        700: '#735817',
+                        800: '#57400F',
+                        900: '#332407',
                     },
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        serif: ['DM Serif Display', 'serif'],
-                        heading: ['DM Serif Display', 'serif'],
-                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    obsidian: {
+                        950: '#070708',
+                        900: '#0E0E11',
+                        800: '#16161C',
+                        700: '#22222A',
+                        600: '#30303B',
                     },
-                    boxShadow: {
-                        'gold-glow': '0 0 35px -5px rgba(212, 175, 55, 0.3)',
-                        'gold-glow-lg': '0 0 60px -10px rgba(212, 175, 55, 0.45)',
-                        'card-glow': '0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 1px 1px rgba(212, 175, 55, 0.2)',
-                        'soft-gold': '0 20px 40px -15px rgba(197, 160, 89, 0.25)',
-                        'card-hover': '0 25px 50px -12px rgba(0, 0, 0, 0.08)',
-                        'avatar-ring': '0 0 0 6px rgba(197, 160, 89, 0.15)',
-                    }
+                    brandDark: '#121619',
+                    brandGray: '#4A5568',
+                    softBg: '#FAF8F5',
+                },
+                fontFamily: {
+                    sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    serif: ['"DM Serif Display"', 'serif'],
+                    heading: ['"DM Serif Display"', 'serif'],
+                    body: ['"Plus Jakarta Sans"', 'sans-serif'],
+                },
+                boxShadow: {
+                    'gold-glow': '0 0 35px -5px rgba(212, 175, 55, 0.3)',
+                    'gold-glow-lg': '0 0 60px -10px rgba(212, 175, 55, 0.45)',
+                    'card-glow': '0 0 25px rgba(212, 175, 55, 0.15)',
                 }
             }
         }
-    </script>
+    }
+</script>
 
-<!-- Theme Stylesheet & Pre-Render Theme Loader (Defaults to Light Mode) -->
+<!-- Theme Stylesheet & Pre-Render Theme Loader (Enforces Luxury Light Visual System) -->
 <link href="theme.css" rel="stylesheet">
 <script>
-        /* Prospera AI uses a single light visual system. */
-        (function() {
-            document.documentElement.setAttribute("data-theme", "light");
-            document.documentElement.classList.remove("dark");
-        })();
-    </script>
+    (function() {
+        document.documentElement.setAttribute("data-theme", "light");
+        document.documentElement.classList.remove("dark");
+    })();
+</script>
 
+<style id="prospera-builder-profile-system">
+/* ============================================================
+   PROSPERA AI - BUILDER PROFILE DESIGN SYSTEM
+   STRICT PALETTE: BLACK + WHITE + GOLD ONLY
+   ============================================================ */
 
+/* ── STRICT TYPOGRAPHY & ZERO ITALICS ── */
+*, *::before, *::after {
+  font-style: normal !important;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading, #builder-title, .bp-section-head h2, #contact-title, #about-title, #projects-title, #builder-faq-title {
+  font-family: 'DM Serif Display', serif !important;
+  font-style: normal !important;
+  letter-spacing: -0.01em !important;
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+
+/* ── HEADINGS VISIBILITY: 100% PURE BLACK ON LIGHT BACKGROUND ── */
+html body #contact-title,
+html body #contact h2,
+html body section#contact h2,
+html body #about-title,
+html body #projects-title,
+html body #builder-faq-title,
+html body .bp-section-head h2,
+html body #builder-title {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+
+/* ── LAYOUT & WRAPPER ── */
+.builder-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.bp-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+@media (min-width: 640px) {
+  .bp-container { padding: 0 2rem; }
+}
+
+/* ── HERO SECTION ── */
+.bp-hero {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+  padding: 104px 0 48px;
+}
+
+.bp-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: #555555;
+  margin-bottom: 1.25rem;
+}
+.bp-breadcrumbs a {
+  color: #555555;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  transition: color 0.15s ease;
+}
+.bp-breadcrumbs a:hover {
+  color: #8C6D1F;
+}
+.bp-breadcrumbs .sep {
+  color: #D4AF37;
+}
+.bp-breadcrumbs .curr {
+  color: #000000;
+  font-weight: 700;
+}
+
+.bp-profile-card {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(212, 175, 55, 0.3);
+  border-radius: 24px;
+  padding: 2.25rem;
+  box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.bp-profile-card:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 12px 32px -4px rgba(212, 175, 55, 0.2);
+}
+
+.bp-profile-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .bp-profile-top {
+    grid-template-columns: 1.45fr 1fr;
+    gap: 3rem;
+  }
+}
+
+.bp-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8C6D1F;
+  background: #FAF8F5;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  padding: 4px 14px;
+  border-radius: 9999px;
+  margin-bottom: 0.875rem;
+}
+
+#builder-title {
+  font-size: 2.5rem;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  margin-bottom: 0.625rem;
+}
+@media (min-width: 640px) {
+  #builder-title { font-size: 3.25rem; }
+}
+
+.bp-tagline {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #8C6D1F;
+  margin-bottom: 0.75rem;
+}
+
+.bp-hero-desc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #333333;
+  max-width: 620px;
+  margin-bottom: 1.5rem;
+}
+
+.bp-mini-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.bp-mini-tags span {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 12px;
+  background: #FAF8F5;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #000000;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+/* ── ASSIGNED AI AGENT CARD (HIGH CONTRAST WHITE TEXT ON LUXURY OBSIDIAN-GOLD) ── */
+.bp-agent-assigned-card {
+  background: linear-gradient(145deg, #2a2418 0%, #16161C 100%) !important;
+  border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
+  border-radius: 20px !important;
+  padding: 1.75rem !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.25), 0 0 25px rgba(212, 175, 55, 0.15) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.125rem !important;
+}
+
+.bp-agent-assigned-top {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+}
+
+.bp-agent-assigned-icon {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #D4AF37 0%, #8C6D1F 100%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.25rem !important;
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4) !important;
+}
+.bp-agent-assigned-icon i {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+
+.bp-agent-assigned-copy {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3px !important;
+}
+
+.bp-agent-assigned-eyebrow {
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  color: #D4AF37 !important;
+  -webkit-text-fill-color: #D4AF37 !important;
+  text-transform: uppercase !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
+
+.bp-agent-assigned-copy strong,
+.bp-agent-assigned-card strong {
+  font-size: 1.5rem !important;
+  font-family: 'DM Serif Display', serif !important;
+  font-weight: 700 !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  line-height: 1.2 !important;
+}
+
+.bp-agent-active {
+  font-size: 11px !important;
+  color: #34D399 !important;
+  -webkit-text-fill-color: #34D399 !important;
+  font-weight: 700 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+.bp-agent-active i {
+  font-size: 7px !important;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite !important;
+}
+
+.bp-agent-assigned-note,
+.bp-agent-assigned-card p {
+  font-size: 0.875rem !important;
+  line-height: 1.6 !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* ── CHAT WITH AI: SOLID GOLD BUTTON WITH BOLD WHITE TEXT & ZERO INVERSION ── */
+html body main button.bp-agent-chat,
+html body main .bp-agent-chat,
+html body .bp-agent-chat,
+button.bp-agent-chat {
+  width: 100% !important;
+  background: #D4AF37 !important;
+  background-color: #D4AF37 !important;
+  background-image: none !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  border: 1.5px solid #D4AF37 !important;
+  border-color: #D4AF37 !important;
+  border-radius: 12px !important;
+  padding: 13px 20px !important;
+  font-size: 0.8125rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.22) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35) !important;
+  transition: all 0.2s ease !important;
+}
+
+html body main button.bp-agent-chat:hover,
+html body main .bp-agent-chat:hover,
+html body .bp-agent-chat:hover,
+html body main button.bp-agent-chat:focus {
+  background: #D4AF37 !important;
+  background-color: #D4AF37 !important;
+  background-image: none !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  border-color: #D4AF37 !important;
+  transform: none !important;
+  filter: brightness(1.08) !important;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5) !important;
+}
+
+html body .bp-agent-chat *,
+html body .bp-agent-chat:hover * {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
+.bp-profile-actions {
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.bp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.bp-btn-gold {
+  background: #D4AF37 !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid #D4AF37 !important;
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35);
+}
+.bp-btn-gold:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+}
+.bp-btn-gold * { color: #FFFFFF !important; }
+
+.bp-btn-outline {
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+.bp-btn-outline:hover {
+  border-color: #D4AF37 !important;
+  background: #FAF8F5 !important;
+  color: #8C6D1F !important;
+}
+
+/* ── SECTIONS & CARDS ── */
+.bp-section {
+  padding: 48px 0;
+}
+
+.bp-section-head {
+  margin-bottom: 2rem;
+}
+.bp-section-head h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  margin-top: 0.35rem;
+}
+@media (min-width: 640px) {
+  .bp-section-head h2 { font-size: 2.25rem; }
+}
+
+.bp-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .bp-overview-grid {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.bp-card {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(212, 175, 55, 0.3);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.bp-card:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 12px 32px -4px rgba(212, 175, 55, 0.2);
+}
+
+.bp-about-compact p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #182033;
+  margin-bottom: 1rem;
+}
+.bp-about-compact .bp-muted {
+  color: #444444;
+  margin-bottom: 0;
+}
+
+.bp-key-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.bp-key-info > div {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(212, 175, 55, 0.28);
+  border-radius: 16px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+}
+.bp-key-info > div:hover {
+  border-color: #D4AF37;
+  background: #FAF8F5;
+}
+.bp-key-info small {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #8C6D1F;
+  text-transform: uppercase;
+}
+.bp-key-info strong {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.4;
+}
+
+/* ── PROJECTS VISUAL GRID ── */
+.bp-projects-visual {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .bp-projects-visual {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.bp-project-card-visual {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(212, 175, 55, 0.3);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+.bp-project-card-visual:hover {
+  border-color: #D4AF37;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -4px rgba(212, 175, 55, 0.22);
+}
+
+.bp-project-visual-img {
+  position: relative;
+  height: 240px;
+  background: #000000;
+  overflow: hidden;
+}
+.bp-project-visual-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.bp-project-card-visual:hover .bp-project-visual-img img {
+  transform: scale(1.06);
+}
+
+.bp-project-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: #000000;
+  border: 1px solid #D4AF37;
+  color: #FAF8F5 !important;
+  -webkit-text-fill-color: #FAF8F5 !important;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.bp-project-badge.completed {
+  background: #064E3B;
+  border-color: #10B981;
+  color: #A7F3D0 !important;
+  -webkit-text-fill-color: #A7F3D0 !important;
+}
+
+.bp-project-visual-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.bp-project-visual-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.bp-project-visual-top h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #000000;
+  font-family: 'DM Serif Display', serif;
+}
+.bp-project-price {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #8C6D1F;
+  font-family: 'DM Serif Display', serif;
+  white-space: nowrap;
+}
+
+.bp-project-location {
+  font-size: 0.8125rem;
+  color: #555555;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 0.75rem;
+}
+.bp-project-location i {
+  color: #D4AF37;
+}
+
+.bp-project-description {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.bp-project-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+.bp-project-details span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: #FAF8F5;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  font-size: 11px;
+  font-weight: 700;
+  color: #000000;
+}
+.bp-project-details span i {
+  color: #8C6D1F;
+}
+
+.bp-project-view-btn {
+  width: 100%;
+  padding: 12px 16px;
+  background: #D4AF37 !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid #D4AF37 !important;
+  border-radius: 12px;
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.3);
+}
+.bp-project-view-btn:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.45);
+}
+.bp-project-view-btn * { color: #FFFFFF !important; }
+
+/* ── DIRECT CONTACT ── */
+.bp-contact-grid-single {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bp-contact-card {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(212, 175, 55, 0.3);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.04);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 640px) {
+  .bp-contact-card {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.bp-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.bp-contact-item > i {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #FAF8F5;
+  border: 1.5px solid rgba(212, 175, 55, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8C6D1F;
+  font-size: 1.125rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+.bp-contact-item small {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #8C6D1F;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.bp-contact-item a,
+.bp-contact-item span {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+  line-height: 1.4;
+  transition: color 0.15s ease;
+}
+.bp-contact-item a:hover {
+  color: #8C6D1F;
+}
+
+/* ── FAQ SECTION ── */
+.bp-faq-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 900px;
+}
+
+.bp-faq-item {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(212, 175, 55, 0.3);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s ease;
+}
+.bp-faq-item:hover {
+  border-color: #D4AF37;
+}
+
+.bp-faq-item summary {
+  padding: 1.25rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000000;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  outline: none;
+}
+.bp-faq-item summary::-webkit-details-marker { display: none; }
+.bp-faq-item summary::after {
+  content: '\f078';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  font-size: 0.8125rem;
+  color: #8C6D1F;
+  transition: transform 0.25s ease;
+}
+.bp-faq-item[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.bp-faq-item p {
+  padding: 0 1.5rem 1.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  padding-top: 1rem;
+}
+
+/* ── AI ADVISOR MODAL ── */
+.bp-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.bp-modal.open {
+  display: flex;
+}
+
+.bp-modal-card {
+  background: #FFFFFF;
+  border: 1.5px solid #D4AF37;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.3), 0 0 35px rgba(212, 175, 55, 0.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: modalScale 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes modalScale {
+  from { transform: scale(0.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.bp-modal-head {
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, #16161C 0%, #2a2418 100%);
+  color: #FFFFFF;
+  border-bottom: 1.5px solid rgba(212, 175, 55, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bp-modal-head #builderAiModalTitle {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.125rem;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+.bp-modal-head #modal-agent-subtitle,
+#modal-agent-subtitle,
+html body #modal-agent-subtitle,
+html body .bp-modal-head #modal-agent-subtitle {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  opacity: 0.95 !important;
+}
+.bp-modal-head button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.bp-modal-head button:hover {
+  background: #D4AF37;
+  color: #000000;
+}
+
+.bp-chat {
+  padding: 1.25rem;
+  height: 320px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: #FAF8F5;
+}
+
+.bp-chat-bubble {
+  max-width: 85%;
+  padding: 0.75rem 1rem;
+  border-radius: 16px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.bp-chat-bubble.bot {
+  align-self: flex-start;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(212, 175, 55, 0.3);
+  color: #000000;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.bp-chat-bubble.user {
+  align-self: flex-end;
+  background: #D4AF37;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.35);
+}
+
+.bp-chat-input {
+  padding: 1rem 1.25rem;
+  background: #FFFFFF;
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  display: flex;
+  gap: 0.5rem;
+}
+.bp-chat-input input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1.5px solid rgba(212, 175, 55, 0.35);
+  border-radius: 12px;
+  font-size: 0.875rem;
+  outline: none;
+  color: #000000;
+  background: #FFFFFF;
+  transition: border-color 0.15s ease;
+}
+.bp-chat-input input:focus {
+  border-color: #D4AF37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+.bp-chat-input button {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #D4AF37;
+  color: #FFFFFF;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+  transition: all 0.15s ease;
+}
+.bp-chat-input button:hover {
+  filter: brightness(1.08);
+}
+
+/* ── MASTER HEADER ABOUT DROPDOWN FIXES ── */
+html[data-theme="light"] .prospera-about-dropdown {
+  position: relative !important;
+  flex-shrink: 0 !important;
+}
+html[data-theme="light"] .prospera-about-menu {
+  position: absolute !important;
+  top: calc(100% + 12px) !important;
+  right: 0 !important;
+  left: auto !important;
+  z-index: 100 !important;
+  width: 230px !important;
+  min-width: 230px !important;
+  max-width: 230px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 8px !important;
+  margin: 0 !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid rgba(212, 175, 55, 0.3) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12) !important;
+}
+html[data-theme="light"] .prospera-about-menu > a {
+  display: block !important;
+  width: 100% !important;
+  padding: 10px 12px !important;
+  color: #000000 !important;
+  background: transparent !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  transition: all 0.15s ease !important;
+}
+html[data-theme="light"] .prospera-about-menu > a:hover {
+  color: #000000 !important;
+  background: #FAF8F5 !important;
+  border-left: 2px solid #D4AF37 !important;
+}
+</style>
 </head>
-<body class="bg-[#f7f4ee] text-[#182033] font-sans selection:bg-gold-200 selection:text-[#182033] relative antialiased min-h-screen overflow-x-hidden">
+<body class="bg-[#FAF8F5] text-black font-sans selection:bg-gold-500 selection:text-white relative antialiased min-h-screen overflow-x-hidden">
 <div class="builder-page">
-<header class="fixed top-0 left-0 right-0 w-full z-50 bg-white border-b border-slate-200 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <!-- Brand Logo -->
-      <a aria-label="Prospera AI Realtors" class="prospera-brand-logo group flex-shrink-0" href="index.html">
-        <span aria-hidden="true" class="prospera-logo-frame">
-          <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
-        </span>
-      </a>
-      <!-- Desktop Primary Navigation -->
-      <nav aria-label="Primary navigation"
-        class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-700">
-        <a class="hover:text-gold-500 transition-colors" href="index.html">Home</a>
-        <a class="hover:text-gold-500 transition-colors" href="builders.html">Builders</a>
-        <a class="hover:text-gold-500 transition-colors" href="explore.html">Properties</a>
-        <a class="hover:text-gold-500 transition-colors" href="agents.html">Agents</a>
-        <a class="hover:text-gold-500 transition-colors" href="market-insights.html">Market Insights</a>
-        <a class="hover:text-gold-500 transition-colors" href="compare-projects.html">Compare</a>
-        <a class="hover:text-gold-500 transition-colors" href="book-site-visit.html">Book Site Visit</a>
-        <div class="prospera-about-dropdown" id="desktopAboutDropdown">
-          <button aria-controls="desktopAboutMenu" aria-expanded="false"
-            class="prospera-about-trigger hover:text-gold-500 transition-colors"
-            onclick="toggleAboutDropdown(event, 'desktopAboutDropdown')" type="button">
-            <span>About</span>
-            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
-          </button>
-          <div aria-label="About links" class="prospera-about-menu" id="desktopAboutMenu" role="menu">
-            <a href="about-us.html" role="menuitem">About Us</a>
-            <a href="why-prospera-ai.html" role="menuitem">Why Prospera AI</a>
-            <a href="reviews.html" role="menuitem">Reviews</a>
-            <a href="contact.html" role="menuitem">Contact Us</a>
-            <a href="privacy-terms.html" role="menuitem">Privacy Policy</a>
+  <!-- ============================================================
+       PROSPERA GLOBAL MASTER NAVBAR
+       Uniform luxury real-estate navbar across all 16 pages
+       ============================================================ -->
+  <header class="prospera-site-header fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 pointer-events-none">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-2.5 sm:pt-3.5 pb-1 pointer-events-auto">
+      <div class="prospera-nav-capsule flex items-center justify-between">
+        <!-- Brand Logo -->
+        <a aria-label="Prospera AI Realtors" class="prospera-brand-logo group flex-shrink-0" href="index.html">
+          <span aria-hidden="true" class="prospera-logo-frame">
+            <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+          </span>
+        </a>
+
+        <!-- Desktop Primary Navigation -->
+        <nav aria-label="Primary navigation" class="hidden md:flex items-center gap-3.5 lg:gap-5 xl:gap-7 text-[13px] lg:text-[13.5px] xl:text-sm font-semibold text-[#182033]">
+          <a class="prospera-nav-link" href="index.html">Home</a>
+          <a class="prospera-nav-link is-active" href="builders.html">Builders</a>
+          <a class="prospera-nav-link" href="explore.html">Properties</a>
+          <a class="prospera-nav-link" href="agents.html">Agents</a>
+          <a class="prospera-nav-link" href="market-insights.html">Market Insights</a>
+          <a class="prospera-nav-link" href="compare-projects.html">Compare</a>
+          <a class="prospera-nav-link" href="book-site-visit.html">Book Site Visit</a>
+          <div class="prospera-about-dropdown" id="desktopAboutDropdown">
+            <button aria-controls="desktopAboutMenu" aria-expanded="false"
+              class="prospera-about-trigger"
+              onclick="toggleAboutDropdown(event, 'desktopAboutDropdown')" type="button">
+              <span>About</span>
+              <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+            </button>
+            <div aria-label="About links" class="prospera-about-menu" id="desktopAboutMenu" role="menu">
+              <a class="" href="about-us.html" role="menuitem">About Us</a>
+              <a class="" href="why-prospera-ai.html" role="menuitem">Why Prospera AI</a>
+              <a class="" href="reviews.html" role="menuitem">Reviews</a>
+              <a class="" href="contact.html" role="menuitem">Contact Us</a>
+              <a class="" href="privacy-terms.html" role="menuitem">Privacy Policy</a>
+            </div>
           </div>
+        </nav>
+
+        <!-- Mobile Hamburger Toggle -->
+        <div class="flex md:hidden items-center">
+          <button aria-label="Open menu"
+            class="prospera-mobile-toggle flex items-center justify-center"
+            id="mobileMenuBtn" onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-bars text-base" id="mobileMenuIcon"></i>
+          </button>
         </div>
-      </nav>
-      <!-- Right: Mobile Navigation -->
-      <div class="flex items-center gap-2 sm:gap-3">
-        <button aria-label="Open menu"
-          class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl border border-gold-500/30 bg-gold-500/10 text-gold-500 hover:bg-gold-500/20 transition-all"
-          id="mobileMenuBtn" onclick="toggleMobileMenu()">
-          <i class="fa-solid fa-bars text-base" id="mobileMenuIcon"></i>
-        </button>
+      </div>
+
+      <!-- Mobile Navigation Dropdown -->
+      <div class="hidden md:hidden prospera-mobile-menu-card" id="mobileMenu">
+        <nav aria-label="Mobile navigation" class="p-3 sm:p-4 flex flex-col gap-1">
+          <a class="prospera-mobile-nav-link" href="index.html">Home</a>
+          <a class="prospera-mobile-nav-link is-active" href="builders.html">Builders</a>
+          <a class="prospera-mobile-nav-link" href="explore.html">Properties</a>
+          <a class="prospera-mobile-nav-link" href="agents.html">Agents</a>
+          <a class="prospera-mobile-nav-link" href="market-insights.html">Market Insights</a>
+          <a class="prospera-mobile-nav-link" href="compare-projects.html">Compare</a>
+          <a class="prospera-mobile-nav-link" href="book-site-visit.html">Book Site Visit</a>
+          <div class="prospera-mobile-about" id="mobileAboutDropdown">
+            <button aria-controls="mobileAboutMenu" aria-expanded="false"
+              class="prospera-mobile-about-trigger"
+              onclick="toggleAboutDropdown(event, 'mobileAboutDropdown')" type="button">
+              <span>About</span>
+              <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+            </button>
+            <div class="prospera-mobile-about-menu" id="mobileAboutMenu">
+              <a class="" href="about-us.html">About Us</a>
+              <a class="" href="why-prospera-ai.html">Why Prospera AI</a>
+              <a class="" href="reviews.html">Reviews</a>
+              <a class="" href="contact.html">Contact Us</a>
+              <a class="" href="privacy-terms.html">Privacy Policy</a>
+            </div>
+          </div>
+        </nav>
       </div>
     </div>
-    <!-- Mobile Navigation Dropdown -->
-    <div class="hidden md:hidden border-t border-slate-200 bg-white" id="mobileMenu">
-      <nav aria-label="Mobile navigation" class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="index.html">Home</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="builders.html">Builders</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="explore.html">Properties</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="agents.html">Agents</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="market-insights.html">Market Insights</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="compare-projects.html">Compare</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="book-site-visit.html">Book Site Visit</a>
-        <div class="prospera-mobile-about" id="mobileAboutDropdown">
-          <button aria-controls="mobileAboutMenu" aria-expanded="false" class="prospera-mobile-about-trigger"
-            onclick="toggleAboutDropdown(event, 'mobileAboutDropdown')" type="button">
-            <span>About</span>
-            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
-          </button>
-          <div class="prospera-mobile-about-menu" id="mobileAboutMenu">
-            <a href="about-us.html">About Us</a>
-            <a href="why-prospera-ai.html">Why Prospera AI</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="privacy-terms.html">Privacy Policy</a>
-          </div>
-        </div>
-      </nav>
-    </div>
   </header>
-<main aria-label="Baba Infra builder profile">
+<main aria-label="Builder profile">
 <section aria-labelledby="builder-title" class="bp-hero bp-compact-hero">
 <div class="bp-container">
+<nav class="bp-breadcrumbs">
+  <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+  <span class="sep">/</span>
+  <a href="builders.html">Builders</a>
+  <span class="sep">/</span>
+  <span class="curr" id="crumb-builder-name">Baba Infra</span>
+</nav>
 <div class="bp-profile-card">
 <div class="bp-profile-top">
 <div>
-<div class="bp-kicker">BUILDER PROFILE</div>
-<h1 id="builder-title">Baba Infra</h1>
-<p class="bp-tagline">Premium real estate development across Uttar Pradesh.</p>
-<p class="bp-hero-desc">A focused builder profile with key projects, operating areas, direct contact details and a dedicated Prospera AI advisor.</p>
-<div class="bp-mini-tags"><span>5+ Years</span><span>50+ Acres</span><span>2,500+ Customers</span></div>
+<div class="bp-kicker"><i class="fa-solid fa-award text-gold-500"></i> VERIFIED BUILDER PROFILE</div>
+<div class="flex items-center gap-4 my-2.5 flex-wrap sm:flex-nowrap">
+  <div id="builder-logo-badge" class="w-16 h-16 rounded-xl bg-white border border-gold-500/30 p-2 flex items-center justify-center flex-shrink-0 shadow-sm">
+    <img id="builder-logo-img" src="./assets/images/partner/babainfra.png" alt="Builder Logo" class="max-h-full max-w-full object-contain" />
+  </div>
+  <div>
+    <h1 id="builder-title" style="color: #000000 !important; -webkit-text-fill-color: #000000 !important; margin: 0; line-height: 1.15;">Baba Infra</h1>
+    <p class="bp-tagline" id="builder-tagline" style="margin-top: 4px; margin-bottom: 0;">Premium real estate development across Uttar Pradesh.</p>
+  </div>
 </div>
-<aside aria-label="Prospera AI assigned builder agent" class="bp-agent-assigned-card">
+<p class="bp-hero-desc" id="builder-desc">A focused builder profile with key projects, operating areas, direct contact details and a dedicated Prospera AI advisor.</p>
+<div class="bp-mini-tags">
+  <span><i class="fa-solid fa-calendar-check text-gold-600 mr-1.5"></i> <span id="builder-exp">5+ Years Track Record</span></span>
+  <span><i class="fa-solid fa-chart-area text-gold-600 mr-1.5"></i> <span id="builder-acres">50+ Acres Developed</span></span>
+  <span><i class="fa-solid fa-users text-gold-600 mr-1.5"></i> <span id="builder-cust">2,500+ Customers</span></span>
+  <span><i class="fa-solid fa-shield-halved text-gold-600 mr-1.5"></i> 100% RERA Registered</span>
+</div>
+</div>
+<aside aria-label="Prospera AI assigned builder agent" class="bp-agent-assigned-card dark-card text-white">
 <div class="bp-agent-assigned-top">
 <div class="bp-agent-assigned-icon"><i class="fa-solid fa-robot"></i></div>
 <div class="bp-agent-assigned-copy">
-<span class="bp-agent-assigned-eyebrow"><i class="fa-solid fa-sparkles"></i> ASSIGNED BY PROSPERA AI</span>
-<strong>Deepak AI</strong>
+<span class="bp-agent-assigned-eyebrow"><i class="fa-solid fa-sparkles text-gold-500"></i> ASSIGNED BY PROSPERA AI</span>
+<strong class="text-white font-serif text-2xl font-bold tracking-tight" id="assigned-agent-name">Deepak AI</strong>
 <span class="bp-agent-active"><i class="fa-solid fa-circle"></i> Active AI advisor</span>
 </div>
 </div>
-<div class="bp-agent-assigned-note">Your dedicated AI advisor for Baba Infra projects, availability and property enquiries.</div>
-<button class="bp-agent-chat" onclick="openBuilderAI()" type="button"><i class="fa-solid fa-comments"></i> Chat with Deepak AI</button>
+<div class="bp-agent-assigned-note text-white" id="assigned-agent-note">Your dedicated AI advisor for Baba Infra projects, availability and property enquiries.</div>
+<button class="bp-agent-chat btn-gold-primary" onclick="openBuilderAI()" type="button"><i class="fa-solid fa-comments"></i> <span id="chat-btn-text">Chat with Deepak AI</span></button>
 </aside>
 </div>
 <div class="bp-profile-actions">
 <a class="bp-btn bp-btn-gold" href="#projects"><i class="fa-solid fa-building"></i> View Projects</a>
+<a class="bp-btn bp-btn-outline" id="book-visit-btn" href="book-site-visit.html?builder=baba-infra"><i class="fa-solid fa-calendar-day text-gold-600"></i> Book Site Visit</a>
+<a class="bp-btn bp-btn-outline" href="#contact"><i class="fa-solid fa-phone text-gold-600"></i> Direct Contact</a>
 </div>
 </div>
 </div>
 </section>
+
 <section aria-labelledby="about-title" class="bp-section bp-compact-section" id="about">
 <div class="bp-container">
-<div class="bp-section-head"><div class="bp-kicker">ABOUT THE BUILDER</div><h2 id="about-title">Baba Infra at a glance</h2></div>
+<div class="bp-section-head">
+  <div class="bp-kicker">ABOUT THE BUILDER</div>
+  <h2 id="about-title" style="color: #000000 !important; -webkit-text-fill-color: #000000 !important;">Baba Infra at a glance</h2>
+</div>
 <div class="bp-overview-grid">
 <article class="bp-card bp-about-compact">
-<p>Baba Infra Developers is a Lucknow-based real estate brand focused on residential and commercial developments in growth corridors across Uttar Pradesh.</p>
-<p class="bp-muted">Its current portfolio includes residential, plotted and commercial projects across locations such as Vrindavan Yojna, Sultanpur Road and Shaheed Path.</p>
+<p id="about-p1">Baba Infra Developers is a Lucknow-based real estate brand focused on residential and commercial developments in growth corridors across Uttar Pradesh.</p>
+<p class="bp-muted" id="about-p2">Its current portfolio includes residential, plotted and commercial projects across prime locations such as Vrindavan Yojna, Sultanpur Road and Shaheed Path.</p>
 </article>
 <div class="bp-key-info">
-<div><small>FOCUS</small><strong>Residential · Commercial · Plots</strong></div>
-<div><small>PRIMARY MARKET</small><strong>Lucknow &amp; Uttar Pradesh</strong></div>
+<div><small>FOCUS</small><strong id="info-focus">Residential &bull; Commercial &bull; Plots</strong></div>
+<div><small>PRIMARY MARKET</small><strong id="info-market">Lucknow &amp; Uttar Pradesh</strong></div>
 <div><small>RERA</small><strong>Project-level registrations</strong></div>
-<div><small>ACTIVE PORTFOLIO</small><strong>5+ ongoing projects</strong></div>
+<div><small>ACTIVE PORTFOLIO</small><strong id="info-portfolio">5+ ongoing projects</strong></div>
 </div>
 </div>
 </div>
 </section>
+
 <section aria-labelledby="projects-title" class="bp-section bp-compact-section" id="projects">
 <div class="bp-container">
-<div class="bp-section-head"><div class="bp-kicker">PROJECTS</div><h2 id="projects-title">Current &amp; Key Projects</h2></div>
-<div class="bp-projects-visual">
+<div class="bp-section-head">
+  <div class="bp-kicker">PROJECTS</div>
+  <h2 id="projects-title" style="color: #000000 !important; -webkit-text-fill-color: #000000 !important;">Current &amp; Key Projects</h2>
+</div>
+<div class="bp-projects-visual" id="projects-container">
 <article class="bp-project-card-visual">
 <div class="bp-project-visual-img"><img alt="Imperial Residencia residential project" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"/><span class="bp-project-badge">ONGOING</span></div>
 <div class="bp-project-visual-body">
-<div class="bp-project-visual-top"><h3>Imperial Residencia</h3><span class="bp-project-price">₹2.15 Cr+</span></div>
+<div class="bp-project-visual-top"><h3>Imperial Residencia</h3><span class="bp-project-price">&#8377;2.15 Cr+</span></div>
 <p class="bp-project-location"><i class="fa-solid fa-location-dot"></i> Vrindavan Yojna, Lucknow</p>
 <p class="bp-project-description">Premium residential development with spacious 4 BHK residences and a lifestyle-focused community setting.</p>
 <div class="bp-project-details"><span><i class="fa-solid fa-house"></i> 4 BHK</span><span><i class="fa-solid fa-expand"></i> Premium Residences</span></div>
-<a class="bp-project-view-btn" href="#" onclick="return false;">View Project <i class="fa-solid fa-arrow-right"></i></a>
+<a class="bp-project-view-btn" href="project-details.html?project=imperial-residencia">View Project <i class="fa-solid fa-arrow-right"></i></a>
 </div>
 </article>
 <article class="bp-project-card-visual">
@@ -242,7 +1180,7 @@
 <p class="bp-project-location"><i class="fa-solid fa-location-dot"></i> Sultanpur Road, Lucknow</p>
 <p class="bp-project-description">Commercial retail project designed for shops and business spaces along a key Lucknow growth corridor.</p>
 <div class="bp-project-details"><span><i class="fa-solid fa-store"></i> Retail</span><span><i class="fa-solid fa-building"></i> Commercial</span></div>
-<a class="bp-project-view-btn" href="#" onclick="return false;">View Project <i class="fa-solid fa-arrow-right"></i></a>
+<a class="bp-project-view-btn" href="project-details.html?project=kailasha-arcade">View Project <i class="fa-solid fa-arrow-right"></i></a>
 </div>
 </article>
 <article class="bp-project-card-visual">
@@ -252,7 +1190,7 @@
 <p class="bp-project-location"><i class="fa-solid fa-location-dot"></i> Shaheed Path, Lucknow</p>
 <p class="bp-project-description">Commercial project offering business and retail opportunities in one of Lucknow's established development corridors.</p>
 <div class="bp-project-details"><span><i class="fa-solid fa-shop"></i> Shops</span><span><i class="fa-solid fa-building"></i> Commercial</span></div>
-<a class="bp-project-view-btn" href="#" onclick="return false;">View Project <i class="fa-solid fa-arrow-right"></i></a>
+<a class="bp-project-view-btn" href="project-details.html?project=kailasha-awadh">View Project <i class="fa-solid fa-arrow-right"></i></a>
 </div>
 </article>
 <article class="bp-project-card-visual">
@@ -262,37 +1200,42 @@
 <p class="bp-project-location"><i class="fa-solid fa-location-dot"></i> Sultanpur Road, Lucknow</p>
 <p class="bp-project-description">Gated plotted development created for buyers looking for residential land in a growing Lucknow corridor.</p>
 <div class="bp-project-details"><span><i class="fa-solid fa-draw-polygon"></i> Residential Plots</span><span><i class="fa-solid fa-shield-halved"></i> RERA Linked</span></div>
-<a class="bp-project-view-btn" href="#" onclick="return false;">View Project <i class="fa-solid fa-arrow-right"></i></a>
+<a class="bp-project-view-btn" href="project-details.html?project=kailasha-enclave">View Project <i class="fa-solid fa-arrow-right"></i></a>
 </div>
 </article>
 </div>
 </div>
 </section>
+
 <section aria-labelledby="contact-title" class="bp-section bp-compact-section" id="contact">
 <div class="bp-container">
-<div class="bp-section-head"><div class="bp-kicker">DIRECT CONTACT</div><h2 id="contact-title">Connect with Baba Infra</h2></div>
+<div class="bp-section-head">
+  <div class="bp-kicker">DIRECT CONTACT</div>
+  <h2 id="contact-title" class="text-black font-serif text-3xl sm:text-4xl font-bold" style="color: #000000 !important; -webkit-text-fill-color: #000000 !important;">Connect with Baba Infra</h2>
+</div>
 <div class="bp-contact-grid-single">
 <div class="bp-contact-card bp-contact-simple">
-<div class="bp-contact-item"><i class="fa-solid fa-phone"></i><div><small>PHONE</small><a href="tel:+918010928928">+91 80109 28928</a></div></div>
-<div class="bp-contact-item"><i class="fa-solid fa-envelope"></i><div><small>EMAIL</small><a href="mailto:crm@babainfra.com">crm@babainfra.com</a></div></div>
-<div class="bp-contact-item"><i class="fa-solid fa-location-dot"></i><div><small>OFFICE</small><span>D-1261, Sector-D, Indira Nagar, Lucknow, Uttar Pradesh 226016</span></div></div>
-<div class="bp-contact-item"><i class="fa-solid fa-globe"></i><div><small>WEBSITE</small><a href="https://babainfra.com/" rel="noopener noreferrer" target="_blank">babainfra.com</a></div></div>
+<div class="bp-contact-item"><i class="fa-solid fa-phone"></i><div><small>PHONE</small><a href="tel:+918010928928" id="contact-phone">+91 80109 28928</a></div></div>
+<div class="bp-contact-item"><i class="fa-solid fa-envelope"></i><div><small>EMAIL</small><a href="mailto:crm@babainfra.com" id="contact-email">crm@babainfra.com</a></div></div>
+<div class="bp-contact-item"><i class="fa-solid fa-location-dot"></i><div><small>OFFICE</small><span id="contact-office">D-1261, Sector-D, Indira Nagar, Lucknow, Uttar Pradesh 226016</span></div></div>
+<div class="bp-contact-item"><i class="fa-solid fa-globe"></i><div><small>WEBSITE</small><a href="https://babainfra.com/" id="contact-web" rel="noopener noreferrer" target="_blank">babainfra.com</a></div></div>
 </div>
 </div>
 </div>
 </section>
 </main>
+
 <section aria-labelledby="builder-faq-title" class="bp-section bp-compact-section builder-faq-section" id="builder-faq">
 <div class="bp-container">
 <div class="bp-section-head">
 <div class="bp-kicker">BUILDER FAQ</div>
-<h2 id="builder-faq-title">Baba Infra — quick answers</h2>
+<h2 id="builder-faq-title" style="color: #000000 !important; -webkit-text-fill-color: #000000 !important;">Baba Infra &mdash; Quick Answers</h2>
 </div>
-<div class="bp-faq-grid">
-<details class="bp-faq-item"><summary>What projects are listed for Baba Infra?</summary><p>The profile currently lists Imperial Residencia, Kailasha Arcade, Kailasha Awadh and Kailasha Enclave.</p></details>
-<details class="bp-faq-item"><summary>Where are Baba Infra projects shown?</summary><p>The listed projects are in Lucknow locations including Vrindavan Yojna, Sultanpur Road and Shaheed Path.</p></details>
-<details class="bp-faq-item"><summary>What types of projects are shown?</summary><p>The profile presents residential, commercial and plotted development projects.</p></details>
-<details class="bp-faq-item"><summary>How can I contact Baba Infra?</summary><p>Use the direct phone, email or website details on this profile, or chat with the assigned Prospera AI advisor, Deepak AI.</p></details>
+<div class="bp-faq-grid" id="faq-container">
+<details class="bp-faq-item"><summary id="faq-q1">What projects are listed for Baba Infra?</summary><p id="faq-a1">The profile currently lists Imperial Residencia, Kailasha Arcade, Kailasha Awadh and Kailasha Enclave.</p></details>
+<details class="bp-faq-item"><summary id="faq-q2">Where are Baba Infra projects shown?</summary><p id="faq-a2">The listed projects are in Lucknow locations including Vrindavan Yojna, Sultanpur Road and Shaheed Path.</p></details>
+<details class="bp-faq-item"><summary id="faq-q3">What types of projects are shown?</summary><p id="faq-a3">The profile presents residential, commercial and plotted development projects.</p></details>
+<details class="bp-faq-item"><summary id="faq-q4">How can I contact Baba Infra?</summary><p id="faq-a4">Use the direct phone, email or website details on this profile, or chat with the assigned Prospera AI advisor.</p></details>
 </div>
 </div>
 </section>
@@ -364,30 +1307,567 @@
     </div>
   </footer>
 </div>
+
+<!-- BUILDER AI MODAL -->
 <div aria-labelledby="builderAiModalTitle" aria-modal="true" class="bp-modal" id="builderAiModal" onclick="if(event.target===this)closeBuilderAI()" role="dialog">
 <div class="bp-modal-card">
-<div class="bp-modal-head"><div><div class="font-bold text-sm" id="builderAiModalTitle">Prospera AI · Deepak AI</div><div class="text-[10px] text-slate-400 mt-1">Baba Infra Builder Advisor</div></div><button aria-label="Close AI advisor" onclick="closeBuilderAI()" type="button"><i class="fa-solid fa-xmark"></i></button></div>
-<div class="bp-chat" id="builderChat"><div class="bp-chat-bubble bot">Hi, I’m Deepak AI. Ask me about Baba Infra projects, locations, property types, price ranges or how to connect with the builder.</div></div>
-<div class="bp-chat-input"><input autocomplete="off" id="builderChatInput" placeholder="Ask Deepak AI..." type="text"/><button aria-label="Send" onclick="sendBuilderQuestion()" type="button"><i class="fa-solid fa-paper-plane"></i></button></div>
+<div class="bp-modal-head">
+  <div>
+    <div class="font-bold text-sm" id="builderAiModalTitle">Prospera AI &mdash; Deepak AI</div>
+    <div class="text-[11px] text-white mt-0.5" id="modal-agent-subtitle" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">Baba Infra Dedicated Advisor</div>
+  </div>
+  <button aria-label="Close AI advisor" onclick="closeBuilderAI()" type="button"><i class="fa-solid fa-xmark"></i></button>
+</div>
+<div class="bp-chat" id="builderChat">
+  <div class="bp-chat-bubble bot" id="modal-greeting">Hi, I'm Deepak AI. Ask me about Baba Infra projects, locations, property types, price ranges or how to connect with the builder.</div>
+</div>
+<div class="bp-chat-input">
+  <input autocomplete="off" id="builderChatInput" placeholder="Ask AI advisor..." type="text"/>
+  <button aria-label="Send" onclick="sendBuilderQuestion()" type="button"><i class="fa-solid fa-paper-plane"></i></button>
 </div>
 </div>
+</div>
+
 <script>
+/* ── DYNAMIC BUILDER DATABASE ── */
+const PROSPERA_BUILDERS = {
+  'baba-infra': {
+    name: 'Baba Infra',
+    title: 'Baba Infra',
+    logo: './assets/images/partner/babainfra.png',
+    tagline: 'Premium real estate development across Uttar Pradesh.',
+    desc: 'Lucknow-focused residential developer with a growing project portfolio and customer base.',
+    exp: '5+ Years Track Record',
+    acres: '50+ Acres Developed',
+    cust: '2,500+ Customers',
+    agent: 'Deepak AI',
+    focus: 'Residential • Commercial • Plots',
+    market: 'Lucknow & Uttar Pradesh',
+    portfolio: '5+ ongoing projects',
+    about1: 'Baba Infra Developers is a Lucknow-based real estate brand focused on residential and commercial developments in growth corridors across Uttar Pradesh.',
+    about2: 'Its current portfolio includes residential, plotted and commercial projects across prime locations such as Vrindavan Yojna, Sultanpur Road and Shaheed Path.',
+    phone: '+91 80109 28928',
+    email: 'crm@babainfra.com',
+    office: 'D-1261, Sector-D, Indira Nagar, Lucknow, Uttar Pradesh 226016',
+    web: 'https://babainfra.com/',
+    webDisplay: 'babainfra.com',
+    q1: 'What projects are listed for Baba Infra?',
+    a1: 'The profile currently lists Imperial Residencia, Kailasha Arcade, Kailasha Awadh and Kailasha Enclave.',
+    q2: 'Where are Baba Infra projects located?',
+    a2: 'The listed projects are in Lucknow locations including Vrindavan Yojna, Sultanpur Road and Shaheed Path.',
+    projects: [
+      {
+        name: 'Imperial Residencia',
+        price: '₹2.15 Cr+',
+        location: 'Vrindavan Yojna, Lucknow',
+        desc: 'Premium residential development with spacious 4 BHK residences and a lifestyle-focused community setting.',
+        type: '4 BHK',
+        feature: 'Premium Residences',
+        badge: 'ONGOING',
+        image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85',
+        url: 'project-details.html?project=imperial-residencia'
+      },
+      {
+        name: 'Kailasha Arcade',
+        price: 'Commercial',
+        location: 'Sultanpur Road, Lucknow',
+        desc: 'Commercial retail project designed for shops and business spaces along a key Lucknow growth corridor.',
+        type: 'Retail',
+        feature: 'Commercial',
+        badge: 'ONGOING',
+        image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85',
+        url: 'project-details.html?project=kailasha-arcade'
+      },
+      {
+        name: 'Kailasha Awadh',
+        price: 'Commercial',
+        location: 'Shaheed Path, Lucknow',
+        desc: 'Commercial project offering business and retail opportunities in one of Lucknow\'s established development corridors.',
+        type: 'Shops',
+        feature: 'Commercial',
+        badge: 'ONGOING',
+        image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85',
+        url: 'project-details.html?project=kailasha-awadh'
+      },
+      {
+        name: 'Kailasha Enclave',
+        price: 'Plots',
+        location: 'Sultanpur Road, Lucknow',
+        desc: 'Gated plotted development created for buyers looking for residential land in a growing Lucknow corridor.',
+        type: 'Residential Plots',
+        feature: 'RERA Linked',
+        badge: 'COMPLETED',
+        image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85',
+        url: 'project-details.html?project=kailasha-enclave'
+      }
+    ]
+  },
+  'm3m': {
+    name: 'M3M India',
+    title: 'M3M India Private Limited',
+    logo: './assets/images/partner/m3m.png',
+    tagline: 'Redefining luxury living & architectural landmarks across NCR.',
+    desc: 'Foremost luxury real estate conglomerate renowned for groundbreaking architectural landmarks, golf-residence communities and premier commercial destinations.',
+    exp: '15+ Years Track Record',
+    acres: '500+ Acres Developed',
+    cust: '35,000+ Elite Families',
+    agent: 'Kabir AI',
+    focus: 'Ultra-Luxury Golf Residences • High-Street Commercial • Mixed-Use',
+    market: 'Gurugram (Golf Course Ext. Rd, SPR, Dwarka Expressway) & NCR',
+    portfolio: '45+ Delivered & Iconic Projects',
+    about1: 'M3M India stands as one of the fastest growing and most innovative luxury real estate developers in India, known for transforming Gurugram\'s skyline with world-class residential and commercial master-developments.',
+    about2: 'Renowned for landmark developments such as M3M Golfestate Crown, M3M Altitude, M3M Antalya Hills, and M3M Capital, delivering unmatched luxury, world-class golf amenities, and sustainable architecture.',
+    phone: '+91 8010 333 444',
+    email: 'sales@m3mindia.com',
+    office: 'M3M Cosmopolitan, 12th Floor, Golf Course Extension Road, Sector 66, Gurugram, Haryana 122002',
+    web: 'https://m3mindia.com/',
+    webDisplay: 'm3mindia.com',
+    q1: 'What projects are listed for M3M India?',
+    a1: 'Flagship luxury developments include M3M Golfestate Crown, M3M Altitude, M3M Antalya Hills, and M3M Capital.',
+    q2: 'Where are M3M projects located?',
+    a2: 'M3M projects are located across prime growth corridors in Gurugram, including Golf Course Extension Road, SPR, and Dwarka Expressway.',
+    projects: [
+      {
+        name: 'M3M Golfestate Crown',
+        price: '₹3.85 Cr*',
+        location: 'Golf Course Extension Road, Sector 65, Gurgaon',
+        desc: '7-star ultra-luxury golf residences featuring 3.5 & 4.5 BHK palatial layouts and 75,000 sq.ft. signature clubhouse.',
+        type: '3.5 & 4.5 BHK',
+        feature: 'Golf Facing Luxury',
+        badge: 'ONGOING',
+        image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85',
+        url: 'property-details.html'
+      },
+      {
+        name: 'M3M Altitude',
+        price: '₹4.20 Cr*',
+        location: 'Sector 65, Golf Course Extension Road, Gurgaon',
+        desc: 'Futuristic glass-facade luxury suites with private sky lounges and unobstructed panoramic city views.',
+        type: '4 BHK Luxury Suites',
+        feature: 'Sky Lounge & Deck',
+        badge: 'NEW LAUNCH',
+        image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85',
+        url: 'property-details.html'
+      },
+      {
+        name: 'M3M Antalya Hills',
+        price: '₹1.65 Cr*',
+        location: 'Sector 79, Aravalli Foothills, Gurgaon',
+        desc: 'Low-rise boutique luxury floors amidst nature with open terrace decks and private basement workspaces.',
+        type: '2.5 & 3.5 BHK',
+        feature: 'Aravalli Greens',
+        badge: 'ONGOING',
+        image: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=85',
+        url: 'property-details.html'
+      },
+      {
+        name: 'M3M Capital',
+        price: '₹2.10 Cr*',
+        location: 'Sector 113, Dwarka Expressway, Gurgaon',
+        desc: 'High-rise residential community adjacent to Delhi border with 9-hole executive golf course and wide green corridors.',
+        type: '2.5 & 3.5 BHK',
+        feature: 'Dwarka Expressway Link',
+        badge: 'COMPLETED',
+        image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=85',
+        url: 'property-details.html'
+      }
+    ]
+  },
+  'rishita': {
+    name: 'Rishita Developers',
+    title: 'Rishita Developers',
+    logo: './assets/images/partner/rishita.png',
+    tagline: 'Luxury living, contemporary architecture & elevated lifestyle.',
+    desc: 'Residential developer focused on premium communities around Sushant Golf City and Gomti Nagar Extension.',
+    exp: '17+ Years Track Record',
+    acres: '80+ Acres Developed',
+    cust: '5,000+ Happy Families',
+    agent: 'Ananya AI',
+    focus: 'Luxury Residences • High-Rise Apartments',
+    market: 'Lucknow (Sushant Golf City & Gomti Nagar Ext)',
+    portfolio: '8+ Landmark Projects',
+    about1: 'Rishita Developers is renowned for iconic luxury residences in Lucknow, blending contemporary architecture with expansive green spaces.',
+    about2: 'Key projects include Rishita Manhattan, Rishita Mulberry Heights, and Rishita Serenity offering state-of-the-art amenities and prime highway connectivity.',
+    phone: '+91 80099 22000',
+    email: 'sales@rishita.in',
+    office: 'Coronation Club, Sushant Golf City, Amar Shaheed Path, Lucknow 226030',
+    web: 'https://rishita.in/',
+    webDisplay: 'rishita.in',
+    q1: 'What projects are listed for Rishita Developers?',
+    a1: 'Popular projects include Rishita Manhattan, Mulberry Heights, and Rishita Serenity.',
+    q2: 'Where are Rishita projects located?',
+    a2: 'Rishita developments are strategically situated in Sushant Golf City and Gomti Nagar Extension, Lucknow.',
+    projects: [
+      {
+        name: 'Rishita Manhattan',
+        price: '₹1.25 Cr+',
+        location: 'Sector 7, Gomti Nagar Extension, Lucknow',
+        desc: 'Iconic Manhattan-style luxury residential towers with world-class amenities and expansive green landscape.',
+        type: '3 & 4 BHK',
+        feature: 'Club Manhattan',
+        badge: 'ONGOING',
+        image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=85',
+        url: 'property-details.html'
+      },
+      {
+        name: 'Rishita Mulberry Heights',
+        price: '₹95 L+',
+        location: 'Sushant Golf City, Shaheed Path, Lucknow',
+        desc: 'Ultra-modern apartments spread across 21.45 acres offering serene golf vistas and premium recreation.',
+        type: '2 & 3 BHK',
+        feature: 'Golf View Living',
+        badge: 'ONGOING',
+        image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85',
+        url: 'property-details.html'
+      },
+      {
+        name: 'Rishita Serenity',
+        price: '₹1.80 Cr+',
+        location: 'Amar Shaheed Path, Lucknow',
+        desc: 'Palatial high-rise residences designed for discerning homeowners seeking exclusivity and refined luxury.',
+        type: '4 BHK Luxury',
+        feature: 'Private Balconies',
+        badge: 'NEW LAUNCH',
+        image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85',
+        url: 'property-details.html'
+      }
+    ]
+  },
+  'eldeco': {
+    name: 'Eldeco Group',
+    title: 'Eldeco Group',
+    logo: './assets/images/partner/eldeco.png',
+    tagline: 'Pioneers in integrated townships & premium urban housing.',
+    desc: 'Established developer with a broad portfolio spanning residential communities, townships and commercial projects.',
+    exp: '40+ Years Track Record',
+    acres: '200+ Acres Developed',
+    cust: '30,000+ Satisfied Customers',
+    agent: 'Meera AI',
+    focus: 'Integrated Townships • Group Housing • Commercial',
+    market: 'Lucknow, Kanpur, Agra & NCR',
+    portfolio: '65+ Delivered Projects',
+    about1: 'Eldeco Group has been at the forefront of real estate development in North India for four decades, known for timely delivery and supreme quality.',
+    about2: 'Their flagship developments in Lucknow include Eldeco Select, Eldeco Latitude 27, and Eldeco City along IIM Road and Shaheed Path.',
+    phone: '+91 522 4039999',
+    email: 'contact@eldecohousing.co.in',
+    office: 'Eldeco Corporate Chamber, Vibhuti Khand, Gomti Nagar, Lucknow 226010',
+    web: 'https://eldecogroup.com/',
+    webDisplay: 'eldecogroup.com',
+    q1: 'What projects are listed for Eldeco Group?',
+    a1: 'Key projects include Eldeco Select, Eldeco Latitude 27, and Eldeco Twin Towers.',
+    q2: 'Where are Eldeco projects located?',
+    a2: 'Eldeco communities span IIM Road, Shaheed Path, Sitapur Road, and Gomti Nagar in Lucknow.',
+    projects: [
+      {
+        name: 'Eldeco Latitude 27',
+        price: '₹1.35 Cr+',
+        location: 'IIM Road, Lucknow',
+        desc: 'Premium high-rise homes set amidst landscaped green lawns with contemporary lifestyle clubhouse.',
+        type: '2 & 3 BHK',
+        feature: 'Green Living',
+        badge: 'ONGOING',
+        image: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=85',
+        url: 'property-details.html'
+      },
+      {
+        name: 'Eldeco Select',
+        price: '₹1.95 Cr+',
+        location: 'Amar Shaheed Path, Lucknow',
+        desc: 'Signature luxury condominiums featuring spacious layouts, central park greens, and private fitness suites.',
+        type: '3 & 4 BHK',
+        feature: 'Signature Club',
+        badge: 'ONGOING',
+        image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85',
+        url: 'property-details.html'
+      },
+      {
+        name: 'Eldeco Twin Towers',
+        price: '₹1.10 Cr+',
+        location: 'Sitapur Road, Lucknow',
+        desc: 'Twin luxury high-rise towers offering rapid highway connectivity and panoramic suburban views.',
+        type: '2 & 3 BHK',
+        feature: 'Panoramic Vistas',
+        badge: 'COMPLETED',
+        image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=85',
+        url: 'property-details.html'
+      }
+    ]
+  },
+  'omaxe': {
+    name: 'Omaxe Limited',
+    title: 'Omaxe Limited',
+    logo: './assets/images/partner/omaxe.png',
+    tagline: 'Turning dreams into reality with world-class townships.',
+    desc: 'Large real-estate group with multiple residential and commercial projects across Lucknow.',
+    exp: '38+ Years Track Record',
+    acres: '300+ Acres Developed',
+    cust: '1,00,000+ Happy Customers',
+    agent: 'Kabir AI',
+    focus: 'Hi-Tech Townships • Luxury Villas • Commercial Malls',
+    market: 'Lucknow, Noida, Greater Noida, Faridabad',
+    portfolio: '100+ Delivered Projects',
+    about1: 'Omaxe Limited is one of India’s most trusted real estate developers, delivering world-class townships, penthouses, and commercial hubs.',
+    about2: 'In Lucknow, Omaxe City on Amar Shaheed Path and Raebareli Road stands as a premier self-sustained mega-township.',
+    phone: '+91 1800 102 0064',
+    email: 'customercare@omaxe.com',
+    office: 'Omaxe City, Amar Shaheed Path, Lucknow, Uttar Pradesh 226025',
+    web: 'https://www.omaxe.com/',
+    webDisplay: 'omaxe.com',
+    q1: 'What projects are listed for Omaxe Limited?',
+    a1: 'Notable projects include Omaxe City, Omaxe Heights, and Omaxe Grand.',
+    q2: 'Where are Omaxe projects located?',
+    a2: 'Omaxe projects are primarily located along Amar Shaheed Path, Raebareli Road, and Gomti Nagar in Lucknow.',
+    projects: [
+      {
+        name: 'Omaxe City Villas',
+        price: '₹1.65 Cr+',
+        location: 'Amar Shaheed Path, Lucknow',
+        desc: 'Exclusive gated villa enclave within integrated mega township featuring private gardens and clubhouse.',
+        type: '4 & 5 BHK Villas',
+        feature: 'Private Lawn & Deck',
+        badge: 'ONGOING',
+        image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85',
+        url: 'property-details.html'
+      },
+      {
+        name: 'Omaxe Heights',
+        price: '₹1.15 Cr+',
+        location: 'Vibhuti Khand, Gomti Nagar, Lucknow',
+        desc: 'Prime high-rise residential towers adjacent to commercial business parks and prime social infrastructure.',
+        type: '3 & 4 BHK',
+        feature: 'Prime Gomti Nagar',
+        badge: 'COMPLETED',
+        image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=85',
+        url: 'property-details.html'
+      },
+      {
+        name: 'Omaxe Grand',
+        price: '₹1.45 Cr+',
+        location: 'Sector 7, Gomti Nagar Ext, Lucknow',
+        desc: 'Luxury condominium towers with international standard sports facilities and lush landscaped lawns.',
+        type: '3 BHK Luxury',
+        feature: 'Sports Complex',
+        badge: 'ONGOING',
+        image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85',
+        url: 'property-details.html'
+      }
+    ]
+  },
+  'ekana': {
+    name: 'Ekana Sportz City',
+    title: 'Ekana Sportz City',
+    logo: './assets/images/partner/ekana.png',
+    tagline: 'India’s premier sports & luxury residential destination.',
+    desc: 'Large-format sports and lifestyle destination with residential, commercial and mixed-use opportunities.',
+    exp: '12+ Years Track Record',
+    acres: '137+ Acres Mega City',
+    cust: '4,000+ Elite Residents',
+    agent: 'Arjun AI',
+    focus: 'Sports City • Luxury High-Rise • Mixed-Use Commercial',
+    market: 'Gomti Nagar Extension, Lucknow',
+    portfolio: '4+ Landmark Projects',
+    about1: 'Ekana Sportz City is a transformative destination in Lucknow integrating international-standard sports stadiums with ultra-luxury residences.',
+    about2: 'Centred around the Ekana International Cricket Stadium, it features Ekana Ontario, Ekana Anthem, and commercial business hubs.',
+    phone: '+91 84000 00555',
+    email: 'info@ekanasportzcity.com',
+    office: 'Ekana Stadium Complex, Amar Shaheed Path, Gomti Nagar Ext, Lucknow 226010',
+    web: 'https://ekanasportzcity.com/',
+    webDisplay: 'ekanasportzcity.com',
+    q1: 'What projects are listed for Ekana Sportz City?',
+    a1: 'Developments include Ekana Ontario, Ekana Anthem, and Ekana Business Centre.',
+    q2: 'Where is Ekana Sportz City located?',
+    a2: 'It is situated on Amar Shaheed Path in Gomti Nagar Extension, adjacent to the International Cricket Stadium.',
+    projects: [
+      {
+        name: 'Ekana Ontario',
+        price: '₹1.85 Cr+',
+        location: 'Gomti Nagar Extension, Lucknow',
+        desc: 'Ultra-luxurious high-rise residences overlooking the international cricket stadium with sky gardens.',
+        type: '3 & 4 BHK',
+        feature: 'Stadium View Suites',
+        badge: 'ONGOING',
+        image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85',
+        url: 'property-details.html'
+      },
+      {
+        name: 'Ekana Anthem',
+        price: '₹1.40 Cr+',
+        location: 'Amar Shaheed Path, Lucknow',
+        desc: 'Contemporary lifestyle residences with integrated sports courts, Olympic-size pool and jogging track.',
+        type: '3 BHK',
+        feature: 'Club Ekana',
+        badge: 'ONGOING',
+        image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85',
+        url: 'property-details.html'
+      },
+      {
+        name: 'Ekana Business Centre',
+        price: 'Commercial',
+        location: 'Gomti Nagar Extension, Lucknow',
+        desc: 'Next-generation commercial office towers and retail high-street adjacent to Atal Bihari Vajpayee Stadium.',
+        type: 'Offices & Retail',
+        feature: 'Grade-A Commercial',
+        badge: 'COMPLETED',
+        image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85',
+        url: 'property-details.html'
+      }
+    ]
+  }
+};
+
+/* Alias M3M India */
+PROSPERA_BUILDERS['m3m-india'] = PROSPERA_BUILDERS['m3m'];
+
+/* Apply dynamic builder profile based on ?builder= query parameter */
+(function initBuilderProfile() {
+  const params = new URLSearchParams(window.location.search);
+  const rawKey = (params.get('builder') || 'baba-infra').toLowerCase().trim();
+  const b = PROSPERA_BUILDERS[rawKey] || PROSPERA_BUILDERS['baba-infra'];
+
+  // Update Page Title & Breadcrumbs
+  document.title = `${b.name} Builder Profile | Projects, Contact & AI Advisor | Prospera AI Realtors`;
+  const crumb = document.getElementById('crumb-builder-name');
+  if (crumb) crumb.textContent = b.name;
+
+  // Hero Section
+  const title = document.getElementById('builder-title');
+  if (title) title.textContent = b.name;
+  const tagline = document.getElementById('builder-tagline');
+  if (tagline) tagline.textContent = b.tagline;
+  const desc = document.getElementById('builder-desc');
+  if (desc) desc.textContent = b.desc;
+  const exp = document.getElementById('builder-exp');
+  if (exp) exp.textContent = b.exp;
+  const acres = document.getElementById('builder-acres');
+  if (acres) acres.textContent = b.acres;
+  const cust = document.getElementById('builder-cust');
+  if (cust) cust.textContent = b.cust;
+
+  // Builder Logo
+  const logoImg = document.getElementById('builder-logo-img');
+  if (logoImg && b.logo) {
+    logoImg.src = b.logo;
+    logoImg.alt = `${b.name} Logo`;
+  }
+
+  // Assigned Agent
+  const agentName = document.getElementById('assigned-agent-name');
+  if (agentName) agentName.textContent = b.agent;
+  const agentNote = document.getElementById('assigned-agent-note');
+  if (agentNote) agentNote.textContent = `Your dedicated AI advisor for ${b.name} projects, availability and property enquiries.`;
+  const chatBtnText = document.getElementById('chat-btn-text');
+  if (chatBtnText) chatBtnText.textContent = `Chat with ${b.agent}`;
+  const bookBtn = document.getElementById('book-visit-btn');
+  if (bookBtn) bookBtn.href = `book-site-visit.html?builder=${rawKey}`;
+
+  // Dynamic Projects Rendering
+  const projContainer = document.getElementById('projects-container');
+  if (projContainer && b.projects && b.projects.length) {
+    projContainer.innerHTML = b.projects.map(p => `
+      <article class="bp-project-card-visual">
+        <div class="bp-project-visual-img">
+          <img alt="${p.name}" decoding="async" loading="lazy" src="${p.image}"/>
+          <span class="bp-project-badge ${p.badge === 'COMPLETED' ? 'completed' : ''}">${p.badge}</span>
+        </div>
+        <div class="bp-project-visual-body">
+          <div class="bp-project-visual-top">
+            <h3>${p.name}</h3>
+            <span class="bp-project-price">${p.price}</span>
+          </div>
+          <p class="bp-project-location"><i class="fa-solid fa-location-dot"></i> ${p.location}</p>
+          <p class="bp-project-description">${p.desc}</p>
+          <div class="bp-project-details">
+            <span><i class="fa-solid fa-house"></i> ${p.type}</span>
+            <span><i class="fa-solid fa-expand"></i> ${p.feature}</span>
+          </div>
+          <a class="bp-project-view-btn" href="${p.url}">View Details <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+    `).join('');
+  }
+
+  // About Section
+  const aboutTitle = document.getElementById('about-title');
+  if (aboutTitle) aboutTitle.textContent = `${b.name} at a glance`;
+  const p1 = document.getElementById('about-p1');
+  if (p1) p1.textContent = b.about1;
+  const p2 = document.getElementById('about-p2');
+  if (p2) p2.textContent = b.about2;
+  const focus = document.getElementById('info-focus');
+  if (focus) focus.innerHTML = b.focus;
+  const market = document.getElementById('info-market');
+  if (market) market.textContent = b.market;
+  const port = document.getElementById('info-portfolio');
+  if (port) port.textContent = b.portfolio;
+
+  // Contact Section - ALWAYS DEEP BLACK HEADING
+  const contactTitle = document.getElementById('contact-title');
+  if (contactTitle) {
+    contactTitle.textContent = `Connect with ${b.name}`;
+    contactTitle.style.color = '#000000';
+    contactTitle.style.webkitTextFillColor = '#000000';
+  }
+  const phone = document.getElementById('contact-phone');
+  if (phone) { phone.textContent = b.phone; phone.href = `tel:${b.phone.replace(/\s+/g, '')}`; }
+  const email = document.getElementById('contact-email');
+  if (email) { email.textContent = b.email; email.href = `mailto:${b.email}`; }
+  const office = document.getElementById('contact-office');
+  if (office) office.textContent = b.office;
+  const web = document.getElementById('contact-web');
+  if (web) { web.textContent = b.webDisplay; web.href = b.web; }
+
+  // FAQ Section
+  const faqTitle = document.getElementById('builder-faq-title');
+  if (faqTitle) faqTitle.innerHTML = `${b.name} &mdash; Quick Answers`;
+  const q1 = document.getElementById('faq-q1');
+  if (q1) q1.textContent = b.q1;
+  const a1 = document.getElementById('faq-a1');
+  if (a1) a1.textContent = b.a1;
+  const q2 = document.getElementById('faq-q2');
+  if (q2) q2.textContent = b.q2;
+  const a2 = document.getElementById('faq-a2');
+  if (a2) a2.textContent = b.a2;
+  const q4 = document.getElementById('faq-q4');
+  if (q4) q4.textContent = `How can I contact ${b.name}?`;
+  const a4 = document.getElementById('faq-a4');
+  if (a4) a4.textContent = `Use the direct phone, email or website details on this profile, or chat with the assigned Prospera AI advisor, ${b.agent}.`;
+
+  // Modal
+  const modalTitle = document.getElementById('builderAiModalTitle');
+  if (modalTitle) modalTitle.innerHTML = `Prospera AI &mdash; ${b.agent}`;
+  const modalSub = document.getElementById('modal-agent-subtitle');
+  if (modalSub) modalSub.textContent = `${b.name} Dedicated Advisor`;
+  const greeting = document.getElementById('modal-greeting');
+  if (greeting) greeting.textContent = `Hi, I'm ${b.agent}. Ask me about ${b.name} projects, locations, property types, price ranges or how to connect with the builder.`;
+})();
+
 function toggleMobileMenu(){const menu=document.getElementById('mobileMenu');const icon=document.getElementById('mobileMenuIcon');if(!menu)return;menu.classList.toggle('hidden');if(icon){icon.classList.toggle('fa-bars');icon.classList.toggle('fa-xmark');}}
-const builderDemoAnswers=[
- {keys:['project','projects','portfolio'],answer:'Baba Infra’s current portfolio includes Imperial Residencia, Kailasha Arcade, Kailasha Awadh and Kailasha Enclave. I can help you narrow them by location, type or price.'},
- {keys:['imperial','residencia','4bhk'],answer:'Imperial Residencia is a premium 4 BHK residential project in Vrindavan Yojna, Lucknow. Public project records show RERA registration UPRERAPRJ486522/09/2024.'},
- {keys:['kailasha','arcade','commercial'],answer:'Kailasha Arcade is a commercial retail project on Sultanpur Road, Lucknow. Ask me if you want its project details or want to connect with the builder.'},
- {keys:['location','area','where'],answer:'Baba Infra’s Lucknow portfolio includes areas such as Sultanpur Road, Vrindavan Yojna, Shaheed Path and Mohanlalganj.'},
- {keys:['price','budget','cost'],answer:'Imperial Residencia is currently shown from ₹2.15 Cr onwards on the project information available to Prospera. For live inventory and final pricing, I can help you connect directly with the builder.'},
- {keys:['contact','phone','email','office'],answer:'You can contact Baba Infra at +91 80109 28928 or crm@babainfra.com. The listed office is D-1261, Sector-D, Indira Nagar, Lucknow.'}
-];
-function demoAnswer(q){const lower=q.toLowerCase();const hit=builderDemoAnswers.find(x=>x.keys.some(k=>lower.includes(k)));return hit?hit.answer:'I can help with Baba Infra projects, locations, property types, price ranges and direct contact. Ask me what you want to know.';}
+
+function demoAnswer(q){
+  const params = new URLSearchParams(window.location.search);
+  const rawKey = (params.get('builder') || 'baba-infra').toLowerCase().trim();
+  const b = PROSPERA_BUILDERS[rawKey] || PROSPERA_BUILDERS['baba-infra'];
+  const lower = q.toLowerCase();
+  if (lower.includes('project') || lower.includes('portfolio')) {
+    return `${b.name}'s key developments include ${b.a1}`;
+  }
+  if (lower.includes('location') || lower.includes('where') || lower.includes('area')) {
+    return `${b.name} projects are situated in prime growth corridors: ${b.a2}`;
+  }
+  if (lower.includes('contact') || lower.includes('phone') || lower.includes('email') || lower.includes('office')) {
+    return `You can reach ${b.name} directly at ${b.phone} or via email at ${b.email}. Office: ${b.office}.`;
+  }
+  return `I can help with ${b.name} projects, prime locations, price benchmarks and direct bookings. What would you like to know?`;
+}
+
 function appendBuilderChat(text,role){const box=document.getElementById('builderChat');if(!box)return;const el=document.createElement('div');el.className='bp-chat-bubble '+(role==='user'?'user':'bot');el.textContent=text;box.appendChild(el);box.scrollTop=box.scrollHeight;}
 function sendBuilderQuestion(){const input=document.getElementById('builderChatInput');if(!input)return;const q=input.value.trim();if(!q)return;appendBuilderChat(q,'user');input.value='';setTimeout(()=>appendBuilderChat(demoAnswer(q),'bot'),260);}
 function openBuilderAI(){const m=document.getElementById('builderAiModal');if(m){m.classList.add('open');setTimeout(()=>document.getElementById('builderChatInput')?.focus(),80);}}
 function closeBuilderAI(){document.getElementById('builderAiModal')?.classList.remove('open');}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBuilderAI();if(e.key==='Enter'&&document.activeElement?.id==='builderChatInput')sendBuilderQuestion();});
-</script><script id="prospera-about-dropdown-final">
+</script>
+
+<script id="prospera-about-dropdown-final">
 (function(){
   function toggleAboutDropdown(event, id){
     if(event){ event.preventDefault(); event.stopPropagation(); }
@@ -410,11 +1890,11 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBuilderAI();if(
 })();
 </script>
 
-  <script>
-    function askAILocation(loc) {
-      window.location.href = 'ai-property-finder.html?q=' + encodeURIComponent('Find best properties and appreciation rate in ' + loc);
-    }
-  </script>
-  <script src="theme.js"></script>
+<script>
+  function askAILocation(loc) {
+    window.location.href = 'ai-property-finder.html?q=' + encodeURIComponent('Find best properties and appreciation rate in ' + loc);
+  }
+</script>
+<script src="theme.js"></script>
 </body>
 </html>

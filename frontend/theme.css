@@ -56,15 +56,17 @@
 [data-theme="light"] .gold-border-glow { border-color: rgba(212, 175, 55, 0.3) !important; box-shadow: var(--shadow-card) !important; }
 [data-theme="light"] .gold-border-glow:hover { border-color: rgba(212, 175, 55, 0.7) !important; box-shadow: 0 8px 30px -4px rgba(212, 175, 55, 0.22) !important; }
 /* Light Mode text-white override: DO NOT apply to dark backgrounds/cards! */
-[data-theme="light"] .text-white:not([class*="bg-black"] *):not([class*="bg-[#0"] *):not([class*="bg-[#1"] *):not([class*="bg-[#2"] *):not([class*="dark-"] *):not(#contact *):not(#motivation *):not(#why-different table *):not(#why-different [class*="bg-"] *):not(.dark-container *) { color: var(--text-primary) !important; }
-[data-theme="light"] h1:not([class*="bg-black"] *):not([class*="bg-[#0"] *):not([class*="bg-[#1"] *):not([class*="bg-[#2"] *):not([class*="dark-"] *):not(#contact *):not(#motivation *):not(.dark-container *),
-[data-theme="light"] h2:not([class*="bg-black"] *):not([class*="bg-[#0"] *):not([class*="bg-[#1"] *):not([class*="bg-[#2"] *):not([class*="dark-"] *):not(#contact *):not(#motivation *):not(.dark-container *),
-[data-theme="light"] h3:not([class*="bg-black"] *):not([class*="bg-[#0"] *):not([class*="bg-[#1"] *):not([class*="bg-[#2"] *):not([class*="dark-"] *):not(#contact *):not(#motivation *):not(.dark-container *),
-[data-theme="light"] h4:not([class*="bg-black"] *):not([class*="bg-[#0"] *):not([class*="bg-[#1"] *):not([class*="bg-[#2"] *):not([class*="dark-"] *):not(#contact *):not(#motivation *):not(.dark-container *),
-[data-theme="light"] h5:not([class*="bg-black"] *):not([class*="bg-[#0"] *):not([class*="bg-[#1"] *):not([class*="bg-[#2"] *):not([class*="dark-"] *):not(#contact *):not(#motivation *):not(.dark-container *),
-[data-theme="light"] h6:not([class*="bg-black"] *):not([class*="bg-[#0"] *):not([class*="bg-[#1"] *):not([class*="bg-[#2"] *):not([class*="dark-"] *):not(#contact *):not(#motivation *):not(.dark-container *) { color: var(--text-primary); }
+[data-theme="light"] .text-white:not([class*="bg-black"] *):not([class*="bg-[#0"] *):not([class*="bg-[#1"] *):not([class*="bg-[#2"] *):not([class*="dark-"] *):not(#motivation *):not(#why-different table *):not(#why-different [class*="bg-"] *):not(.dark-container *):not(#review-cta *):not(.review-cta-card *) { color: var(--text-primary) !important; }
+[data-theme="light"] h1:not([class*="bg-black"] *):not([class*="bg-[#0"] *):not([class*="bg-[#1"] *):not([class*="bg-[#2"] *):not([class*="dark-"] *):not(#motivation *):not(.dark-container *):not(#review-cta *):not(.review-cta-card *),
+[data-theme="light"] h2:not([class*="bg-black"] *):not([class*="bg-[#0"] *):not([class*="bg-[#1"] *):not([class*="bg-[#2"] *):not([class*="dark-"] *):not(#motivation *):not(.dark-container *):not(#review-cta *):not(.review-cta-card *),
+[data-theme="light"] h3:not([class*="bg-black"] *):not([class*="bg-[#0"] *):not([class*="bg-[#1"] *):not([class*="bg-[#2"] *):not([class*="dark-"] *):not(#motivation *):not(.dark-container *):not(#review-cta *):not(.review-cta-card *),
+[data-theme="light"] h4:not([class*="bg-black"] *):not([class*="bg-[#0"] *):not([class*="bg-[#1"] *):not([class*="bg-[#2"] *):not([class*="dark-"] *):not(#motivation *):not(.dark-container *):not(#review-cta *):not(.review-cta-card *),
+[data-theme="light"] h5:not([class*="bg-black"] *):not([class*="bg-[#0"] *):not([class*="bg-[#1"] *):not([class*="bg-[#2"] *):not([class*="dark-"] *):not(#motivation *):not(.dark-container *):not(#review-cta *):not(.review-cta-card *),
+[data-theme="light"] h6:not([class*="bg-black"] *):not([class*="bg-[#0"] *):not([class*="bg-[#1"] *):not([class*="bg-[#2"] *):not([class*="dark-"] *):not(#motivation *):not(.dark-container *):not(#review-cta *):not(.review-cta-card *) { color: var(--text-primary); }
 
 /* Force pure white on all elements inside dark containers across light mode */
+[data-theme="light"] #review-cta *,
+[data-theme="light"] .review-cta-card *,
 [data-theme="light"] [class*="bg-[#000000]"] h1,
 [data-theme="light"] [class*="bg-[#000000]"] h2,
 [data-theme="light"] [class*="bg-[#000000]"] h3,
@@ -82,10 +84,6 @@
 [data-theme="light"] [class*="bg-black"] h3,
 [data-theme="light"] [class*="bg-black"] h4,
 [data-theme="light"] [class*="bg-black"] .text-white,
-[data-theme="light"] #contact h1,
-[data-theme="light"] #contact h2,
-[data-theme="light"] #contact h3,
-[data-theme="light"] #contact .text-white,
 [data-theme="light"] #motivation h1,
 [data-theme="light"] #motivation h2,
 [data-theme="light"] #motivation h3,
@@ -183,46 +181,345 @@ main .gold-btn-gradient:not(header *):not(footer *):not(#floatingAIWidget *) * {
 [data-theme="light"] ::-webkit-scrollbar-track { background: #F1F5F9 !important; }
 [data-theme="light"] ::-webkit-scrollbar-thumb { background: #CBD5E1 !important; border: 1px solid #E2E8F0 !important; }
 [data-theme="light"] ::-webkit-scrollbar-thumb:hover { background: #94A3B8 !important; }
-header { background: rgba(251, 250, 247, .94) !important; color: #182033 !important; border-bottom: 1px solid rgba(181, 138, 42, .16) !important; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
-header a:hover { color: #b58a2a !important; }
-.prospera-brand-logo { display: inline-flex; align-items: center; justify-content: flex-start; width: clamp(190px, 15vw, 260px) !important; height: 82px !important; min-width: 0; overflow: hidden; text-decoration: none; flex-shrink: 0; }
-.prospera-logo-frame { display: flex; width: 100%; height: 82px !important; align-items: center; justify-content: flex-start; overflow: hidden; }
-.prospera-logo-image { display: block; width: auto; height: 82px !important; max-width: none; max-height: none; object-fit: contain; object-position: left center; flex: 0 0 auto; transition: transform .2s ease, opacity .2s ease; }
-.prospera-footer-brand .prospera-logo-image { width: auto; height: 88px; max-width: none; max-height: none; object-fit: contain; }
-.prospera-logo-for-light { display: flex !important; }
-.prospera-logo-for-dark { display: none !important; }
-@media (max-width: 767px) { .prospera-brand-logo { width: 184px !important; height: 70px !important; } .prospera-logo-frame, .prospera-logo-image { height: 70px !important; } header > div { min-height: 70px; height: 70px !important; } .prospera-footer-brand { width: 220px; height: 72px; } .prospera-footer-brand .prospera-logo-frame, .prospera-footer-brand .prospera-logo-image { height: 72px; } }
-#mobileMenu { background: rgba(251, 250, 247, .98) !important; border-top: 1px solid #e8e1d4 !important; box-shadow: 0 18px 35px rgba(24, 32, 51, .08); }
-#mobileMenu nav a { color: #182033 !important; border-radius: 12px; }
-#mobileMenuBtn { width: 44px !important; height: 44px !important; background: #fff !important; color: #182033 !important; border: 1px solid #ded6c7 !important; box-shadow: 0 5px 16px rgba(24, 32, 51, .06); }
-.prospera-about-dropdown { position: relative; display: flex; align-items: center; height: 100%; }
-.prospera-about-trigger { display: inline-flex; align-items: center; gap: 7px; border: 0; background: transparent; color: inherit; font: inherit; cursor: pointer; padding: 8px 0; }
-.prospera-about-chevron { font-size: 9px; transition: transform .22s ease; color: #9B7628; }
+/* ============================================================
+   PROSPERA GLOBAL MASTER NAVBAR SYSTEM
+   Strict Palette: White (#FFF), Black/Dark Charcoal (#182033), Warm Gold (#D4AF37 / #B58A2A)
+   ============================================================ */
+header,
+header.prospera-site-header {
+  background: transparent !important;
+  color: #182033 !important;
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  pointer-events: none;
+}
+header a:hover {
+  color: #b58a2a !important;
+}
+.prospera-site-header .pointer-events-auto {
+  pointer-events: auto;
+}
+.prospera-nav-capsule {
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.28) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 30px -4px rgba(24, 32, 51, 0.08), 0 2px 8px -1px rgba(212, 175, 55, 0.12) !important;
+  height: 72px !important;
+  min-height: 72px !important;
+  padding: 0 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  transition: all 0.25s ease !important;
+  pointer-events: auto;
+}
+.prospera-brand-logo {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  width: clamp(170px, 14vw, 220px) !important;
+  height: 62px !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-decoration: none !important;
+  flex-shrink: 0 !important;
+}
+.prospera-logo-frame {
+  display: flex !important;
+  width: 100% !important;
+  height: 62px !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  overflow: hidden !important;
+}
+.prospera-logo-image {
+  display: block !important;
+  width: auto !important;
+  height: 62px !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+  flex: 0 0 auto !important;
+  transition: transform 0.2s ease, opacity 0.2s ease !important;
+}
+.prospera-footer-brand .prospera-logo-image {
+  width: auto;
+  height: 88px;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+}
+.prospera-logo-for-light {
+  display: flex !important;
+}
+.prospera-logo-for-dark {
+  display: none !important;
+}
+.prospera-nav-link {
+  position: relative !important;
+  color: #182033 !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  padding: 8px 2px !important;
+  transition: color 0.18s ease !important;
+}
+.prospera-nav-link:hover,
+.prospera-nav-link.is-active {
+  color: #B58A2A !important;
+}
+.prospera-nav-link.is-active::after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: 2px !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 2px !important;
+  background: #D4AF37 !important;
+  border-radius: 2px !important;
+}
+#mobileMenu,
+.prospera-mobile-menu-card {
+  margin-top: 10px !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(212, 175, 55, 0.28) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 18px 40px rgba(24, 32, 51, 0.12) !important;
+  overflow: hidden !important;
+  pointer-events: auto;
+}
+#mobileMenu nav a,
+.prospera-mobile-nav-link {
+  display: block !important;
+  padding: 11px 14px !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  color: #182033 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  transition: background 0.18s ease, color 0.18s ease !important;
+}
+#mobileMenu nav a:hover,
+#mobileMenu nav a.is-active,
+.prospera-mobile-nav-link:hover,
+.prospera-mobile-nav-link.is-active {
+  background: #FCF9EE !important;
+  color: #B58A2A !important;
+}
+#mobileMenuBtn,
+.prospera-mobile-toggle {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 12px !important;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(212, 175, 55, 0.35) !important;
+  color: #182033 !important;
+  box-shadow: 0 2px 8px rgba(24, 32, 51, 0.05) !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.2s ease !important;
+}
+#mobileMenuBtn:hover,
+.prospera-mobile-toggle:hover {
+  background: #FCF9EE !important;
+  color: #B58A2A !important;
+  border-color: #D4AF37 !important;
+}
+.prospera-about-dropdown {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+.prospera-about-trigger {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: #182033 !important;
+  font: inherit !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  padding: 8px 2px !important;
+  transition: color 0.18s ease !important;
+}
+.prospera-about-trigger:hover,
+.prospera-about-dropdown.is-open .prospera-about-trigger,
+.prospera-about-trigger.is-active {
+  color: #B58A2A !important;
+}
+.prospera-about-chevron {
+  font-size: 10px !important;
+  transition: transform 0.22s ease !important;
+  color: #B58A2A !important;
+}
 .prospera-about-dropdown:hover .prospera-about-chevron,
-.prospera-about-dropdown.is-open .prospera-about-chevron { transform: rotate(180deg); }
-.prospera-about-menu { position: absolute; top: calc(100% + 14px); right: 0; width: 220px !important; padding: 8px !important; border: 1px solid #E5DED2 !important; border-radius: 16px !important; background: #FFFFFF !important; box-shadow: 0 18px 40px rgba(23, 35, 61, .12) !important; opacity: 0; visibility: hidden; transform: translateY(-7px); transition: opacity .2s ease, transform .2s ease, visibility .2s ease; z-index: 80; }
-.prospera-about-menu::before { content: ""; position: absolute; right: 26px; top: -6px; width: 11px; height: 11px; background: #FFFFFF !important; border-left: 1px solid #E5DED2 !important; border-top: 1px solid #E5DED2 !important; transform: rotate(45deg); }
+.prospera-about-dropdown.is-open .prospera-about-chevron {
+  transform: rotate(180deg) !important;
+}
+.prospera-about-menu {
+  position: absolute !important;
+  top: calc(100% + 14px) !important;
+  right: 0 !important;
+  width: 220px !important;
+  padding: 8px !important;
+  border: 1px solid rgba(212, 175, 55, 0.28) !important;
+  border-radius: 16px !important;
+  background: #FFFFFF !important;
+  box-shadow: 0 16px 36px rgba(24, 32, 51, 0.12) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(-6px) !important;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important;
+  z-index: 120 !important;
+}
+.prospera-about-menu::before {
+  content: "" !important;
+  position: absolute !important;
+  right: 24px !important;
+  top: -6px !important;
+  width: 10px !important;
+  height: 10px !important;
+  background: #FFFFFF !important;
+  border-left: 1px solid rgba(212, 175, 55, 0.28) !important;
+  border-top: 1px solid rgba(212, 175, 55, 0.28) !important;
+  transform: rotate(45deg) !important;
+}
 .prospera-about-dropdown:hover .prospera-about-menu,
-.prospera-about-dropdown.is-open .prospera-about-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.prospera-about-dropdown.is-open .prospera-about-menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
 .prospera-about-menu-label,
 .prospera-about-menu-icon,
 .prospera-about-menu a span:last-child small,
-.prospera-about-menu a strong { display: none !important; }
-.prospera-about-menu a { display: block !important; width: 100% !important; padding: 11px 12px !important; margin: 0 !important; border-radius: 8px !important; background: transparent !important; color: #182033 !important; font-size: 13px !important; font-weight: 600 !important; line-height: 1.35 !important; text-decoration: none !important; transform: none !important; transition: background .16s ease, color .16s ease !important; }
+.prospera-about-menu a strong {
+  display: none !important;
+}
+.prospera-about-menu a {
+  display: block !important;
+  width: 100% !important;
+  padding: 10px 14px !important;
+  margin: 0 !important;
+  border-radius: 10px !important;
+  background: transparent !important;
+  color: #182033 !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+  text-decoration: none !important;
+  transform: none !important;
+  transition: background 0.16s ease, color 0.16s ease !important;
+}
 .prospera-about-menu a:hover,
-.prospera-about-menu a:focus-visible { background: #F6F6F4 !important; color: #182033 !important; transform: none !important; outline: none !important; }
-.prospera-mobile-about { border-radius: 12px; overflow: hidden; }
-.prospera-mobile-about-trigger { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 11px 12px; border: 0; border-radius: 10px; background: transparent; color: #263746; font-size: 14px; font-weight: 600; text-align: left; cursor: pointer; transition: background .18s ease, color .18s ease; }
+.prospera-about-menu a:focus-visible,
+.prospera-about-menu a.is-active {
+  background: #FCF9EE !important;
+  color: #B58A2A !important;
+  transform: none !important;
+  outline: none !important;
+}
+.prospera-mobile-about {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+.prospera-mobile-about-trigger {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 11px 14px !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  background: transparent !important;
+  color: #182033 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-align: left !important;
+  cursor: pointer !important;
+  transition: background 0.18s ease, color 0.18s ease !important;
+}
 .prospera-mobile-about-trigger:hover,
-.prospera-mobile-about.is-open .prospera-mobile-about-trigger { background: #f4ead7; color: #9B7628; }
-.prospera-mobile-about-menu { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows .25s ease, opacity .2s ease; padding: 0 8px !important; }
-.prospera-mobile-about-menu > * { min-height: 0; overflow: hidden; }
-.prospera-mobile-about.is-open .prospera-mobile-about-menu { grid-template-rows: 1fr; opacity: 1; padding-bottom: 6px; }
-.prospera-mobile-about-menu a { display: block !important; padding: 10px 12px !important; border-radius: 8px !important; text-decoration: none !important; color: #182033 !important; font-size: 13px !important; font-weight: 600 !important; transition: background .18s ease, color .18s ease !important; }
-.prospera-mobile-about-menu a:hover { background: #fbf7ee !important; color: #9B7628 !important; }
-.prospera-mobile-about .prospera-about-chevron { transition: transform .22s ease; }
-.prospera-mobile-about.is-open .prospera-mobile-about-chevron { transform: rotate(180deg); }
-@media (max-width: 767px) { .prospera-about-dropdown { display: none !important; } }
+.prospera-mobile-about.is-open .prospera-mobile-about-trigger,
+.prospera-mobile-about-trigger.is-active {
+  background: #FCF9EE !important;
+  color: #B58A2A !important;
+}
+.prospera-mobile-about-menu {
+  display: grid !important;
+  grid-template-rows: 0fr !important;
+  opacity: 0 !important;
+  transition: grid-template-rows 0.25s ease, opacity 0.2s ease !important;
+  padding: 0 8px !important;
+}
+.prospera-mobile-about-menu > * {
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+.prospera-mobile-about.is-open .prospera-mobile-about-menu {
+  grid-template-rows: 1fr !important;
+  opacity: 1 !important;
+  padding-bottom: 6px !important;
+}
+.prospera-mobile-about-menu a {
+  display: block !important;
+  padding: 9px 14px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  color: #475569 !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  transition: background 0.18s ease, color 0.18s ease !important;
+}
+.prospera-mobile-about-menu a:hover,
+.prospera-mobile-about-menu a.is-active {
+  background: #FCF9EE !important;
+  color: #B58A2A !important;
+}
+.prospera-mobile-about .prospera-about-chevron {
+  transition: transform 0.22s ease !important;
+}
+.prospera-mobile-about.is-open .prospera-mobile-about-chevron {
+  transform: rotate(180deg) !important;
+}
+@media (max-width: 767px) {
+  .prospera-about-dropdown {
+    display: none !important;
+  }
+  .prospera-nav-capsule {
+    height: 64px !important;
+    min-height: 64px !important;
+    padding: 0 16px !important;
+    border-radius: 16px !important;
+  }
+  .prospera-brand-logo {
+    width: 165px !important;
+    height: 52px !important;
+  }
+  .prospera-logo-frame,
+  .prospera-logo-image {
+    height: 52px !important;
+  }
+  .prospera-footer-brand {
+    width: 220px;
+    height: 72px;
+  }
+  .prospera-footer-brand .prospera-logo-frame,
+  .prospera-footer-brand .prospera-logo-image {
+    height: 72px;
+  }
+}
 .max-w-7xl, .container-1280, .prospera-container, .agents-container { max-width: 1280px !important; margin-left: auto !important; margin-right: auto !important; box-sizing: border-box !important; }
 .section-title-bg,
 .heading-bg-box,
@@ -276,24 +573,24 @@ span.section-kicker { background: transparent !important; background-color: tran
 .prospera-agent-card button:hover { background: #000000 !important; background-color: #000000 !important; background-image: none !important; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; border-color: #D4AF37 !important; transform: translateY(-1px) !important; box-shadow: 0 6px 18px rgba(212, 175, 55, 0.35) !important; }
 body, p, span, li, a, button, input, select, textarea { font-family: 'Plus Jakarta Sans', sans-serif !important; }
 h1, h2, h3, h4, h5, h6, .font-serif, .font-heading { font-family: 'DM Serif Display', 'Playfair Display', serif !important; }
-main h1:not(.text-white):not([class*="text-white"]):not([class*="dark-card"] *):not([class*="dark-section"] *):not(#contact *), 
-main h2:not(.text-white):not([class*="text-white"]):not([class*="dark-card"] *):not([class*="dark-section"] *):not(#contact *), 
-main h3:not(.text-white):not([class*="text-white"]):not([class*="dark-card"] *):not([class*="dark-section"] *):not(#contact *), 
-main h4:not(.text-white):not([class*="text-white"]):not([class*="dark-card"] *):not([class*="dark-section"] *):not(#contact *), 
-main h5:not(.text-white):not([class*="text-white"]):not([class*="dark-card"] *):not([class*="dark-section"] *):not(#contact *), 
-main h6:not(.text-white):not([class*="text-white"]):not([class*="dark-card"] *):not([class*="dark-section"] *):not(#contact *), 
-main strong:not(.text-white):not([class*="text-white"]):not([class*="dark-card"] *):not([class*="dark-section"] *):not(#contact *), 
-main b:not(.text-white):not([class*="text-white"]):not([class*="dark-card"] *):not([class*="dark-section"] *):not(#contact *) { color: #000000 !important; }
-main p:not(.text-white):not([class*="text-white"]):not([class*="dark-card"] *):not([class*="dark-section"] *):not(#contact *), 
-main li:not(.text-white):not([class*="text-white"]):not([class*="dark-card"] *):not([class*="dark-section"] *):not(#contact *) { color: #000000 !important; }
+main h1:not(.text-white):not([class*="text-white"]):not([class*="dark-card"] *):not([class*="dark-section"] *):not(#review-cta *):not(.review-cta-card *), 
+main h2:not(.text-white):not([class*="text-white"]):not([class*="dark-card"] *):not([class*="dark-section"] *):not(.bp-agent-assigned-card *):not([class*="bp-agent"] *):not(#review-cta *):not(.review-cta-card *), 
+main h3:not(.text-white):not([class*="text-white"]):not([class*="dark-card"] *):not([class*="dark-section"] *):not(.bp-agent-assigned-card *):not([class*="bp-agent"] *):not(#review-cta *):not(.review-cta-card *), 
+main h4:not(.text-white):not([class*="text-white"]):not([class*="dark-card"] *):not([class*="dark-section"] *):not(.bp-agent-assigned-card *):not([class*="bp-agent"] *):not(#review-cta *):not(.review-cta-card *), 
+main h5:not(.text-white):not([class*="text-white"]):not([class*="dark-card"] *):not([class*="dark-section"] *):not(.bp-agent-assigned-card *):not([class*="bp-agent"] *):not(#review-cta *):not(.review-cta-card *), 
+main h6:not(.text-white):not([class*="text-white"]):not([class*="dark-card"] *):not([class*="dark-section"] *):not(.bp-agent-assigned-card *):not([class*="bp-agent"] *):not(#review-cta *):not(.review-cta-card *), 
+main strong:not(.text-white):not([class*="text-white"]):not([class*="dark-card"] *):not([class*="dark-section"] *):not(.bp-agent-assigned-card *):not([class*="bp-agent"] *):not(#review-cta *):not(.review-cta-card *), 
+main b:not(.text-white):not([class*="text-white"]):not([class*="dark-card"] *):not([class*="dark-section"] *):not(.bp-agent-assigned-card *):not([class*="bp-agent"] *):not(#review-cta *):not(.review-cta-card *) { color: #000000 !important; }
+main p:not(.text-white):not([class*="text-white"]):not([class*="dark-card"] *):not([class*="dark-section"] *):not(.bp-agent-assigned-card *):not([class*="bp-agent"] *):not(#review-cta *):not(.review-cta-card *), 
+main li:not(.text-white):not([class*="text-white"]):not([class*="dark-card"] *):not([class*="dark-section"] *):not(.bp-agent-assigned-card *):not([class*="bp-agent"] *):not(#review-cta *):not(.review-cta-card *) { color: #000000 !important; }
 small, .text-muted { color: #525252 !important; }
-main button:not(header *):not(footer *):not(#floatingAIWidget *):not(.bg-white):not([class*="bg-white"]):not(.modal-close-btn):not(.date-quick-btn):not(.time-slot-btn):not(.budget-chip):not(.type-chip):not(.cat-btn):not(.property-option-chip):not([onclick*="resetAllFilters"]):not([onclick*="resetFilters"]):not(.btn-visit-secondary):not(.btn-compare-secondary):not([class*="secondary"]):not([class*="btn-back"]):not(#submit-btn):not(.btn-gold-primary):not([class*="btn-gold"]):not(.btn-agent-talk):not(#final-cta button):not(#final-cta a),
-main a[role="button"]:not(header *):not(footer *):not(#floatingAIWidget *):not(.bg-white):not([class*="bg-white"]):not(.btn-visit-secondary):not(.btn-compare-secondary):not([class*="secondary"]):not([class*="btn-back"]):not(#submit-btn):not(.btn-gold-primary):not([class*="btn-gold"]):not(.btn-agent-talk):not(#final-cta button):not(#final-cta a),
-main .gold-btn-gradient:not(header *):not(footer *):not(#floatingAIWidget *),
-main .gold-gradient-btn:not(header *):not(footer *):not(#floatingAIWidget *),
-main .btn-primary:not(header *):not(footer *):not(#floatingAIWidget *),
-main button.gold-btn:not(header *):not(footer *):not(#floatingAIWidget *),
-main [class*="gold-btn"]:not(header *):not(footer *):not(#floatingAIWidget *),
+main button:not(header *):not(footer *):not(#floatingAIWidget *):not(.bg-white):not([class*="bg-white"]):not(.modal-close-btn):not(.date-quick-btn):not(.time-slot-btn):not(.budget-chip):not(.type-chip):not(.cat-btn):not(.property-option-chip):not([onclick*="resetAllFilters"]):not([onclick*="resetFilters"]):not(.btn-visit-secondary):not(.btn-compare-secondary):not([class*="secondary"]):not([class*="btn-back"]):not(#submit-btn):not(.btn-gold-primary):not([class*="btn-gold"]):not(.btn-agent-talk):not(#final-cta button):not(#final-cta a):not(.bp-agent-chat):not([class*="bp-agent"]):not(#voiceSimBtn):not(.voice-sim-gold-btn),
+main a[role="button"]:not(header *):not(footer *):not(#floatingAIWidget *):not(.bg-white):not([class*="bg-white"]):not(.btn-visit-secondary):not(.btn-compare-secondary):not([class*="secondary"]):not([class*="btn-back"]):not(#submit-btn):not(.btn-gold-primary):not([class*="btn-gold"]):not(.btn-agent-talk):not(#final-cta button):not(#final-cta a):not(.bp-agent-chat):not([class*="bp-agent"]):not(#voiceSimBtn):not(.voice-sim-gold-btn),
+main .gold-btn-gradient:not(header *):not(footer *):not(#floatingAIWidget *):not(#voiceSimBtn),
+main .gold-gradient-btn:not(header *):not(footer *):not(#floatingAIWidget *):not(#voiceSimBtn),
+main .btn-primary:not(header *):not(footer *):not(#floatingAIWidget *):not(#voiceSimBtn),
+main button.gold-btn:not(header *):not(footer *):not(#floatingAIWidget *):not(#voiceSimBtn),
+main [class*="gold-btn"]:not(header *):not(footer *):not(#floatingAIWidget *):not(#voiceSimBtn):not(.voice-sim-gold-btn):not(.btn-gold-primary),
 main [class*="from-[#F2D280]"]:not(header *):not(footer *):not(#floatingAIWidget *),
 body main .gold-btn-gradient:not(header *):not(footer *):not(#floatingAIWidget *),
 body main .gold-gradient-btn:not(header *):not(footer *):not(#floatingAIWidget *),
@@ -303,13 +600,13 @@ body main .gold-gradient-btn:not(header *):not(footer *):not(#floatingAIWidget *
 .direct-connect-btn,
 .talk-to-ai,
 .talk-ai { background: #171717 !important; background-color: #171717 !important; background-image: none !important; border: 1px solid #171717 !important; color: #FFFFFF !important; border-radius: 12px !important; font-family: 'Plus Jakarta Sans', sans-serif !important; font-weight: 700 !important; box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08) !important; transition: all 0.2s ease !important; cursor: pointer !important; }
-main button:not(header *):not(footer *):not(#floatingAIWidget *):not(.bg-white):not([class*="bg-white"]):not(.modal-close-btn):not(.date-quick-btn):not(.time-slot-btn):not(.budget-chip):not(.type-chip):not(.cat-btn):not(.property-option-chip):not([onclick*="resetAllFilters"]):not([onclick*="resetFilters"]):not(.btn-visit-secondary):not(.btn-compare-secondary):not([class*="secondary"]):not([class*="btn-back"]):not(#submit-btn):not(.btn-gold-primary):not([class*="btn-gold"]):not(.btn-agent-talk):not(#final-cta button):not(#final-cta a):hover,
-main a[role="button"]:not(header *):not(footer *):not(#floatingAIWidget *):not(.bg-white):not([class*="bg-white"]):not(.btn-visit-secondary):not(.btn-compare-secondary):not([class*="secondary"]):not([class*="btn-back"]):not(#submit-btn):not(.btn-gold-primary):not([class*="btn-gold"]):not(.btn-agent-talk):not(#final-cta button):not(#final-cta a):hover,
-main .gold-btn-gradient:not(header *):not(footer *):not(#floatingAIWidget *):hover,
-main .gold-gradient-btn:not(header *):not(footer *):not(#floatingAIWidget *):hover,
-main .btn-primary:not(header *):not(footer *):not(#floatingAIWidget *):hover,
-main button.gold-btn:not(header *):not(footer *):not(#floatingAIWidget *):hover,
-main [class*="gold-btn"]:not(header *):not(footer *):not(#floatingAIWidget *):hover,
+main button:not(header *):not(footer *):not(#floatingAIWidget *):not(.bg-white):not([class*="bg-white"]):not(.modal-close-btn):not(.date-quick-btn):not(.time-slot-btn):not(.budget-chip):not(.type-chip):not(.cat-btn):not(.property-option-chip):not([onclick*="resetAllFilters"]):not([onclick*="resetFilters"]):not(.btn-visit-secondary):not(.btn-compare-secondary):not([class*="secondary"]):not([class*="btn-back"]):not(#submit-btn):not(.btn-gold-primary):not([class*="btn-gold"]):not(.btn-agent-talk):not(#final-cta button):not(#final-cta a):not(.bp-agent-chat):not([class*="bp-agent"]):not(#voiceSimBtn):not(.voice-sim-gold-btn):hover,
+main a[role="button"]:not(header *):not(footer *):not(#floatingAIWidget *):not(.bg-white):not([class*="bg-white"]):not(.btn-visit-secondary):not(.btn-compare-secondary):not([class*="secondary"]):not([class*="btn-back"]):not(#submit-btn):not(.btn-gold-primary):not([class*="btn-gold"]):not(.btn-agent-talk):not(#final-cta button):not(#final-cta a):not(.bp-agent-chat):not([class*="bp-agent"]):not(#voiceSimBtn):not(.voice-sim-gold-btn):hover,
+main .gold-btn-gradient:not(header *):not(footer *):not(#floatingAIWidget *):not(#voiceSimBtn):hover,
+main .gold-gradient-btn:not(header *):not(footer *):not(#floatingAIWidget *):not(#voiceSimBtn):hover,
+main .btn-primary:not(header *):not(footer *):not(#floatingAIWidget *):not(#voiceSimBtn):hover,
+main button.gold-btn:not(header *):not(footer *):not(#floatingAIWidget *):not(#voiceSimBtn):hover,
+main [class*="gold-btn"]:not(header *):not(footer *):not(#floatingAIWidget *):not(#voiceSimBtn):not(.voice-sim-gold-btn):not(.btn-gold-primary):hover,
 main [class*="from-[#F2D280]"]:not(header *):not(footer *):not(#floatingAIWidget *):hover,
 body main .gold-btn-gradient:not(header *):not(footer *):not(#floatingAIWidget *):hover,
 body main .gold-gradient-btn:not(header *):not(footer *):not(#floatingAIWidget *):hover,
@@ -318,7 +615,7 @@ body main .gold-gradient-btn:not(header *):not(footer *):not(#floatingAIWidget *
 .direct-connect-btn:hover,
 .talk-to-ai:hover,
 .talk-ai:hover { background: #242424 !important; background-color: #242424 !important; background-image: none !important; border-color: #242424 !important; color: #FFFFFF !important; transform: translateY(-1px) !important; box-shadow: 0 6px 18px rgba(15, 23, 42, 0.14) !important; }
-main button:not(header *):not(footer *):not(#floatingAIWidget *):not(.bg-white):not([class*="bg-white"]):not(.modal-close-btn):not(.date-quick-btn):not(.time-slot-btn):not(.budget-chip):not(.type-chip):not(.cat-btn):not(.property-option-chip):not(.btn-visit-secondary):not(.btn-compare-secondary):not([class*="secondary"]):not([class*="btn-back"]):not(#submit-btn):not(.btn-gold-primary):not([class*="btn-gold"]):not(.btn-agent-talk):not(#final-cta button):not(#final-cta a) *,
+main button:not(header *):not(footer *):not(#floatingAIWidget *):not(.bg-white):not([class*="bg-white"]):not(.modal-close-btn):not(.date-quick-btn):not(.time-slot-btn):not(.budget-chip):not(.type-chip):not(.cat-btn):not(.property-option-chip):not(.btn-visit-secondary):not(.btn-compare-secondary):not([class*="secondary"]):not([class*="btn-back"]):not(#submit-btn):not(.btn-gold-primary):not([class*="btn-gold"]):not(.btn-agent-talk):not(#final-cta button):not(#final-cta a):not(.bp-agent-chat):not([class*="bp-agent"]):not(#voiceSimBtn):not(.voice-sim-gold-btn) *,
 main a[role="button"]:not(header *):not(footer *):not(#floatingAIWidget *):not(.bg-white):not([class*="bg-white"]) *,
 main .gold-btn-gradient:not(header *):not(footer *):not(#floatingAIWidget *) *,
 main .gold-gradient-btn:not(header *):not(footer *):not(#floatingAIWidget *) *,
@@ -514,6 +811,10 @@ html body .prospera-agent-card button:hover * {
 html body main button#submit-btn,
 html body button#submit-btn,
 html body #submit-btn,
+html body main button#voiceSimBtn,
+html body button#voiceSimBtn,
+html body #voiceSimBtn,
+html body .voice-sim-gold-btn,
 html body .btn-gold-primary,
 html body main .btn-gold-primary,
 html body .gold-btn-primary,
@@ -539,10 +840,15 @@ html body #final-cta .prospera-secondary-btn {
 html body main button#submit-btn:hover,
 html body button#submit-btn:hover,
 html body #submit-btn:hover,
+html body main button#voiceSimBtn:hover,
+html body button#voiceSimBtn:hover,
+html body #voiceSimBtn:hover,
+html body .voice-sim-gold-btn:hover,
 html body .btn-gold-primary:hover,
 html body main .btn-gold-primary:hover,
 html body #submit-btn:focus,
 html body .btn-gold-primary:focus,
+html body #voiceSimBtn:focus,
 html body .btn-agent-talk:hover,
 html body .btn-agent-talk:focus,
 html body #final-cta .prospera-primary-btn:hover,
@@ -554,8 +860,16 @@ html body #final-cta .prospera-secondary-btn:hover {
   -webkit-text-fill-color: #FFFFFF !important;
   border-color: #D4AF37 !important;
   transform: none !important;
-  filter: brightness(1.06) !important;
+  filter: brightness(1.08) !important;
   box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45) !important;
+}
+
+html body main button#voiceSimBtn *,
+html body button#voiceSimBtn *,
+html body #voiceSimBtn *,
+html body .voice-sim-gold-btn * {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
 }
 
 html body #submit-btn *,
@@ -569,3 +883,109 @@ html body #final-cta .prospera-secondary-btn * {
   color: #FFFFFF !important;
   -webkit-text-fill-color: #FFFFFF !important;
 }
+
+/* ============================================================
+   BUILDER PROFILE - ASSIGNED AI AGENT CONTRAST & GOLD BUTTON
+   ============================================================ */
+html body .bp-agent-assigned-card,
+html body main .bp-agent-assigned-card {
+  background: linear-gradient(145deg, #2a2418 0%, #16161C 100%) !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
+html body .bp-agent-assigned-card strong,
+html body main .bp-agent-assigned-card strong,
+html body .bp-agent-assigned-copy strong,
+html body main .bp-agent-assigned-copy strong {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  font-size: 1.4rem !important;
+  font-family: 'DM Serif Display', serif !important;
+  font-weight: 700 !important;
+}
+
+html body .bp-agent-assigned-card p,
+html body main .bp-agent-assigned-card p,
+html body .bp-agent-assigned-note,
+html body main .bp-agent-assigned-note {
+  color: rgba(255, 255, 255, 0.92) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.92) !important;
+  font-size: 0.85rem !important;
+  line-height: 1.55 !important;
+}
+
+html body .bp-agent-assigned-eyebrow,
+html body main .bp-agent-assigned-eyebrow,
+html body .bp-agent-assigned-eyebrow * {
+  color: #D4AF37 !important;
+  -webkit-text-fill-color: #D4AF37 !important;
+}
+
+html body .bp-agent-active,
+html body main .bp-agent-active,
+html body .bp-agent-active * {
+  color: #34D399 !important;
+  -webkit-text-fill-color: #34D399 !important;
+}
+
+html body main button.bp-agent-chat,
+html body main .bp-agent-chat,
+html body .bp-agent-chat {
+  background: #D4AF37 !important;
+  background-color: #D4AF37 !important;
+  background-image: none !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  border: 1.5px solid #D4AF37 !important;
+  border-color: #D4AF37 !important;
+  border-radius: 12px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.22) !important;
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35) !important;
+  cursor: pointer !important;
+}
+
+html body main button.bp-agent-chat:hover,
+html body main .bp-agent-chat:hover,
+html body .bp-agent-chat:hover,
+html body main button.bp-agent-chat:focus {
+  background: #D4AF37 !important;
+  background-color: #D4AF37 !important;
+  background-image: none !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  border-color: #D4AF37 !important;
+  transform: none !important;
+  filter: brightness(1.08) !important;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5) !important;
+}
+
+html body .bp-agent-chat *,
+html body .bp-agent-chat:hover * {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
+#modal-agent-subtitle,
+.bp-modal-head #modal-agent-subtitle,
+html body #modal-agent-subtitle,
+html body .bp-modal-head #modal-agent-subtitle {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  opacity: 0.95 !important;
+}
+
+.project-item h3,
+.project-item .font-heading,
+html body .project-item h3,
+html body .project-item .font-heading {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  text-shadow: none !important;
+}
+
+
+

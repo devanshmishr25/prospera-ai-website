@@ -157,6 +157,82 @@
       -webkit-text-fill-color: #FFFFFF !important;
     }
 
+    /* ── REVIEW SUBMIT CTA CARD (EXACT PURE BLACK & GOLD COLOR TONE MATCHING WHY-PROSPERA-AI) ── */
+    html body #review-cta,
+    html body .review-cta-card {
+      background: #000000 !important;
+      background-color: #000000 !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.5) !important;
+      border-radius: 24px !important;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6) !important;
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+    }
+    html body #review-cta h3,
+    html body .review-cta-card h3,
+    html body [data-theme="light"] #review-cta h3,
+    html body [data-theme="light"] .review-cta-card h3 {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+    }
+    html body #review-cta h3 span,
+    html body .review-cta-card h3 span,
+    html body [data-theme="light"] #review-cta h3 span,
+    html body [data-theme="light"] .review-cta-card h3 span {
+      color: #D4AF37 !important;
+      -webkit-text-fill-color: #D4AF37 !important;
+    }
+    html body #review-cta p,
+    html body .review-cta-card p,
+    html body [data-theme="light"] #review-cta p,
+    html body [data-theme="light"] .review-cta-card p {
+      color: rgba(255, 255, 255, 0.88) !important;
+      -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;
+    }
+    html body #review-cta .btn-gold-action {
+      background: #D4AF37 !important;
+      background-color: #D4AF37 !important;
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+      border: 1.5px solid #D4AF37 !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 800 !important;
+      box-shadow: 0 4px 18px rgba(212, 175, 55, 0.35) !important;
+      transition: all 0.2s ease !important;
+    }
+    html body #review-cta .btn-gold-action:hover {
+      background: #E4BF3F !important;
+      border-color: #E4BF3F !important;
+      transform: translateY(-1px) !important;
+      box-shadow: 0 6px 22px rgba(212, 175, 55, 0.5) !important;
+    }
+    html body #review-cta .btn-gold-action * {
+      color: #000000 !important;
+      -webkit-text-fill-color: #000000 !important;
+    }
+    html body #review-cta .btn-advisor-secondary,
+    html body [data-theme="light"] #review-cta .btn-advisor-secondary {
+      background: transparent !important;
+      border: 1.5px solid #D4AF37 !important;
+      color: #D4AF37 !important;
+      -webkit-text-fill-color: #D4AF37 !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 700 !important;
+      border-radius: 12px !important;
+      transition: all 0.2s ease !important;
+    }
+    html body #review-cta .btn-advisor-secondary:hover {
+      background: rgba(212, 175, 55, 0.15) !important;
+      border-color: #D4AF37 !important;
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      transform: translateY(-1px) !important;
+    }
+    html body #review-cta .btn-advisor-secondary * {
+      color: #D4AF37 !important;
+      -webkit-text-fill-color: #D4AF37 !important;
+    }
+
     /* ── MASTER HEADER ABOUT DROPDOWN FIXES ── */
     html[data-theme="light"] .prospera-about-dropdown {
       position: relative !important;
@@ -223,96 +299,94 @@
     </style>
 </head>
 <body class="bg-[#FAF8F5] text-black font-sans min-h-screen flex flex-col antialiased selection:bg-gold-500 selection:text-white">
-<header class="fixed top-0 left-0 right-0 w-full z-50 bg-white border-b border-slate-200 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <!-- Brand Logo -->
-      <a aria-label="Prospera AI Realtors" class="prospera-brand-logo group flex-shrink-0" href="index.html">
-        <span aria-hidden="true" class="prospera-logo-frame">
-          <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
-        </span>
-      </a>
-      <!-- Desktop Primary Navigation -->
-      <nav aria-label="Primary navigation"
-        class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-700">
-        <a class="hover:text-gold-500 transition-colors" href="index.html">Home</a>
-        <a class="hover:text-gold-500 transition-colors" href="builders.html">Builders</a>
-        <a class="hover:text-gold-500 transition-colors" href="explore.html">Properties</a>
-        <a class="hover:text-gold-500 transition-colors" href="agents.html">Agents</a>
-        <a class="hover:text-gold-500 transition-colors" href="market-insights.html">Market Insights</a>
-        <a class="hover:text-gold-500 transition-colors" href="compare-projects.html">Compare</a>
-        <a class="hover:text-gold-500 transition-colors" href="book-site-visit.html">Book Site Visit</a>
-        <div class="prospera-about-dropdown" id="desktopAboutDropdown">
-          <button aria-controls="desktopAboutMenu" aria-expanded="false"
-            class="prospera-about-trigger hover:text-gold-500 transition-colors"
-            onclick="toggleAboutDropdown(event, 'desktopAboutDropdown')" type="button">
-            <span>About</span>
-            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
-          </button>
-          <div aria-label="About links" class="prospera-about-menu" id="desktopAboutMenu" role="menu">
-            <a href="about-us.html" role="menuitem">About Us</a>
-            <a href="why-prospera-ai.html" role="menuitem">Why Prospera AI</a>
-            <a href="reviews.html" role="menuitem">Reviews</a>
-            <a href="contact.html" role="menuitem">Contact Us</a>
-            <a href="privacy-terms.html" role="menuitem">Privacy Policy</a>
+  <!-- ============================================================
+       PROSPERA GLOBAL MASTER NAVBAR
+       Uniform luxury real-estate navbar across all 16 pages
+       ============================================================ -->
+  <header class="prospera-site-header fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 pointer-events-none">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-2.5 sm:pt-3.5 pb-1 pointer-events-auto">
+      <div class="prospera-nav-capsule flex items-center justify-between">
+        <!-- Brand Logo -->
+        <a aria-label="Prospera AI Realtors" class="prospera-brand-logo group flex-shrink-0" href="index.html">
+          <span aria-hidden="true" class="prospera-logo-frame">
+            <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+          </span>
+        </a>
+
+        <!-- Desktop Primary Navigation -->
+        <nav aria-label="Primary navigation" class="hidden md:flex items-center gap-3.5 lg:gap-5 xl:gap-7 text-[13px] lg:text-[13.5px] xl:text-sm font-semibold text-[#182033]">
+          <a class="prospera-nav-link" href="index.html">Home</a>
+          <a class="prospera-nav-link" href="builders.html">Builders</a>
+          <a class="prospera-nav-link" href="explore.html">Properties</a>
+          <a class="prospera-nav-link" href="agents.html">Agents</a>
+          <a class="prospera-nav-link" href="market-insights.html">Market Insights</a>
+          <a class="prospera-nav-link" href="compare-projects.html">Compare</a>
+          <a class="prospera-nav-link" href="book-site-visit.html">Book Site Visit</a>
+          <div class="prospera-about-dropdown" id="desktopAboutDropdown">
+            <button aria-controls="desktopAboutMenu" aria-expanded="false"
+              class="prospera-about-trigger is-active"
+              onclick="toggleAboutDropdown(event, 'desktopAboutDropdown')" type="button">
+              <span>About</span>
+              <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+            </button>
+            <div aria-label="About links" class="prospera-about-menu" id="desktopAboutMenu" role="menu">
+              <a class="" href="about-us.html" role="menuitem">About Us</a>
+              <a class="" href="why-prospera-ai.html" role="menuitem">Why Prospera AI</a>
+              <a class="is-active" href="reviews.html" role="menuitem">Reviews</a>
+              <a class="" href="contact.html" role="menuitem">Contact Us</a>
+              <a class="" href="privacy-terms.html" role="menuitem">Privacy Policy</a>
+            </div>
           </div>
+        </nav>
+
+        <!-- Mobile Hamburger Toggle -->
+        <div class="flex md:hidden items-center">
+          <button aria-label="Open menu"
+            class="prospera-mobile-toggle flex items-center justify-center"
+            id="mobileMenuBtn" onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-bars text-base" id="mobileMenuIcon"></i>
+          </button>
         </div>
-      </nav>
-      <!-- Right: Mobile Navigation -->
-      <div class="flex items-center gap-2 sm:gap-3">
-        <button aria-label="Open menu"
-          class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl border border-gold-500/30 bg-gold-500/10 text-gold-500 hover:bg-gold-500/20 transition-all"
-          id="mobileMenuBtn" onclick="toggleMobileMenu()">
-          <i class="fa-solid fa-bars text-base" id="mobileMenuIcon"></i>
-        </button>
       </div>
-    </div>
-    <!-- Mobile Navigation Dropdown -->
-    <div class="hidden md:hidden border-t border-slate-200 bg-white" id="mobileMenu">
-      <nav aria-label="Mobile navigation" class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="index.html">Home</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="builders.html">Builders</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="explore.html">Properties</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="agents.html">Agents</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="market-insights.html">Market Insights</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="compare-projects.html">Compare</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="book-site-visit.html">Book Site Visit</a>
-        <div class="prospera-mobile-about" id="mobileAboutDropdown">
-          <button aria-controls="mobileAboutMenu" aria-expanded="false" class="prospera-mobile-about-trigger"
-            onclick="toggleAboutDropdown(event, 'mobileAboutDropdown')" type="button">
-            <span>About</span>
-            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
-          </button>
-          <div class="prospera-mobile-about-menu" id="mobileAboutMenu">
-            <a href="about-us.html">About Us</a>
-            <a href="why-prospera-ai.html">Why Prospera AI</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="privacy-terms.html">Privacy Policy</a>
+
+      <!-- Mobile Navigation Dropdown -->
+      <div class="hidden md:hidden prospera-mobile-menu-card" id="mobileMenu">
+        <nav aria-label="Mobile navigation" class="p-3 sm:p-4 flex flex-col gap-1">
+          <a class="prospera-mobile-nav-link" href="index.html">Home</a>
+          <a class="prospera-mobile-nav-link" href="builders.html">Builders</a>
+          <a class="prospera-mobile-nav-link" href="explore.html">Properties</a>
+          <a class="prospera-mobile-nav-link" href="agents.html">Agents</a>
+          <a class="prospera-mobile-nav-link" href="market-insights.html">Market Insights</a>
+          <a class="prospera-mobile-nav-link" href="compare-projects.html">Compare</a>
+          <a class="prospera-mobile-nav-link" href="book-site-visit.html">Book Site Visit</a>
+          <div class="prospera-mobile-about" id="mobileAboutDropdown">
+            <button aria-controls="mobileAboutMenu" aria-expanded="false"
+              class="prospera-mobile-about-trigger is-active"
+              onclick="toggleAboutDropdown(event, 'mobileAboutDropdown')" type="button">
+              <span>About</span>
+              <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+            </button>
+            <div class="prospera-mobile-about-menu" id="mobileAboutMenu">
+              <a class="" href="about-us.html">About Us</a>
+              <a class="" href="why-prospera-ai.html">Why Prospera AI</a>
+              <a class="is-active" href="reviews.html">Reviews</a>
+              <a class="" href="contact.html">Contact Us</a>
+              <a class="" href="privacy-terms.html">Privacy Policy</a>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </div>
   </header>
     <!-- HERO SECTION (MATCHING AGENTS.HTML & CONTACT.HTML) -->
     <section class="builders-hero">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
-        <nav class="flex items-center gap-2 text-xs text-[#555555] mb-4">
-          <a href="index.html" class="hover:text-gold-600 transition-colors flex items-center gap-1.5 font-medium">
-            <i class="fa-solid fa-house text-[11px]"></i> Home
-          </a>
-          <span class="text-gold-500">/</span>
-          <span class="text-black font-semibold">Verified Reviews</span>
+        <!-- Breadcrumb (matching builders.html) -->
+        <nav class="flex items-center gap-2 text-xs text-black/60 mb-6" aria-label="Breadcrumb">
+          <a href="index.html" class="hover:text-gold-600 transition-colors">Prospera AI</a>
+          <i class="fa-solid fa-chevron-right text-[8px] text-gold-500"></i>
+          <span class="text-gold-600 font-semibold">Verified Reviews</span>
         </nav>
-        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white border border-[#D4AF37]/40 text-[#8C6D1F] mb-4 shadow-sm">
-          <i class="fa-solid fa-certificate text-gold-500"></i> Authentic Resident &amp; Buyer Experiences
-        </span>
         <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold text-black tracking-tight font-serif mb-4">
           Client Stories &amp; <span class="text-gold-600">Verified Reviews.</span>
         </h1>
@@ -775,25 +849,25 @@
             </div>
         </section>
 
-        <!-- SECTION 4: SUBMIT REVIEW CTA (DARK LUXURY OBSIDIAN-GOLD MATCHING INDEX.HTML & AGENTS.HTML) -->
-        <section class="rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-2xl border border-gold-500/30" style="background: linear-gradient(145deg, #2a2418, #57400f);">
-            <div class="relative z-10 max-w-3xl mx-auto text-center space-y-5">
-                <div class="w-14 h-14 rounded-full bg-[#D4AF37]/20 text-[#FAF8F5] border border-[#D4AF37]/50 flex items-center justify-center mx-auto text-2xl shadow-lg">
-                    <i class="fa-solid fa-feather-pointed text-gold-400"></i>
-                </div>
-                <h3 class="font-serif text-2xl sm:text-4xl font-bold text-white tracking-wide">
-                    Are You a Prospera Homeowner?
-                </h3>
-                <p class="text-slate-200 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed font-normal">
-                    Share your property journey to help fellow luxury buyers make verified investment decisions. All verified reviews receive a complimentary annual real estate portfolio audit and yield report.
-                </p>
-                <div class="pt-3 flex flex-wrap items-center justify-center gap-4">
-                    <a href="contact.html?type=review" class="btn-gold-primary px-8 py-3.5 text-xs font-bold tracking-wider">
-                        <i class="fa-solid fa-paper-plane mr-2 text-white"></i> Submit Your Review
-                    </a>
-                    <a href="contact.html" class="inline-flex items-center justify-center px-8 py-3.5 rounded-xl border border-white/40 text-white hover:bg-white/10 font-bold text-xs uppercase tracking-wider transition-all">
-                        <i class="fa-solid fa-phone mr-2 text-gold-400"></i> Speak with Advisor
-                    </a>
+        <!-- SECTION 4: CALL TO ACTION (MATCHING EXACT COLOR TONE OF WHY-PROSPERA-AI) -->
+        <section id="contact" class="pt-6">
+            <div id="review-cta" class="review-cta-card bg-[#000000] rounded-3xl p-8 sm:p-14 text-center border border-[#D4AF37]/50 shadow-2xl relative overflow-hidden text-white" style="background: #000000 !important; background-color: #000000 !important; border: 1.5px solid rgba(212, 175, 55, 0.5) !important; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                <div class="max-w-2xl mx-auto space-y-6">
+                    <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold block" style="color: #D4AF37 !important; -webkit-text-fill-color: #D4AF37 !important; letter-spacing: 0.15em;">Verified Homeowner Reviews</span>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
+                        Are You a <span class="text-gold-500" style="color: #D4AF37 !important; -webkit-text-fill-color: #D4AF37 !important;">Prospera Homeowner?</span>
+                    </h2>
+                    <p class="text-sm sm:text-base leading-relaxed" style="color: rgba(255, 255, 255, 0.88) !important; -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;">
+                        Share your property journey to help fellow luxury buyers make verified investment decisions. All verified reviews receive a complimentary annual real estate portfolio audit and yield report.
+                    </p>
+                    <div class="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <a href="contact.html?type=review" class="btn-gold-action w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold text-xs uppercase tracking-widest inline-flex items-center justify-center gap-2" style="background: #D4AF37 !important; background-color: #D4AF37 !important; color: #000000 !important; -webkit-text-fill-color: #000000 !important; border: 1.5px solid #D4AF37 !important; font-family: 'Plus Jakarta Sans', sans-serif !important; font-weight: 800 !important; box-shadow: 0 4px 18px rgba(212, 175, 55, 0.35) !important;">
+                            Submit Your Review
+                        </a>
+                        <a href="contact.html" class="btn-advisor-secondary w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold text-xs uppercase tracking-widest inline-flex items-center justify-center gap-2" style="background: transparent !important; border: 1.5px solid #D4AF37 !important; color: #D4AF37 !important; -webkit-text-fill-color: #D4AF37 !important; font-family: 'Plus Jakarta Sans', sans-serif !important; font-weight: 700 !important;">
+                            Speak with Advisor
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -972,7 +1046,7 @@
             <!-- Live Transcript Text -->
             <div class="space-y-2">
                 <h3 id="modalVoiceStatus" class="font-serif text-xl sm:text-2xl font-bold text-white">Listening to your voice...</h3>
-                <p id="modalVoiceTranscript" class="text-slate-300 text-xs sm:text-sm max-w-md mx-auto italic">
+                <p id="modalVoiceTranscript" class="text-slate-300 text-xs sm:text-sm max-w-md mx-auto ">
                     "Looking for a 3 BHK luxury apartment in Gurgaon under 3.5 Crores near metro station..."
                 </p>
             </div>

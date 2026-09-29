@@ -80,81 +80,83 @@
     <!-- =========================================
          PROSPERA MASTER HEADER
          ========================================= -->
-    <header class="fixed top-0 left-0 right-0 w-full z-50 bg-white border-b border-slate-200 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <!-- Brand Logo -->
-      <a aria-label="Prospera AI Realtors" class="prospera-brand-logo group flex-shrink-0" href="index.html">
-        <span aria-hidden="true" class="prospera-logo-frame">
-          <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
-        </span>
-      </a>
-      <!-- Desktop Primary Navigation -->
-      <nav aria-label="Primary navigation"
-        class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-700">
-        <a class="hover:text-gold-500 transition-colors" href="index.html">Home</a>
-        <a class="hover:text-gold-500 transition-colors" href="builders.html">Builders</a>
-        <a class="hover:text-gold-500 transition-colors" href="explore.html">Properties</a>
-        <a class="hover:text-gold-500 transition-colors" href="agents.html">Agents</a>
-        <a class="hover:text-gold-500 transition-colors" href="market-insights.html">Market Insights</a>
-        <a class="hover:text-gold-500 transition-colors" href="compare-projects.html">Compare</a>
-        <a class="hover:text-gold-500 transition-colors" href="book-site-visit.html">Book Site Visit</a>
-        <div class="prospera-about-dropdown" id="desktopAboutDropdown">
-          <button aria-controls="desktopAboutMenu" aria-expanded="false"
-            class="prospera-about-trigger hover:text-gold-500 transition-colors"
-            onclick="toggleAboutDropdown(event, 'desktopAboutDropdown')" type="button">
-            <span>About</span>
-            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
-          </button>
-          <div aria-label="About links" class="prospera-about-menu" id="desktopAboutMenu" role="menu">
-            <a href="about-us.html" role="menuitem">About Us</a>
-            <a href="why-prospera-ai.html" role="menuitem">Why Prospera AI</a>
-            <a href="reviews.html" role="menuitem">Reviews</a>
-            <a href="contact.html" role="menuitem">Contact Us</a>
-            <a href="privacy-terms.html" role="menuitem">Privacy Policy</a>
+      <!-- ============================================================
+       PROSPERA GLOBAL MASTER NAVBAR
+       Uniform luxury real-estate navbar across all 16 pages
+       ============================================================ -->
+  <header class="prospera-site-header fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 pointer-events-none">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-2.5 sm:pt-3.5 pb-1 pointer-events-auto">
+      <div class="prospera-nav-capsule flex items-center justify-between">
+        <!-- Brand Logo -->
+        <a aria-label="Prospera AI Realtors" class="prospera-brand-logo group flex-shrink-0" href="index.html">
+          <span aria-hidden="true" class="prospera-logo-frame">
+            <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+          </span>
+        </a>
+
+        <!-- Desktop Primary Navigation -->
+        <nav aria-label="Primary navigation" class="hidden md:flex items-center gap-3.5 lg:gap-5 xl:gap-7 text-[13px] lg:text-[13.5px] xl:text-sm font-semibold text-[#182033]">
+          <a class="prospera-nav-link" href="index.html">Home</a>
+          <a class="prospera-nav-link" href="builders.html">Builders</a>
+          <a class="prospera-nav-link is-active" href="explore.html">Properties</a>
+          <a class="prospera-nav-link" href="agents.html">Agents</a>
+          <a class="prospera-nav-link" href="market-insights.html">Market Insights</a>
+          <a class="prospera-nav-link" href="compare-projects.html">Compare</a>
+          <a class="prospera-nav-link" href="book-site-visit.html">Book Site Visit</a>
+          <div class="prospera-about-dropdown" id="desktopAboutDropdown">
+            <button aria-controls="desktopAboutMenu" aria-expanded="false"
+              class="prospera-about-trigger"
+              onclick="toggleAboutDropdown(event, 'desktopAboutDropdown')" type="button">
+              <span>About</span>
+              <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+            </button>
+            <div aria-label="About links" class="prospera-about-menu" id="desktopAboutMenu" role="menu">
+              <a class="" href="about-us.html" role="menuitem">About Us</a>
+              <a class="" href="why-prospera-ai.html" role="menuitem">Why Prospera AI</a>
+              <a class="" href="reviews.html" role="menuitem">Reviews</a>
+              <a class="" href="contact.html" role="menuitem">Contact Us</a>
+              <a class="" href="privacy-terms.html" role="menuitem">Privacy Policy</a>
+            </div>
           </div>
+        </nav>
+
+        <!-- Mobile Hamburger Toggle -->
+        <div class="flex md:hidden items-center">
+          <button aria-label="Open menu"
+            class="prospera-mobile-toggle flex items-center justify-center"
+            id="mobileMenuBtn" onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-bars text-base" id="mobileMenuIcon"></i>
+          </button>
         </div>
-      </nav>
-      <!-- Right: Mobile Navigation -->
-      <div class="flex items-center gap-2 sm:gap-3">
-        <button aria-label="Open menu"
-          class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl border border-gold-500/30 bg-gold-500/10 text-gold-500 hover:bg-gold-500/20 transition-all"
-          id="mobileMenuBtn" onclick="toggleMobileMenu()">
-          <i class="fa-solid fa-bars text-base" id="mobileMenuIcon"></i>
-        </button>
       </div>
-    </div>
-    <!-- Mobile Navigation Dropdown -->
-    <div class="hidden md:hidden border-t border-slate-200 bg-white" id="mobileMenu">
-      <nav aria-label="Mobile navigation" class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="index.html">Home</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="builders.html">Builders</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="explore.html">Properties</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="agents.html">Agents</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="market-insights.html">Market Insights</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="compare-projects.html">Compare</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="book-site-visit.html">Book Site Visit</a>
-        <div class="prospera-mobile-about" id="mobileAboutDropdown">
-          <button aria-controls="mobileAboutMenu" aria-expanded="false" class="prospera-mobile-about-trigger"
-            onclick="toggleAboutDropdown(event, 'mobileAboutDropdown')" type="button">
-            <span>About</span>
-            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
-          </button>
-          <div class="prospera-mobile-about-menu" id="mobileAboutMenu">
-            <a href="about-us.html">About Us</a>
-            <a href="why-prospera-ai.html">Why Prospera AI</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="privacy-terms.html">Privacy Policy</a>
+
+      <!-- Mobile Navigation Dropdown -->
+      <div class="hidden md:hidden prospera-mobile-menu-card" id="mobileMenu">
+        <nav aria-label="Mobile navigation" class="p-3 sm:p-4 flex flex-col gap-1">
+          <a class="prospera-mobile-nav-link" href="index.html">Home</a>
+          <a class="prospera-mobile-nav-link" href="builders.html">Builders</a>
+          <a class="prospera-mobile-nav-link is-active" href="explore.html">Properties</a>
+          <a class="prospera-mobile-nav-link" href="agents.html">Agents</a>
+          <a class="prospera-mobile-nav-link" href="market-insights.html">Market Insights</a>
+          <a class="prospera-mobile-nav-link" href="compare-projects.html">Compare</a>
+          <a class="prospera-mobile-nav-link" href="book-site-visit.html">Book Site Visit</a>
+          <div class="prospera-mobile-about" id="mobileAboutDropdown">
+            <button aria-controls="mobileAboutMenu" aria-expanded="false"
+              class="prospera-mobile-about-trigger"
+              onclick="toggleAboutDropdown(event, 'mobileAboutDropdown')" type="button">
+              <span>About</span>
+              <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+            </button>
+            <div class="prospera-mobile-about-menu" id="mobileAboutMenu">
+              <a class="" href="about-us.html">About Us</a>
+              <a class="" href="why-prospera-ai.html">Why Prospera AI</a>
+              <a class="" href="reviews.html">Reviews</a>
+              <a class="" href="contact.html">Contact Us</a>
+              <a class="" href="privacy-terms.html">Privacy Policy</a>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </div>
   </header>
     <!-- =========================================

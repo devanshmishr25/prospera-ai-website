@@ -28,7 +28,7 @@
         if (trigger) trigger.setAttribute("aria-expanded", String(isOpen));
     };
 
-    // Header Navigation: Outside Click to Close Dropdown
+    // Header Navigation: Outside Click to Close Dropdown & Mobile Menu
     document.addEventListener("click", function(event) {
         document.querySelectorAll(".prospera-about-dropdown.is-open,.prospera-mobile-about.is-open").forEach(function(wrap) {
             if (!wrap.contains(event.target)) {
@@ -37,6 +37,18 @@
                 if (trigger) trigger.setAttribute("aria-expanded", "false");
             }
         });
+        const mobileMenu = document.getElementById("mobileMenu");
+        const mobileBtn = document.getElementById("mobileMenuBtn");
+        if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+            if (!mobileMenu.contains(event.target) && !mobileBtn?.contains(event.target)) {
+                mobileMenu.classList.add("hidden");
+                const icon = document.getElementById("mobileMenuIcon");
+                if (icon) {
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+                }
+            }
+        }
     });
 
     // Header Navigation: Mobile Hamburger Menu Toggle

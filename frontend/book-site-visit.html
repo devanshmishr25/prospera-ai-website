@@ -490,81 +490,83 @@
   </style>
 </head>
 <body class="bg-[#FAF8F5] text-[#000000] font-sans selection:bg-gold-200 selection:text-black relative antialiased min-h-screen overflow-x-hidden">
-<header class="fixed top-0 left-0 right-0 w-full z-50 bg-white border-b border-slate-200 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <!-- Brand Logo -->
-      <a aria-label="Prospera AI Realtors" class="prospera-brand-logo group flex-shrink-0" href="index.html">
-        <span aria-hidden="true" class="prospera-logo-frame">
-          <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
-        </span>
-      </a>
-      <!-- Desktop Primary Navigation -->
-      <nav aria-label="Primary navigation"
-        class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-700">
-        <a class="hover:text-gold-500 transition-colors" href="index.html">Home</a>
-        <a class="hover:text-gold-500 transition-colors" href="builders.html">Builders</a>
-        <a class="hover:text-gold-500 transition-colors" href="explore.html">Properties</a>
-        <a class="hover:text-gold-500 transition-colors" href="agents.html">Agents</a>
-        <a class="hover:text-gold-500 transition-colors" href="market-insights.html">Market Insights</a>
-        <a class="hover:text-gold-500 transition-colors" href="compare-projects.html">Compare</a>
-        <a class="hover:text-gold-500 transition-colors" href="book-site-visit.html">Book Site Visit</a>
-        <div class="prospera-about-dropdown" id="desktopAboutDropdown">
-          <button aria-controls="desktopAboutMenu" aria-expanded="false"
-            class="prospera-about-trigger hover:text-gold-500 transition-colors"
-            onclick="toggleAboutDropdown(event, 'desktopAboutDropdown')" type="button">
-            <span>About</span>
-            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
-          </button>
-          <div aria-label="About links" class="prospera-about-menu" id="desktopAboutMenu" role="menu">
-            <a href="about-us.html" role="menuitem">About Us</a>
-            <a href="why-prospera-ai.html" role="menuitem">Why Prospera AI</a>
-            <a href="reviews.html" role="menuitem">Reviews</a>
-            <a href="contact.html" role="menuitem">Contact Us</a>
-            <a href="privacy-terms.html" role="menuitem">Privacy Policy</a>
+  <!-- ============================================================
+       PROSPERA GLOBAL MASTER NAVBAR
+       Uniform luxury real-estate navbar across all 16 pages
+       ============================================================ -->
+  <header class="prospera-site-header fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 pointer-events-none">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-2.5 sm:pt-3.5 pb-1 pointer-events-auto">
+      <div class="prospera-nav-capsule flex items-center justify-between">
+        <!-- Brand Logo -->
+        <a aria-label="Prospera AI Realtors" class="prospera-brand-logo group flex-shrink-0" href="index.html">
+          <span aria-hidden="true" class="prospera-logo-frame">
+            <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+          </span>
+        </a>
+
+        <!-- Desktop Primary Navigation -->
+        <nav aria-label="Primary navigation" class="hidden md:flex items-center gap-3.5 lg:gap-5 xl:gap-7 text-[13px] lg:text-[13.5px] xl:text-sm font-semibold text-[#182033]">
+          <a class="prospera-nav-link" href="index.html">Home</a>
+          <a class="prospera-nav-link" href="builders.html">Builders</a>
+          <a class="prospera-nav-link" href="explore.html">Properties</a>
+          <a class="prospera-nav-link" href="agents.html">Agents</a>
+          <a class="prospera-nav-link" href="market-insights.html">Market Insights</a>
+          <a class="prospera-nav-link" href="compare-projects.html">Compare</a>
+          <a class="prospera-nav-link is-active" href="book-site-visit.html">Book Site Visit</a>
+          <div class="prospera-about-dropdown" id="desktopAboutDropdown">
+            <button aria-controls="desktopAboutMenu" aria-expanded="false"
+              class="prospera-about-trigger"
+              onclick="toggleAboutDropdown(event, 'desktopAboutDropdown')" type="button">
+              <span>About</span>
+              <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+            </button>
+            <div aria-label="About links" class="prospera-about-menu" id="desktopAboutMenu" role="menu">
+              <a class="" href="about-us.html" role="menuitem">About Us</a>
+              <a class="" href="why-prospera-ai.html" role="menuitem">Why Prospera AI</a>
+              <a class="" href="reviews.html" role="menuitem">Reviews</a>
+              <a class="" href="contact.html" role="menuitem">Contact Us</a>
+              <a class="" href="privacy-terms.html" role="menuitem">Privacy Policy</a>
+            </div>
           </div>
+        </nav>
+
+        <!-- Mobile Hamburger Toggle -->
+        <div class="flex md:hidden items-center">
+          <button aria-label="Open menu"
+            class="prospera-mobile-toggle flex items-center justify-center"
+            id="mobileMenuBtn" onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-bars text-base" id="mobileMenuIcon"></i>
+          </button>
         </div>
-      </nav>
-      <!-- Right: Mobile Navigation -->
-      <div class="flex items-center gap-2 sm:gap-3">
-        <button aria-label="Open menu"
-          class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl border border-gold-500/30 bg-gold-500/10 text-gold-500 hover:bg-gold-500/20 transition-all"
-          id="mobileMenuBtn" onclick="toggleMobileMenu()">
-          <i class="fa-solid fa-bars text-base" id="mobileMenuIcon"></i>
-        </button>
       </div>
-    </div>
-    <!-- Mobile Navigation Dropdown -->
-    <div class="hidden md:hidden border-t border-slate-200 bg-white" id="mobileMenu">
-      <nav aria-label="Mobile navigation" class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="index.html">Home</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="builders.html">Builders</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="explore.html">Properties</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="agents.html">Agents</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="market-insights.html">Market Insights</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="compare-projects.html">Compare</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="book-site-visit.html">Book Site Visit</a>
-        <div class="prospera-mobile-about" id="mobileAboutDropdown">
-          <button aria-controls="mobileAboutMenu" aria-expanded="false" class="prospera-mobile-about-trigger"
-            onclick="toggleAboutDropdown(event, 'mobileAboutDropdown')" type="button">
-            <span>About</span>
-            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
-          </button>
-          <div class="prospera-mobile-about-menu" id="mobileAboutMenu">
-            <a href="about-us.html">About Us</a>
-            <a href="why-prospera-ai.html">Why Prospera AI</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="privacy-terms.html">Privacy Policy</a>
+
+      <!-- Mobile Navigation Dropdown -->
+      <div class="hidden md:hidden prospera-mobile-menu-card" id="mobileMenu">
+        <nav aria-label="Mobile navigation" class="p-3 sm:p-4 flex flex-col gap-1">
+          <a class="prospera-mobile-nav-link" href="index.html">Home</a>
+          <a class="prospera-mobile-nav-link" href="builders.html">Builders</a>
+          <a class="prospera-mobile-nav-link" href="explore.html">Properties</a>
+          <a class="prospera-mobile-nav-link" href="agents.html">Agents</a>
+          <a class="prospera-mobile-nav-link" href="market-insights.html">Market Insights</a>
+          <a class="prospera-mobile-nav-link" href="compare-projects.html">Compare</a>
+          <a class="prospera-mobile-nav-link is-active" href="book-site-visit.html">Book Site Visit</a>
+          <div class="prospera-mobile-about" id="mobileAboutDropdown">
+            <button aria-controls="mobileAboutMenu" aria-expanded="false"
+              class="prospera-mobile-about-trigger"
+              onclick="toggleAboutDropdown(event, 'mobileAboutDropdown')" type="button">
+              <span>About</span>
+              <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+            </button>
+            <div class="prospera-mobile-about-menu" id="mobileAboutMenu">
+              <a class="" href="about-us.html">About Us</a>
+              <a class="" href="why-prospera-ai.html">Why Prospera AI</a>
+              <a class="" href="reviews.html">Reviews</a>
+              <a class="" href="contact.html">Contact Us</a>
+              <a class="" href="privacy-terms.html">Privacy Policy</a>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </div>
   </header>
   <!-- =============================================
@@ -582,24 +584,16 @@
         Schedule a Private <span class="text-gold-600">Site Visit.</span>
       </h1>
       <p class="text-black/75 text-base max-w-2xl leading-relaxed">
-        Experience luxury real estate in person. Reserve a private tour with our senior property relationship managers and complimentary executive chauffeur service.
+        Experience luxury real estate in person. Reserve an exclusive guided private tour across our verified developments.
       </p>
-      <div class="flex flex-wrap items-center gap-4 mt-6">
-        <div class="px-4 py-2 rounded-xl bg-white border border-gold-500/30 text-xs font-semibold text-black">
-          <strong class="text-gold-600 font-bold mr-1">VIP Access</strong> Direct Builder Sales Tour
-        </div>
-        <div class="px-4 py-2 rounded-xl bg-white border border-gold-500/30 text-xs font-semibold text-black">
-          <strong class="text-gold-600 font-bold mr-1">Zero Cost</strong> 100% Free Executive Cab
-        </div>
-      </div>
     </div>
   </div>
 
 
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow w-full">
-    <!-- STEP TABS -->
+    <!-- STEP TABS (3 STEPS) -->
     <div class="step-tabs-container">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
+      <div class="grid grid-cols-3 gap-2 sm:gap-4 text-center">
         <div id="step-tab-1" class="step-tab is-active" onclick="goToStep(1)">
           <div class="step-circle">1</div>
           <div class="text-left hidden sm:block">
@@ -620,14 +614,6 @@
           <div class="step-circle">3</div>
           <div class="text-left hidden sm:block">
             <span class="text-[10px] text-black/60 uppercase font-bold block">Step 03</span>
-            <span class="text-xs font-semibold text-black/80 block truncate">Assigned Agent</span>
-          </div>
-        </div>
-
-        <div id="step-tab-4" class="step-tab is-inactive" onclick="goToStep(4)">
-          <div class="step-circle">4</div>
-          <div class="text-left hidden sm:block">
-            <span class="text-[10px] text-black/60 uppercase font-bold block">Step 04</span>
             <span class="text-xs font-semibold text-black/80 block truncate">Confirmation</span>
           </div>
         </div>
@@ -784,106 +770,24 @@
             </div>
           </div>
 
-          <div class="p-4 rounded-xl bg-white border border-gold-500/30 flex items-center gap-3">
-            <input type="checkbox" id="pickup-service" class="w-4 h-4 accent-[#D4AF37] rounded cursor-pointer" onchange="togglePickupService(this)">
-            <label for="pickup-service" class="text-xs text-black/80 font-medium cursor-pointer">
-              Request Complimentary Executive Chauffeur Pick-up from Metro Station / Delhi NCR address.
-            </label>
-          </div>
-
           <div class="pt-4 flex justify-between items-center">
             <button type="button" onclick="goToStep(1)" class="btn-visit-secondary bg-white">
               <i class="fa-solid fa-arrow-left"></i>
               <span>Back to Projects</span>
             </button>
             <button type="button" onclick="goToStep(3)" class="btn-visit-primary">
-              <span>Proceed to Assigned Agent</span>
+              <span>Proceed to Confirmation</span>
               <i class="fa-solid fa-arrow-right"></i>
             </button>
           </div>
         </div>
 
-        <!-- STEP 3: ASSIGNED AGENT -->
+        <!-- STEP 3: VISITOR DETAILS & CONFIRMATION -->
         <div id="step-content-3" class="step-panel hidden space-y-6">
           <div class="border-b border-gold-500/25 pb-4">
             <h2 class="font-heading text-2xl font-bold text-black flex items-center gap-3">
-              <i class="fa-solid fa-user-tie text-gold-600"></i>
-              <span>Assigned Executive Relationship Manager</span>
-            </h2>
-            <p class="text-black/65 text-xs sm:text-sm mt-1">Our certified luxury property experts will host your private tour.</p>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <!-- Agent 1 -->
-            <div class="agent-card gold-card-active" onclick="selectAgent(this, 'Vikramaditya Verma', 'Senior Luxury Portfolio Manager', '+91 98765 11223', '4.9 ★ (180+ Tours)')">
-              <div class="agent-avatar-frame">
-                <img loading="lazy" decoding="async" src="./assets/images/agents/Arjun AI.png" alt="Vikramaditya Verma">
-              </div>
-              <span class="text-[10px] bg-gold-50 text-gold-700 font-bold px-2.5 py-0.5 rounded-full border border-gold-500/30">Noida HQ Senior Expert</span>
-              <h3 class="font-heading font-bold text-black text-base mt-2">Vikramaditya Verma</h3>
-              <p class="text-xs text-black/60">Senior Luxury Advisor</p>
-              <div class="mt-3 pt-3 border-t border-gold-500/20 text-xs text-gold-700 font-bold">
-                <span><i class="fa-solid fa-star text-gold-500 mr-1"></i> 4.9 (180+ Tours)</span>
-              </div>
-            </div>
-
-            <!-- Agent 2 -->
-            <div class="agent-card" onclick="selectAgent(this, 'Ananya Sharma', 'Principal Residential Specialist', '+91 98765 44556', '4.8 ★ (140+ Tours)')">
-              <div class="agent-avatar-frame">
-                <img loading="lazy" decoding="async" src="./assets/images/agents/Ananya AI.png" alt="Ananya Sharma">
-              </div>
-              <span class="text-[10px] bg-white text-black/60 px-2.5 py-0.5 rounded-full border border-black/15 font-bold">Golf Villa Specialist</span>
-              <h3 class="font-heading font-bold text-black text-base mt-2">Ananya Sharma</h3>
-              <p class="text-xs text-black/60">Residential Specialist</p>
-              <div class="mt-3 pt-3 border-t border-gold-500/20 text-xs text-gold-700 font-bold">
-                <span><i class="fa-solid fa-star text-gold-500 mr-1"></i> 4.8 (140+ Tours)</span>
-              </div>
-            </div>
-
-            <!-- Agent 3 -->
-            <div class="agent-card" onclick="selectAgent(this, 'Rohan Kapoor', 'Commercial Investment Consultant', '+91 98765 77889', '4.9 ★ (210+ Tours)')">
-              <div class="agent-avatar-frame">
-                <img loading="lazy" decoding="async" src="./assets/images/agents/Kabir AI.png" alt="Rohan Kapoor">
-              </div>
-              <span class="text-[10px] bg-white text-black/60 px-2.5 py-0.5 rounded-full border border-black/15 font-bold">Commercial &amp; Retail</span>
-              <h3 class="font-heading font-bold text-black text-base mt-2">Rohan Kapoor</h3>
-              <p class="text-xs text-black/60">Investment Consultant</p>
-              <div class="mt-3 pt-3 border-t border-gold-500/20 text-xs text-gold-700 font-bold">
-                <span><i class="fa-solid fa-star text-gold-500 mr-1"></i> 4.9 (210+ Tours)</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="visit-card-panel space-y-3 bg-[#FAF8F5]">
-            <h4 class="text-xs font-bold text-gold-700 uppercase tracking-wider flex items-center gap-2">
-              <i class="fa-solid fa-gem text-gold-600"></i>
-              <span>What's Included in Your VIP Visit</span>
-            </h4>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-black/85 font-medium">
-              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-600 font-bold"></i><span>Sample Flat Walkthrough</span></div>
-              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-600 font-bold"></i><span>Architecture &amp; Master Plan Brief</span></div>
-              <div class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-600 font-bold"></i><span>Exclusive On-spot Pricing Offer</span></div>
-            </div>
-          </div>
-
-          <div class="pt-4 flex justify-between items-center">
-            <button type="button" onclick="goToStep(2)" class="btn-visit-secondary bg-white">
-              <i class="fa-solid fa-arrow-left"></i>
-              <span>Back to Date &amp; Time</span>
-            </button>
-            <button type="button" onclick="goToStep(4)" class="btn-visit-primary">
-              <span>Proceed to Contact Info</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- STEP 4: VISITOR DETAILS & CONFIRMATION -->
-        <div id="step-content-4" class="step-panel hidden space-y-6">
-          <div class="border-b border-gold-500/25 pb-4">
-            <h2 class="font-heading text-2xl font-bold text-black flex items-center gap-3">
               <i class="fa-solid fa-address-card text-gold-600"></i>
-              <span>Visitor Details &amp; Confirmation Channel</span>
+              <span>Visitor Details &amp; Confirmation</span>
             </h2>
             <p class="text-black/65 text-xs sm:text-sm mt-1">Enter your details to generate your digital Site Visit Pass.</p>
           </div>
@@ -940,14 +844,14 @@
             </div>
 
             <div>
-              <label for="visitor-notes" class="block text-xs font-bold text-black/80 uppercase tracking-wider mb-2">Special Requests or Pick-Up Address (Optional)</label>
-              <textarea id="visitor-notes" rows="3" placeholder="e.g. Please arrange pick-up from Sector 62 Metro Station for 2 adults." class="w-full p-3 bg-[#FAF8F5] border border-gold-500/35 rounded-xl text-black text-xs focus:outline-none focus:border-gold-500 resize-none"></textarea>
+              <label for="visitor-notes" class="block text-xs font-bold text-black/80 uppercase tracking-wider mb-2">Special Requests or Queries (Optional)</label>
+              <textarea id="visitor-notes" rows="3" placeholder="e.g. Specific configuration or queries you'd like to discuss during the tour." class="w-full p-3 bg-[#FAF8F5] border border-gold-500/35 rounded-xl text-black text-xs focus:outline-none focus:border-gold-500 resize-none"></textarea>
             </div>
 
             <div class="pt-4 flex justify-between items-center">
-              <button type="button" onclick="goToStep(3)" class="btn-visit-secondary bg-white">
+              <button type="button" onclick="goToStep(2)" class="btn-visit-secondary bg-white">
                 <i class="fa-solid fa-arrow-left"></i>
-                <span>Back to Agent</span>
+                <span>Back to Date &amp; Time</span>
               </button>
 
               <button type="submit" id="confirm-submit-btn" class="btn-visit-primary">
@@ -982,16 +886,15 @@
               <div class="flex-grow min-w-0">
                 <span class="text-[10px] text-black/50 uppercase block font-bold">Scheduled Date &amp; Time</span>
                 <strong id="summary-date-time" class="text-black font-bold text-xs block">Sep 08, 2026 • 10:00 AM</strong>
-                <span id="summary-pickup-status" class="text-black/60 text-[10px] block mt-0.5 font-medium"><i class="fa-solid fa-car text-gold-600 mr-1"></i> Self Arrival</span>
               </div>
             </div>
 
             <div class="summary-item-card">
-              <div class="summary-item-icon"><i class="fa-solid fa-user-shield"></i></div>
+              <div class="summary-item-icon"><i class="fa-solid fa-handshake"></i></div>
               <div class="flex-grow min-w-0">
-                <span class="text-[10px] text-black/50 uppercase block font-bold">Assigned Agent</span>
-                <strong id="summary-agent-name" class="text-black font-bold text-xs block">Vikramaditya Verma</strong>
-                <span id="summary-agent-role" class="text-black/60 text-[10px] block">Senior Luxury Advisor</span>
+                <span class="text-[10px] text-black/50 uppercase block font-bold">Tour Format</span>
+                <strong class="text-black font-bold text-xs block">Private Site Tour</strong>
+                <span class="text-black/60 text-[10px] block">Direct Builder Representative</span>
               </div>
             </div>
 
@@ -1020,13 +923,13 @@
       <div>
         <span class="text-[10px] bg-gold-50 text-gold-700 border border-gold-500/30 px-3 py-1 rounded-full uppercase tracking-wider font-bold">Appointment Confirmed #SV-2026-8892</span>
         <h2 class="font-heading text-2xl font-bold text-black mt-3">Site Visit Booked Successfully!</h2>
-        <p class="text-black/65 text-xs mt-1">Your digital pass and agent contact details have been sent to your chosen channel.</p>
+        <p class="text-black/65 text-xs mt-1">Your digital pass and details have been sent to your chosen channel.</p>
       </div>
 
       <div class="bg-[#FAF8F5] border border-gold-500/25 rounded-2xl p-4 text-left space-y-2.5 text-xs">
         <div class="flex justify-between border-b border-gold-500/15 pb-2"><span class="text-black/60">Project:</span><span id="modal-project" class="text-black font-bold">Grand Imperial Towers</span></div>
         <div class="flex justify-between border-b border-gold-500/15 pb-2"><span class="text-black/60">Date &amp; Slot:</span><span id="modal-datetime" class="text-gold-700 font-bold">Sep 08, 2026 - 10:00 AM</span></div>
-        <div class="flex justify-between border-b border-gold-500/15 pb-2"><span class="text-black/60">Assigned Agent:</span><span id="modal-agent" class="text-black font-bold">Vikramaditya Verma</span></div>
+        <div class="flex justify-between border-b border-gold-500/15 pb-2"><span class="text-black/60">Tour Format:</span><span class="text-black font-bold">Direct Builder Sales Tour</span></div>
         <div class="flex justify-between"><span class="text-black/60">Pass Delivered To:</span><span id="modal-contact" class="text-gold-700 font-bold">+91 9876543210 (WhatsApp)</span></div>
       </div>
 
@@ -1134,7 +1037,7 @@
     function goToStep(step) {
       currentStep = step;
 
-      for (let i = 1; i <= 4; i++) {
+      for (let i = 1; i <= 3; i++) {
         const panel = document.getElementById(`step-content-${i}`);
         const tab = document.getElementById(`step-tab-${i}`);
         if (!panel || !tab) continue;
@@ -1234,32 +1137,11 @@
     }
 
     function togglePickupService(checkbox) {
-      isPickupRequested = checkbox.checked;
-      const statusEl = document.getElementById('summary-pickup-status');
-      if (!statusEl) return;
-
-      if (isPickupRequested) {
-        statusEl.innerHTML = '<i class="fa-solid fa-car text-gold-600 mr-1"></i> Executive Cab Pick-up Included';
-        statusEl.classList.add('text-gold-700', 'font-bold');
-      } else {
-        statusEl.innerHTML = '<i class="fa-solid fa-car text-gold-600 mr-1"></i> Self Arrival';
-        statusEl.classList.remove('text-gold-700', 'font-bold');
-      }
+      // pickup service removed per requirements
     }
 
     function selectAgent(element, name, role, phone, rating) {
-      document.querySelectorAll('.agent-card').forEach(card => {
-        card.classList.remove('gold-card-active');
-      });
-
-      element.classList.add('gold-card-active');
-      selectedAgent = name;
-      selectedAgentRole = role;
-
-      const aName = document.getElementById('summary-agent-name');
-      const aRole = document.getElementById('summary-agent-role');
-      if (aName) aName.innerText = name;
-      if (aRole) aRole.innerText = role;
+      // agent selection removed per requirements
     }
 
     function updateChannelText(channel) {

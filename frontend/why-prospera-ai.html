@@ -208,6 +208,80 @@
       box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4) !important;
     }
 
+    /* Voice Simulation Gold Button - Global Gold Luxury Standards */
+    html body #voiceSimBtn,
+    html body button#voiceSimBtn,
+    html body .voice-sim-gold-btn,
+    #voiceSimBtn,
+    .voice-sim-gold-btn {
+      background: #D4AF37 !important;
+      background-color: #D4AF37 !important;
+      background-image: none !important;
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      border: 1.5px solid #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      border-radius: 12px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 800 !important;
+      font-size: 13px !important;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase !important;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.22) !important;
+      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35) !important;
+      cursor: pointer !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      transition: all 0.2s ease !important;
+    }
+    html body #voiceSimBtn span,
+    html body button#voiceSimBtn span,
+    html body .voice-sim-gold-btn span,
+    #voiceSimBtn span,
+    .voice-sim-gold-btn span {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+    }
+    html body #voiceSimBtn svg,
+    html body button#voiceSimBtn svg,
+    #voiceSimBtn svg {
+      fill: currentColor !important;
+      color: #FFFFFF !important;
+      display: inline-block !important;
+    }
+    html body #voiceSimBtn i,
+    html body button#voiceSimBtn i,
+    #voiceSimBtn i {
+      font-family: "Font Awesome 6 Free", "FontAwesome" !important;
+      font-weight: 900 !important;
+      font-style: normal !important;
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      display: inline-block !important;
+    }
+    html body #voiceSimBtn:hover,
+    html body button#voiceSimBtn:hover,
+    html body .voice-sim-gold-btn:hover,
+    #voiceSimBtn:hover,
+    .voice-sim-gold-btn:hover {
+      background: #D4AF37 !important;
+      background-color: #D4AF37 !important;
+      background-image: none !important;
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      border-color: #D4AF37 !important;
+      transform: none !important;
+      filter: brightness(1.08) !important;
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5) !important;
+    }
+    html body #voiceSimBtn:active,
+    html body button#voiceSimBtn:active,
+    #voiceSimBtn:active {
+      transform: none !important;
+    }
+
     /* Soundwave bars */
     .bar {
       width: 3px;
@@ -277,81 +351,83 @@
     <!-- =========================================
          PROSPERA MASTER HEADER
          ========================================= -->
-    <header class="fixed top-0 left-0 right-0 w-full z-50 bg-white border-b border-slate-200 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <!-- Brand Logo -->
-      <a aria-label="Prospera AI Realtors" class="prospera-brand-logo group flex-shrink-0" href="index.html">
-        <span aria-hidden="true" class="prospera-logo-frame">
-          <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
-        </span>
-      </a>
-      <!-- Desktop Primary Navigation -->
-      <nav aria-label="Primary navigation"
-        class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-700">
-        <a class="hover:text-gold-500 transition-colors" href="index.html">Home</a>
-        <a class="hover:text-gold-500 transition-colors" href="builders.html">Builders</a>
-        <a class="hover:text-gold-500 transition-colors" href="explore.html">Properties</a>
-        <a class="hover:text-gold-500 transition-colors" href="agents.html">Agents</a>
-        <a class="hover:text-gold-500 transition-colors" href="market-insights.html">Market Insights</a>
-        <a class="hover:text-gold-500 transition-colors" href="compare-projects.html">Compare</a>
-        <a class="hover:text-gold-500 transition-colors" href="book-site-visit.html">Book Site Visit</a>
-        <div class="prospera-about-dropdown" id="desktopAboutDropdown">
-          <button aria-controls="desktopAboutMenu" aria-expanded="false"
-            class="prospera-about-trigger hover:text-gold-500 transition-colors"
-            onclick="toggleAboutDropdown(event, 'desktopAboutDropdown')" type="button">
-            <span>About</span>
-            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
-          </button>
-          <div aria-label="About links" class="prospera-about-menu" id="desktopAboutMenu" role="menu">
-            <a href="about-us.html" role="menuitem">About Us</a>
-            <a href="why-prospera-ai.html" role="menuitem">Why Prospera AI</a>
-            <a href="reviews.html" role="menuitem">Reviews</a>
-            <a href="contact.html" role="menuitem">Contact Us</a>
-            <a href="privacy-terms.html" role="menuitem">Privacy Policy</a>
+      <!-- ============================================================
+       PROSPERA GLOBAL MASTER NAVBAR
+       Uniform luxury real-estate navbar across all 16 pages
+       ============================================================ -->
+  <header class="prospera-site-header fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 pointer-events-none">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-2.5 sm:pt-3.5 pb-1 pointer-events-auto">
+      <div class="prospera-nav-capsule flex items-center justify-between">
+        <!-- Brand Logo -->
+        <a aria-label="Prospera AI Realtors" class="prospera-brand-logo group flex-shrink-0" href="index.html">
+          <span aria-hidden="true" class="prospera-logo-frame">
+            <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+          </span>
+        </a>
+
+        <!-- Desktop Primary Navigation -->
+        <nav aria-label="Primary navigation" class="hidden md:flex items-center gap-3.5 lg:gap-5 xl:gap-7 text-[13px] lg:text-[13.5px] xl:text-sm font-semibold text-[#182033]">
+          <a class="prospera-nav-link" href="index.html">Home</a>
+          <a class="prospera-nav-link" href="builders.html">Builders</a>
+          <a class="prospera-nav-link" href="explore.html">Properties</a>
+          <a class="prospera-nav-link" href="agents.html">Agents</a>
+          <a class="prospera-nav-link" href="market-insights.html">Market Insights</a>
+          <a class="prospera-nav-link" href="compare-projects.html">Compare</a>
+          <a class="prospera-nav-link" href="book-site-visit.html">Book Site Visit</a>
+          <div class="prospera-about-dropdown" id="desktopAboutDropdown">
+            <button aria-controls="desktopAboutMenu" aria-expanded="false"
+              class="prospera-about-trigger is-active"
+              onclick="toggleAboutDropdown(event, 'desktopAboutDropdown')" type="button">
+              <span>About</span>
+              <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+            </button>
+            <div aria-label="About links" class="prospera-about-menu" id="desktopAboutMenu" role="menu">
+              <a class="" href="about-us.html" role="menuitem">About Us</a>
+              <a class="is-active" href="why-prospera-ai.html" role="menuitem">Why Prospera AI</a>
+              <a class="" href="reviews.html" role="menuitem">Reviews</a>
+              <a class="" href="contact.html" role="menuitem">Contact Us</a>
+              <a class="" href="privacy-terms.html" role="menuitem">Privacy Policy</a>
+            </div>
           </div>
+        </nav>
+
+        <!-- Mobile Hamburger Toggle -->
+        <div class="flex md:hidden items-center">
+          <button aria-label="Open menu"
+            class="prospera-mobile-toggle flex items-center justify-center"
+            id="mobileMenuBtn" onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-bars text-base" id="mobileMenuIcon"></i>
+          </button>
         </div>
-      </nav>
-      <!-- Right: Mobile Navigation -->
-      <div class="flex items-center gap-2 sm:gap-3">
-        <button aria-label="Open menu"
-          class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl border border-gold-500/30 bg-gold-500/10 text-gold-500 hover:bg-gold-500/20 transition-all"
-          id="mobileMenuBtn" onclick="toggleMobileMenu()">
-          <i class="fa-solid fa-bars text-base" id="mobileMenuIcon"></i>
-        </button>
       </div>
-    </div>
-    <!-- Mobile Navigation Dropdown -->
-    <div class="hidden md:hidden border-t border-slate-200 bg-white" id="mobileMenu">
-      <nav aria-label="Mobile navigation" class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="index.html">Home</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="builders.html">Builders</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="explore.html">Properties</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="agents.html">Agents</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="market-insights.html">Market Insights</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="compare-projects.html">Compare</a>
-        <a class="py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 hover:text-gold-500 hover:bg-gold-50 transition-all"
-          href="book-site-visit.html">Book Site Visit</a>
-        <div class="prospera-mobile-about" id="mobileAboutDropdown">
-          <button aria-controls="mobileAboutMenu" aria-expanded="false" class="prospera-mobile-about-trigger"
-            onclick="toggleAboutDropdown(event, 'mobileAboutDropdown')" type="button">
-            <span>About</span>
-            <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
-          </button>
-          <div class="prospera-mobile-about-menu" id="mobileAboutMenu">
-            <a href="about-us.html">About Us</a>
-            <a href="why-prospera-ai.html">Why Prospera AI</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="privacy-terms.html">Privacy Policy</a>
+
+      <!-- Mobile Navigation Dropdown -->
+      <div class="hidden md:hidden prospera-mobile-menu-card" id="mobileMenu">
+        <nav aria-label="Mobile navigation" class="p-3 sm:p-4 flex flex-col gap-1">
+          <a class="prospera-mobile-nav-link" href="index.html">Home</a>
+          <a class="prospera-mobile-nav-link" href="builders.html">Builders</a>
+          <a class="prospera-mobile-nav-link" href="explore.html">Properties</a>
+          <a class="prospera-mobile-nav-link" href="agents.html">Agents</a>
+          <a class="prospera-mobile-nav-link" href="market-insights.html">Market Insights</a>
+          <a class="prospera-mobile-nav-link" href="compare-projects.html">Compare</a>
+          <a class="prospera-mobile-nav-link" href="book-site-visit.html">Book Site Visit</a>
+          <div class="prospera-mobile-about" id="mobileAboutDropdown">
+            <button aria-controls="mobileAboutMenu" aria-expanded="false"
+              class="prospera-mobile-about-trigger is-active"
+              onclick="toggleAboutDropdown(event, 'mobileAboutDropdown')" type="button">
+              <span>About</span>
+              <i aria-hidden="true" class="fa-solid fa-chevron-down prospera-about-chevron"></i>
+            </button>
+            <div class="prospera-mobile-about-menu" id="mobileAboutMenu">
+              <a class="" href="about-us.html">About Us</a>
+              <a class="is-active" href="why-prospera-ai.html">Why Prospera AI</a>
+              <a class="" href="reviews.html">Reviews</a>
+              <a class="" href="contact.html">Contact Us</a>
+              <a class="" href="privacy-terms.html">Privacy Policy</a>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </div>
   </header>
     <!-- =========================================
@@ -494,29 +570,32 @@
                             </div>
                         </div>
 
-                        <!-- Live Call Dialogue Box with 100% Readable Text -->
-                        <div class="mt-6 space-y-4 font-mono text-xs">
+                        <!-- Live Call Dialogue Box with 100% Readable Text (Hindi) -->
+                        <div class="mt-6 space-y-4 text-xs">
                             <div class="bg-[#141414] p-3.5 rounded-xl border border-[rgba(212,175,55,0.3)]">
-                                <span class="text-[#D4AF37] block font-bold mb-1">[00:04] Prospera AI:</span>
-                                <p class="leading-relaxed" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">"Good afternoon, Mr. Singhania. I noticed your interest in our South Mumbai off-market estate. Are you seeking primary residential occupancy or an investment holding?"</p>
+                                <span class="text-[#D4AF37] block font-bold mb-1 font-mono">[00:04] Prospera AI:</span>
+                                <p class="leading-relaxed font-sans text-xs sm:text-sm font-medium" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">"नमस्ते सिंघानिया जी! मैंने देखा कि आपकी रुचि हमारे साउथ मुंबई ऑफ़-मार्केट एस्टेट में है। क्या आप स्वयं रहने के लिए प्रॉपर्टी देख रहे हैं या निवेश (इन्वेस्टमेंट) के उद्देश्य से?"</p>
                             </div>
 
                             <div class="bg-[#1F2428] p-3.5 rounded-xl border border-[rgba(212,175,55,0.2)] text-right">
-                                <span class="text-[#D4AF37] block font-bold mb-1">[00:09] Client:</span>
-                                <p class="leading-relaxed" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">"Investment holding. Looking for minimum 12% projected ROI and high security."</p>
+                                <span class="text-[#D4AF37] block font-bold mb-1 font-mono">[00:09] Client (ग्राहक):</span>
+                                <p class="leading-relaxed font-sans text-xs sm:text-sm font-medium" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">"इन्वेस्टमेंट के उद्देश्य से। मुझे कम से कम 12% अनुमानित ROI और हाई सिक्योरिटी चाहिए।"</p>
                             </div>
 
                             <div class="bg-[#141414] p-3.5 rounded-xl border border-[rgba(212,175,55,0.3)]">
-                                <span class="text-[#D4AF37] block font-bold mb-1">[00:13] Prospera AI:</span>
-                                <p class="leading-relaxed" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">"Understood. I have locked two off-market properties matching 14.2% projected appreciation. Would Thursday at 3 PM work for a private confidential viewing?"</p>
+                                <span class="text-[#D4AF37] block font-bold mb-1 font-mono">[00:13] Prospera AI:</span>
+                                <p class="leading-relaxed font-sans text-xs sm:text-sm font-medium" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">"बिल्कुल समझ गया। मैंने 14.2% अनुमानित रिटर्न वाली दो ऑफ़-मार्केट प्रॉपर्टीज़ शॉर्टलिस्ट की हैं। क्या गुरुवार दोपहर 3 बजे एक प्राइवेट व गोपनीय विज़िट आपके लिए सही रहेगी?"</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="mt-6 pt-4 border-t border-[rgba(212,175,55,0.3)] text-center">
-                        <button id="voiceSimBtn" onclick="toggleVoiceSim()" class="w-full py-3.5 why-btn-primary rounded-xl transition-all text-xs uppercase tracking-widest font-bold flex items-center justify-center space-x-2">
-                            <i class="fa-solid fa-microphone text-sm mr-2"></i>
-                            <span id="voiceSimText">Simulate Live Voice Interaction</span>
+                        <button id="voiceSimBtn" onclick="toggleVoiceSim()" class="btn-gold-primary voice-sim-gold-btn w-full py-3.5 rounded-xl text-xs uppercase tracking-widest font-extrabold flex items-center justify-center gap-2" style="background: #D4AF37 !important; background-color: #D4AF37 !important; background-image: none !important; color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; border: 1.5px solid #D4AF37 !important; font-family: 'Plus Jakarta Sans', sans-serif !important; font-size: 13px !important; font-weight: 800 !important; letter-spacing: 0.08em !important; box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35) !important;">
+                            <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="color: #FFFFFF !important; fill: #FFFFFF !important;">
+                                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                                <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+                            </svg>
+                            <span id="voiceSimText" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; font-family: 'Plus Jakarta Sans', sans-serif !important; font-weight: 800 !important; letter-spacing: 0.08em !important;">Simulate Live Voice Interaction</span>
                         </button>
                     </div>
                 </div>
@@ -683,7 +762,7 @@
                                 </div>
                                 <div>
                                     <div class="text-xs font-bold flex items-center gap-1" style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;">
-                                        Prospera Concierge
+                                        Prospera AI
                                         <i class="fa-solid fa-circle-check text-emerald-400 text-xs"></i>
                                     </div>
                                     <div class="text-[10px] text-gray-400">Verified Business Account</div>
@@ -1059,16 +1138,16 @@
     <script>
         let isSimulating = false;
         function toggleVoiceSim() {
+            const btn = document.getElementById('voiceSimBtn');
             const btnText = document.getElementById('voiceSimText');
-            if (!isSimulating) {
+            if (!isSimulating && btn && btnText) {
                 isSimulating = true;
-                btnText.innerText = "Voice Simulation Active (Listening...)";
-                btnText.parentElement.classList.add("bg-[#D4AF37]", "text-black");
-                btnText.parentElement.classList.remove("text-[#D4AF37]");
+                const originalText = btnText.innerText;
+                btnText.innerText = "वॉयस सिमुलेशन सक्रिय (सुन रहा है...)";
+                btn.style.filter = "brightness(1.2)";
                 setTimeout(() => {
-                    btnText.innerText = "Simulate Live Voice Interaction";
-                    btnText.parentElement.classList.remove("bg-[#D4AF37]", "text-black");
-                    btnText.parentElement.classList.add("text-[#D4AF37]");
+                    btnText.innerText = originalText;
+                    btn.style.filter = "";
                     isSimulating = false;
                 }, 4000);
             }
