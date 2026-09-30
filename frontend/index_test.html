@@ -1301,7 +1301,7 @@
     }
   </style>
   <style id="prospera-gemini-homepage-compat">
-    /* Gemini middle-page visual language; master header/footer remain the original index markup. */
+    /* Gemini middle-page visual language; master header/footer.legacy-disabled remain the original index markup. */
     body{
       font-family: "Plus Jakarta Sans", sans-serif;
     }
@@ -1426,7 +1426,7 @@
   <style id="prospera-global-theme-contrast">
     /* =========================================================
        PROSPERA GLOBAL THEME — COMPLETE MIDDLE-PAGE CONTRAST
-       Header + footer markup/styles are intentionally untouched.
+       Header + footer.legacy-disabled markup/styles are intentionally untouched.
        The page is locked to the light visual system.
        ========================================================= */
 
@@ -1890,7 +1890,7 @@ html[data-theme="dark"] main textarea::placeholder{
     /* =========================================================
        FINAL GLOBAL THEME POLISH
        - Original typography system: Plus Jakarta Sans + DM Serif Display
-       - Header/footer markup and styling are intentionally excluded
+       - Header/footer.legacy-disabled markup and styling are intentionally excluded
        - Middle content fully adapts to light/dark mode
        ========================================================= */
 
@@ -2117,11 +2117,25 @@ html[data-theme="light"] #hero [class*="bg-white/70"] strong{
 
     
 
-    
+    .legacy-footer-brand{
+      display: flex;
+      align-items: center;
+      width: min(260px, 100%);
+      height: 88px;
+      overflow: hidden;
+    }
 
-    
+    .legacy-footer-brand .prospera-logo-frame{
+      width: 100%;
+      height: 88px;
+    }
 
-    
+    .legacy-footer-brand .prospera-logo-image{
+      width: auto;
+      height: 88px;
+      max-width: none;
+      max-height: none;
+    }
 
     /* Light theme: use the dark logo because it has dark lettering. */
     
@@ -2140,11 +2154,18 @@ html[data-theme="light"] #hero [class*="bg-white/70"] strong{
 
       
 
-      
+      .legacy-footer-brand{
+        width: 220px;
+        height: 72px;
+      }
 
-      
+      .legacy-footer-brand .prospera-logo-frame{
+        height: 72px;
+      }
 
-      
+      .legacy-footer-brand .prospera-logo-image{
+        height: 72px;
+      }
     }
 
     
@@ -4550,7 +4571,17 @@ main h4{
       overflow-wrap: anywhere !important;
     }
 
-    
+    #projects .premium-project-card-footer {
+      min-width: 0 !important;
+      min-height: 92px !important;
+      padding: 17px 22px 20px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 18px !important;
+      border-top: 1px solid #E9ECEF !important;
+      background: #FFFFFF !important;
+    }
 
     #projects .premium-project-card-label {
       font-size: 10px !important;
@@ -4566,11 +4597,35 @@ main h4{
       white-space: nowrap !important;
     }
 
-    
+    #projects .premium-project-card-footer .gold-gradient-btn {
+      flex: 0 0 auto !important;
+      min-width: 188px !important;
+      min-height: 52px !important;
+      padding: 11px 18px !important;
+      border-radius: 8px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 9px !important;
+      text-align: center !important;
+      line-height: 1.2 !important;
+      white-space: normal !important;
+      border: 1px solid #C89E4A !important;
+      background: #FFFFFF !important;
+      color: #17233D !important;
+      box-shadow: 0 5px 16px rgba(23, 35, 61, .06) !important;
+    }
 
-    
+    #projects .premium-project-card-footer .gold-gradient-btn i {
+      color: #A57920 !important;
+    }
 
-    
+    #projects .premium-project-card-footer .gold-gradient-btn:hover {
+      background: #FFF9EA !important;
+      border-color: #B88B32 !important;
+      transform: translateY(-1px) !important;
+      box-shadow: 0 8px 20px rgba(181, 141, 67, .12) !important;
+    }
 
     @media (max-width:1024px) {
       #projects .premium-project-card .relative.h-60 {
@@ -4582,9 +4637,14 @@ main h4{
         padding: 20px 19px 18px !important;
       }
 
-      
+      #projects .premium-project-card-footer {
+        padding: 16px 19px 18px !important;
+        gap: 12px !important;
+      }
 
-      
+      #projects .premium-project-card-footer .gold-gradient-btn {
+        min-width: 168px !important;
+      }
     }
 
     @media (max-width:767px) {
@@ -4606,23 +4666,43 @@ main h4{
         font-size: 23px !important;
       }
 
-      
+      #projects .premium-project-card-footer {
+        min-height: auto !important;
+        padding: 15px 18px 18px !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+      }
 
-      
+      #projects .premium-project-card-footer>div:first-child {
+        width: 100% !important;
+      }
 
       #projects .premium-project-card-price {
         font-size: 22px !important;
       }
 
-      
+      #projects .premium-project-card-footer .gold-gradient-btn {
+        width: 100% !important;
+        min-width: 0 !important;
+        min-height: 50px !important;
+      }
     }
 
     @media (min-width:768px) and (max-width:900px) {
-      
+      #projects .premium-project-card-footer {
+        align-items: stretch !important;
+        flex-direction: column !important;
+      }
 
-      
+      #projects .premium-project-card-footer>div:first-child {
+        width: 100% !important;
+      }
 
-      
+      #projects .premium-project-card-footer .gold-gradient-btn {
+        width: 100% !important;
+        min-width: 0 !important;
+      }
     }
 
     @media (prefers-reduced-motion:reduce) {
@@ -5073,18 +5153,32 @@ main h4{
     }
 
     /* Footer brand — slightly larger while staying responsive */
-    
+    .legacy-footer-brand{
+      width: min(300px, 100%) !important;
+      height: 104px !important;
+    }
 
-    
+    .legacy-footer-brand .prospera-logo-frame{
+      height: 104px !important;
+    }
 
-    
+    .legacy-footer-brand .prospera-logo-image{
+      height: 104px !important;
+    }
 
     @media (max-width:767px) {
-      
+      .legacy-footer-brand{
+        width: 245px !important;
+        height: 86px !important;
+      }
 
-      
+      .legacy-footer-brand .prospera-logo-frame{
+        height: 86px !important;
+      }
 
-      
+      .legacy-footer-brand .prospera-logo-image{
+        height: 86px !important;
+      }
     }
   </style>
   <style>
@@ -5520,7 +5614,13 @@ main h4{
       line-height: 1.35;
     }
 
-    
+    .property-result-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 16px;
+    }
 
     .property-result-card-price {
       color: #17233d;
@@ -5649,16 +5749,20 @@ main h4{
 
 
   <style id="prospera-final-footer-heading-tune">
-    /* FINAL MICRO-TUNE: footer spacing + consistent section heading scale. */
+    /* FINAL MICRO-TUNE: footer.legacy-disabled spacing + consistent section heading scale. */
     @media (min-width: 768px) {
 
-      /* Keep the footer logo at its existing premium size, but remove the
+      /* Keep the footer.legacy-disabled logo at its existing premium size, but remove the
      unnecessary empty space before the brand description. */
-      
+      footer.legacy-disabled .legacy-footer-brand {
+        margin-bottom: 0.15rem !important;
+      }
 
       /* Give Quick Links / Top Locations a little more breathing room while
      keeping the desktop columns evenly spaced. */
-      
+      footer.legacy-disabled>div>.grid {
+        column-gap: 3rem !important;
+      }
     }
 
     /* Slightly reduce the oversized section headings without changing
@@ -8505,13 +8609,29 @@ textarea::placeholder{
    not an image recoloring rule. */
 
     /* ---------- FOOTER: BLACK SURFACE / WHITE TYPE ---------- */
-    
+    footer.legacy-disabled,
+footer.legacy-disabled *,
+.legacy-site-footer,
+.legacy-site-footer *{
+      background-color: inherit;
+    }
 
-    
+    footer.legacy-disabled{
+      background: #000000 !important;
+      color: #ffffff !important;
+      border-color: #ffffff !important;
+    }
 
-    
+    footer.legacy-disabled *,
+.legacy-site-footer *{
+      color: #ffffff !important;
+      border-color: #ffffff !important;
+    }
 
-    
+    footer.legacy-disabled a:hover,
+.legacy-site-footer a:hover{
+      color: #ffffff !important;
+    }
 
     /* ---------- FLOATING AI ADVISOR: MONOCHROME ---------- */
     [id*="floating"],
@@ -8638,7 +8758,8 @@ textarea::placeholder{
     }
 
     /* Accessibility: no animated contrast changes on hover. */
-    .prospera-home-section *{
+    .prospera-home-section *,
+footer.legacy-disabled *{
       text-shadow: none !important;
     }
   </style>
@@ -9435,12 +9556,25 @@ textarea::placeholder{
       color: #c7c7c7 !important
     }
 
-    /* footer */
-    
+    /* footer.legacy-disabled */
+    footer.legacy-disabled{
+      position: relative !important;
+      display: block !important;
+      clear: both !important;
+      background: #111315 !important;
+      color: #fff !important;
+      border-top: 1px solid #2d3034 !important;
+      padding: 62px 0 28px !important
+    }
 
-    
+    footer.legacy-disabled *{
+      color: inherit !important;
+      border-color: #2d3034 !important
+    }
 
-    
+    footer.legacy-disabled a:hover{
+      color: var(--p-gold2) !important
+    }
 
     /* floating advisor */
     .prospera-floating-advisor,
@@ -10533,11 +10667,19 @@ textarea::placeholder{
     }
 
     /* ---------- FOOTER ---------- */
-    
+    footer.legacy-disabled {
+      background: #000 !important;
+      color: #fff !important;
+      border-top: 1px solid #fff !important
+    }
 
-    
+    footer.legacy-disabled * {
+      color: #fff !important
+    }
 
-    
+    footer.legacy-disabled a:hover {
+      color: #fff !important
+    }
 
     /* ---------- FLOATING ADVISOR ---------- */
     .prospera-floating-advisor,
@@ -11683,13 +11825,25 @@ textarea::placeholder{
     /* ---------------------------------------------------------
    FOOTER — DEEP NAVY
    --------------------------------------------------------- */
-    
+    footer.legacy-disabled {
+      background: #07101F !important;
+      color: #A9B6C9 !important;
+      border-top: 1px solid rgba(99, 164, 255, .18) !important;
+    }
 
-    
+    footer.legacy-disabled h3,
+    footer.legacy-disabled h4,
+    footer.legacy-disabled strong {
+      color: #fff !important;
+    }
 
-    
+    footer.legacy-disabled a {
+      color: #B9C5D6 !important;
+    }
 
-    
+    footer.legacy-disabled a:hover {
+      color: #63A4FF !important;
+    }
 
     /* ---------------------------------------------------------
    BUTTON SAFETY — prevent invisible text from legacy overrides
@@ -12382,7 +12536,7 @@ textarea::placeholder{
   <style id="prospera-reference-header-footer-final">
     /* =========================================================
    PROSPERA REFERENCE HEADER + FOOTER — FINAL MATCH
-   Header/footer only. Middle-page content is intentionally untouched.
+   Header/footer.legacy-disabled only. Middle-page content is intentionally untouched.
    ========================================================= */
 
     /* ---------- HEADER BASE ---------- */
@@ -12483,36 +12637,101 @@ textarea::placeholder{
     
 
     /* ---------- FOOTER: REFERENCE DARK SYSTEM ---------- */
-    
+    footer.legacy-disabled{
+      background: #070708 !important;
+      background-color: #070708 !important;
+      background-image: none !important;
+      color: #94A3B8 !important;
+      border-top: 1px solid rgba(212, 175, 55, .20) !important;
+    }
 
-    
+    footer.legacy-disabled .legacy-footer-brand{
+      display: flex !important;
+      align-items: center !important;
+      width: min(300px, 100%) !important;
+      height: 104px !important;
+      overflow: hidden !important;
+      margin-bottom: .15rem !important;
+    }
 
-    
+    footer.legacy-disabled .legacy-footer-brand .prospera-logo-frame{
+      width: 100% !important;
+      height: 104px !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+      overflow: hidden !important;
+    }
 
-    
+    footer.legacy-disabled .legacy-footer-brand .prospera-logo-image{
+      width: auto !important;
+      height: 104px !important;
+      max-width: none !important;
+      max-height: none !important;
+      object-fit: contain !important;
+      object-position: left center !important;
+    }
 
-    
+    footer.legacy-disabled h4,
+footer.legacy-disabled .text-white{
+      color: #FFFFFF !important;
+    }
 
-    
+    footer.legacy-disabled p,
+footer.legacy-disabled li,
+footer.legacy-disabled li a,
+footer.legacy-disabled .text-slate-400,
+footer.legacy-disabled .text-slate-500,
+footer.legacy-disabled .text-slate-600{
+      color: #94A3B8 !important;
+    }
 
-    
+    footer.legacy-disabled a:hover{
+      color: #D4AF37 !important;
+    }
 
-    
+    footer.legacy-disabled .text-gold-400,
+footer.legacy-disabled .fa-envelope,
+footer.legacy-disabled .fa-phone,
+footer.legacy-disabled .fa-linkedin-in,
+footer.legacy-disabled .fa-x-twitter,
+footer.legacy-disabled .fa-instagram{
+      color: #D4AF37 !important;
+    }
 
-    
+    footer.legacy-disabled .flex.gap-3>a{
+      background: #16161C !important;
+      border: 1px solid rgba(212, 175, 55, .20) !important;
+      color: #D4AF37 !important;
+      box-shadow: none !important;
+    }
 
-    
+    footer.legacy-disabled .flex.gap-3>a:hover{
+      background: #D4AF37 !important;
+      border-color: #D4AF37 !important;
+      color: #070708 !important;
+    }
 
-    
+    footer.legacy-disabled .flex.gap-3>a:hover i{
+      color: #070708 !important;
+    }
 
-    
+    footer.legacy-disabled .border-t{
+      border-color: #22222A !important;
+    }
 
     @media (max-width:767px) {
-      
+      footer.legacy-disabled .legacy-footer-brand{
+        width: 245px !important;
+        height: 86px !important;
+      }
 
-      
+      footer.legacy-disabled .legacy-footer-brand .prospera-logo-frame{
+        height: 86px !important;
+      }
 
-      
+      footer.legacy-disabled .legacy-footer-brand .prospera-logo-image{
+        height: 86px !important;
+      }
     }
   </style>
 
@@ -12740,43 +12959,148 @@ a.btn{
     }
 
     /* ===== WHITE / LIGHT FOOTER ===== */
-    
+    html body footer.legacy-disabled,
+footer.legacy-disabled.bg-obsidian-950,
+footer.legacy-disabled.bg-white,
+html[data-theme] body footer.legacy-disabled,
+html[data-theme="light"] body footer.legacy-disabled,
+footer.legacy-disabled{
+      background: #FFFFFF !important;
+      background-color: #FFFFFF !important;
+      background-image: none !important;
+      border-top: 1px solid #E2E8F0 !important;
+      border-bottom: none !important;
+      border-left: none !important;
+      border-right: none !important;
+      color: #64748B !important;
+    }
 
-    
+    footer.legacy-disabled .legacy-footer-brand{
+      display: flex !important;
+      align-items: center !important;
+      width: min(300px, 100%) !important;
+      height: 104px !important;
+      overflow: hidden !important;
+      background: transparent !important;
+    }
 
-    
+    footer.legacy-disabled .legacy-footer-brand .prospera-logo-frame{
+      display: flex !important;
+      width: 100% !important;
+      height: 104px !important;
+      align-items: center !important;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
 
-    
+    footer.legacy-disabled .legacy-footer-brand .prospera-logo-image{
+      display: block !important;
+      width: auto !important;
+      height: 104px !important;
+      max-width: none !important;
+      max-height: none !important;
+      object-fit: contain !important;
+      background: transparent !important;
+    }
 
-    
+    footer.legacy-disabled .prospera-logo-for-dark{
+      display: none !important;
+    }
 
     @media (min-width:768px) {
-      
+      footer.legacy-disabled .legacy-footer-brand{
+        margin-bottom: 0.15rem !important;
+      }
 
-      
+      footer.legacy-disabled>div>.grid{
+        column-gap: 3rem !important;
+      }
     }
 
     @media (max-width:767px) {
-      
+      footer.legacy-disabled .legacy-footer-brand{
+        width: 245px !important;
+        height: 86px !important;
+      }
 
-      
+      footer.legacy-disabled .legacy-footer-brand .prospera-logo-frame,
+footer.legacy-disabled .legacy-footer-brand .prospera-logo-image{
+        height: 86px !important;
+      }
     }
 
-    
+    footer.legacy-disabled h4,
+footer.legacy-disabled h3,
+footer.legacy-disabled .text-white{
+      color: #0F172A !important;
+      font-weight: 700 !important;
+      font-size: .75rem !important;
+      text-transform: uppercase !important;
+      letter-spacing: .05em !important;
+      margin-bottom: 1rem !important;
+    }
 
-    
+    footer.legacy-disabled ul a,
+footer.legacy-disabled p,
+footer.legacy-disabled li,
+footer.legacy-disabled li a,
+footer.legacy-disabled .text-slate-400,
+footer.legacy-disabled .text-slate-500,
+footer.legacy-disabled .text-slate-600{
+      color: #64748B !important;
+      text-decoration: none !important;
+      transition: color .15s ease !important;
+    }
 
-    
+    footer.legacy-disabled ul a:hover,
+footer.legacy-disabled a:hover{
+      color: #9B7628 !important;
+    }
 
-    
+    footer.legacy-disabled .flex.gap-3 a,
+footer.legacy-disabled .flex.gap-3>a,
+footer.legacy-disabled a.rounded-full,
+footer.legacy-disabled .bg-obsidian-800,
+footer.legacy-disabled .bg-slate-100{
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 34px !important;
+      height: 34px !important;
+      border-radius: 9999px !important;
+      background: transparent !important;
+      background-color: transparent !important;
+      border: 1px solid rgba(181, 138, 42, 0.45) !important;
+      color: #B58A2A !important;
+      text-decoration: none !important;
+      box-shadow: none !important;
+      transition: all .2s ease !important;
+    }
 
-    
+    footer.legacy-disabled .flex.gap-3 a i,
+footer.legacy-disabled a.rounded-full i{
+      color: #B58A2A !important;
+      font-size: 13px !important;
+    }
 
-    
+    footer.legacy-disabled .flex.gap-3 a:hover,
+footer.legacy-disabled a.rounded-full:hover,
+footer.legacy-disabled .bg-obsidian-800:hover,
+footer.legacy-disabled .bg-slate-100:hover{
+      background: rgba(181, 138, 42, 0.12) !important;
+      border-color: #B58A2A !important;
+    }
 
-    
+    footer.legacy-disabled .flex.gap-3 a:hover i,
+footer.legacy-disabled a.rounded-full:hover i{
+      color: #9B7628 !important;
+    }
 
-    
+    footer.legacy-disabled .border-t,
+footer.legacy-disabled .border-slate-900{
+      border-top-color: #E2E8F0 !important;
+    }
   </style>
 
 
@@ -12796,7 +13120,12 @@ a.btn{
        ========================================================================== */
 
     /* ===== 1. UNIFIED PAGE CONTAINER SYSTEM ===== */
-    .max-w-7xl, .prospera-home-container, main section>div, .prospera-home-section>div, #hero>div{
+    .max-w-7xl,
+.prospera-home-container,
+main section>div,
+.prospera-home-section>div,
+#hero>div,
+footer.legacy-disabled>div{
       width: 100% !important;
       max-width: 1280px !important;
       margin-left: auto !important;
@@ -12808,7 +13137,12 @@ a.btn{
 
     @media (min-width: 640px) {
 
-      .max-w-7xl, .prospera-home-container, main section>div, .prospera-home-section>div, #hero>div{
+      .max-w-7xl,
+.prospera-home-container,
+main section>div,
+.prospera-home-section>div,
+#hero>div,
+footer.legacy-disabled>div{
         padding-left: 24px !important;
         padding-right: 24px !important;
       }
@@ -12816,7 +13150,12 @@ a.btn{
 
     @media (min-width: 1024px) {
 
-      .max-w-7xl, .prospera-home-container, main section>div, .prospera-home-section>div, #hero>div{
+      .max-w-7xl,
+.prospera-home-container,
+main section>div,
+.prospera-home-section>div,
+#hero>div,
+footer.legacy-disabled>div{
         padding-left: 32px !important;
         padding-right: 32px !important;
       }
@@ -17898,7 +18237,7 @@ main{
       animation-play-state: paused !important
     }
 
-    /* Final CTA + footer: navy instead of black, gold accents retained in footer. */
+    /* Final CTA + footer.legacy-disabled: navy instead of black, gold accents retained in footer.legacy-disabled. */
     #final-cta {
       background: linear-gradient(135deg, #07152b, #0c2d58) !important;
       border: 0 !important
@@ -17919,21 +18258,43 @@ main{
       color: #8bc0ff !important
     }
 
-    
+    footer.legacy-disabled {
+      background: #0b1424 !important;
+      color: #c7d3e3 !important;
+      border-top: 1px solid rgba(213, 169, 47, .28) !important
+    }
 
-    
+    footer.legacy-disabled *,
+    footer.legacy-disabled .text-slate-500,
+    footer.legacy-disabled .text-slate-600 {
+      color: #c7d3e3 !important
+    }
 
-    
+    footer.legacy-disabled h4,
+    footer.legacy-disabled .text-white {
+      color: #fff !important
+    }
 
-    
+    footer.legacy-disabled a:hover {
+      color: #d5a92f !important
+    }
 
-    
+    footer.legacy-disabled .text-gold-400,
+    footer.legacy-disabled i.text-gold-400 {
+      color: #d5a92f !important
+    }
 
-    
+    footer.legacy-disabled .bg-obsidian-800 {
+      background: #13233a !important
+    }
 
-    
+    footer.legacy-disabled .border-gold-500\/20 {
+      border-color: rgba(213, 169, 47, .28) !important
+    }
 
-    
+    footer.legacy-disabled .hover\:bg-gold-500:hover {
+      background: #d5a92f !important
+    }
 
     /* Remove black borders/backgrounds from homepage UI without touching image pixels. */
     .prospera-home-section,
@@ -18380,13 +18741,30 @@ main{
     }
 
     /* Footer: retain gold accents, no blue. */
-    
+    footer.legacy-disabled{
+      background: #171717 !important;
+      color: #d6d3cd !important;
+      border-top: 1px solid rgba(212, 175, 55, .28) !important
+    }
 
-    
+    footer.legacy-disabled h3,
+footer.legacy-disabled h4,
+footer.legacy-disabled .text-white{
+      color: #fff !important
+    }
 
-    
+    footer.legacy-disabled p,
+footer.legacy-disabled .text-slate-500,
+footer.legacy-disabled .text-slate-600,
+footer.legacy-disabled .text-slate-400{
+      color: #c8c4bb !important
+    }
 
-    
+    footer.legacy-disabled a:hover,
+footer.legacy-disabled .text-gold-400,
+footer.legacy-disabled i.text-gold-400{
+      color: #d4af37 !important
+    }
 
     /* Floating AI */
     #floatingAIWidget>button{
@@ -18574,7 +18952,10 @@ button.bg-gold-700:hover,
     }
 
     /* Keep footer/CTA readable while preserving dark-blue action buttons. */
-    #final-cta button, #final-cta a[class*="btn"]{
+    #final-cta button,
+#final-cta a[class*="btn"],
+footer.legacy-disabled button,
+footer.legacy-disabled a[class*="btn"]{
       background: var(--prospera-navy) !important;
       color: #fff !important;
       border-color: var(--prospera-navy) !important
@@ -18917,7 +19298,7 @@ button.bg-gold-700:hover,
   </style>
 
   <style id="prospera-v4-final-header-agent-footer-fixes">
-    /* V4 FINAL — preserve the old light header/footer character while keeping dark-blue actions. */
+    /* V4 FINAL — preserve the old light header/footer.legacy-disabled character while keeping dark-blue actions. */
     :root{
       --prospera-db: #0b2d4d;
       --prospera-db-hover: #123e63;
@@ -18943,19 +19324,53 @@ button.bg-gold-700:hover,
     
 
     /* Logo — use the original image when available; only show fallback if the asset is missing. */
-    
+    footer.legacy-disabled .prospera-logo-frame{
+      background: transparent !important;
+      border: 0 !important;
+      box-shadow: none !important;
+    }
 
-    
+    .prospera-logo-fallback{
+      display: none;
+      align-items: center;
+      gap: 9px;
+      color: #111827;
+      font-size: 20px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: -.035em;
+      white-space: nowrap;
+    }
 
-    
+    .prospera-logo-fallback b{
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: var(--prospera-db);
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: -.05em;
+    }
 
-    
+    .prospera-logo-fallback em{
+      font-style: normal;
+      color: #b28e28;
+    }
 
-    
+    footer.legacy-disabled .prospera-logo-fallback{
+      color: #fff;
+    }
 
-    
+    footer.legacy-disabled .prospera-logo-fallback b{
+      background: #fff;
+      color: var(--prospera-db);
+    }
 
-    
+    footer.legacy-disabled .prospera-logo-fallback em{
+      color: #d4af37;
+    }
 
     /* MOBILE HAMBURGER — white button with dark icon, matching the reference. */
     
@@ -18999,23 +19414,52 @@ button.bg-gold-700:hover,
     }
 
     /* FOOTER — restore the previous gold social/contact treatment. */
-    
+    footer.legacy-disabled{
+      background: #171717 !important;
+      color: #c8c4bb !important;
+      border-top: 1px solid rgba(212, 175, 55, .28) !important;
+    }
 
-    
+    footer.legacy-disabled h4,
+footer.legacy-disabled .text-white{
+      color: #fff !important;
+    }
 
-    
+    footer.legacy-disabled p,
+footer.legacy-disabled .text-slate-500,
+footer.legacy-disabled .text-slate-600,
+footer.legacy-disabled .text-slate-400{
+      color: #c8c4bb !important;
+    }
 
-    
+    footer.legacy-disabled .text-gold-400,
+footer.legacy-disabled i.text-gold-400{
+      color: #d4af37 !important;
+    }
 
-    
+    footer.legacy-disabled a:hover{
+      color: #d4af37 !important;
+    }
 
-    
+    footer.legacy-disabled .flex.gap-3 a{
+      color: #d4af37 !important;
+      border-color: rgba(212, 175, 55, .30) !important;
+      background: #222 !important;
+    }
 
-    
+    footer.legacy-disabled .flex.gap-3 a i{
+      color: #d4af37 !important;
+    }
 
-    
+    footer.legacy-disabled .flex.gap-3 a:hover{
+      background: #d4af37 !important;
+      color: #171717 !important;
+      border-color: #d4af37 !important;
+    }
 
-    
+    footer.legacy-disabled .flex.gap-3 a:hover i{
+      color: #171717 !important;
+    }
 
     /* All structural borders stay dark-blue where borders are requested; no black borders. */
     #top-agents .prospera-agent-card,
@@ -19152,7 +19596,9 @@ button.bg-gold-700:hover,
   </style>
   <style id="prospera-final-v6-agent-property-polish">
     /* Final targeted polish: logo, six properties, compact agent metrics and premium AI actions. */
-    
+    .prospera-logo-fallback{
+      display: none !important;
+    }
 
     
 
@@ -19352,6 +19798,92 @@ button.bg-gold-700:hover,
        PROSPERA GLOBAL FOOTER
        Premium responsive floating luxury card
        ============================================================ -->
+  
+  <style id="prospera-global-footer-master-guard">
+    /* ============================================================
+       PROSPERA AI — FOOTER STYLING GUARD
+       Ensures 100% visual parity with builders.html & theme.css
+       Prevents any legacy internal style block from leaking into footer.
+       ============================================================ */
+    footer.prospera-global-footer {
+      background: transparent !important;
+      border-top: none !important;
+      border-bottom: none !important;
+      border-left: none !important;
+      border-right: none !important;
+      box-shadow: none !important;
+    }
+    footer.prospera-global-footer .prospera-footer-container {
+      background: #FFFFFF !important;
+      border: 1px solid rgba(212, 175, 55, 0.22) !important;
+      border-radius: 32px !important;
+      box-shadow: 0 20px 50px -12px rgba(24, 32, 51, 0.05), 0 2px 10px -2px rgba(212, 175, 55, 0.06) !important;
+    }
+    footer.prospera-global-footer .prospera-footer-brand {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      width: auto !important;
+      height: auto !important;
+      max-height: none !important;
+      overflow: visible !important;
+      background: transparent !important;
+    }
+    footer.prospera-global-footer .prospera-footer-brand-logo {
+      display: inline-flex !important;
+      margin-bottom: 22px !important;
+      height: auto !important;
+      width: auto !important;
+    }
+    footer.prospera-global-footer .prospera-footer-brand-logo img {
+      height: 60px !important;
+      width: auto !important;
+      max-width: 230px !important;
+      display: block !important;
+    }
+    footer.prospera-global-footer .prospera-footer-desc {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 13.5px !important;
+      line-height: 1.7 !important;
+      color: #64748B !important;
+      max-width: 320px !important;
+      margin: 0 !important;
+    }
+    footer.prospera-global-footer .prospera-footer-heading {
+      color: #0F172A !important;
+    }
+    footer.prospera-global-footer .prospera-footer-heading-line {
+      background: #D4AF37 !important;
+    }
+    footer.prospera-global-footer .prospera-footer-link {
+      color: #475569 !important;
+    }
+    footer.prospera-global-footer .prospera-footer-link:hover {
+      color: #B58A2A !important;
+    }
+    footer.prospera-global-footer .prospera-footer-contact-icon {
+      background: #FAF6ED !important;
+      border: 1px solid rgba(212, 175, 55, 0.35) !important;
+    }
+    footer.prospera-global-footer .prospera-footer-contact-text {
+      color: #334155 !important;
+    }
+    footer.prospera-global-footer .prospera-footer-social-icon {
+      background: #FFFFFF !important;
+      border: 1.5px solid rgba(212, 175, 55, 0.4) !important;
+    }
+    footer.prospera-global-footer .prospera-footer-social-icon svg {
+      fill: #B58A2A !important;
+    }
+    footer.prospera-global-footer .prospera-footer-copyright,
+    footer.prospera-global-footer .prospera-footer-rera {
+      color: #8A94A6 !important;
+    }
+  </style>
+
   <footer class="prospera-global-footer">
     <div class="prospera-footer-container">
       <div class="prospera-footer-main">
@@ -20299,43 +20831,148 @@ a.btn{
     }
 
     /* ===== WHITE / LIGHT FOOTER ===== */
-    
+    html body footer.legacy-disabled,
+footer.legacy-disabled.bg-obsidian-950,
+footer.legacy-disabled.bg-white,
+html[data-theme] body footer.legacy-disabled,
+html[data-theme="light"] body footer.legacy-disabled,
+footer.legacy-disabled{
+      background: #FFFFFF !important;
+      background-color: #FFFFFF !important;
+      background-image: none !important;
+      border-top: 1px solid #E2E8F0 !important;
+      border-bottom: none !important;
+      border-left: none !important;
+      border-right: none !important;
+      color: #64748B !important;
+    }
 
-    
+    footer.legacy-disabled .legacy-footer-brand{
+      display: flex !important;
+      align-items: center !important;
+      width: min(300px, 100%) !important;
+      height: 104px !important;
+      overflow: hidden !important;
+      background: transparent !important;
+    }
 
-    
+    footer.legacy-disabled .legacy-footer-brand .prospera-logo-frame{
+      display: flex !important;
+      width: 100% !important;
+      height: 104px !important;
+      align-items: center !important;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
 
-    
+    footer.legacy-disabled .legacy-footer-brand .prospera-logo-image{
+      display: block !important;
+      width: auto !important;
+      height: 104px !important;
+      max-width: none !important;
+      max-height: none !important;
+      object-fit: contain !important;
+      background: transparent !important;
+    }
 
-    
+    footer.legacy-disabled .prospera-logo-for-dark{
+      display: none !important;
+    }
 
     @media (min-width:768px) {
-      
+      footer.legacy-disabled .legacy-footer-brand{
+        margin-bottom: 0.15rem !important;
+      }
 
-      
+      footer.legacy-disabled>div>.grid{
+        column-gap: 3rem !important;
+      }
     }
 
     @media (max-width:767px) {
-      
+      footer.legacy-disabled .legacy-footer-brand{
+        width: 245px !important;
+        height: 86px !important;
+      }
 
-      
+      footer.legacy-disabled .legacy-footer-brand .prospera-logo-frame,
+footer.legacy-disabled .legacy-footer-brand .prospera-logo-image{
+        height: 86px !important;
+      }
     }
 
-    
+    footer.legacy-disabled h4,
+footer.legacy-disabled h3,
+footer.legacy-disabled .text-white{
+      color: #0F172A !important;
+      font-weight: 700 !important;
+      font-size: .75rem !important;
+      text-transform: uppercase !important;
+      letter-spacing: .05em !important;
+      margin-bottom: 1rem !important;
+    }
 
-    
+    footer.legacy-disabled ul a,
+footer.legacy-disabled p,
+footer.legacy-disabled li,
+footer.legacy-disabled li a,
+footer.legacy-disabled .text-slate-400,
+footer.legacy-disabled .text-slate-500,
+footer.legacy-disabled .text-slate-600{
+      color: #64748B !important;
+      text-decoration: none !important;
+      transition: color .15s ease !important;
+    }
 
-    
+    footer.legacy-disabled ul a:hover,
+footer.legacy-disabled a:hover{
+      color: #9B7628 !important;
+    }
 
-    
+    footer.legacy-disabled .flex.gap-3 a,
+footer.legacy-disabled .flex.gap-3>a,
+footer.legacy-disabled a.rounded-full,
+footer.legacy-disabled .bg-obsidian-800,
+footer.legacy-disabled .bg-slate-100{
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 34px !important;
+      height: 34px !important;
+      border-radius: 9999px !important;
+      background: transparent !important;
+      background-color: transparent !important;
+      border: 1px solid rgba(181, 138, 42, 0.45) !important;
+      color: #B58A2A !important;
+      text-decoration: none !important;
+      box-shadow: none !important;
+      transition: all .2s ease !important;
+    }
 
-    
+    footer.legacy-disabled .flex.gap-3 a i,
+footer.legacy-disabled a.rounded-full i{
+      color: #B58A2A !important;
+      font-size: 13px !important;
+    }
 
-    
+    footer.legacy-disabled .flex.gap-3 a:hover,
+footer.legacy-disabled a.rounded-full:hover,
+footer.legacy-disabled .bg-obsidian-800:hover,
+footer.legacy-disabled .bg-slate-100:hover{
+      background: rgba(181, 138, 42, 0.12) !important;
+      border-color: #B58A2A !important;
+    }
 
-    
+    footer.legacy-disabled .flex.gap-3 a:hover i,
+footer.legacy-disabled a.rounded-full:hover i{
+      color: #9B7628 !important;
+    }
 
-    
+    footer.legacy-disabled .border-t,
+footer.legacy-disabled .border-slate-900{
+      border-top-color: #E2E8F0 !important;
+    }
   </style>
 
 
@@ -22337,7 +22974,7 @@ a.btn{
   <style id="prospera-builders-header-final-guard">
     /* ============================================================
        BUILDERS.HTML HEADER — FINAL HEADER-ONLY GUARD
-       Do not modify page content, footer, typography or functionality.
+       Do not modify page content, footer.legacy-disabled, typography or functionality.
        This exists only to block legacy global button/nav rules from
        touching the shared Builders-style navbar.
        ============================================================ */

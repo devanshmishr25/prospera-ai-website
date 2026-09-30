@@ -1608,70 +1608,105 @@ html body .btn-outline:hover,
   </div>
 </div>
 
-<footer class="bg-white border-t border-slate-200 text-slate-600 text-sm py-12 relative z-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-        <div>
-          <div aria-label="Prospera AI Realtors" class="prospera-footer-brand mb-4">
-            <span aria-hidden="true" class="prospera-logo-frame">
-              <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
-            </span>
-          </div>
-          <p class="text-xs text-slate-500 leading-relaxed">
-            India’s premier AI-first conversational real estate network. Unbiased recommendations, voice search, and
-            predictive market intelligence.
+  <!-- ============================================================
+       PROSPERA GLOBAL FOOTER
+       Premium responsive floating luxury card
+       ============================================================ -->
+  <footer class="prospera-global-footer">
+    <div class="prospera-footer-container">
+      <div class="prospera-footer-main">
+        <!-- COLUMN 1: BRAND -->
+        <section class="prospera-footer-col prospera-footer-brand" aria-label="Prospera AI Company Information">
+          <a class="prospera-footer-brand-logo" href="index.html" aria-label="Prospera AI Realtors Home">
+            <img alt="Prospera AI Realtors" class="prospera-logo-image" src="./assets/images/logos/dark_mode.png" />
+          </a>
+          <p class="prospera-footer-desc">
+            India's premier AI-first conversational real estate network. Unbiased recommendations, voice search, and predictive market intelligence.
           </p>
-        </div>
-        <div>
-          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Quick Links</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="about-us.html">About Us</a></li>
-            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="why-prospera-ai.html">Why Prospera
-                AI</a></li>
-            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="reviews.html">Reviews</a></li>
-            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="contact.html">Contact Us</a></li>
-            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="privacy-terms.html">Privacy
-                Policy</a></li>
+        </section>
+
+        <!-- DESKTOP VERTICAL DIVIDER 1 -->
+        <div class="prospera-footer-vdivider" aria-hidden="true"></div>
+        <!-- MOBILE HORIZONTAL DIVIDER 1 -->
+        <div class="prospera-footer-hdivider-mobile" aria-hidden="true"></div>
+
+        <!-- COLUMN 2: QUICK LINKS -->
+        <nav class="prospera-footer-col prospera-footer-links" aria-label="Footer Quick Links">
+          <h4 class="prospera-footer-heading">QUICK LINKS</h4>
+          <span class="prospera-footer-heading-line" aria-hidden="true"></span>
+          <ul class="prospera-footer-list">
+            <li><a class="prospera-footer-link" href="about-us.html">About Us</a></li>
+            <li><a class="prospera-footer-link" href="why-prospera-ai.html">Why Prospera AI</a></li>
+            <li><a class="prospera-footer-link" href="reviews.html">Reviews</a></li>
+            <li><a class="prospera-footer-link" href="contact.html">Contact Us</a></li>
+            <li><a class="prospera-footer-link" href="privacy-terms.html">Privacy Policy</a></li>
           </ul>
-        </div>
-        <div>
-          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Top Locations</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
-                onclick="askAILocation('Gomti Nagar'); return false;">Gomti
-                Nagar</a></li>
-            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
-                onclick="askAILocation('Gomti Nagar Extension'); return false;">Gomti Nagar Extension</a></li>
-            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
-                onclick="askAILocation('Shaheed Path'); return false;">Shaheed
-                Path</a></li>
-            <li><a class="text-slate-600 hover:text-gold-600 transition-colors" href="#"
-                onclick="askAILocation('Sultanpur Road'); return false;">Sultanpur Road</a></li>
+        </nav>
+
+        <!-- DESKTOP VERTICAL DIVIDER 2 -->
+        <div class="prospera-footer-vdivider" aria-hidden="true"></div>
+        <!-- MOBILE HORIZONTAL DIVIDER 2 -->
+        <div class="prospera-footer-hdivider-mobile" aria-hidden="true"></div>
+
+        <!-- COLUMN 3: TOP LOCATIONS -->
+        <nav class="prospera-footer-col prospera-footer-locations" aria-label="Footer Top Locations">
+          <h4 class="prospera-footer-heading">TOP LOCATIONS</h4>
+          <span class="prospera-footer-heading-line" aria-hidden="true"></span>
+          <ul class="prospera-footer-list">
+            <li><a class="prospera-footer-link" href="explore.html?location=Gomti%20Nagar" onclick="if(window.askAILocation){ askAILocation('Gomti Nagar'); } return false;">Gomti Nagar</a></li>
+            <li><a class="prospera-footer-link" href="explore.html?location=Gomti%20Nagar%20Extension" onclick="if(window.askAILocation){ askAILocation('Gomti Nagar Extension'); } return false;">Gomti Nagar Extension</a></li>
+            <li><a class="prospera-footer-link" href="explore.html?location=Shaheed%20Path" onclick="if(window.askAILocation){ askAILocation('Shaheed Path'); } return false;">Shaheed Path</a></li>
+            <li><a class="prospera-footer-link" href="explore.html?location=Sultanpur%20Road" onclick="if(window.askAILocation){ askAILocation('Sultanpur Road'); } return false;">Sultanpur Road</a></li>
           </ul>
-        </div>
-        <div>
-          <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4">Contact &amp; Legal</h4>
-          <p class="text-xs text-slate-500 mb-2"><i class="fa-solid fa-envelope text-gold-500 mr-2"></i>
-            advisor@prospera.ai</p>
-          <p class="text-xs text-slate-500 mb-4"><i class="fa-solid fa-phone text-gold-500 mr-2"></i> +91 1800-PROSPERA
-          </p>
-          <div class="flex gap-3">
-            <a aria-label="LinkedIn"
-              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
-              href="#"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
-            <a aria-label="Twitter / X"
-              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
-              href="#"><i class="fa-brands fa-x-twitter text-xs"></i></a>
-            <a aria-label="Instagram"
-              class="w-8 h-8 rounded-full border border-gold-500/40 bg-transparent text-gold-500 flex items-center justify-center hover:bg-gold-500/10 transition-colors"
-              href="#"><i class="fa-brands fa-instagram text-xs"></i></a>
+        </nav>
+
+        <!-- DESKTOP VERTICAL DIVIDER 3 -->
+        <div class="prospera-footer-vdivider" aria-hidden="true"></div>
+        <!-- MOBILE HORIZONTAL DIVIDER 3 -->
+        <div class="prospera-footer-hdivider-mobile" aria-hidden="true"></div>
+
+        <!-- COLUMN 4: CONTACT & LEGAL -->
+        <section class="prospera-footer-col prospera-footer-contact" aria-label="Footer Contact Information">
+          <h4 class="prospera-footer-heading">CONTACT &amp; LEGAL</h4>
+          <span class="prospera-footer-heading-line" aria-hidden="true"></span>
+          <div class="prospera-footer-contact-list">
+            <a class="prospera-footer-contact-item" href="mailto:advisor@prospera.ai">
+              <span class="prospera-footer-contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C59E3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </span>
+              <span class="prospera-footer-contact-text">advisor@prospera.ai</span>
+            </a>
+            <a class="prospera-footer-contact-item" href="tel:+911800PROSPERA">
+              <span class="prospera-footer-contact-icon" aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="#C59E3F"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <span class="prospera-footer-contact-text">+91 1800-PROSPERA</span>
+            </a>
           </div>
-        </div>
+          <div class="prospera-footer-social-row">
+            <a aria-label="LinkedIn" class="prospera-footer-social-icon" href="#" rel="noopener noreferrer" target="_blank">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C59E3F"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a aria-label="Twitter / X" class="prospera-footer-social-icon" href="#" rel="noopener noreferrer" target="_blank">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#C59E3F"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a aria-label="Instagram" class="prospera-footer-social-icon" href="#" rel="noopener noreferrer" target="_blank">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#C59E3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+          </div>
+        </section>
       </div>
-      <div
-        class="pt-8 border-t border-slate-200 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p>© 2026 Prospera AI Realtors Inc. All rights reserved.</p>
-        <p class="text-slate-500">RERA Reg: UPRERA/AI/2026/001</p>
+
+      <!-- BOTTOM HORIZONTAL DIVIDER -->
+      <div class="prospera-footer-divider" aria-hidden="true"></div>
+
+      <!-- BOTTOM LEGAL ROW -->
+      <div class="prospera-footer-bottom">
+        <p class="prospera-footer-copyright">&copy; 2026 Prospera AI Realtors Inc. All rights reserved.</p>
+        <div class="prospera-footer-rera-wrap">
+          <span class="prospera-footer-bottom-vdivider" aria-hidden="true"></span>
+          <p class="prospera-footer-rera">RERA Reg. No. UPRERAAI/202502</p>
+        </div>
       </div>
     </div>
   </footer>

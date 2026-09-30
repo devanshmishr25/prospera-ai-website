@@ -989,3 +989,345 @@ html body .project-item .font-heading {
 
 
 
+
+
+/* ============================================================
+   PROSPERA AI — GLOBAL FOOTER
+   Premium responsive floating footer
+   ============================================================ */
+
+.prospera-global-footer {
+  width: 100%;
+  padding: 56px 16px 64px 16px;
+  background: transparent;
+  position: relative;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .prospera-global-footer {
+    padding: 72px 28px 80px 28px;
+  }
+}
+
+.prospera-footer-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 32px;
+  box-shadow: 0 20px 50px -12px rgba(24, 32, 51, 0.05), 0 2px 10px -2px rgba(212, 175, 55, 0.06);
+  padding: 52px 56px 36px 56px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .prospera-footer-container {
+    padding: 40px 36px 30px 36px;
+    border-radius: 26px;
+  }
+}
+
+@media (max-width: 767px) {
+  .prospera-footer-container {
+    width: calc(100% - 8px);
+    margin: 0 auto;
+    padding: 32px 20px 24px 20px;
+    border-radius: 22px;
+  }
+}
+
+/* Main 4-Column Section */
+.prospera-footer-main {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .prospera-footer-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .prospera-footer-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* Columns */
+.prospera-footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1025px) {
+  .prospera-footer-brand {
+    flex: 1.35 1 0;
+    min-width: 0;
+    padding-right: 40px;
+  }
+  .prospera-footer-links {
+    flex: 1 1 0;
+    min-width: 0;
+    padding-left: 40px;
+    padding-right: 32px;
+  }
+  .prospera-footer-locations {
+    flex: 1 1 0;
+    min-width: 0;
+    padding-left: 40px;
+    padding-right: 32px;
+  }
+  .prospera-footer-contact {
+    flex: 1.25 1 0;
+    min-width: 0;
+    padding-left: 40px;
+  }
+}
+
+/* Vertical Dividers on Desktop */
+.prospera-footer-vdivider {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  .prospera-footer-vdivider {
+    display: block;
+    width: 1px;
+    background: rgba(24, 32, 51, 0.08);
+    flex-shrink: 0;
+    align-self: stretch;
+  }
+}
+
+/* Horizontal Dividers on Mobile only */
+.prospera-footer-hdivider-mobile {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .prospera-footer-hdivider-mobile {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: rgba(24, 32, 51, 0.08);
+    margin: 26px 0;
+  }
+}
+
+/* Brand Column Content */
+.prospera-footer-brand-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  margin-bottom: 22px;
+}
+
+.prospera-footer-brand-logo img {
+  height: 60px;
+  width: auto;
+  max-width: 230px;
+  object-fit: contain;
+  object-position: left center;
+  display: block;
+}
+
+.prospera-footer-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #64748B;
+  max-width: 320px;
+  margin: 0;
+}
+
+/* Column Headings & Gold Underline */
+.prospera-footer-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #0F172A;
+  margin: 0;
+  padding: 0;
+}
+
+.prospera-footer-heading-line {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: #D4AF37;
+  border-radius: 2px;
+  margin-top: 8px;
+  margin-bottom: 22px;
+}
+
+/* Navigation Lists & Text Links (NO ARROWS) */
+.prospera-footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.prospera-footer-link {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #475569;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.18s ease;
+  line-height: 1.4;
+}
+
+.prospera-footer-link:hover {
+  color: #B58A2A;
+}
+
+/* Strict enforcement: NO ARROWS or chevrons on links or hover */
+.prospera-footer-link::before,
+.prospera-footer-link::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Contact Column Content */
+.prospera-footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.prospera-footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.prospera-footer-contact-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #FAF6ED;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.prospera-footer-contact-item:hover .prospera-footer-contact-icon {
+  background: #F4EAD3;
+  border-color: #D4AF37;
+  transform: scale(1.04);
+}
+
+.prospera-footer-contact-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #334155;
+  transition: color 0.18s ease;
+}
+
+.prospera-footer-contact-item:hover .prospera-footer-contact-text {
+  color: #B58A2A;
+}
+
+/* Social Media Icons */
+.prospera-footer-social-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.prospera-footer-social-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(212, 175, 55, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.prospera-footer-social-icon:hover {
+  background: #FAF6ED;
+  border-color: #D4AF37;
+  transform: scale(1.05);
+}
+
+/* Bottom Divider */
+.prospera-footer-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(24, 32, 51, 0.08);
+  margin: 40px 0 24px 0;
+}
+
+/* Bottom Legal Row */
+.prospera-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  color: #8A94A6;
+}
+
+.prospera-footer-copyright {
+  margin: 0;
+  color: #8A94A6;
+}
+
+.prospera-footer-rera-wrap {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.prospera-footer-bottom-vdivider {
+  display: inline-block;
+  width: 1px;
+  height: 14px;
+  background: rgba(24, 32, 51, 0.14);
+}
+
+@media (max-width: 640px) {
+  .prospera-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .prospera-footer-bottom-vdivider {
+    display: none;
+  }
+}
+
+.prospera-footer-rera {
+  margin: 0;
+  color: #8A94A6;
+}
