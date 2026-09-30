@@ -6,6 +6,7 @@ import { env } from "./config/env.js";
 import propertyRoutes from "./routes/properties.js";
 import chatRoutes from "./routes/chat.js";
 import realtimeRoutes from "./routes/realtime.js";
+import marketNewsRoutes from "./routes/marketNews.js";
 
 const app = express();
 
@@ -73,6 +74,11 @@ app.use(
 app.use(
   "/api/chat",
   chatRoutes
+);
+
+app.use(
+  "/api/market-news",
+  marketNewsRoutes
 );
 
 /*

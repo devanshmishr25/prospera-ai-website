@@ -704,6 +704,134 @@ html body .prospera-agent-card button:hover * {
   -webkit-text-fill-color: #FFFFFF !important;
 }
 
+/* ── MOBILE RESPONSIVENESS FIX (320px - 767px) ── */
+@media (max-width: 767px) {
+  html, body {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  .builders-hero {
+    padding: 96px 0 28px !important;
+  }
+  .builders-hero h1 {
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+  }
+  .builders-hero p {
+    font-size: 13.5px !important;
+    line-height: 1.55 !important;
+  }
+  .builders-hero .flex-wrap {
+    gap: 8px !important;
+  }
+  .builders-hero .flex-wrap > div {
+    padding: 6px 12px !important;
+    font-size: 11px !important;
+  }
+
+  main {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    padding-top: 20px !important;
+    padding-bottom: 40px !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Agent Grid */
+  .prospera-agent-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .prospera-agent-card {
+    padding: 20px 16px !important;
+    border-radius: 16px !important;
+    min-height: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .prospera-agent-stats {
+    gap: 6px !important;
+    margin: 14px 0 18px !important;
+  }
+  .prospera-agent-stats span {
+    min-height: 48px !important;
+    padding: 8px 4px !important;
+    border-radius: 10px !important;
+  }
+  .prospera-agent-stats span strong {
+    font-size: 12px !important;
+  }
+  .prospera-agent-stats span small {
+    font-size: 8px !important;
+  }
+
+  /* Business Panel: ZERO HORIZONTAL OVERFLOW */
+  .agent-business-section {
+    padding: 24px 0 40px !important;
+  }
+  .business-panel,
+  .agent-business-section .business-panel,
+  html body .business-panel {
+    padding: 24px 16px !important;
+    border-radius: 20px !important;
+    gap: 24px !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .business-copy h2,
+  .agent-business-section .business-panel h2 {
+    font-size: 24px !important;
+    line-height: 1.25 !important;
+    margin: 10px 0 !important;
+  }
+  .business-copy p,
+  .agent-business-section .business-panel p {
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+  }
+  .business-copy .mt-6.flex {
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+  .business-copy .mt-6.flex button,
+  .business-copy .mt-6.flex a {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 12px 16px !important;
+    font-size: 13px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2x2 metric cards with compact padding and wrapping text */
+  .business-metrics {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+  .business-metrics div {
+    padding: 12px 6px !important;
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
+  }
+  .business-metrics strong {
+    font-size: 18px !important;
+    margin-bottom: 2px !important;
+  }
+  .business-metrics span {
+    font-size: 9.5px !important;
+    line-height: 1.25 !important;
+    word-break: break-word !important;
+  }
+}
+
 </style>
 </head>
 <body class="bg-[#FAF8F5] text-[#000000] font-sans selection:bg-gold-200 selection:text-[#000000] relative antialiased min-h-screen overflow-x-hidden">

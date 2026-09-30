@@ -450,6 +450,51 @@
       opacity: 0.92 !important;
       line-height: 1.65 !important;
     }
+
+
+    /* ============================================================
+       DYNAMIC MARKET NEWS
+       Main-content-only styles. Header and footer are untouched.
+       ============================================================ */
+    .market-news-image {
+      width: 100% !important;
+      height: 190px !important;
+      object-fit: cover !important;
+      display: block !important;
+      border-radius: 14px !important;
+      background: #FAF8F5 !important;
+      border: 1px solid rgba(212, 175, 55, 0.22) !important;
+    }
+
+    .market-news-image-wrap {
+      margin: -2px -2px 18px -2px !important;
+      overflow: hidden !important;
+      border-radius: 14px !important;
+      background: #FAF8F5 !important;
+    }
+
+    .market-news-card {
+      min-width: 0 !important;
+      overflow: hidden !important;
+    }
+
+    .market-news-title {
+      display: -webkit-box !important;
+      -webkit-line-clamp: 3 !important;
+      -webkit-box-orient: vertical !important;
+      overflow: hidden !important;
+    }
+
+    .market-news-description {
+      display: -webkit-box !important;
+      -webkit-line-clamp: 4 !important;
+      -webkit-box-orient: vertical !important;
+      overflow: hidden !important;
+    }
+
+    .market-news-loading {
+      min-height: 220px !important;
+    }
   </style>
 </head>
 <body class="bg-[#FAF8F5] text-black font-sans selection:bg-gold-200 selection:text-black antialiased min-h-screen">
@@ -569,12 +614,11 @@
         <!-- CATEGORY QUICK FILTER BAR -->
         <section class="filter-bar-wrap">
             <div class="flex flex-wrap gap-2.5 justify-center items-center">
-                <button onclick="filterCategory('all')" id="btn-all" class="cat-btn is-active active">All Categories</button>
+                <button onclick="filterCategory('all')" id="btn-all" class="cat-btn is-active active">All India Market</button>
                 <button onclick="filterCategory('noida')" id="btn-noida" class="cat-btn">Noida Market</button>
                 <button onclick="filterCategory('gurgaon')" id="btn-gurgaon" class="cat-btn">Gurgaon Market</button>
-                <button onclick="filterCategory('tips')" id="btn-tips" class="cat-btn">Investment Tips</button>
-                <button onclick="filterCategory('guides')" id="btn-guides" class="cat-btn">Buyer Guides</button>
-                <button onclick="filterCategory('news')" id="btn-news" class="cat-btn">Real Estate News</button>
+                <button onclick="filterCategory('lucknow')" id="btn-lucknow" class="cat-btn">Lucknow Market</button>
+                <button onclick="filterCategory('delhi')" id="btn-delhi" class="cat-btn">Delhi NCR Market</button>
                 <button onclick="filterCategory('reports')" id="btn-reports" class="cat-btn">AI Reports</button>
             </div>
         </section>
@@ -892,65 +936,32 @@
         <section id="real-estate-news" class="cat-section" data-category="news">
             <div class="flex items-center space-x-3 mb-2">
                 <div class="h-px w-8 bg-[#D4AF37]"></div>
-                <span class="text-xs uppercase tracking-widest text-[#8C6D1F] font-bold">Macro & Regulatory Feed</span>
+                <span class="text-xs uppercase tracking-widest text-[#8C6D1F] font-bold">Live Market Feed</span>
             </div>
+
             <h2 class="section-title">Real Estate News & Industry Trends</h2>
             <div class="accent-line"></div>
+
             <p class="section-subtitle">
-                Curated policy updates, RBI interest rate adjustments, and infrastructure milestones shaping high-value property markets.
+                Live real-estate news covering India, Noida, Gurgaon, housing, property, RERA, infrastructure, and investment trends.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- News 1 -->
-                <article class="insight-card p-6 flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-center text-[10px] font-mono text-[#8C6D1F] font-bold mb-3">
-                            <span>POLICY UPDATE</span>
-                            <span>SEPTEMBER 2026</span>
-                        </div>
-                        <h3 class="text-base card-title mb-2.5 leading-snug">RBI Maintains Repo Rate: Ultra-Luxury Housing Liquidity Remains Strong</h3>
-                        <p class="card-text mb-4">
-                            Stable lending rates continue to fuel confidence among high-net-worth borrowers, with luxury segment mortgage approvals rising by 14% quarter-on-quarter.
-                        </p>
-                    </div>
-                    <a href="#" class="gold-link pt-3 border-t border-neutral-100">
-                        Read Full Analysis &rarr;
-                    </a>
-                </article>
+            <!-- LIVE NEWS STATUS -->
+            <div id="marketNewsStatus"
+                 class="text-xs text-[#8C6D1F] font-semibold mb-5"
+                 aria-live="polite">
+                Loading latest real-estate news...
+            </div>
 
-                <!-- News 2 -->
-                <article class="insight-card p-6 flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-center text-[10px] font-mono text-[#8C6D1F] font-bold mb-3">
-                            <span>INFRASTRUCTURE</span>
-                            <span>AUGUST 2026</span>
-                        </div>
-                        <h3 class="text-base card-title mb-2.5 leading-snug">Jewar Airport Terminal Testing Completed: Expressways Rerouted</h3>
-                        <p class="card-text mb-4">
-                            Phase 1 trials at Noida International Airport trigger renewed institutional land acquisition along the Yamuna Expressway corridor.
-                        </p>
+            <!-- DYNAMIC NEWS CARDS -->
+            <div id="marketNewsGrid"
+                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="insight-card market-news-loading p-6 flex items-center justify-center">
+                    <div class="text-center">
+                        <i class="fa-solid fa-spinner fa-spin text-[#D4AF37] text-xl mb-3"></i>
+                        <p class="text-sm font-semibold text-black">Loading latest news...</p>
                     </div>
-                    <a href="#" class="gold-link pt-3 border-t border-neutral-100">
-                        Read Full Analysis &rarr;
-                    </a>
-                </article>
-
-                <!-- News 3 -->
-                <article class="insight-card p-6 flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-center text-[10px] font-mono text-[#8C6D1F] font-bold mb-3">
-                            <span>MARKET ABSORPTION</span>
-                            <span>AUGUST 2026</span>
-                        </div>
-                        <h3 class="text-base card-title mb-2.5 leading-snug">NCR Ultra-Luxury Sales Cross ₹25,000 Cr Mark in First Half of 2026</h3>
-                        <p class="card-text mb-4">
-                            Demand for 5,000+ sq. ft. residences outpaces supply in Golf Course Extension Road, leading to rapid presale sell-outs.
-                        </p>
-                    </div>
-                    <a href="#" class="gold-link pt-3 border-t border-neutral-100">
-                        Read Full Analysis &rarr;
-                    </a>
-                </article>
+                </div>
             </div>
         </section>
 
@@ -1260,124 +1271,521 @@
         </div>
     </div>
 
+
     <script>
-        // Category Filtering Functionality
-                // Category Filtering Functionality
-                // Category Filtering Functionality
+        /* ============================================================
+           PROSPERA AI — LIVE MARKET NEWS
+           Existing card design preserved.
+           API key remains on the backend.
+           ============================================================ */
+
+        const MARKET_NEWS_API =
+            "http://localhost:5000/api/market-news";
+
+        let currentMarketNewsLocation = "all";
+
+        function formatNewsDate(dateValue) {
+            if (!dateValue) return "Latest";
+
+            const date = new Date(dateValue);
+
+            if (Number.isNaN(date.getTime())) {
+                return "Latest";
+            }
+
+            return date.toLocaleDateString("en-IN", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric"
+            });
+        }
+
+        function getNewsCategory(article) {
+            const text = (
+                (article?.title || "") + " " +
+                (article?.description || "")
+            ).toLowerCase();
+
+            if (
+                text.includes("rera") ||
+                text.includes("regulatory") ||
+                text.includes("policy") ||
+                text.includes("approval")
+            ) {
+                return "RERA & POLICY";
+            }
+
+            if (
+                text.includes("sales") ||
+                text.includes("sold") ||
+                text.includes("property price") ||
+                text.includes("housing demand") ||
+                text.includes("homebuyers")
+            ) {
+                return "MARKET TRENDS";
+            }
+
+            return "REAL ESTATE NEWS";
+        }
+
+        /* =========================================================
+           NEWSAPI SOURCE FIX
+           NewsAPI returns source as an object:
+           { id: ..., name: ... }
+           Never render the object directly.
+           ========================================================= */
+        function getNewsSourceName(article) {
+            if (article?.source && typeof article.source === "object") {
+                return article.source.name || "News Source";
+            }
+
+            if (typeof article?.source === "string") {
+                return article.source;
+            }
+
+            return "News Source";
+        }
+
+        /* =========================================================
+           NEWSAPI IMAGE FIX
+           Backend preserves urlToImage.
+           article.image remains a fallback for compatibility.
+           ========================================================= */
+        function getNewsImage(article) {
+            return article?.urlToImage || article?.image || "";
+        }
+
+        function createNewsCard(article) {
+            const articleEl = document.createElement("article");
+
+            /* EXISTING CARD CLASS — DO NOT CHANGE */
+            articleEl.className =
+                "insight-card market-news-card p-5 sm:p-6 flex flex-col justify-between";
+
+            const content = document.createElement("div");
+
+            /* =====================================================
+               IMAGE — SAME EXISTING CARD AREA
+               ===================================================== */
+            const imageUrl = getNewsImage(article);
+
+            if (imageUrl) {
+                const imageWrap = document.createElement("div");
+                imageWrap.className = "market-news-image-wrap";
+
+                const image = document.createElement("img");
+                image.className = "market-news-image";
+                image.src = imageUrl;
+                image.alt = article?.title || "Real estate news";
+                image.loading = "lazy";
+                image.decoding = "async";
+
+                image.addEventListener(
+                    "error",
+                    () => imageWrap.remove(),
+                    { once: true }
+                );
+
+                imageWrap.appendChild(image);
+                content.appendChild(imageWrap);
+            }
+
+            /* Meta */
+            const meta = document.createElement("div");
+            meta.className =
+                "flex justify-between items-center gap-3 text-[10px] font-mono text-[#8C6D1F] font-bold mb-3";
+
+            const category = document.createElement("span");
+            category.textContent = getNewsCategory(article);
+
+            const date = document.createElement("span");
+            date.textContent = formatNewsDate(article?.publishedAt);
+
+            meta.appendChild(category);
+            meta.appendChild(date);
+            content.appendChild(meta);
+
+            /* Title */
+            const title = document.createElement("h3");
+            title.className =
+                "text-base card-title market-news-title mb-2.5 leading-snug";
+            title.textContent = article?.title || "Real Estate News";
+            content.appendChild(title);
+
+            /* Description */
+            const description = document.createElement("p");
+            description.className =
+                "card-text market-news-description mb-4";
+            description.textContent =
+                article?.description ||
+                "Read the latest real-estate industry update.";
+            content.appendChild(description);
+
+            /* Footer */
+            const footer = document.createElement("div");
+            footer.className =
+                "pt-3 border-t border-neutral-100 flex items-center justify-between gap-3";
+
+            /* FIX: source.name instead of [object Object] */
+            const source = document.createElement("span");
+            source.className =
+                "text-[10px] font-semibold text-black/60 truncate";
+            source.textContent = getNewsSourceName(article);
+
+            /* Direct original publisher article */
+            const readLink = document.createElement("a");
+            readLink.className = "gold-link flex-shrink-0";
+            readLink.href = article?.url || "#";
+            readLink.target = "_blank";
+            readLink.rel = "noopener noreferrer";
+            readLink.textContent = "Read More →";
+
+            footer.appendChild(source);
+            footer.appendChild(readLink);
+            content.appendChild(footer);
+
+            articleEl.appendChild(content);
+
+            return articleEl;
+        }
+
+        function setNewsLocationButton(location) {
+            return location;
+        }
+
+        function showNewsMessage(message, iconClass = "fa-newspaper") {
+            const grid = document.getElementById("marketNewsGrid");
+            if (!grid) return;
+
+            grid.innerHTML = "";
+
+            const card = document.createElement("div");
+            card.className =
+                "insight-card p-8 md:col-span-2 lg:col-span-3 text-center";
+
+            const icon = document.createElement("i");
+            icon.className =
+                `fa-solid ${iconClass} text-[#D4AF37] text-xl mb-3`;
+
+            const text = document.createElement("p");
+            text.className = "text-sm font-semibold text-black";
+            text.textContent = message;
+
+            card.appendChild(icon);
+            card.appendChild(text);
+            grid.appendChild(card);
+        }
+
+        async function loadMarketNews(location = "all", selectedCategory = location) {
+            const grid = document.getElementById("marketNewsGrid");
+            const status = document.getElementById("marketNewsStatus");
+
+            if (!grid) return;
+
+            currentMarketNewsLocation = location;
+
+            if (status) {
+                status.textContent = "Loading latest real-estate news...";
+            }
+
+            grid.innerHTML = `
+                <div class="insight-card market-news-loading p-6 flex items-center justify-center md:col-span-2 lg:col-span-3">
+                    <div class="text-center">
+                        <i class="fa-solid fa-spinner fa-spin text-[#D4AF37] text-xl mb-3"></i>
+                        <p class="text-sm font-semibold text-black">Loading latest news...</p>
+                    </div>
+                </div>
+            `;
+
+            const labelMap = {
+                all: "All India Market",
+                noida: "Noida Market",
+                gurgaon: "Gurgaon Market",
+                lucknow: "Lucknow Market",
+                delhi: "Delhi NCR Market"
+            };
+
+            const requestedLabel =
+                selectedCategory === "reports"
+                    ? "AI Reports • All India News"
+                    : (labelMap[location] || "All India Market");
+
+            try {
+                const url =
+                    `${MARKET_NEWS_API}?location=${encodeURIComponent(location)}`;
+
+                const response = await fetch(url);
+                const data = await response.json();
+
+                if (!response.ok || !data.success) {
+                    throw new Error(
+                        data?.message || "Unable to load market news."
+                    );
+                }
+
+                const articles = Array.isArray(data.articles)
+                    ? data.articles
+                    : [];
+
+                grid.innerHTML = "";
+
+                if (!articles.length) {
+                    showNewsMessage(
+                        `No recent real-estate news was found for ${requestedLabel}. Please try again shortly.`,
+                        "fa-circle-info"
+                    );
+
+                    if (status) {
+                        status.textContent =
+                            `No live ${requestedLabel} news available right now.`;
+                    }
+                    return;
+                }
+
+                const fragment = document.createDocumentFragment();
+
+                articles.forEach(article => {
+                    fragment.appendChild(createNewsCard(article));
+                });
+
+                grid.appendChild(fragment);
+
+                if (status) {
+                    status.textContent =
+                        `${articles.length} latest real-estate ${articles.length === 1 ? "article" : "articles"} • ${requestedLabel}`;
+                }
+            } catch (error) {
+                console.error("Market News Error:", error);
+
+                showNewsMessage(
+                    "Unable to load live market news. Please make sure the Prospera backend is running.",
+                    "fa-triangle-exclamation"
+                );
+
+                if (status) {
+                    status.textContent = "Market news could not be loaded.";
+                }
+            }
+        }
+
+        /* =========================================================
+           CATEGORY FILTER
+           All India + 4 city feeds + AI Reports.
+           AI Reports intentionally uses the All India feed.
+           ========================================================= */
         function filterCategory(cat) {
-            const sections = document.querySelectorAll('.cat-section');
-            const buttons = document.querySelectorAll('.cat-btn');
+            const sections = document.querySelectorAll(".cat-section");
+            const buttons = document.querySelectorAll(".cat-btn");
 
             buttons.forEach(btn => {
-                btn.classList.remove('is-active', 'active');
+                btn.classList.remove("is-active", "active");
             });
 
             const activeBtn = document.getElementById(`btn-${cat}`);
             if (activeBtn) {
-                activeBtn.classList.add('is-active', 'active');
+                activeBtn.classList.add("is-active", "active");
             }
 
-            sections.forEach(sec => {
-                if (cat === 'all' || sec.getAttribute('data-category') === cat) {
-                    sec.style.display = 'block';
-                } else {
-                    sec.style.display = 'none';
-                }
+            const newsCategories = {
+                all: "all",
+                noida: "noida",
+                gurgaon: "gurgaon",
+                lucknow: "lucknow",
+                delhi: "delhi",
+                reports: "all"
+            };
+
+            if (Object.prototype.hasOwnProperty.call(newsCategories, cat)) {
+                sections.forEach(section => {
+                    section.style.display =
+                        section.id === "real-estate-news"
+                            ? "block"
+                            : "none";
+                });
+
+                loadMarketNews(newsCategories[cat], cat);
+                return;
+            }
+
+            sections.forEach(section => {
+                section.style.display =
+                    section.getAttribute("data-category") === cat
+                        ? "block"
+                        : "none";
             });
         }
 
+        /* =========================================================
+           EXISTING PAGE FUNCTIONS — PRESERVED
+           ========================================================= */
         function previewReport(title) {
-            const previewBox = document.getElementById('reportPreviewBox');
-            const reportTitle = document.getElementById('reportTitle');
-            reportTitle.innerText = "Simulated Live AI Preview: " + title;
-            previewBox.classList.remove('hidden');
-            previewBox.scrollIntoView({ behavior: 'smooth' });
+            const previewBox = document.getElementById("reportPreviewBox");
+            const reportTitle = document.getElementById("reportTitle");
+
+            if (!previewBox || !reportTitle) return;
+
+            reportTitle.innerText =
+                "Simulated Live AI Preview: " + title;
+
+            previewBox.classList.remove("hidden");
+            previewBox.scrollIntoView({ behavior: "smooth" });
         }
 
         function closeReportPreview() {
-            document.getElementById('reportPreviewBox').classList.add('hidden');
+            const previewBox = document.getElementById("reportPreviewBox");
+            if (previewBox) {
+                previewBox.classList.add("hidden");
+            }
         }
 
         function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            const icon = document.getElementById('mobileMenuIcon');
-            if (menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-                if (icon) {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-xmark');
-                }
-            } else {
-                menu.classList.add('hidden');
-                if (icon) {
-                    icon.classList.remove('fa-xmark');
-                    icon.classList.add('fa-bars');
-                }
+            const menu = document.getElementById("mobileMenu");
+            const icon = document.getElementById("mobileMenuIcon");
+
+            if (!menu) return;
+
+            const isHidden = menu.classList.contains("hidden");
+
+            menu.classList.toggle("hidden", !isHidden);
+
+            if (icon) {
+                icon.classList.toggle("fa-bars", !isHidden);
+                icon.classList.toggle("fa-xmark", isHidden);
             }
         }
 
         function askAILocation(loc) {
-            window.location.href = 'ai-property-finder.html?q=' + encodeURIComponent('Find best properties and appreciation rate in ' + loc);
+            window.location.href =
+                "ai-property-finder.html?q=" +
+                encodeURIComponent(
+                    "Find best properties and appreciation rate in " + loc
+                );
         }
 
-function triggerVoiceModal() {
-            const modal = document.getElementById('voiceModal');
-            if (modal) { modal.classList.remove('hidden'); modal.classList.add('flex'); }
+        function triggerVoiceModal() {
+            const modal = document.getElementById("voiceModal");
+            if (modal) {
+                modal.classList.remove("hidden");
+                modal.classList.add("flex");
+            }
         }
+
         function closeVoiceModal() {
-            const modal = document.getElementById('voiceModal');
-            if (modal) { modal.classList.add('hidden'); modal.classList.remove('flex'); }
+            const modal = document.getElementById("voiceModal");
+            if (modal) {
+                modal.classList.add("hidden");
+                modal.classList.remove("flex");
+            }
         }
+
         function simulateVoiceInput(text) {
-            const transcript = document.getElementById('modalVoiceTranscript');
-            const status = document.getElementById('modalVoiceStatus');
+            const transcript = document.getElementById("modalVoiceTranscript");
+            const status = document.getElementById("modalVoiceStatus");
+
             if (transcript) transcript.innerText = '"' + text + '"';
             if (status) status.innerText = "Analyzing requirements with AI...";
+
             setTimeout(() => {
                 closeVoiceModal();
-                const heroInput = document.getElementById('heroPromptInput');
-                if (heroInput) { heroInput.value = text; if (typeof submitHeroQuery === 'function') submitHeroQuery(); }
-                else {
-                    const drawer = document.getElementById('aiChatDrawer');
-                    if (drawer && drawer.classList.contains('hidden')) toggleFloatingChat();
-                    const floatingInput = document.getElementById('floatingInput');
-                    if (floatingInput) { floatingInput.value = text; sendFloatingMessage(); }
+
+                const heroInput = document.getElementById("heroPromptInput");
+
+                if (heroInput) {
+                    heroInput.value = text;
+
+                    if (typeof submitHeroQuery === "function") {
+                        submitHeroQuery();
+                    }
+                } else {
+                    const drawer = document.getElementById("aiChatDrawer");
+
+                    if (
+                        drawer &&
+                        drawer.classList.contains("hidden") &&
+                        typeof toggleFloatingChat === "function"
+                    ) {
+                        toggleFloatingChat();
+                    }
+
+                    const floatingInput =
+                        document.getElementById("floatingInput");
+
+                    if (floatingInput) {
+                        floatingInput.value = text;
+                        sendFloatingMessage();
+                    }
                 }
             }, 1500);
         }
+
         function toggleFloatingChat() {
-            const drawer = document.getElementById('aiChatDrawer');
+            const drawer = document.getElementById("aiChatDrawer");
             if (!drawer) return;
-            if (drawer.classList.contains('hidden')) { drawer.classList.remove('hidden'); drawer.classList.add('flex'); }
-            else { drawer.classList.add('hidden'); drawer.classList.remove('flex'); }
-        }
-        function handleKeyPress(e) { if (e.key === 'Enter') sendFloatingMessage(); }
-        function sendQuickMessage(text) {
-            const input = document.getElementById('floatingInput');
-            if (input) { input.value = text; sendFloatingMessage(); }
-        }
-        function sendFloatingMessage() {
-            const input = document.getElementById('floatingInput');
-            if (!input || !input.value.trim()) return;
-            const val = input.value.trim();
-            const chatMessages = document.getElementById('chatMessages');
-            if (chatMessages) {
-                const userDiv = document.createElement('div');
-                userDiv.className = 'flex justify-end';
-                userDiv.innerHTML = '<div class="bg-gold-500 text-obsidian-950 font-semibold p-2.5 rounded-2xl rounded-tr-none max-w-[80%]">' + val + '</div>';
-                chatMessages.appendChild(userDiv);
-                input.value = '';
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-                setTimeout(() => {
-                    const aiDiv = document.createElement('div');
-                    aiDiv.className = 'flex gap-2.5';
-                    aiDiv.innerHTML = `<div class="w-7 h-7 rounded-full bg-gold-500/20 border border-gold-500/40 flex items-center justify-center text-gold-400 flex-shrink-0"><i class="fa-solid fa-robot text-xs"></i></div><div class="bg-obsidian-800 border border-gold-500/20 p-3 rounded-2xl rounded-tl-none text-slate-200 max-w-[82%] leading-relaxed">I found several verified projects matching "${val}". Explore them above or speak with our luxury advisor.</div>`;
-                    chatMessages.appendChild(aiDiv);
-                    chatMessages.scrollTop = chatMessages.scrollHeight;
-                }, 600);
+
+            if (drawer.classList.contains("hidden")) {
+                drawer.classList.remove("hidden");
+                drawer.classList.add("flex");
+            } else {
+                drawer.classList.add("hidden");
+                drawer.classList.remove("flex");
             }
         }
+
+        function handleKeyPress(e) {
+            if (e.key === "Enter") {
+                sendFloatingMessage();
+            }
+        }
+
+        function sendQuickMessage(text) {
+            const input = document.getElementById("floatingInput");
+
+            if (input) {
+                input.value = text;
+                sendFloatingMessage();
+            }
+        }
+
+        function sendFloatingMessage() {
+            const input = document.getElementById("floatingInput");
+
+            if (!input || !input.value.trim()) return;
+
+            const val = input.value.trim();
+            const chatMessages = document.getElementById("chatMessages");
+
+            if (!chatMessages) return;
+
+            const userDiv = document.createElement("div");
+            userDiv.className = "flex justify-end";
+            userDiv.innerHTML =
+                '<div class="bg-gold-500 text-obsidian-950 font-semibold p-2.5 rounded-2xl rounded-tr-none max-w-[80%]">' +
+                val +
+                "</div>";
+
+            chatMessages.appendChild(userDiv);
+            input.value = "";
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            setTimeout(() => {
+                const aiDiv = document.createElement("div");
+                aiDiv.className = "flex gap-2.5";
+                aiDiv.innerHTML =
+                    `<div class="w-7 h-7 rounded-full bg-gold-500/20 border border-gold-500/40 flex items-center justify-center text-gold-400 flex-shrink-0"><i class="fa-solid fa-robot text-xs"></i></div><div class="bg-obsidian-800 border border-gold-500/20 p-3 rounded-2xl rounded-tl-none text-slate-200 max-w-[82%] leading-relaxed">I found several verified projects matching "${val}". Explore them above or speak with our luxury advisor.</div>`;
+
+                chatMessages.appendChild(aiDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 600);
+        }
+
+        /* =========================================================
+           LOAD ALL INDIA MARKET FEED ON FIRST OPEN
+           ========================================================= */
+        document.addEventListener("DOMContentLoaded", () => {
+            filterCategory("all");
+        });
     </script>
+
     <!-- Global Theme Toggle JS -->
     <script src="theme.js"></script>
   <script>
@@ -1409,4 +1817,3 @@ function triggerVoiceModal() {
 
 </body>
 </html>
-
