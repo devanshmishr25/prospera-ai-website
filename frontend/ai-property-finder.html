@@ -159,7 +159,7 @@
       flex: 1 1 auto;
       overflow-y: auto;
       overflow-x: hidden;
-      padding: 24px 16px 16px;
+      padding: 56px 16px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -316,6 +316,7 @@
     .user-message .message-bubble {
       background: #000000 !important;
       color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
       border: 1px solid #000000 !important;
       border-radius: 20px 20px 4px 20px;
       padding: 14px 20px;
@@ -323,9 +324,19 @@
       font-size: 14.5px;
       line-height: 1.55;
     }
+    html body main .user-message .message-bubble,
+    html body main .user-message .message-bubble p,
+    html body main .user-message .message-bubble span,
+    html body main .user-message .message-bubble * {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
     .user-message .message-bubble p {
       margin: 0;
       color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
     }
 
     .ai-message {
@@ -746,16 +757,17 @@
       color: #8C6D1F;
       display: flex;
       align-items: center;
-      gap: 4px;
-      padding-left: 6px;
+      justify-content: center !important;
+      gap: 6px;
+      padding: 0 !important;
+      margin: 8px auto 0 auto !important;
+      text-align: center !important;
+      width: 100% !important;
       font-weight: 600;
     }
 
     .disclaimer {
-      font-size: 11px;
-      color: #6B7280;
-      margin: 6px 0 0 0;
-      text-align: center;
+      display: none !important;
     }
 
     /* ── LIGHTBOX ── */
@@ -952,10 +964,6 @@
                     <span>Tap mic to speak or type your requirement above</span>
                 </div>
             </div>
-
-            <p class="disclaimer">
-                Prospera AI provides predictive intelligence and verified real estate guidance.
-            </p>
         </footer>
 
     </main>
@@ -1296,7 +1304,7 @@
                 ${!isUser ? '<div class="message-avatar">✨</div>' : ""}
                 <div class="message-content">
                     <div class="message-label">${isUser ? "YOU" : "PROSPERA AI"}</div>
-                    <div class="message-bubble"><p>${
+                    <div class="message-bubble"><p class="${isUser ? "text-white" : ""}" style="${isUser ? "color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important;" : ""}">${
                         message.thinking
                             ? '<span class="typing-dots"><span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span></span>'
                             : isUser
@@ -1932,7 +1940,7 @@
 
             voiceHint.innerHTML = isBusy
                 ? '<span class="voice-pulse"></span>Listening...'
-                : '<span class="hint-mic">🎙</span>Tap the mic to start';
+                : '<span class="hint-mic">🎙</span>Tap mic to speak or type your requirement above';
         }
 
         async function handleVoiceStart() {

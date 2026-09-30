@@ -105,15 +105,95 @@
 [data-theme="light"] #voiceModal .bg-gradient-to-r,
 [data-theme="light"] #voiceModal .bg-gradient-to-tr,
 [data-theme="light"] #voiceModal .bg-gradient-to-b { background-image: initial !important; background-color: initial !important; }
-[data-theme="light"] #floatingAIWidget { z-index: 60 !important; }
-[data-theme="light"] #floatingAIWidget > button { background: #FFFFFF !important; background-image: none !important; color: #172033 !important; border: 2px solid #D4AF37 !important; box-shadow: 0 8px 24px rgba(23, 32, 51, 0.10), 0 0 0 1px rgba(212, 175, 55, 0.08) !important; }
-[data-theme="light"] #floatingAIWidget > button:hover { background: #FFFDF5 !important; background-image: none !important; border-color: #B28E28 !important; box-shadow: 0 12px 30px rgba(23, 32, 51, 0.14), 0 0 24px rgba(212, 175, 55, 0.18) !important; }
-[data-theme="light"] #floatingAIWidget > button .text-gold-300 { color: #806118 !important; }
-[data-theme="light"] #floatingAIWidget > button span:not(.bg-emerald-400) { color: #806118 !important; }
+/* ============================================================
+   FLOATING AI ADVISOR BUTTON — STANDARDIZED PILL (MOBILE + TAB + DESKTOP)
+   ============================================================ */
+#floatingAIWidget,
+[data-theme="light"] #floatingAIWidget {
+  position: fixed !important;
+  bottom: 16px !important;
+  right: 16px !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  pointer-events: auto !important;
+  max-width: calc(100vw - 2rem) !important;
+}
+
+#floatingAIWidget > button[aria-label="Open Prospera AI Property Finder"],
+#floatingAIWidget > button,
+[data-theme="light"] #floatingAIWidget > button {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 8px 18px 8px 10px !important;
+  border-radius: 9999px !important;
+  background: #FFFFFF !important;
+  background-image: none !important;
+  color: #172033 !important;
+  border: 1.5px solid #D4AF37 !important;
+  box-shadow: 0 8px 24px rgba(23, 32, 51, 0.12), 0 0 0 1px rgba(212, 175, 55, 0.10) !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+#floatingAIWidget > button:hover,
+[data-theme="light"] #floatingAIWidget > button:hover {
+  background: #FFFDF5 !important;
+  background-image: none !important;
+  border-color: #B28E28 !important;
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 12px 30px rgba(23, 32, 51, 0.16), 0 0 20px rgba(212, 175, 55, 0.20) !important;
+}
+
+/* Force the 'AI Advisor' text to ALWAYS show across mobile, tablet, and desktop */
+#floatingAIWidget > button span:not(.animate-ping):not(.w-2\.5):not(.bg-emerald-400):not(.bg-gold-400),
+#floatingAIWidget > button .hidden,
+[data-theme="light"] #floatingAIWidget > button span:not(.animate-ping):not(.w-2\.5):not(.bg-emerald-400):not(.bg-gold-400) {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #806118 !important;
+  line-height: 1 !important;
+}
+
+#floatingAIWidget > button > div:first-child,
+#floatingAIWidget > button .w-8.h-8,
+[data-theme="light"] #floatingAIWidget > button > div {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  min-height: 32px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: linear-gradient(135deg, #F8E7A3 0%, #D4AF37 100%) !important;
+  color: #172033 !important;
+  box-shadow: 0 2px 6px rgba(212, 175, 55, 0.25) !important;
+}
+
+#floatingAIWidget > button i,
+#floatingAIWidget > button .fa-robot,
 [data-theme="light"] #floatingAIWidget > button i,
-[data-theme="light"] #floatingAIWidget > button .fa-robot { color: #172033 !important; }
-[data-theme="light"] #floatingAIWidget > button > div { background: linear-gradient( 135deg, #F8E7A3 0%, #D4AF37 100% ) !important; color: #172033 !important; }
-[data-theme="light"] #floatingAIWidget > button .bg-emerald-400 { background-color: #34D399 !important; }
+[data-theme="light"] #floatingAIWidget > button .fa-robot {
+  font-size: 13px !important;
+  color: #172033 !important;
+}
+
+#floatingAIWidget > button .bg-emerald-400,
+#floatingAIWidget > button .bg-gold-400,
+[data-theme="light"] #floatingAIWidget > button .bg-emerald-400 {
+  background-color: #34D399 !important;
+}
 [data-theme="light"] .relative.h-56 .absolute .text-white,
 [data-theme="light"] .relative.h-56 .absolute h3,
 [data-theme="light"] .relative.overflow-hidden .absolute .text-white,

@@ -63,7 +63,7 @@
         document.documentElement.classList.remove("dark");
       })();
   </script>
-    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="theme.css?v=2">
 
   
 
@@ -944,13 +944,19 @@
   </div>
 
   <!-- FLOATING AI ADVISOR WIDGET -->
-  <div id="floatingAIWidget" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end max-w-[calc(100vw-2rem)]">
-    <button aria-label="Open Prospera AI Property Finder" class="relative group flex items-center gap-3 bg-black border-2 border-gold-500 text-white p-3 sm:px-5 sm:py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105" onclick="window.location.href='ai-property-finder.html'" type="button">
-      <div class="w-8 h-8 rounded-full bg-gold-500 flex items-center justify-center text-black font-bold">
-        <i class="fa-solid fa-robot text-sm"></i>
+  <div id="floatingAIWidget" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end max-w-[calc(100vw-2rem)]" style="position: fixed !important; bottom: 18px !important; right: 18px !important; z-index: 99999 !important; display: flex !important; flex-direction: column !important; align-items: flex-end !important; pointer-events: auto !important;">
+    <button aria-label="Open Prospera AI Property Finder"
+      class="relative group flex items-center gap-2.5 bg-white border border-[#D4AF37] px-4 py-2 sm:px-4 sm:py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all cursor-pointer"
+      onclick="window.location.href='ai-property-finder.html'" type="button"
+      style="display: inline-flex !important; align-items: center !important; gap: 8px !important; background: #FFFFFF !important; border: 1.5px solid #D4AF37 !important; border-radius: 9999px !important; padding: 7px 16px 7px 8px !important; box-shadow: 0 6px 20px rgba(0,0,0,0.12) !important; cursor: pointer !important; text-decoration: none !important;">
+      <div
+        class="w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0"
+        style="width: 32px !important; height: 32px !important; min-width: 32px !important; border-radius: 50% !important; display: flex !important; align-items: center !important; justify-content: center !important; background: linear-gradient(135deg, #F8E7A3 0%, #D4AF37 100%) !important;">
+        <i class="fa-solid fa-robot" style="color: #172033 !important; font-size: 13px !important;"></i>
       </div>
-      <span class="hidden sm:inline-block font-semibold text-xs text-gold-400 tracking-wider uppercase">AI Advisor</span>
-      <span class="w-2.5 h-2.5 rounded-full bg-gold-400 animate-ping absolute top-1 right-1"></span>
+      <span class="inline-block font-bold text-xs uppercase tracking-wider text-[#806118]"
+        style="display: inline-block !important; visibility: visible !important; opacity: 1 !important; font-size: 11.5px !important; font-weight: 700 !important; letter-spacing: 0.08em !important; text-transform: uppercase !important; color: #806118 !important; line-height: 1 !important;">AI Advisor</span>
+      <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping absolute top-1 right-1"></span>
     </button>
   </div>
 
